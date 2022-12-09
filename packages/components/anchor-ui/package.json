@@ -1,0 +1,27 @@
+{
+  "name": "@buoysoftware/anchor-ui",
+  "author": "Damian Galarza <damian@buoysoftware.com>",
+  "version": "0.0.1",
+  "homepage": "https://github.com/BuoySoftware/anchor-ui",
+  "main": "src/index.ts",
+  "license": "MIT",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc -outDir dist",
+    "compile": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@buoysoftware/anchor-layout": "workspace:*"
+  },
+  "devDependencies": {
+    "@types/node": "^18.11.12",
+    "@types/styled-components": "^5.1.26",
+    "@types/styled-system": "^5.1.15",
+    "react": "^18.2.0",
+    "styled-components": "^5.3.6",
+    "styled-system": "^5.1.5",
+    "typescript": "^4.9.4"
+  }
+}
