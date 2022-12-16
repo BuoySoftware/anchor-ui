@@ -13,7 +13,7 @@
     "compile": "tsc --noEmit"
   },
   "dependencies": {
-    "@buoysoftware/anchor-layout": "*"
+    "@buoysoftware/anchor-layout": "^0.1.0"
   },
   "devDependencies": {
     "@types/node": "^18.11.12",
