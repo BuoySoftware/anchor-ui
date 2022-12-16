@@ -1,0 +1,22 @@
+name: specs
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+
+jobs:
+  specs:
+    runs-on: large
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Install Node
+        uses: ./.github/actions/setup-node
+        with:
+          node-version: 16.10.0
+
+      - name: Compile Typescript
+        run: npx lerna run compile
