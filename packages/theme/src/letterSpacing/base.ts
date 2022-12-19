@@ -1,4 +1,4 @@
-import { buildThemeAliases } from "../../utils/buildThemeAliases";
+import { buildThemeAliases } from "../utils/buildThemeAliases";
 
 const baseLetterSpacings = {
   "0.01": "0.01em",

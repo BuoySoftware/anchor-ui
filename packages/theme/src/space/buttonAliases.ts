@@ -1,4 +1,4 @@
-import { buildThemeAliases } from "../../utils/buildThemeAliases";
+import { buildThemeAliases } from "../utils/buildThemeAliases";
 import { base } from "./base";
 
 export const buttonAliases = buildThemeAliases(base, {

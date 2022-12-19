@@ -1,4 +1,4 @@
-import { buildThemeAliases } from "../../utils/buildThemeAliases";
+import { buildThemeAliases } from "../utils/buildThemeAliases";
 import { colors } from "../colors";
 
 const baseBorders = {

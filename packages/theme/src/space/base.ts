@@ -1,6 +1,6 @@
 import { rem } from "polished";
 
-import { buildThemeAliases } from "../../utils/buildThemeAliases";
+import { buildThemeAliases } from "../utils/buildThemeAliases";
 
 const baseSpace = {
   "-68": rem("-68px"),

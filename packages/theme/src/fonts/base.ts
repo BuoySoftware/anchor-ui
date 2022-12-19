@@ -1,4 +1,4 @@
-import { buildThemeAliases } from "../../utils/buildThemeAliases";
+import { buildThemeAliases } from "../utils/buildThemeAliases";
 
 const baseFonts = {
   poppins: "'Poppins', sans-serif",

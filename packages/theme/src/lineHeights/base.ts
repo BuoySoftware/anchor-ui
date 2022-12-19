@@ -1,5 +1,5 @@
 import { rem } from "polished";
-import { buildThemeAliases } from "../../utils/buildThemeAliases";
+import { buildThemeAliases } from "../utils/buildThemeAliases";
 
 const baseLineHeights = {
   "9": rem("9px"),
