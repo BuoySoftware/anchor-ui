@@ -2,14 +2,15 @@
   "name": "@buoysoftware/anchor-layout",
   "version": "0.1.2",
   "license": "MIT",
-  "main": "dist/index.js",
-  "types": "dist/index.d.ts",
+  "main": "src/index.ts",
   "files": [
     "dist"
   ],
   "scripts": {
     "build": "tsc -outDir dist",
-    "compile": "tsc --noEmit"
+    "compile": "tsc --noEmit",
+    "postpack": "clean-package restore",
+    "prepack": "clean-package"
   },
   "dependencies": {
     "styled-components": "^5.3.6",
@@ -19,6 +20,7 @@
     "@types/node": "^18.11.12",
     "@types/styled-components": "^5.1.26",
     "@types/styled-system": "^5.1.15",
+    "clean-package": "^2.2.0",
     "react": "^18.0.0"
   }
 }
