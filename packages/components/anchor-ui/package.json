@@ -3,7 +3,8 @@
   "author": "Damian Galarza <damian@buoysoftware.com>",
   "version": "0.1.1",
   "homepage": "https://github.com/BuoySoftware/anchor-ui",
-  "main": "src/index.ts",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "license": "MIT",
   "files": [
     "dist"
