@@ -1,6 +1,6 @@
 import { rem } from "polished";
 
-import { buildThemeAliases } from "../../utils/buildThemeAliases";
+import { buildThemeAliases } from "../utils/buildThemeAliases";
 
 const baseFontSizes = {
   "8": rem("8px"),

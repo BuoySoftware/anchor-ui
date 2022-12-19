@@ -1,6 +1,6 @@
 import { rem } from "polished";
 
-import { buildThemeAliases } from "../../utils/buildThemeAliases";
+import { buildThemeAliases } from "../utils/buildThemeAliases";
 
 const baseBorderWidths = {
   0: rem("0px"),

@@ -1,6 +1,6 @@
 import { rgba } from "polished";
 
-import { buildThemeAliases } from "../../utils/buildThemeAliases";
+import { buildThemeAliases } from "../utils/buildThemeAliases";
 
 const NAVY = "#0B1D2D";
 
