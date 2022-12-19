@@ -20,6 +20,10 @@ jobs:
         uses: BuoySoftware/github-actions/setup-node@main
         with:
           node-version: ${{ env.NODE_VERSION }}
+          install-dependencies: false
+
+      - name: Boostrap lerna
+        run: npx lerna bootstrap
 
       - name: Compile Typescript
         run: npx lerna run compile
