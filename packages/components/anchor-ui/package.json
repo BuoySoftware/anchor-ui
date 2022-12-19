@@ -1,7 +1,7 @@
 {
   "name": "@buoysoftware/anchor-ui",
   "author": "Damian Galarza <damian@buoysoftware.com>",
-  "version": "0.1.3",
+  "version": "0.2.0",
   "homepage": "https://github.com/BuoySoftware/anchor-ui",
   "main": "src/index.ts",
   "license": "MIT",
@@ -15,8 +15,8 @@
     "postpack": "clean-package restore"
   },
   "dependencies": {
-    "@buoysoftware/anchor-layout": "*",
-    "@buoysoftware/anchor-theme": "*"
+    "@buoysoftware/anchor-layout": "^0.2.0",
+    "@buoysoftware/anchor-theme": "^0.2.0"
   },
   "devDependencies": {
     "@types/node": "^18.11.12",
