@@ -1,0 +1,25 @@
+name: specs
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+
+env:
+  NODE_VERSION: 16.10.0
+
+jobs:
+  specs:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Install Node
+        uses: BuoySoftware/github-actions/setup-node@main
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+
+      - name: Compile Typescript
+        run: npx lerna run compile
