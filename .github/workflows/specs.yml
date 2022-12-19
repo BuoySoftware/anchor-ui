@@ -6,6 +6,9 @@ on:
       - main
   pull_request:
 
+env:
+  NODE_VERSION: 16.10.0
+
 jobs:
   specs:
     runs-on: ubuntu-latest
@@ -14,9 +17,9 @@ jobs:
       - uses: actions/checkout@v3
 
       - name: Install Node
-        uses: ./.github/actions/setup-node
+        uses: BuoySoftware/github-actions/setup-node@main
         with:
-          node-version: 16.10.0
+          node-version: ${{ env.NODE_VERSION }}
 
       - name: Compile Typescript
         run: npx lerna run compile
