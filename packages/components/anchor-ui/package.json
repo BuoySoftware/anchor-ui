@@ -15,7 +15,8 @@
     "postpack": "clean-package restore"
   },
   "dependencies": {
-    "@buoysoftware/anchor-layout": "^0.1.3"
+    "@buoysoftware/anchor-layout": "*",
+    "@buoysoftware/anchor-theme": "*"
   },
   "devDependencies": {
     "@types/node": "^18.11.12",
