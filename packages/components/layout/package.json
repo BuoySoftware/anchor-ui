@@ -14,7 +14,8 @@
   },
   "dependencies": {
     "styled-components": "^5.3.6",
-    "styled-system": "^5.1.5"
+    "styled-system": "^5.1.5",
+    "@buoysoftware/anchor-theme": "*"
   },
   "devDependencies": {
     "@types/node": "^18.11.12",
