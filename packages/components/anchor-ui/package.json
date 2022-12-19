@@ -1,7 +1,7 @@
 {
   "name": "@buoysoftware/anchor-ui",
   "author": "Damian Galarza <damian@buoysoftware.com>",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "homepage": "https://github.com/BuoySoftware/anchor-ui",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -14,7 +14,7 @@
     "compile": "tsc --noEmit"
   },
   "dependencies": {
-    "@buoysoftware/anchor-layout": "^0.1.1"
+    "@buoysoftware/anchor-layout": "^0.1.2"
   },
   "devDependencies": {
     "@types/node": "^18.11.12",
