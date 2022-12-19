@@ -1,6 +1,6 @@
 {
-  "name": "@buoysoftware/anchor-layout",
-  "version": "0.2.0",
+  "name": "@buoysoftware/anchor-theme",
+  "version": "0.2.3",
   "license": "MIT",
   "main": "src/index.ts",
   "files": [
@@ -13,13 +13,12 @@
     "prepack": "clean-package"
   },
   "dependencies": {
-    "styled-components": "^5.3.6",
-    "styled-system": "^5.1.5"
+    "polished": "^4.2.2",
+    "styled-components": "^5.3.6"
   },
   "devDependencies": {
     "@types/node": "^18.11.12",
     "@types/styled-components": "^5.1.26",
-    "@types/styled-system": "^5.1.15",
     "clean-package": "^2.2.0",
     "react": "^18.0.0"
   }
