@@ -26,9 +26,11 @@ jobs:
           install-dependencies: false
 
       - name: Boostrap lerna
-        run: npx lerna bootstrap
+        run: |
+          npm ci
+          npx lerna bootstrap
 
       - name: Deploy
         env:
           GH_TOKEN: ${{ github.actor }}:${{ secrets.GITHUB_TOKEN }}
-        run: npm run deploy-storybook -- --ci
+        run: npm run deploy-storybook -- --ci --dry-run
