@@ -1,0 +1,27 @@
+name: storybook
+
+on:
+  workflow_run:
+    workflows: ["specs"]
+    branches: [main]
+    types:
+      - completed
+env:
+  NODE_VERSION: 16.10.0
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Install Node
+        uses: BuoySoftware/github-actions/setup-node@main
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+
+      - name: Deploy
+        env:
+          GH_TOKEN: ${{ github.actor }}:${{ secrets.GITHUB_TOKEN }}
+        run: yarn deploy-storybook -- --ci

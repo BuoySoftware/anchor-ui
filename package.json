@@ -14,6 +14,7 @@
     "@storybook/builder-webpack4": "^6.5.14",
     "@storybook/manager-webpack4": "^6.5.14",
     "@storybook/react": "^6.5.14",
+    "@storybook/storybook-deployer": "^2.8.16",
     "@storybook/testing-library": "^0.0.13",
     "@typescript-eslint/eslint-plugin": "^5.46.1",
     "@typescript-eslint/parser": "^5.46.1",
@@ -39,11 +40,12 @@
   },
   "scripts": {
     "build": "yarn lerna run build",
-    "compile": "yarn lerna run compile",
-    "publish-build": "yarn build && yarn lerna publish",
     "build-storybook": "build-storybook",
+    "compile": "yarn lerna run compile",
     "deploy-storybook": "storybook-to-ghpages",
     "lint": "eslint packages/**/**/src --ext .ts,.tsx --config .eslintrc",
+    "lint": "eslint packages/**/**/src --ext .ts,.tsx --config .eslintrc",
+    "publish-build": "yarn build && yarn lerna publish",
     "storybook": "start-storybook -p 6006"
   }
 }
