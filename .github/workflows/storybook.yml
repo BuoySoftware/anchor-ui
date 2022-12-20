@@ -1,0 +1,32 @@
+name: storybook
+
+on:
+  # For testing
+  pull_request:
+
+  workflow_run:
+    workflows: ["specs"]
+    branches: [main]
+    types:
+      - completed
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Install Node
+        uses: BuoySoftware/github-actions/setup-node@main
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+          install-dependencies: false
+
+      - name: Boostrap lerna
+        run: npx lerna bootstrap
+
+      - name: Deploy
+        env:
+          GH_TOKEN: ${{ github.actor }}:${{ secrets.GITHUB_TOKEN }}
+        run: npm run deploy-storybook -- --ci
