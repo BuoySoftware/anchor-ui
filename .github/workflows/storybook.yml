@@ -9,6 +9,8 @@ on:
     branches: [main]
     types:
       - completed
+env:
+  NODE_VERSION: 16.10.0
 
 jobs:
   deploy:
