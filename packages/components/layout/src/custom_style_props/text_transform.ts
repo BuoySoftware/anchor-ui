@@ -1,6 +1,6 @@
 import { style } from "styled-system";
 
-interface OwnProps {
+export interface TextTransformProps {
   textTransform?:
     | "capitalize"
     | "uppercase"
@@ -9,8 +9,6 @@ interface OwnProps {
     | "full-width"
     | "full-size-kana";
 }
-
-export type TextTransformProps = OwnProps;
 
 export const textTransform = style({
   prop: "textTransform",
