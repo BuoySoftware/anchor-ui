@@ -24,11 +24,14 @@ import {
   TypographyProps,
 } from "styled-system";
 
+import { listStyle, ListStyleProps } from "./custom_style_props/list_style";
+
 export type ElementStructuralProps = BorderProps &
   FlexboxProps &
   FlexGrowProps &
   GridProps &
   LayoutProps &
+  ListStyleProps &
   PositionProps &
   SpaceProps;
 
@@ -49,6 +52,7 @@ export const elementCss = css`
   ${flexGrow}
   ${grid};
   ${layout};
+  ${listStyle};
   ${position};
   ${shadow};
   ${space};
