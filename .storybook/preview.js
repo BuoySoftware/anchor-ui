@@ -4,7 +4,6 @@ export const parameters = {
       order: [
         "Typography",
         ["Introduction", "Components", ["Heading", "Subheading", "Body"]],
-        "Layout",
       ],
     },
   },

@@ -9,7 +9,6 @@ import { inputAliases, InputAliases } from "./inputAliases";
 import { modalAliases, ModalAliases } from "./modalAliases";
 import { tableAliases, TableAliases } from "./tableAliases";
 import { tdAliases, TdAliases } from "./tdAliases";
-import { textAliases, TextAliases } from "./textAliases";
 
 export interface Colors extends Base {
   buttonBackground: ButtonBackgroundAliases;
@@ -19,7 +18,6 @@ export interface Colors extends Base {
   modal: ModalAliases;
   table: TableAliases;
   td: TdAliases;
-  text: TextAliases;
 }
 
 export const colors: Colors = {
@@ -31,5 +29,4 @@ export const colors: Colors = {
   modal: modalAliases,
   table: tableAliases,
   td: tdAliases,
-  text: textAliases,
 };
