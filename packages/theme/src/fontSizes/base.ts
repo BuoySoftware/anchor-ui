@@ -3,6 +3,14 @@ import { rem } from "polished";
 import { buildThemeAliases } from "../utils/buildThemeAliases";
 
 const baseFontSizes = {
+  "font-size-700": rem("40px"),
+  "font-size-600": rem("32px"),
+  "font-size-500": rem("28px"),
+  "font-size-400": rem("24px"),
+  "font-size-300": rem("20px"),
+  "font-size-200": rem("16px"),
+  "font-size-100": rem("14px"),
+  "font-size-75": rem("12px"),
   "8": rem("8px"),
   "9": rem("9px"),
   "10": rem("10px"),

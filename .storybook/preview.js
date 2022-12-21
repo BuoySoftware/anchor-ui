@@ -1,9 +1,25 @@
 export const parameters = {
-  actions: { argTypesRegex: "^on[A-Z].*" },
+  options: {
+    storySort: {
+      order: [
+        "Typography",
+        ["Introduction", "Components", ["Heading", "Subheading", "Body"]],
+        "Layout",
+      ],
+    },
+  },
   controls: {
+    actions: { argTypesRegex: "^on[A-Z].*" },
     matchers: {
       color: /(background|color)$/i,
       date: /Date$/,
     },
   },
-}
+};
+
+export const argTypes = {
+  theme: { table: { disable: true } },
+  ref: { table: { disable: true } },
+  listStyle: { table: { disable: true } },
+  forwardedAs: { table: { disable: true } },
+};
