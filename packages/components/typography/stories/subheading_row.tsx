@@ -1,4 +1,4 @@
-import { Element } from "@buoysoftware/anchor-layout";
+import { Box } from "@buoysoftware/anchor-layout";
 import { theme } from "@buoysoftware/anchor-theme";
 import { remToPx, stripUnit } from "polished";
 
@@ -21,7 +21,7 @@ export const SubheadingRow: React.FC<RowProps> = ({
   const token = SUBHEADING_TOKEN_MAPPING[size];
 
   return (
-    <Element as="tr" pt="l">
+    <Box as="tr" pt="l">
       <Subheading size={size} py="l" as="td">
         Subheading - {size.toUpperCase()}
       </Subheading>
@@ -35,6 +35,6 @@ export const SubheadingRow: React.FC<RowProps> = ({
       <Td>Regular (400)</Td>
       <Td>{stripUnit(remToPx(theme.lineHeights[token]))}</Td>
       <Td>0.1rem</Td>
-    </Element>
+    </Box>
   );
 };

@@ -1,0 +1,31 @@
+import { Canvas, Story } from '@storybook/addon-docs';
+import { Box as BoxComponent } from "../src";
+
+<Meta title="Layout / Box" component={BoxComponent}
+  argTypes={{
+    as: {
+      name: "as",
+      options: ["div", "p", "section", "header", "nav"]
+    }
+  }}
+/>
+
+export const Template = (args) => <BoxComponent {...args}>I am a box!</BoxComponent>
+
+# Box
+
+The Box component is the most abstract component upon which all other components are built in AnchorUI. By default, the Box renders a `div` element.
+
+## Import
+
+```javascript
+import { Box } from "@buoysoftware/anchor-ui";
+```
+
+## Usage
+
+<Canvas>
+  <Story args={{ bg: "orange", p: "25px" }} name="Box">
+    {Template.bind({})}
+  </Story>
+</Canvas>
