@@ -13,6 +13,7 @@
     "@storybook/builder-webpack4": "^6.5.14",
     "@storybook/manager-webpack4": "^6.5.14",
     "@storybook/react": "^6.5.14",
+    "@storybook/storybook-deployer": "^2.8.16",
     "@storybook/testing-library": "^0.0.13",
     "@typescript-eslint/eslint-plugin": "^5.46.1",
     "@typescript-eslint/parser": "^5.46.1",
@@ -36,6 +37,7 @@
   "scripts": {
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
-    "lint": "eslint packages/**/**/src --ext .ts,.tsx --config .eslintrc"
+    "lint": "eslint packages/**/**/src --ext .ts,.tsx --config .eslintrc",
+    "deploy-storybook": "storybook-to-ghpages"
   }
 }
