@@ -6,12 +6,6 @@ import {
   BorderProps,
   color,
   ColorProps,
-  flexbox,
-  FlexboxProps,
-  flexGrow,
-  FlexGrowProps,
-  grid,
-  GridProps,
   layout,
   LayoutProps,
   position,
@@ -20,27 +14,19 @@ import {
   ShadowProps,
   space,
   SpaceProps,
-  typography,
-  TypographyProps,
 } from "styled-system";
 
 import { listStyle, ListStyleProps } from "./custom_style_props/list_style";
 
-export type ElementStructuralProps = BorderProps &
-  FlexboxProps &
-  FlexGrowProps &
-  GridProps &
+export type BoxStructuralProps = BorderProps &
   LayoutProps &
   ListStyleProps &
   PositionProps &
   SpaceProps;
 
-export type ElementStylisticProps = BackgroundProps &
-  ColorProps &
-  ShadowProps &
-  TypographyProps;
+export type BoxStylisticProps = BackgroundProps & ColorProps & ShadowProps;
 
-export type ElementProps = ElementStructuralProps & ElementStylisticProps;
+export type BoxProps = BoxStructuralProps & BoxStylisticProps;
 
 export const elementCss = css`
   box-sizing: border-box;
@@ -48,17 +34,13 @@ export const elementCss = css`
   ${background};
   ${border};
   ${color};
-  ${flexbox};
-  ${flexGrow}
-  ${grid};
   ${layout};
   ${listStyle};
   ${position};
   ${shadow};
   ${space};
-  ${typography};
 `;
 
-export const Element = styled.div<ElementProps>`
+export const Box = styled.div<BoxProps>`
   ${elementCss}
 `;

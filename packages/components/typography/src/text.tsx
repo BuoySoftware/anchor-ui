@@ -1,5 +1,6 @@
 import styled from "styled-components";
-import { Element, ElementProps } from "@buoysoftware/anchor-layout";
+import { Box, BoxProps } from "@buoysoftware/anchor-layout";
+import { typography, TypographyProps } from "styled-system";
 
 import {
   textTransform,
@@ -12,13 +13,17 @@ export interface LegacyHtmlProps {
   width?: string;
 }
 
-export type TextProps = ElementProps & TextTransformProps & LegacyHtmlProps;
+export type TextProps = BoxProps &
+  TypographyProps &
+  TextTransformProps &
+  LegacyHtmlProps;
 
-export const Text = styled(Element)<TextProps>`
+export const Text = styled(Box)<TextProps>`
   font-family: -apple-system, BlinkMacSystemFont, San Francisco, Segoe UI,
     Roboto, Helvetica Neue, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 
+  ${typography}
   ${textTransform}
 `;
