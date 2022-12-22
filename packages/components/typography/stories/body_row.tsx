@@ -1,4 +1,4 @@
-import { Element } from "@buoysoftware/anchor-layout";
+import { Box } from "@buoysoftware/anchor-layout";
 import { theme } from "@buoysoftware/anchor-theme";
 import { remToPx, stripUnit } from "polished";
 
@@ -15,7 +15,7 @@ export const BodyRow: React.FC<RowProps> = ({ size }): React.ReactElement => {
   const token = BODY_TOKEN_MAPPING[size];
 
   return (
-    <Element as="tr" pt="l">
+    <Box as="tr" pt="l">
       <Body size={size} py="l" as="td">
         Body - {size.toUpperCase()}
       </Body>
@@ -29,6 +29,6 @@ export const BodyRow: React.FC<RowProps> = ({ size }): React.ReactElement => {
       <Td>Bold (700)</Td>
       <Td>{stripUnit(remToPx(theme.lineHeights[token]))}</Td>
       <Td>--</Td>
-    </Element>
+    </Box>
   );
 };

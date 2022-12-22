@@ -1,0 +1,34 @@
+import { Canvas, Story } from '@storybook/addon-docs';
+import { Box, Grid } from "../src";
+
+<Meta title="Layout / Grid" component={Grid} />
+
+export const Template = (args) => {
+  return (
+    <Grid {...args}>
+      <Box height="50px" bg="teal">Box 1</Box>
+      <Box height="50px" bg="tomato">Box 2</Box>
+      <Box height="50px" bg="yellow">Box 3</Box>
+      <Box height="50px" bg="orange">Box 4</Box>
+      <Box height="50px" bg="blue">Box 5</Box>
+      <Box height="50px" bg="green">Box 6</Box>
+    </Grid>
+  );
+};
+
+# Grid
+
+## Import
+
+```javascript
+import { Grid } from "@buoysoftware/anchor-ui";
+```
+
+## Usage
+
+<Canvas>
+  <Story name="Grid" args={{
+    gridTemplateColumns: "repeat(3, 1fr)",
+    gridGap: "20px"
+  }}>{Template.bind({})}</Story>
+</Canvas>

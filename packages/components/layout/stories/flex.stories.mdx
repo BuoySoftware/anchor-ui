@@ -1,0 +1,45 @@
+import { Canvas, Story } from '@storybook/addon-docs';
+import { Box, Flex } from "../src";
+
+<Meta title="Layout / Flex" component={Flex} 
+  argTypes={{
+    alignItems: {
+      control: "select",
+      options: ["normal", "stretch", "center", "start", "end", "flex-start", "flex-end"],
+    },
+    flexDirection: {
+      control: "select",
+      options: ["row", "column", "row-reverse", "column-reverse"],
+    },
+    justifyContent: {
+      control: "select",
+      options: ["normal", "center", "start", "end", "flex-start", "flex-end", "left", "right", "space-between", "space-around", "space-evenly", "stretch"]
+    }
+  }}
+/>
+
+export const Template = (args) => {
+  return (
+    <Flex {...args}>
+      <Box height="100px" width="100px" bg="teal">Box 1</Box>
+      <Box height="100px" width="30px" bg="tomato">Box 2</Box>
+      <Box height="100px" width="150px" bg="yellow">Box 3</Box>
+    </Flex>
+  );
+}
+
+# Flex
+
+Flex is Box with display set to flex and exposes properties to control the layout of the flex content within it.
+
+## Import
+
+```javascript
+import { Flex } from "@buoysoftware/anchor-ui";
+```
+
+## Usage
+
+<Canvas>
+  <Story name="Flex">{Template.bind({})}</Story>
+</Canvas>

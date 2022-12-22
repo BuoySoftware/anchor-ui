@@ -1,4 +1,4 @@
-import { Element } from "@buoysoftware/anchor-layout";
+import { Box } from "@buoysoftware/anchor-layout";
 import { theme } from "@buoysoftware/anchor-theme";
 import { remToPx, stripUnit } from "polished";
 
@@ -17,7 +17,7 @@ export const HeadingRow: React.FC<RowProps> = ({
   const token = HEADING_TOKEN_MAPPING[size];
 
   return (
-    <Element as="tr" pt="l">
+    <Box as="tr" pt="l">
       <Heading size={size} py="l" as="td">
         Heading - {size.toUpperCase()}
       </Heading>
@@ -31,6 +31,6 @@ export const HeadingRow: React.FC<RowProps> = ({
       <Td>Semibold (600)</Td>
       <Td>{stripUnit(remToPx(theme.lineHeights[token]))}</Td>
       <Td>--</Td>
-    </Element>
+    </Box>
   );
 };

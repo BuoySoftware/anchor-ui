@@ -6,6 +6,8 @@ import {
   BorderProps,
   color,
   ColorProps,
+  flexGrow,
+  FlexGrowProps,
   layout,
   LayoutProps,
   position,
@@ -19,6 +21,7 @@ import {
 import { listStyle, ListStyleProps } from "./custom_style_props/list_style";
 
 export type BoxStructuralProps = BorderProps &
+  FlexGrowProps &
   LayoutProps &
   ListStyleProps &
   PositionProps &
@@ -28,12 +31,13 @@ export type BoxStylisticProps = BackgroundProps & ColorProps & ShadowProps;
 
 export type BoxProps = BoxStructuralProps & BoxStylisticProps;
 
-export const elementCss = css`
+export const boxCss = css`
   box-sizing: border-box;
 
   ${background};
   ${border};
   ${color};
+  ${flexGrow};
   ${layout};
   ${listStyle};
   ${position};
@@ -42,5 +46,5 @@ export const elementCss = css`
 `;
 
 export const Box = styled.div<BoxProps>`
-  ${elementCss}
+  ${boxCss}
 `;
