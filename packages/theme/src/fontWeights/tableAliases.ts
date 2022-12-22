@@ -2,12 +2,12 @@ import { buildThemeAliases } from "../utils/buildThemeAliases";
 import { base } from "./base";
 
 const deprecatedTableAliases = buildThemeAliases(base, {
-  th: "600",
+  th: "semibold",
 });
 
 const defaultAliases = buildThemeAliases(base, {
-  td: "500",
-  th: "600",
+  td: "regular",
+  th: "semibold",
 });
 
 export const tableAliases = {

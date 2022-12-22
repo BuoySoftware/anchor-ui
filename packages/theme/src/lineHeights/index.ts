@@ -1,11 +1,7 @@
 import { Base, base } from "./base";
-import { TableAliases, tableAliases } from "./tableAliases";
 
-export interface LineHeights extends Base {
-  table: TableAliases;
-}
+export type LineHeights = Base;
 
 export const lineHeights = {
   ...base,
-  table: tableAliases,
 };
