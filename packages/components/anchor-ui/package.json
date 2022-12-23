@@ -17,6 +17,7 @@
   "dependencies": {
     "@buoysoftware/anchor-layout": "^0.3.0",
     "@buoysoftware/anchor-theme": "^0.3.0",
+    "@buoysoftware/anchor-nav": "*",
     "@buoysoftware/anchor-typography": "^0.3.0"
   },
   "devDependencies": {
