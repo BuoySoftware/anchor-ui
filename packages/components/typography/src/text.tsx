@@ -27,3 +27,7 @@ export const Text = styled(Box)<TextProps>`
   ${typography}
   ${textTransform}
 `;
+
+Text.defaultProps = {
+  color: "text.primary",
+};
