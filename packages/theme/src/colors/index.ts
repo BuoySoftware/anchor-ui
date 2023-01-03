@@ -1,32 +1,20 @@
 import { base, Base } from "./base";
-import {
-  buttonBackgroundAliases,
-  ButtonBackgroundAliases,
-} from "./buttonBackgroundAliases";
-import { buttonTextAliases, ButtonTextAliases } from "./buttonTextAliases";
-import { calendarAliases, CalendarAliases } from "./calendarAliases";
-import { inputAliases, InputAliases } from "./inputAliases";
-import { modalAliases, ModalAliases } from "./modalAliases";
-import { tableAliases, TableAliases } from "./tableAliases";
-import { tdAliases, TdAliases } from "./tdAliases";
+import { backgroundAliases, BackgroundAliases } from "./backgroundAliases";
+import { borderAliases, BorderAliases } from "./borderAliases";
+import { interactiveAliases, InteractiveAliases } from "./interactiveAliases";
+import { textAliases, TextAliases } from "./textAliases";
 
 export interface Colors extends Base {
-  buttonBackground: ButtonBackgroundAliases;
-  buttonText: ButtonTextAliases;
-  calendar: CalendarAliases;
-  input: InputAliases;
-  modal: ModalAliases;
-  table: TableAliases;
-  td: TdAliases;
+  background: BackgroundAliases;
+  border: BorderAliases;
+  text: TextAliases;
+  interactive: InteractiveAliases;
 }
 
 export const colors: Colors = {
   ...base,
-  buttonBackground: buttonBackgroundAliases,
-  buttonText: buttonTextAliases,
-  calendar: calendarAliases,
-  input: inputAliases,
-  modal: modalAliases,
-  table: tableAliases,
-  td: tdAliases,
+  background: backgroundAliases,
+  border: borderAliases,
+  text: textAliases,
+  interactive: interactiveAliases,
 };

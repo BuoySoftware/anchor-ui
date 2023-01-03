@@ -1,59 +1,78 @@
-import { rgba } from "polished";
-
 import { buildThemeAliases } from "../utils/buildThemeAliases";
 
-const NAVY = "#0B1D2D";
-
-const baseColors = {
-  amber: "#FFCB69",
-  aqua: "#63B7CA",
-  black: "#000000",
-  blue: "#4361EE",
-  blueLight: "#ECF0FC",
-  charcoal: "#979DAC",
-  clementine: "#FF9D6C",
-  cloud: "#F2F2F2",
-  coral: "#EA8689",
-  gray: "#9B9B9B",
-  grayLight: "#E2E2E2",
-  green: "#8DD4BD",
-  greenLight: "#EFFAF6",
-  greenTransparent: "rgba(95, 201, 165, 0.1)",
-  magenta: "#9E0059",
-  magentaLight: "#EFD6E4",
-  mauve: "#9C89B8",
-  navy: NAVY,
-  navyTransparent: rgba(NAVY, 0.8),
-  none: "none",
-  offWhite: "#F9F9F9",
-  olive: "#AABA78",
-  rose: "#BF5F7D",
-  rust: "#C87D57",
-  slate: "#7BA0C4",
-  taupe: "#DAB38D",
-  teal: "#509EA7",
+export const baseColors = {
+  grey100: "#101112",
+  grey90: "#2B2D2F",
+  grey80: "#46494D",
+  grey70: "#62666A",
+  grey60: "#7F8387",
+  grey50: "#9CA1A5",
+  grey40: "#BABEC3",
+  grey30: "#D9DDE1",
+  grey20: "#EBEDF0",
+  grey10: "#F5F6F7",
+  grey05: "#FAFBFC",
   white: "#FFFFFF",
+
+  blue100: "#0A1935",
+  blue90: "#0B2046",
+  blue80: "#102C60",
+  blue70: "#174291",
+  blue60: "#1E54B7",
+  blue50: "#276EF1",
+  blue40: "#5B91F4",
+  blue30: "#A0BFF9",
+  blue20: "#D4E2FC",
+  blue10: "#EEF3FE",
+
+  green100: "#0F2E1D",
+  green90: "#133723",
+  green80: "#1C472F",
+  green70: "#2B6B46",
+  green60: "#2E8554",
+  green50: "#3AA76D",
+  green40: "#73C496",
+  green30: "#AEDDC2",
+  green20: "#DAF0E3",
+  green10: "#F0F9F4",
+
+  yellow100: "#392A0B",
+  yellow90: "#503B12",
+  yellow80: "#664D1B",
+  yellow70: "#997328",
+  yellow60: "#BC8B2C",
+  yellow50: "#FFC043",
+  yellow40: "#FFD279",
+  yellow30: "#FFE3AC",
+  yellow20: "#FFF2D9",
+  yellow10: "#FFFAF0",
+
+  red100: "#21130D",
+  red90: "#481912",
+  red80: "#6B1F14",
+  red70: "#942619",
+  red60: "#C73624",
+  red50: "#E75F4D",
+  red40: "#ED958A",
+  red30: "#F0BEB6",
+  red20: "#F5DDDA",
+  red10: "#FAF0F0",
 };
 
-const baseAliases = buildThemeAliases(baseColors, {
-  acceptableBg: "greenLight",
-  acceptableBorder: "green",
-  consigneeActive: "olive",
-  consigneeInactive: "grayLight",
-  danger: "magenta",
-  donorStatusActive: "blue",
-  donorStatusDeferred: "magenta",
-  donorStatusDeferredPermanently: "magenta",
-  donorStatusInactive: "gray",
-  donorStatusNew: "navy",
-  sortSorted: "black",
-  sortUnsorted: "gray",
-  tab: "navy",
-  textDefault: "navy",
-  errorBg: "magentaLight",
-  successBg: "greenLight",
-  unacceptableBg: "magentaLight",
-  unacceptableBorder: "magenta",
+export const baseAliases = buildThemeAliases(baseColors, {
+  acceptableBg: "green60", // Deprecated, use background.success
+  acceptableBorder: "green60", // Deprecated use border.success
+  backgroundCritical: "red60",
+  backgroundSuccess: "green60",
+  consigneeActive: "green20",
+  consigneeInactive: "grey40",
+  critical: "red40",
+  danger: "red40", // Deprecated, use critical
+  errorBg: "red60", // Deprecated use background.critical
+  successBg: "green60", // Deprecated use background.success
+  textDefault: "grey100", // Deprecated use text.primary
+  unacceptableBg: "red60", // Deprecated use background.ritical
+  unacceptableBorder: "red60", // Deprecated use border.critical
 });
 
 export const base = {
