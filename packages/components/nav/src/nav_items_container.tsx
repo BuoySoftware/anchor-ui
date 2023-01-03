@@ -5,7 +5,7 @@ import { NavItem } from "./nav_item";
 
 export const NavItemsContainer = styled((props) => (
   <Flex
-    forwardedAs="ul"
+    as="ul"
     alignItems="center"
     list-style="none"
     height="100%"
