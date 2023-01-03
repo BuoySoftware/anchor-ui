@@ -7,7 +7,8 @@
     "dist"
   ],
   "scripts": {
-    "build": "tsc -outDir dist",
+    "build": "tsc -outDir dist && npm run copy-files",
+    "copy-files": "cp ./src/logo.png ./dist",
     "compile": "tsc --noEmit",
     "postpack": "clean-package restore",
     "prepack": "clean-package"
