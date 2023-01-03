@@ -24,7 +24,7 @@ export default {
   ],
 };
 
-export const Basic = (args) => {
+export const Basic = () => {
   return (
     <Nav>
       <NavLogo />
@@ -32,7 +32,7 @@ export const Basic = (args) => {
   );
 };
 
-export const Tabs = (args) => {
+export const Tabs = () => {
   const [currentPage, setCurrentPage] = useState("page1");
   const onClick = (e): void => {
     e.preventDefault();

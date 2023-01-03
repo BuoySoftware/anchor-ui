@@ -7,6 +7,8 @@ interface OwnProps {
   active?: boolean;
 }
 
+type NavItemProps = OwnProps & FlexProps;
+
 export const NavItem = styled(({ active = false, children, ...props }) => {
   return (
     <Flex
@@ -21,7 +23,7 @@ export const NavItem = styled(({ active = false, children, ...props }) => {
       <Subheading size="m">{children}</Subheading>
     </Flex>
   );
-})<FlexProps>`
+})<NavItemProps>`
   text-decoration: none;
   transition: opacity 0.1s ease-in-out, border-color 0.3s ease-in-out;
 
