@@ -3,13 +3,18 @@ import styled from "styled-components";
 import { Flex, FlexProps } from "@buoysoftware/anchor-layout";
 import { Subheading } from "@buoysoftware/anchor-typography";
 
-export const NavItem = styled(({ children, ...props }) => {
+interface OwnProps {
+  active?: boolean;
+}
+
+export const NavItem = styled(({ active = false, children, ...props }) => {
   return (
     <Flex
       alignItems="center"
+      borderBottom={active ? "3SolidBlue" : "3px solid transparent"}
       display="flex"
       height="100%"
-      px="xxl"
+      mx="xxl"
       py="l"
       {...props}
     >
@@ -18,7 +23,7 @@ export const NavItem = styled(({ children, ...props }) => {
   );
 })<FlexProps>`
   text-decoration: none;
-  transition: opacity 0.1s ease-in-out;
+  transition: opacity 0.1s ease-in-out, border-color 0.3s ease-in-out;
 
   a {
     text-decoration: none;
