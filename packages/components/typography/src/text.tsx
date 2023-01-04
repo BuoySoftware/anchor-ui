@@ -7,6 +7,11 @@ import {
   TextTransformProps,
 } from "./custom_style_props/text_transform";
 
+import {
+  textDecoration,
+  TextDecorationProps,
+} from "./custom_style_props/text_decoration";
+
 export interface LegacyHtmlProps {
   color?: string;
   height?: string;
@@ -16,6 +21,7 @@ export interface LegacyHtmlProps {
 export type TextProps = BoxProps &
   TypographyProps &
   TextTransformProps &
+  TextDecorationProps &
   LegacyHtmlProps;
 
 export const Text = styled(Box)<TextProps>`
@@ -26,6 +32,7 @@ export const Text = styled(Box)<TextProps>`
 
   ${typography}
   ${textTransform}
+  ${textDecoration}
 `;
 
 Text.defaultProps = {
