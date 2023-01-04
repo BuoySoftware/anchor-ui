@@ -1,0 +1,33 @@
+import { Canvas, Story } from "@storybook/addon-docs";
+import { DropdownMenu, DropdownMenuList, DropdownMenuItem } from "../src";
+
+<Meta
+  title="Components / Dropdown Menu"
+  component={DropdownMenu}
+  parameters={{ layout: "centered" }}
+/>
+
+export const Template = (args) => (
+  <DropdownMenu label="Actions" {...args}>
+    <DropdownMenuList>
+      <DropdownMenuItem>Item 1</DropdownMenuItem>
+      <DropdownMenuItem>Item 2</DropdownMenuItem>
+      <DropdownMenuItem>Item 3</DropdownMenuItem>
+      <DropdownMenuItem>Item 4</DropdownMenuItem>
+    </DropdownMenuList>
+  </DropdownMenu>
+);
+
+# Action Bar
+
+## Import
+
+```javascript
+import { DropdownMenu, DropdownMenuList, DropdownMenuItem } from "@buoysoftware/anchor-ui";
+```
+
+## Usage
+
+<Canvas>
+  <Story name="Dropdown Menu">{Template.bind({})}</Story>
+</Canvas>

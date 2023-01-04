@@ -1,0 +1,25 @@
+{
+  "name": "@buoysoftware/anchor-dropdown-menu",
+  "version": "0.0.0",
+  "license": "MIT",
+  "main": "src/index.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc -outDir dist",
+    "compile": "tsc --noEmit",
+    "postpack": "clean-package restore",
+    "prepack": "clean-package"
+  },
+  "dependencies": {
+    "@buoysoftware/anchor-layout": "*",
+    "@buoysoftware/anchor-typography": "*",
+    "react-tiny-popover": "^7.2.0"
+  },
+  "devDependencies": {
+    "@types/node": "^18.11.12",
+    "clean-package": "^2.2.0",
+    "react": "^18.0.0"
+  }
+}
