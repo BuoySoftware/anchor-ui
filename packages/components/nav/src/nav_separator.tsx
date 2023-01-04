@@ -8,7 +8,7 @@ export const NavSeparator: React.FC = (): React.ReactElement => {
       my="s"
       display="flex"
       alignSelf="stretch"
-      backgroundColor="grayLight"
+      backgroundColor="#DCDCDC"
     />
   );
 };
