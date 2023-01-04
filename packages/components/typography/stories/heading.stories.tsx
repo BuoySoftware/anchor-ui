@@ -1,6 +1,4 @@
 import { Heading as HeadingComponent } from "../src";
-import { ThemeProvider } from "styled-components";
-import { theme } from "@buoysoftware/anchor-theme";
 
 export default {
   title: "Typography / Components / Heading",
@@ -19,11 +17,9 @@ export default {
 
 export const Heading = ({ content, ...args }) => {
   return (
-    <ThemeProvider theme={theme}>
-      <HeadingComponent size="3xl" {...args}>
-        {content}
-      </HeadingComponent>
-    </ThemeProvider>
+    <HeadingComponent size="3xl" {...args}>
+      {content}
+    </HeadingComponent>
   );
 };
 

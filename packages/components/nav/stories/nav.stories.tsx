@@ -1,27 +1,11 @@
 import { useState } from "react";
-import { ThemeProvider, createGlobalStyle } from "styled-components";
-import { theme } from "@buoysoftware/anchor-theme";
 import { Box } from "@buoysoftware/anchor-layout";
 
 import { Nav, NavLogo, NavSeparator, NavItemsContainer, NavItem } from "../src";
 
-const StorybookPageCSS = createGlobalStyle`
-  .sb-show-main.sb-main-padded {
-    padding: 0;
-  }
-`;
-
 export default {
   component: Nav,
   title: "Components / Nav",
-  decorators: [
-    (Story) => (
-      <ThemeProvider theme={theme}>
-        <StorybookPageCSS />
-        <Story />
-      </ThemeProvider>
-    ),
-  ],
 };
 
 export const Basic = () => {

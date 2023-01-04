@@ -1,3 +1,6 @@
+import { ThemeProvider } from "styled-components";
+import { theme } from "@buoysoftware/anchor-theme";
+
 export const parameters = {
   options: {
     storySort: {
@@ -22,3 +25,11 @@ export const argTypes = {
   listStyle: { table: { disable: true } },
   forwardedAs: { table: { disable: true } },
 };
+
+export const decorators = [
+  (Story) => (
+    <ThemeProvider theme={theme}>
+      <Story />
+    </ThemeProvider>
+  ),
+];
