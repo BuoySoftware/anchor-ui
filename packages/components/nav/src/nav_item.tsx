@@ -13,14 +13,21 @@ export const NavItem = styled(({ active = false, children, ...props }) => {
   return (
     <Flex
       alignItems="center"
-      borderBottom={active ? "3SolidBlue" : "3px solid transparent"}
+      borderBottomStyle="solid"
+      borderBottomWidth="3px"
+      borderBottomColor={active ? "interactive.default" : "transparent"}
       display="flex"
       height="100%"
       mx="xxl"
       py="l"
       {...props}
     >
-      <Subheading size="m">{children}</Subheading>
+      <Subheading
+        color={active ? "interactive.default" : "text.primary"}
+        size="m"
+      >
+        {children}
+      </Subheading>
     </Flex>
   );
 })<NavItemProps>`

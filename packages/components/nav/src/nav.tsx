@@ -8,7 +8,6 @@ export const Nav = styled((props) => {
       as="nav"
       alignItems="center"
       bg="white"
-      borderBottom="1SolidGrayLight"
       display="flex"
       height="navigationBar"
       px="page.gutterX"
