@@ -3,21 +3,18 @@ import { colors } from "../colors";
 
 const baseBorders = {
   none: "none",
-  "1SolidGray": `1px solid ${colors.gray}`,
-  "1SolidGrayLight": `1px solid ${colors.grayLight}`,
-  "2SolidGrayLight": `2px solid ${colors.grayLight}`,
-  "3SolidBlue": `3px solid ${colors.blue}`,
-  "1SolidGreen": `1px solid ${colors.green}`,
-  "1SolidMagenta": `1px solid ${colors.magenta}`,
-  "3SolidMagenta": `3px solid ${colors.magenta}`,
-  "1SolidNavy": `1px solid ${colors.navy}`,
+  "1SolidCritical": `1px solid ${colors.border.critical}`,
+  "1SolidDefault": `1px solid ${colors.border.default}`,
+  "1SolidSubdued": `1px solid ${colors.border.subdued}`,
+  "1SolidSuccess": `1px solid ${colors.border.success}`,
   "1SolidWhite": `1px solid ${colors.white}`,
+  "2SolidSubdued": `2px solid ${colors.border.subdued}`,
 };
 
 const baseAliases = buildThemeAliases(baseBorders, {
-  error: "1SolidMagenta",
-  menu: "1SolidGrayLight",
-  success: "1SolidGreen",
+  critical: "1SolidCritical",
+  error: "1SolidCritical", // Deprecated use critical
+  success: "1SolidSuccess",
 });
 
 export const base = {

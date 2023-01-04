@@ -1,11 +1,5 @@
 import { Base, base } from "./base";
-import { ButtonAliases, buttonAliases } from "./buttonAliases";
 
-export interface Borders extends Base {
-  button: ButtonAliases;
-}
+export type Borders = Base;
 
-export const borders: Borders = {
-  ...base,
-  button: buttonAliases,
-};
+export const borders = base;
