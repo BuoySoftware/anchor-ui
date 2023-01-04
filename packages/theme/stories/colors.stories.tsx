@@ -1,4 +1,3 @@
-import { ThemeProvider } from "styled-components";
 import { get } from "lodash";
 import { readableColor } from "polished";
 import { Box, Flex, Grid } from "@buoysoftware/anchor-layout";
@@ -90,7 +89,7 @@ const DotSwatch: React.FC<{ alias: string }> = ({
 
 export const Colors = () => {
   return (
-    <ThemeProvider theme={theme}>
+    <>
       <Box>
         <Heading as="h2" size="3xl">
           Core Specturms
@@ -215,6 +214,6 @@ export const Colors = () => {
           <DotSwatch alias="border.success" />
         </Grid>
       </Box>
-    </ThemeProvider>
+    </>
   );
 };

@@ -1,6 +1,4 @@
 import { Subheading as SubheadingComponent } from "../src";
-import { ThemeProvider } from "styled-components";
-import { theme } from "@buoysoftware/anchor-theme";
 
 export default {
   title: "Typography / Components / Subheading",
@@ -20,11 +18,9 @@ export default {
 
 export const Subheading = ({ content, ...args }) => {
   return (
-    <ThemeProvider theme={theme}>
-      <SubheadingComponent size="m" {...args}>
-        {content}
-      </SubheadingComponent>
-    </ThemeProvider>
+    <SubheadingComponent size="m" {...args}>
+      {content}
+    </SubheadingComponent>
   );
 };
 

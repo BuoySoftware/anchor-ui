@@ -1,6 +1,4 @@
 import { Body as BodyComponent } from "../src";
-import { ThemeProvider } from "styled-components";
-import { theme } from "@buoysoftware/anchor-theme";
 
 export default {
   title: "Typography / Components / Body",
@@ -19,11 +17,9 @@ export default {
 
 export const Body = ({ content, ...args }) => {
   return (
-    <ThemeProvider theme={theme}>
-      <BodyComponent size="m" {...args}>
-        {content}
-      </BodyComponent>
-    </ThemeProvider>
+    <BodyComponent size="m" {...args}>
+      {content}
+    </BodyComponent>
   );
 };
 
