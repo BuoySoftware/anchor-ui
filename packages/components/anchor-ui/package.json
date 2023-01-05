@@ -16,7 +16,7 @@
   },
   "dependencies": {
     "@buoysoftware/anchor-action-bar": "*",
-    "@buoysoftware/anchor-layout": "*",
+    "@buoysoftware/anchor-layout": "^0.4.0",
     "@buoysoftware/anchor-nav": "*",
     "@buoysoftware/anchor-theme": "*",
     "@buoysoftware/anchor-typography": "*"
@@ -29,5 +29,8 @@
     "react": "^18.2.0",
     "styled-components": "^5.3.6",
     "styled-system": "^5.1.5"
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }
