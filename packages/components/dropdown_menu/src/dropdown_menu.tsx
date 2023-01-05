@@ -2,10 +2,11 @@ import { useState } from "react";
 import { Popover, PopoverProps } from "react-tiny-popover";
 
 import { DropdownMenuButton } from "./dropdown_menu_button";
-import { DropdownMenuList } from "./dropdown_menu_list";
 
 interface OwnProps {
   children: React.ReactNode;
+  icon?: React.ReactNode;
+  iconPosition?: "left" | "right";
   label: string;
 }
 
@@ -16,6 +17,8 @@ const MENU_CONTAINER_OFFSET = 3;
 export const DropdownMenu: React.FC<DropdownMenuProps> = ({
   children,
   label,
+  icon,
+  iconPosition,
   ...popoverProps
 }): React.ReactElement => {
   const [isOpen, setIsOpen] = useState(false);
@@ -36,7 +39,12 @@ export const DropdownMenu: React.FC<DropdownMenuProps> = ({
       positions={["bottom", "top", "left", "right"]}
       {...popoverProps}
     >
-      <DropdownMenuButton label={label} onClick={onClick} />
+      <DropdownMenuButton
+        iconPosition={iconPosition}
+        icon={icon}
+        label={label}
+        onClick={onClick}
+      />
     </Popover>
   );
 };

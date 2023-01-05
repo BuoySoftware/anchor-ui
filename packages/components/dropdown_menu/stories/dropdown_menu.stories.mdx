@@ -1,4 +1,5 @@
 import { Canvas, Story } from "@storybook/addon-docs";
+import { ChevronDown } from "@styled-icons/feather";
 import { DropdownMenu, DropdownMenuList, DropdownMenuItem } from "../src";
 
 <Meta
@@ -7,27 +8,57 @@ import { DropdownMenu, DropdownMenuList, DropdownMenuItem } from "../src";
   parameters={{ layout: "centered" }}
 />
 
-export const Template = (args) => (
-  <DropdownMenu label="Actions" {...args}>
-    <DropdownMenuList>
-      <DropdownMenuItem>Item 1</DropdownMenuItem>
-      <DropdownMenuItem>Item 2</DropdownMenuItem>
-      <DropdownMenuItem>Item 3</DropdownMenuItem>
-      <DropdownMenuItem>Item 4</DropdownMenuItem>
-    </DropdownMenuList>
-  </DropdownMenu>
-);
+export const Template = (args) => {
+  return (
+    <DropdownMenu {...args}>
+      <DropdownMenuList>
+        <DropdownMenuItem>Item 1</DropdownMenuItem>
+        <DropdownMenuItem>Item 2</DropdownMenuItem>
+        <DropdownMenuItem>Item 3</DropdownMenuItem>
+        <DropdownMenuItem>Item 4</DropdownMenuItem>
+      </DropdownMenuList>
+    </DropdownMenu>
+  );
+};
 
 # Action Bar
 
 ## Import
 
 ```javascript
-import { DropdownMenu, DropdownMenuList, DropdownMenuItem } from "@buoysoftware/anchor-ui";
+import {
+  DropdownMenu,
+  DropdownMenuList,
+  DropdownMenuItem,
+} from "@buoysoftware/anchor-ui";
 ```
 
 ## Usage
 
 <Canvas>
-  <Story name="Dropdown Menu">{Template.bind({})}</Story>
+  <Story
+    name="Dropdown Menu"
+    args={{ label: "Actions" }}
+    parameters={{ controls: { exclude: /icon/g } }}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+## Icon
+
+<Canvas>
+  <Story
+    name="Dropdown Menu with Icon"
+    args={{
+      icon: <ChevronDown size="20px" strokeWidth="2px" />,
+      iconPosition: "right",
+      label: "Actions",
+    }}
+    parameters={{
+      controls: { exclude: /icon$/g },
+    }}
+  >
+    {Template.bind({})}
+  </Story>
 </Canvas>

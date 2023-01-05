@@ -10,7 +10,12 @@ export const DropdownMenuList: React.FC<DropdownMenuListProps> = ({
   children,
 }): React.ReactElement => {
   return (
-    <Flex border="1SolidSubdued" borderRadius="4px" flexDirection="column">
+    <Flex
+      border="1SolidSubdued"
+      borderRadius="4px"
+      py="xxs"
+      flexDirection="column"
+    >
       {children}
     </Flex>
   );
