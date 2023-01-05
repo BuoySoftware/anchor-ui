@@ -15,10 +15,11 @@
     "postpack": "clean-package restore"
   },
   "dependencies": {
-    "@buoysoftware/anchor-layout": "^0.4.0",
-    "@buoysoftware/anchor-nav": "^0.4.0",
-    "@buoysoftware/anchor-theme": "^0.4.0",
-    "@buoysoftware/anchor-typography": "^0.4.0"
+    "@buoysoftware/anchor-action-bar": "*",
+    "@buoysoftware/anchor-layout": "*",
+    "@buoysoftware/anchor-nav": "*",
+    "@buoysoftware/anchor-theme": "*",
+    "@buoysoftware/anchor-typography": "*"
   },
   "devDependencies": {
     "@types/node": "^18.11.12",
