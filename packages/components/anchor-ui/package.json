@@ -16,7 +16,7 @@
   },
   "dependencies": {
     "@buoysoftware/anchor-action-bar": "*",
-    "@buoysoftware/anchor-layout": "*",
+    "@buoysoftware/anchor-layout": "^0.4.0",
     "@buoysoftware/anchor-nav": "*",
     "@buoysoftware/anchor-theme": "*",
     "@buoysoftware/anchor-typography": "*"
