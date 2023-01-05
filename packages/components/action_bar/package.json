@@ -13,7 +13,7 @@
     "prepack": "clean-package"
   },
   "dependencies": {
-    "@buoysoftware/anchor-layout": "*"
+    "@buoysoftware/anchor-layout": "^0.4.0"
   },
   "devDependencies": {
     "@types/node": "^18.11.12",
