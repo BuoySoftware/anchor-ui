@@ -6,6 +6,9 @@ import { Nav, NavLogo, NavSeparator, NavItemsContainer, NavItem } from "../src";
 export default {
   component: Nav,
   title: "Components / Nav",
+  parameters: {
+    layout: "fullscreen",
+  },
 };
 
 export const Basic = () => {

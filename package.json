@@ -39,6 +39,7 @@
   },
   "scripts": {
     "build": "yarn lerna run build",
+    "publish-build": "yarn build && yarn lerna publish",
     "build-storybook": "build-storybook",
     "deploy-storybook": "storybook-to-ghpages",
     "lint": "eslint packages/**/**/src --ext .ts,.tsx --config .eslintrc",

@@ -11,6 +11,7 @@ export const DropdownMenuList: React.FC<DropdownMenuListProps> = ({
 }): React.ReactElement => {
   return (
     <Flex
+      bg="white"
       border="1SolidSubdued"
       borderRadius="4px"
       py="xxs"

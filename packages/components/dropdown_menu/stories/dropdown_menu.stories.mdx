@@ -1,6 +1,7 @@
 import { Canvas, Story } from "@storybook/addon-docs";
 import { ChevronDown } from "@styled-icons/feather";
 import { DropdownMenu, DropdownMenuList, DropdownMenuItem } from "../src";
+import { ActionBar } from "@buoysoftware/anchor-action-bar";
 
 <Meta
   title="Components / Dropdown Menu"
@@ -60,5 +61,32 @@ import {
     }}
   >
     {Template.bind({})}
+  </Story>
+</Canvas>
+
+## Within an ActionBar
+
+<Canvas>
+  <Story
+    name="Dropdown Menu in ActionBar"
+    parameters={{
+      controls: { exclude: /icon/g },
+      layout: "fullscreen"
+    }}
+  >
+    <ActionBar justifyContent="flex-end">
+      <DropdownMenu
+        label="Actions"
+        icon={<ChevronDown size="20px" strokeWidth="2px" />}
+        iconPosition="right"
+      >
+        <DropdownMenuList>
+          <DropdownMenuItem>Item 1</DropdownMenuItem>
+          <DropdownMenuItem>Item 2</DropdownMenuItem>
+          <DropdownMenuItem>Item 3</DropdownMenuItem>
+          <DropdownMenuItem>Item 4</DropdownMenuItem>
+        </DropdownMenuList>
+      </DropdownMenu>
+    </ActionBar>
   </Story>
 </Canvas>

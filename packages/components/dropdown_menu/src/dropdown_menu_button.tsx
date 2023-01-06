@@ -16,6 +16,7 @@ export const DropdownMenuButton = React.forwardRef<
 >(({ label, iconPosition, icon, onClick }, ref) => (
   <Heading
     as="a"
+    bg="white"
     border="1SolidDefault"
     borderRadius="4px"
     display="block"
