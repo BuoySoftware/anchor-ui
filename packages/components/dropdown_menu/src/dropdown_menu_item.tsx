@@ -16,6 +16,11 @@ export const DropdownMenuItem = styled(Body).attrs<DropdownMenuItemProps>(
     px: "m",
   })
 )<DropdownMenuItemProps>`
+  a:visited {
+    color: inherit;
+    text-decoration: none;
+  }
+
   &:hover {
     background-color: ${(props) => props.theme.colors.background.hover};
     cursor: pointer;
