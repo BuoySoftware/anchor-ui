@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Box } from "@buoysoftware/anchor-layout";
+import { Heading } from "@buoysoftware/anchor-typography";
 
 import { Nav, NavLogo, NavSeparator, NavItemsContainer, NavItem } from "../src";
 
@@ -48,6 +49,16 @@ export const Tabs = () => {
 
       {currentPage == "page1" && <Box p="xl">Page 1</Box>}
       {currentPage == "page2" && <Box p="xl">Page 2</Box>}
+    </Box>
+  );
+};
+
+export const SubNav = () => {
+  return (
+    <Box>
+      <Nav variant="sub">
+        <Heading size="l">Sub page</Heading>
+      </Nav>
     </Box>
   );
 };

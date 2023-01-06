@@ -2,7 +2,15 @@ import styled from "styled-components";
 
 import { Flex, FlexProps } from "@buoysoftware/anchor-layout";
 
-export const Nav = styled((props) => {
+type Variant = "main" | "sub";
+
+interface OwnProps {
+  variant?: Variant;
+}
+
+type NavProps = FlexProps & OwnProps;
+
+export const Nav = styled(({ variant, ...props }) => {
   return (
     <Flex
       as="nav"
@@ -13,7 +21,12 @@ export const Nav = styled((props) => {
       px="page.gutterX"
       position="relative"
       width="100%"
+      borderBottom={variant === "sub" ? "1SolidSubdued" : "none"}
       {...props}
     />
   );
-})<FlexProps>``;
+})<NavProps>``;
+
+Nav.defaultProps = {
+  variant: "main",
+};
