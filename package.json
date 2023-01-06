@@ -37,6 +37,7 @@
     "typescript": "^4.9.4"
   },
   "scripts": {
+    "build": "yarn lerna run build",
     "build-storybook": "build-storybook",
     "deploy-storybook": "storybook-to-ghpages",
     "lint": "eslint packages/**/**/src --ext .ts,.tsx --config .eslintrc",
