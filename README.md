@@ -12,5 +12,8 @@ yarn add styled-system styled-components @buoysoftware/anchor-ui
 ## Development
 
 The AnchorUI system is a mono repo built and maintained with
-[lerna](https://lerna.js.org/). In order to get started once you've cloned the
-repo run `npx lerna bootstrap` to get started.
+[lerna](https://lerna.js.org/) utilizing [yarn workspaces]. In order to get
+started once you've cloned the repo run `yarn install` from the root to install
+all required dependencies.
+
+[yarn workspaces]: https://yarnpkg.com/features/workspaces
