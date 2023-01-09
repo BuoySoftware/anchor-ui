@@ -2,7 +2,7 @@ import { buildThemeAliases } from "../utils/buildThemeAliases";
 import { base } from "./base";
 
 export const backgroundAliases = buildThemeAliases(base, {
-  default: "grey60",
+  default: "white",
   hover: "grey10",
   pressed: "grey30",
   disabled: "grey05",

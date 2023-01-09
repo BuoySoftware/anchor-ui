@@ -1,0 +1,17 @@
+{
+  "name": "@buoysoftware/anchor-button",
+  "version": "0.0.1",
+  "main": "src/index.ts",
+  "license": "MIT",
+  "dependencies": {
+    "@buoysoftware/anchor-layout": "*",
+    "@buoysoftware/anchor-theme": "*",
+    "@buoysoftware/anchor-typography": "*"
+  },
+  "scripts": {
+    "build": "tsc -outDir dist",
+    "compile": "tsc --noEmit",
+    "postpack": "clean-package restore",
+    "prepack": "clean-package"
+  }
+}
