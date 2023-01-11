@@ -22,4 +22,4 @@ jobs:
           node-version: ${{ env.NODE_VERSION }}
 
       - name: Compile Typescript
-        run: npx lerna run compile
+        run: yarn compile
