@@ -4,11 +4,9 @@ import { theme } from "@buoysoftware/anchor-theme";
 
 export type HeadingSize = "s" | "m" | "l" | "xl" | "2xl" | "3xl";
 
-interface OwnProps {
+export interface HeadingProps extends TextProps {
   size: HeadingSize;
 }
-
-type HeadingProps = TextProps & OwnProps;
 
 export const HEADING_TOKEN_MAPPING: Record<
   HeadingSize,
@@ -22,7 +20,7 @@ export const HEADING_TOKEN_MAPPING: Record<
   s: "font-size-100",
 };
 
-export const Heading = styled(Text).attrs<OwnProps>((props) => ({
+export const Heading = styled(Text).attrs<HeadingProps>((props) => ({
   fontSize: HEADING_TOKEN_MAPPING[props.size],
   fontWeight: "600",
   lineHeight: HEADING_TOKEN_MAPPING[props.size],

@@ -1,0 +1,48 @@
+<Meta
+  title="Forms / Introduction"
+/>
+
+# Forms
+
+In Buoy we have a lot of forms. As such we've built a set of form components
+which relies on convention over configuration to streamline the building and
+maintaining of forms within our system. Our form component system was built with
+the Ruby gem [Simple Form] as inspiration. We have built this on top of
+[react-hook-form] and it's useful to read it's documentation to understand how
+React Hook Form works.
+
+
+## i18n
+
+Our library utilizes the power of [react-i18next] to do look ups for labels,
+placeholders, and errors. The assumption is that these translations exist within
+the namespace called 'forms'.
+
+```
+{
+  "errors": {
+    "date": "Invalid date",
+    "required": "This field is required",
+    "radio": {
+      "required": "This field is required, please make a selection"
+    }
+  },
+  "labels": {
+    "create_shipment": {
+      "consignee": "Who is this shipment for?",
+      "product_type": "What product type is being shipped?"
+    }
+  },
+  "placeholders": {
+    "phone_number": "ex: xxx-xxx-xxxx",
+    "date_field": "ex: mm/dd/yyyy",
+    "registration_address": {
+      "address_1": "ex: 123 Apple Street"
+    }
+  }
+}
+```
+
+[react-hook-form]: https://react-hook-form.com/
+[react-i18next]: https://react.i18next.com/
+[Simple Form]: https://github.com/heartcombo/simple_form
