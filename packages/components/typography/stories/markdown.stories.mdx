@@ -1,0 +1,47 @@
+import { Canvas, Story } from "@storybook/addon-docs";
+
+import { Body, Markdown } from "../src";
+
+<Meta
+  title="Typography / Components / Markdown"
+  component={Markdown}
+  argTypes={{
+    bodySize: { control: "select", options: ["s", "m", "l"] }
+  }}
+  parameters={{
+    layout: "centered",
+    controls: {
+      include: ["markdownText", "bodySize"]
+    }
+  }}
+/>
+
+export const Template = ({ bodySize, markdownText, ...args }) => {
+  return (
+    <Body size={bodySize}>
+      <Markdown {...args}>{markdownText}</Markdown>
+    </Body>
+  );
+}
+
+# Markdown
+
+## Import
+
+```javascript
+import { Markdown } from "@buoysoftware/anchor-ui";
+```
+
+## Usage
+
+<Canvas>
+  <Story
+    name="Markdown"
+    args={{
+      bodySize: "m",
+      markdownText: "I **am** *markdown*"
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>
