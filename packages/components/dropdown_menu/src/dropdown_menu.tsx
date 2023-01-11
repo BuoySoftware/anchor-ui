@@ -1,12 +1,10 @@
-import { useState } from "react";
+import { Button } from "@buoysoftware/anchor-button";
+import { ChevronDown } from "@styled-icons/feather";
 import { Popover, PopoverProps } from "react-tiny-popover";
-
-import { DropdownMenuButton } from "./dropdown_menu_button";
+import { useState } from "react";
 
 interface OwnProps {
   children: React.ReactNode;
-  icon?: React.ReactNode;
-  iconPosition?: "left" | "right";
   label: string;
 }
 
@@ -17,8 +15,6 @@ const MENU_CONTAINER_OFFSET = 3;
 export const DropdownMenu: React.FC<DropdownMenuProps> = ({
   children,
   label,
-  icon,
-  iconPosition,
   ...popoverProps
 }): React.ReactElement => {
   const [isOpen, setIsOpen] = useState(false);
@@ -39,12 +35,14 @@ export const DropdownMenu: React.FC<DropdownMenuProps> = ({
       positions={["bottom", "top", "left", "right"]}
       {...popoverProps}
     >
-      <DropdownMenuButton
-        iconPosition={iconPosition}
-        icon={icon}
-        label={label}
+      <Button
+        icon={<ChevronDown size="20px" strokeWidth="2px" />}
+        iconPosition="right"
         onClick={onClick}
-      />
+        size="l"
+      >
+        {label}
+      </Button>
     </Popover>
   );
 };

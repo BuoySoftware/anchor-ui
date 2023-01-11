@@ -13,14 +13,15 @@
     "prepack": "clean-package"
   },
   "dependencies": {
+    "@buoysoftware/anchor-button": "*",
     "@buoysoftware/anchor-layout": "^0.7.0",
     "@buoysoftware/anchor-typography": "^0.7.0",
+    "@styled-icons/feather": "^10.47.0",
     "@types/styled-components": "^5.1.26",
     "react-tiny-popover": "^7.2.0",
     "styled-components": "^5.3.6"
   },
   "devDependencies": {
-    "@styled-icons/feather": "^10.47.0",
     "@types/node": "^18.11.12",
     "clean-package": "^2.2.0",
     "react": "^18.0.0"
