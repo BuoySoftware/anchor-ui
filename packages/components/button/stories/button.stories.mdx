@@ -1,3 +1,4 @@
+import { ChevronDown, ChevronLeft } from "@styled-icons/feather";
 import { Canvas, Story } from "@storybook/addon-docs";
 
 import { Button } from "../src";
@@ -5,7 +6,12 @@ import { Button } from "../src";
 <Meta
   title="Components / Button"
   component={Button}
-  parameters={{ layout: "centered" }}
+  parameters={{
+    controls: {
+      exclude: /icon/g
+    },
+    layout: "centered"
+  }}
 />
 
 export const Template = (args) => {
@@ -22,12 +28,53 @@ export const Template = (args) => {
 import { Button } from "@buoysoftware/anchor-ui";
 ```
 
-## Usage
+## Basic Usage
 
 <Canvas>
   <Story
     name="Basic"
-    args={{ disabled: false, size: "l", children: "Button", colorScheme: "basic" }}
+    args={{
+      disabled: false,
+      size: "l",
+      children: "Button",
+      colorScheme: "basic" 
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+## Button with Icon Right
+
+<Canvas>
+  <Story
+    name="Icon Right"
+    args={{
+      icon: <ChevronDown size="20px" strokeWidth="2px" />,
+      iconPosition: "right",
+      disabled: false,
+      size: "l",
+      children: "Button",
+      colorScheme: "basic" 
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+## Button with Icon Left
+
+<Canvas>
+  <Story
+    name="Icon Left"
+    args={{
+      icon: <ChevronLeft size="20px" strokeWidth="2px" />,
+      iconPosition: "left",
+      disabled: false,
+      size: "l",
+      children: "Button",
+      colorScheme: "basic"
+    }}
   >
     {Template.bind({})}
   </Story>

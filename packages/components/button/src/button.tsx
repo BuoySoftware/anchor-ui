@@ -4,14 +4,18 @@ import { ColorScheme, InnerButton } from "./inner_button";
 import { StyledButton } from "./styled_button";
 
 type Size = "s" | "l";
+type IconPosition = "left" | "right";
 
-interface OwnProps {
+type OwnProps<T extends React.ReactNode> = {
   children: React.ReactNode;
   colorScheme?: ColorScheme;
+  icon?: T;
+  iconPosition: T extends React.ReactNode ? IconPosition : undefined;
   size?: Size;
-}
+};
 
-type ButtonProps = OwnProps & Omit<FlexProps, "theme" | "color" | "size">;
+type ButtonProps = OwnProps<React.ReactNode> &
+  Omit<FlexProps, "theme" | "color" | "size">;
 
 const HEIGHT_MAPPING: Record<Size, number> = {
   l: 40,
@@ -21,6 +25,8 @@ const HEIGHT_MAPPING: Record<Size, number> = {
 export const Button: React.FC<ButtonProps> = ({
   children,
   colorScheme = "basic",
+  icon,
+  iconPosition,
   size = "l",
   ...props
 }): React.ReactElement => {
@@ -31,12 +37,20 @@ export const Button: React.FC<ButtonProps> = ({
         borderRadius="4px"
         colorScheme={colorScheme}
         height={HEIGHT_MAPPING[size]}
-        px="l"
+        px="m"
         {...props}
       >
-        <Heading as="span" color="inherit" size="s" textDecoration="none">
+        {iconPosition === "left" && icon}
+        <Heading
+          as="span"
+          mx="xs"
+          color="inherit"
+          size="s"
+          textDecoration="none"
+        >
           {children}
         </Heading>
+        {iconPosition === "right" && icon}
       </InnerButton>
     </StyledButton>
   );
