@@ -1,3 +1,4 @@
+import { forwardRef } from "react";
 import { Heading } from "@buoysoftware/anchor-typography";
 import { FlexProps } from "@buoysoftware/anchor-layout";
 import { ColorScheme, InnerButton } from "./inner_button";
@@ -11,6 +12,7 @@ type OwnProps<T extends React.ReactNode> = {
   colorScheme?: ColorScheme;
   icon?: T;
   iconPosition: T extends React.ReactNode ? IconPosition : undefined;
+  onClick?: React.MouseEventHandler;
   size?: Size;
 };
 
@@ -22,16 +24,20 @@ const HEIGHT_MAPPING: Record<Size, number> = {
   s: 28,
 };
 
-export const Button: React.FC<ButtonProps> = ({
-  children,
-  colorScheme = "basic",
-  icon,
-  iconPosition,
-  size = "l",
-  ...props
-}): React.ReactElement => {
-  return (
-    <StyledButton>
+export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
+  (
+    {
+      children,
+      colorScheme = "basic",
+      icon,
+      iconPosition,
+      onClick,
+      size = "l",
+      ...props
+    },
+    ref
+  ): React.ReactElement => (
+    <StyledButton onClick={onClick} ref={ref}>
       <InnerButton
         alignItems="center"
         borderRadius="4px"
@@ -53,5 +59,7 @@ export const Button: React.FC<ButtonProps> = ({
         {iconPosition === "right" && icon}
       </InnerButton>
     </StyledButton>
-  );
-};
+  )
+);
+
+Button.displayName = "Button";
