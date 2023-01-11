@@ -1,0 +1,42 @@
+import { Canvas, Story } from "@storybook/addon-docs";
+import { Flex } from "@buoysoftware/anchor-layout";
+
+import { Radio } from "../src";
+
+<Meta
+  title="Forms / Components / Radio"
+  component={Radio}
+  parameters={{
+    layout: "centered",
+    controls: {
+      include: ["disabled"]
+    }
+  }}
+/>
+
+export const Template = (args) => {
+  return(
+    <Flex as="label" alignItems="center">
+      <Radio name="example" mr="xs" {...args} />
+      Option 1
+    </Flex>
+  );
+}
+
+# Radio
+
+The button is an atom component represent radio buttons with Buoy.
+
+## Import
+
+```javascript
+import { Radio } from "@buoysoftware/anchor-ui";
+```
+
+## Basic Usage
+
+<Canvas>
+ <Story args={{ disabled: false }} name="Radio">
+  {Template.bind({})}
+ </Story>
+</Canvas>

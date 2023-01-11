@@ -1,0 +1,105 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<FieldError /> error field name is missing renders nothing 1`] = `<DocumentFragment />`;
+
+exports[`<FieldError /> error is undefined renders nothing 1`] = `<DocumentFragment />`;
+
+exports[`<FieldError /> error message is provided with a single message renders the provided message 1`] = `
+<DocumentFragment>
+  <div
+    class="sc-bcXHqe jhfmYO"
+    data-testid="error-test-input"
+    id="error-test-input"
+    role="alert"
+  >
+    <div
+      class="sc-bcXHqe sc-hLBbgP sc-eDvSVe dawtXs rKWEz"
+      color="text.critical"
+      font-size="font-size-100"
+      font-style="none"
+      font-weight="400"
+    >
+      <p
+        class="sc-bcXHqe sc-hLBbgP ijfXre dDZkPR"
+        color="text.primary"
+      >
+        Invalid field
+      </p>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`<FieldError /> error message is provided with multiple messages renders all of the provided messages 1`] = `
+<DocumentFragment>
+  <div
+    class="sc-bcXHqe jhfmYO"
+    data-testid="error-test-input"
+    id="error-test-input"
+    role="alert"
+  >
+    <div
+      class="sc-bcXHqe sc-hLBbgP sc-eDvSVe dawtXs rKWEz"
+      color="text.critical"
+      font-size="font-size-100"
+      font-style="none"
+      font-weight="400"
+    >
+      <p
+        class="sc-bcXHqe sc-hLBbgP ijfXre dDZkPR"
+        color="text.primary"
+      >
+        Invalid field
+      </p>
+    </div>
+    <div
+      class="sc-bcXHqe sc-hLBbgP sc-eDvSVe dawtXs rKWEz"
+      color="text.critical"
+      font-size="font-size-100"
+      font-style="none"
+      font-weight="400"
+    >
+      <p
+        class="sc-bcXHqe sc-hLBbgP ijfXre dDZkPR"
+        color="text.primary"
+      >
+        Other error
+      </p>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`<FieldError /> error message with markdown with a single message renders the provided message with markup 1`] = `
+<DocumentFragment>
+  <div
+    class="sc-bcXHqe jhfmYO"
+    data-testid="error-test-input"
+    id="error-test-input"
+    role="alert"
+  >
+    <div
+      class="sc-bcXHqe sc-hLBbgP sc-eDvSVe dawtXs rKWEz"
+      color="text.critical"
+      font-size="font-size-100"
+      font-style="none"
+      font-weight="400"
+    >
+      <p
+        class="sc-bcXHqe sc-hLBbgP ijfXre dDZkPR"
+        color="text.primary"
+      >
+        This is 
+        <strong
+          class="sc-bcXHqe sc-hLBbgP ijfXre ePgUZj"
+          color="text.primary"
+          font-weight="bold"
+        >
+          an error
+        </strong>
+         with markdown
+      </p>
+    </div>
+  </div>
+</DocumentFragment>
+`;

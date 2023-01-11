@@ -1,0 +1,29 @@
+{
+  "name": "@buoysoftware/anchor-form",
+  "version": "0.0.0",
+  "main": "src/index.ts",
+  "license": "MIT",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc -outDir dist",
+    "compile": "tsc --noEmit",
+    "test": "jest",
+    "postpack": "clean-package restore",
+    "prepack": "clean-package"
+  },
+  "dependencies": {
+    "@buoysoftware/anchor-layout": "*",
+    "@buoysoftware/anchor-typography": "*",
+    "i18next": "^22.4.9",
+    "lodash": "*",
+    "react-hook-form": "*",
+    "react-i18next": "*"
+  },
+  "devDependencies": {
+    "jest": "^29.3.1",
+    "ts-jest": "^29.0.4",
+    "ts-node": "^10.9.1"
+  }
+}

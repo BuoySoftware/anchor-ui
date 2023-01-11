@@ -4,14 +4,12 @@ import { theme } from "@buoysoftware/anchor-theme";
 
 export type BodySize = "s" | "m" | "l";
 
-export interface OwnProps {
+export interface BodyProps extends Omit<TextProps, "size"> {
   as?: React.ElementType;
   emphasized?: boolean;
   size: BodySize;
   strong?: boolean;
 }
-
-export type BodyProps = Omit<TextProps, "size"> & OwnProps;
 
 export const BODY_TOKEN_MAPPING: Record<
   BodySize,
