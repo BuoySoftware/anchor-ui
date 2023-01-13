@@ -11,7 +11,7 @@ export const StyledButton = styled.button<BoxProps>`
   border: 2px solid transparent;
   background: transparent;
 
-  &:focus {
+  &:focus-visible {
     background: rgba(255, 255, 255, 0.01);
     border-radius: 4px;
     border-color: rgba(255, 255, 255, 0.01);
