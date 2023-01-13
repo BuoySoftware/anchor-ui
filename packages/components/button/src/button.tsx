@@ -43,7 +43,7 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
         borderRadius="4px"
         colorScheme={colorScheme}
         height={HEIGHT_MAPPING[size]}
-        px="m"
+        px={size}
         {...props}
       >
         {iconPosition === "left" && icon}
