@@ -3,7 +3,7 @@ import { base } from "./base";
 
 export const textAliases = buildThemeAliases(base, {
   primary: "grey100",
-  secondary: "grey80",
+  secondary: "grey70",
   tertiary: "grey50",
   link: "blue50",
   linkHover: "blue60",
