@@ -8,6 +8,7 @@ export const StyledButton = styled.button<BoxProps>`
   margin: 0;
   padding: 0;
   display: flex;
+  cursor: pointer;
   border: 2px solid transparent;
   background: transparent;
 
