@@ -3,7 +3,8 @@
   "private": true,
   "workspaces": [
     "packages/*",
-    "packages/components/*"
+    "packages/components/*",
+    "packages/hooks/*"
   ],
   "devDependencies": {
     "@babel/core": "^7.20.5",
