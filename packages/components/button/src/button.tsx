@@ -1,6 +1,6 @@
 import { forwardRef } from "react";
 import { Heading } from "@buoysoftware/anchor-typography";
-import { FlexProps } from "@buoysoftware/anchor-layout";
+import { Box, FlexProps } from "@buoysoftware/anchor-layout";
 import { ColorScheme, InnerButton } from "./inner_button";
 import { StyledButton } from "./styled_button";
 
@@ -46,17 +46,19 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
         px={size}
         {...props}
       >
-        {iconPosition === "left" && icon}
-        <Heading
-          as="span"
-          mx="xs"
-          color="inherit"
-          size="s"
-          textDecoration="none"
-        >
+        {iconPosition === "left" && (
+          <Box display="flex" ml="-xxs" mr="xs">
+            {icon}
+          </Box>
+        )}
+        <Heading as="span" color="inherit" size="s" textDecoration="none">
           {children}
         </Heading>
-        {iconPosition === "right" && icon}
+        {iconPosition === "right" && (
+          <Box display="flex" ml="xs" mr="-xxs">
+            {icon}
+          </Box>
+        )}
       </InnerButton>
     </StyledButton>
   )
