@@ -7,17 +7,16 @@ import { StyledButton } from "./styled_button";
 type Size = "s" | "l";
 type IconPosition = "left" | "right";
 
-type OwnProps<T extends React.ReactNode> = {
+interface OwnProps {
   children: React.ReactNode;
   colorScheme?: ColorScheme;
-  icon?: T;
-  iconPosition: T extends React.ReactNode ? IconPosition : undefined;
+  icon?: React.ReactNode;
+  iconPosition?: IconPosition;
   onClick?: React.MouseEventHandler;
   size?: Size;
-};
+}
 
-type ButtonProps = OwnProps<React.ReactNode> &
-  Omit<FlexProps, "theme" | "color" | "size">;
+type ButtonProps = OwnProps & Omit<FlexProps, "theme" | "color" | "size">;
 
 const HEIGHT_MAPPING: Record<Size, number> = {
   l: 40,
