@@ -1,0 +1,58 @@
+<Meta title="Hooks / useTranslatedOptions" />
+
+# useTranslatedOptions
+
+The `useTranslatedOptions` hook is a convience hook for taking a set of data
+values and generating options for use in select, radio, or check box collections.
+
+This depends on [react-i18next] for translating the options.
+
+## Import
+
+```javascript
+import { useTranslatedOptions } from "@buoysoftware/anchor-ui";
+```
+
+## Usage
+
+```jsx
+const MyComponent = () => {
+  const values = ["option_1", "option_2"];
+
+  // Returns an arry of objecst like:
+  // [
+  //  { value: "option_1", label: "Option 1" },
+  //  { value: "option_2", label: "Option 2" }
+  // ]
+  const options = useTranslatedOptions(values, { tNamespace: "myNamespace" });
+
+  return (
+    <>
+      {options.map(({ value, label }) => (
+        <label key={value}>
+          <input type="radio" name="myRadio" value={value} />
+          {label}
+        </label>
+      )}
+    </>
+  );
+};
+```
+
+## Arguments
+
+| Name    | Description                                               |
+| ------- | --------------------------------------------------------- |
+| values  | Array of string values that will be used to build options |
+| options | See options table below                                   |
+
+## Options
+
+| Name       | Description                                                    |
+| ---------- | -------------------------------------------------------------- |
+| tNamespace | [i18next namespace] to look up the translation for each value. |
+| tOptions   | Any options that can be passed to the [useTranslation hook]    |
+
+[react-i18next]: https://react.i18next.com/
+[i18next namespace]: https://www.i18next.com/principles/namespaces
+[usetranslation hook]: https://react.i18next.com/latest/usetranslation-hook

@@ -22,7 +22,8 @@
     "@buoysoftware/anchor-layout": "^0.10.0",
     "@buoysoftware/anchor-nav": "^0.10.0",
     "@buoysoftware/anchor-theme": "^0.10.0",
-    "@buoysoftware/anchor-typography": "^0.10.0"
+    "@buoysoftware/anchor-typography": "^0.10.0",
+    "@buoysoftware/anchor-use-translated-options": "*"
   },
   "devDependencies": {
     "@types/node": "^18.11.12",
