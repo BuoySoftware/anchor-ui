@@ -1,6 +1,6 @@
 {
   "name": "@buoysoftware/anchor-form",
-  "version": "0.0.0",
+  "version": "0.10.0-alpha.0",
   "main": "src/index.ts",
   "license": "MIT",
   "files": [
@@ -14,8 +14,8 @@
     "prepack": "clean-package"
   },
   "dependencies": {
-    "@buoysoftware/anchor-layout": "*",
-    "@buoysoftware/anchor-typography": "*",
+    "@buoysoftware/anchor-layout": "^0.10.0-alpha.0",
+    "@buoysoftware/anchor-typography": "^0.10.0-alpha.0",
     "i18next": "^22.4.9",
     "lodash": "*",
     "react-hook-form": "*",
