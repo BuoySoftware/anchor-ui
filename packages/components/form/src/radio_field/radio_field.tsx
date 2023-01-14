@@ -1,10 +1,10 @@
 import { RegisterOptions } from "react-hook-form";
 import { Flex, Grid } from "@buoysoftware/anchor-layout";
 
-import { Label } from "./label";
-import { FieldError } from "./field_error";
+import { Label } from "../label";
+import { FieldError } from "../field_error";
 import { RadioOption, Option } from "./radio_option";
-import { useFormField } from "./use_form_field";
+import { useFormField } from "../use_form_field";
 
 interface OwnProps<V> {
   "data-testid"?: string;
