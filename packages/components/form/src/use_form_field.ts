@@ -1,4 +1,4 @@
-import { get, useFormContext, FieldError } from "react-hook-form";
+import { get, useFormState, FieldError } from "react-hook-form";
 import compact from "lodash/compact";
 import flatten from "lodash/flatten";
 import kebabCase from "lodash/kebabCase";
@@ -7,7 +7,7 @@ import { useTranslation } from "react-i18next";
 
 import { useFormScope } from "./form_scope_provider";
 
-interface UseFormFieldProps<L extends true | false> {
+export interface UseFormFieldProps<L extends true | false> {
   buildLabel?: L;
   name: string;
   defaultPlaceholder?: string;
@@ -28,9 +28,7 @@ export const useFormField = <L extends true | false>({
 }: UseFormFieldProps<L>): FormField<true> | FormField<false> => {
   const { scope, tNamespace } = useFormScope();
   const { t } = useTranslation(compact(flatten([tNamespace, "forms"])));
-  const {
-    formState: { errors },
-  } = useFormContext();
+  const { errors } = useFormState();
 
   const inputId = kebabCase(name);
   const i18nKey = snakeCase(name);
