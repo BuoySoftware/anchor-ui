@@ -5,7 +5,7 @@ import { Body } from "@buoysoftware/anchor-typography";
 
 import { Radio } from "./radio";
 
-export interface Option<V> {
+export interface TRadioOption<V> {
   label: string;
   value: V;
 }
@@ -13,7 +13,7 @@ export interface Option<V> {
 interface OwnProps<V> {
   defaultChecked?: V;
   name: string;
-  option: Option<V>;
+  option: TRadioOption<V>;
   rules?: RegisterOptions;
 }
 

@@ -3,7 +3,7 @@ import { Flex, Grid } from "@buoysoftware/anchor-layout";
 
 import { Label } from "../label";
 import { FieldError } from "../field_error";
-import { RadioOption, Option } from "./radio_option";
+import { RadioOption, TRadioOption } from "./radio_option";
 import { useFormField } from "../use_form_field";
 
 interface OwnProps<V> {
@@ -12,7 +12,7 @@ interface OwnProps<V> {
   label?: React.ReactElement;
   name: string;
   rules?: RegisterOptions;
-  options: Option<V>[];
+  options: TRadioOption<V>[];
   defaultChecked?: V;
 }
 
