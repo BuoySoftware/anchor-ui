@@ -22,11 +22,24 @@ describe("<FieldError />", () => {
     },
   };
 
+  const customScopeTranslations = {
+    forms: {
+      errors: {
+        test_form: {
+          custom_field: {
+            required: "Custom scoped required error",
+          },
+        },
+      },
+    },
+  };
+
   i18n.use(initReactI18next).init({
     lng: "en",
-    ns: ["forms"],
+    ns: ["forms", "customScope"],
     resources: {
       en: {
+        customScope: customScopeTranslations,
         forms: translations,
       },
     },
@@ -100,6 +113,24 @@ describe("<FieldError />", () => {
 
         expect(errors.getByTestId("error-test-input")).toHaveTextContent(
           "Scoped required error"
+        );
+      });
+
+      it("supports a custom tNamespace for the scope and field error", () => {
+        const errors = render(
+          <FormScopeProvider
+            value={{ scope: "testForm", tNamespace: ["customScope"] }}
+          >
+            <FieldError
+              name="customField"
+              error={{ type: "required", message: "" }}
+              inputId="test-input"
+            />
+          </FormScopeProvider>
+        );
+
+        expect(errors.getByTestId("error-test-input")).toHaveTextContent(
+          "Custom scoped required error"
         );
       });
     });

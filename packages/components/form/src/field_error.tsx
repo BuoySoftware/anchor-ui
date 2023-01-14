@@ -1,3 +1,5 @@
+import compact from "lodash/compact";
+import flatten from "lodash/flatten";
 import { FieldError as HookFormFieldError } from "react-hook-form";
 import snakeCase from "lodash/snakeCase";
 import { BoxProps } from "@buoysoftware/anchor-layout";
@@ -24,6 +26,24 @@ interface OwnProps {
 
 export type FieldErrorProps = OwnProps & BoxProps;
 
+/**
+ * Look up an error message in the i18next translations. This utilizes the
+ * i18next fallback mechanism for determining who to translate the error message.
+ *
+ * The order is as follows:
+ *
+ * 1. An error message in a custom provided namespace via tNamespace scoped to
+ *    forms.errors and then the form scope, field name, and error typea.
+ *
+ * 2. An error message in the default forms namespace scoped to the form scope,
+ *    field name and error type.
+ *
+ * 3. An error message in default forms namespace for the given input type and
+ *    error type.
+ *
+ * 4. An error message in the default forms namespace scoped to the form scope,
+ *    for the error type.
+ */
 function lookupErrorMessage(
   error: HookFormFieldError,
   scope: string,
@@ -37,23 +57,13 @@ function lookupErrorMessage(
 
   const i18nName = snakeCase(name);
   const i18nErrorScope = snakeCase(scope);
-  const inputMessage = t(`${i18nErrorScope}.${i18nName}.${error.type}`, {
-    defaultValue: "",
-  });
 
-  if (inputMessage !== "") {
-    return inputMessage;
-  }
-
-  const typeMessage = t(`input_types.${snakeCase(inputType)}.${error.type}`, {
-    defaultValue: "",
-  });
-
-  if (typeMessage !== "") {
-    return typeMessage;
-  }
-
-  return t(error.type);
+  return t([
+    `forms.errors.${i18nErrorScope}.${i18nName}.${error.type}`,
+    `errors.${i18nErrorScope}.${i18nName}.${error.type}`,
+    `errors.input_types.${snakeCase(inputType)}.${error.type}`,
+    `errors.${error.type}`,
+  ]);
 }
 
 export const FieldError: React.FC<FieldErrorProps> = ({
@@ -63,8 +73,8 @@ export const FieldError: React.FC<FieldErrorProps> = ({
   inputType = "text",
   ...elementProps
 }): React.ReactElement | null => {
-  const { t } = useTranslation("forms", { keyPrefix: "errors" });
-  const { scope } = useFormScope();
+  const { scope, tNamespace } = useFormScope();
+  const { t } = useTranslation(compact(flatten([tNamespace, "forms"])));
 
   if (!error || !name) return null;
 
