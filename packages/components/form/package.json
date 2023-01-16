@@ -18,8 +18,8 @@
     "@buoysoftware/anchor-typography": "^0.10.0",
     "i18next": "^22.4.9",
     "lodash": "*",
-    "react-hook-form": "*",
-    "react-i18next": "*"
+    "react-hook-form": "^7.42.1",
+    "react-i18next": "^12.1.4"
   },
   "devDependencies": {
     "jest": "^29.3.1",
