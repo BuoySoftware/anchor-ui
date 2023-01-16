@@ -20,11 +20,13 @@ import {
   SpaceProps,
 } from "styled-system";
 
+import { gap, GapProps } from "./custom_style_props/gap";
 import { listStyle, ListStyleProps } from "./custom_style_props/list_style";
 
 export type BoxStructuralProps = BorderProps &
   FlexProps &
   FlexGrowProps &
+  GapProps &
   LayoutProps &
   ListStyleProps &
   PositionProps &
@@ -42,6 +44,7 @@ export const boxCss = css`
   ${color};
   ${flex};
   ${flexGrow};
+  ${gap};
   ${layout};
   ${listStyle};
   ${position};
