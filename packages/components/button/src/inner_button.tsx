@@ -7,6 +7,7 @@ export type ColorScheme = "basic" | "primary" | "critical";
 
 interface OwnProps {
   colorScheme: ColorScheme;
+  disabled?: boolean;
 }
 
 type InnerButtonProps = FlexProps & OwnProps;

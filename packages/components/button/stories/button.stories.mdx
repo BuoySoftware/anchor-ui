@@ -8,7 +8,11 @@ import { Button } from "../src";
   component={Button}
   parameters={{
     controls: {
-      exclude: /icon/g
+      include: [
+        "disabled",
+        "size",
+        "colorScheme"
+      ]
     },
     layout: "centered"
   }}
