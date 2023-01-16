@@ -21,6 +21,7 @@
     "@buoysoftware/anchor-form": "^0.12.1-alpha.0",
     "@buoysoftware/anchor-layout": "^0.12.1-alpha.0",
     "@buoysoftware/anchor-nav": "^0.12.1-alpha.0",
+    "@buoysoftware/anchor-sticky-footer": "*",
     "@buoysoftware/anchor-theme": "^0.12.1-alpha.0",
     "@buoysoftware/anchor-typography": "^0.12.1-alpha.0",
     "@buoysoftware/anchor-use-translated-options": "^0.12.1-alpha.0"

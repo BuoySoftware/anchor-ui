@@ -1149,6 +1149,31 @@
   resolved "https://registry.yarnpkg.com/@bcoe/v8-coverage/-/v8-coverage-0.2.3.tgz#75a2e8b51cb758a7553d6804a5932d7aace75c39"
   integrity sha512-0hYQ8SB4Db5zvZB4axdMHGwEaQjkZzFjQiN9LVYvIFB2nSUHW9tYpxWriPrWDASIxiaXax83REcLxuSdnGPZtw==
 
+"@buoysoftware/anchor-layout@^0.12.0":
+  version "0.12.0"
+  resolved "https://registry.yarnpkg.com/@buoysoftware/anchor-layout/-/anchor-layout-0.12.0.tgz#13bab63b87e96b2d4af2a9e3f44764769988dbef"
+  integrity sha512-aATnMOeBSOB1pe6dpsVCSMRRxH6oGJPXFeeO6SG7kUAE1qgU+ZsrUFw1RhjlONFQLtTpxLygS7+SgLpTzJ5gKw==
+  dependencies:
+    "@buoysoftware/anchor-theme" "^0.12.0"
+    styled-components "^5.3.6"
+    styled-system "^5.1.5"
+
+"@buoysoftware/anchor-sticky-footer@*":
+  version "0.12.0"
+  resolved "https://registry.yarnpkg.com/@buoysoftware/anchor-sticky-footer/-/anchor-sticky-footer-0.12.0.tgz#a5799a68562eee5e799ac5df60eaf7e75696d8a3"
+  integrity sha512-jJbgcLAMLDLOAGv+0zdpADowW4vEr/KkU4u/Ya8y7IOJF1lM9k/F1BouWTD3YK0kqPuHGNAD4XMKKVhHf+KBcw==
+  dependencies:
+    "@buoysoftware/anchor-layout" "^0.12.0"
+
+"@buoysoftware/anchor-theme@^0.12.0":
+  version "0.12.0"
+  resolved "https://registry.yarnpkg.com/@buoysoftware/anchor-theme/-/anchor-theme-0.12.0.tgz#f7e942661f2f4bd80974f5a7408dbb3f7f5f6a1e"
+  integrity sha512-49Q6AmhH0eDxveDsSHD2tMuFW6RdT2ysEYrdKxxWFo4vtT51kU12oqQ6949qMD783KJbqmqwxaw8HorGV+rsDw==
+  dependencies:
+    "@styled-system/theme-get" "^5.1.2"
+    polished "^4.2.2"
+    styled-components "^5.3.6"
+
 "@cnakazawa/watch@^1.0.3":
   version "1.0.4"
   resolved "https://registry.yarnpkg.com/@cnakazawa/watch/-/watch-1.0.4.tgz#f864ae85004d0fcab6f50be9141c4da368d1656a"
