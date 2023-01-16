@@ -1,20 +1,28 @@
-import styled from "styled-components";
 import { Flex, FlexProps } from "@buoysoftware/anchor-layout";
 
-export const StickyFooter = styled(Flex).attrs(() => ({
-  height: "stickyFooter",
-  position: "fixed",
-  borderTop: "1SolidSubdued",
-  px: "xxxl",
-  bg: "white",
-  left: 0,
-  right: 0,
-  bottom: 0,
-}))<FlexProps>``;
+type StickyFooterProps = Omit<FlexProps, "height">;
 
-StickyFooter.defaultProps = {
-  gap: "m",
-  zIndex: 2,
-  alignItems: "center",
-  justifyContent: "flex-end",
+export const StickyFooter: React.FC<StickyFooterProps> = ({
+  children,
+  ...props
+}): React.ReactElement => {
+  return (
+    <Flex
+      alignItems="center"
+      as="footer"
+      borderTop="1SolidSubdued"
+      bottom={0}
+      gap="m"
+      height="stickyFooter"
+      justifyContent="flex-end"
+      left={0}
+      position="fixed"
+      px="xxxl"
+      right={0}
+      zIndex="2"
+      {...props}
+    >
+      {children}
+    </Flex>
+  );
 };

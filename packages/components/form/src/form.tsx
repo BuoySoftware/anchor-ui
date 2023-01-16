@@ -8,7 +8,7 @@ import {
   UseFormReturn,
 } from "react-hook-form";
 import { ErrorMessage } from "./error_message";
-import { Box, BoxStructuralProps } from "@buoysoftware/anchor-layout";
+import { Box, BoxProps } from "@buoysoftware/anchor-layout";
 
 import { FormScopeProvider, TNamespace } from "./form_scope_provider";
 
@@ -31,7 +31,7 @@ interface OwnProps<TFormValues extends FieldValues> {
 }
 
 export type FormProps<TFormValues extends FieldValues> = OwnProps<TFormValues> &
-  BoxStructuralProps;
+  BoxProps;
 
 export const Form = <TFormValues extends FieldValues>({
   "data-testid": testId,

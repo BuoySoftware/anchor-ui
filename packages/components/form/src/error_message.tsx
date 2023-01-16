@@ -1,4 +1,4 @@
-import { Box, BoxStructuralProps } from "@buoysoftware/anchor-layout";
+import { Box, BoxProps } from "@buoysoftware/anchor-layout";
 import { Body, Markdown } from "@buoysoftware/anchor-typography";
 
 interface OwnProps {
@@ -6,7 +6,7 @@ interface OwnProps {
   parentId: string;
 }
 
-type ErrorMessageProps = OwnProps & BoxStructuralProps;
+type ErrorMessageProps = OwnProps & BoxProps;
 
 export const ErrorMessage: React.FC<ErrorMessageProps> = ({
   errors,
