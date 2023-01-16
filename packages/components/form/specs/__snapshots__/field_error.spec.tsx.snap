@@ -7,20 +7,20 @@ exports[`<FieldError /> error is undefined renders nothing 1`] = `<DocumentFragm
 exports[`<FieldError /> error message is provided with a single message renders the provided message 1`] = `
 <DocumentFragment>
   <div
-    class="sc-bcXHqe jhfmYO"
+    class="sc-bcXHqe jZDVhQ"
     data-testid="error-test-input"
     id="error-test-input"
     role="alert"
   >
     <div
-      class="sc-bcXHqe sc-hLBbgP sc-eDvSVe dawtXs rKWEz"
+      class="sc-bcXHqe sc-hLBbgP sc-eDvSVe bGCHBu rKWEz"
       color="text.critical"
       font-size="font-size-100"
       font-style="none"
       font-weight="400"
     >
       <p
-        class="sc-bcXHqe sc-hLBbgP ijfXre dDZkPR"
+        class="sc-bcXHqe sc-hLBbgP gfGzhI dDZkPR"
         color="text.primary"
       >
         Invalid field
@@ -33,34 +33,34 @@ exports[`<FieldError /> error message is provided with a single message renders 
 exports[`<FieldError /> error message is provided with multiple messages renders all of the provided messages 1`] = `
 <DocumentFragment>
   <div
-    class="sc-bcXHqe jhfmYO"
+    class="sc-bcXHqe jZDVhQ"
     data-testid="error-test-input"
     id="error-test-input"
     role="alert"
   >
     <div
-      class="sc-bcXHqe sc-hLBbgP sc-eDvSVe dawtXs rKWEz"
+      class="sc-bcXHqe sc-hLBbgP sc-eDvSVe bGCHBu rKWEz"
       color="text.critical"
       font-size="font-size-100"
       font-style="none"
       font-weight="400"
     >
       <p
-        class="sc-bcXHqe sc-hLBbgP ijfXre dDZkPR"
+        class="sc-bcXHqe sc-hLBbgP gfGzhI dDZkPR"
         color="text.primary"
       >
         Invalid field
       </p>
     </div>
     <div
-      class="sc-bcXHqe sc-hLBbgP sc-eDvSVe dawtXs rKWEz"
+      class="sc-bcXHqe sc-hLBbgP sc-eDvSVe bGCHBu rKWEz"
       color="text.critical"
       font-size="font-size-100"
       font-style="none"
       font-weight="400"
     >
       <p
-        class="sc-bcXHqe sc-hLBbgP ijfXre dDZkPR"
+        class="sc-bcXHqe sc-hLBbgP gfGzhI dDZkPR"
         color="text.primary"
       >
         Other error
@@ -73,25 +73,25 @@ exports[`<FieldError /> error message is provided with multiple messages renders
 exports[`<FieldError /> error message with markdown with a single message renders the provided message with markup 1`] = `
 <DocumentFragment>
   <div
-    class="sc-bcXHqe jhfmYO"
+    class="sc-bcXHqe jZDVhQ"
     data-testid="error-test-input"
     id="error-test-input"
     role="alert"
   >
     <div
-      class="sc-bcXHqe sc-hLBbgP sc-eDvSVe dawtXs rKWEz"
+      class="sc-bcXHqe sc-hLBbgP sc-eDvSVe bGCHBu rKWEz"
       color="text.critical"
       font-size="font-size-100"
       font-style="none"
       font-weight="400"
     >
       <p
-        class="sc-bcXHqe sc-hLBbgP ijfXre dDZkPR"
+        class="sc-bcXHqe sc-hLBbgP gfGzhI dDZkPR"
         color="text.primary"
       >
         This is 
         <strong
-          class="sc-bcXHqe sc-hLBbgP ijfXre ePgUZj"
+          class="sc-bcXHqe sc-hLBbgP gfGzhI ePgUZj"
           color="text.primary"
           font-weight="bold"
         >
