@@ -2,7 +2,7 @@ import { buildThemeAliases } from "../utils/buildThemeAliases";
 import { base } from "./base";
 
 export const formAliases = buildThemeAliases(base, {
-  fieldGap: "s",
+  fieldGap: "xl",
   labelGap: "xxs",
 });
 
