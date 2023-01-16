@@ -1,7 +1,7 @@
 {
   "name": "@buoysoftware/anchor-ui",
   "author": "Damian Galarza <damian@buoysoftware.com>",
-  "version": "0.11.0-alpha.0",
+  "version": "0.11.1-alpha.0",
   "homepage": "https://github.com/BuoySoftware/anchor-ui",
   "main": "src/index.ts",
   "license": "MIT",
@@ -18,7 +18,7 @@
     "@buoysoftware/anchor-action-bar": "^0.10.0",
     "@buoysoftware/anchor-button": "^0.10.0",
     "@buoysoftware/anchor-dropdown-menu": "^0.10.0",
-    "@buoysoftware/anchor-form": "^0.11.0-alpha.0",
+    "@buoysoftware/anchor-form": "^0.11.1-alpha.0",
     "@buoysoftware/anchor-layout": "^0.10.0",
     "@buoysoftware/anchor-nav": "^0.10.0",
     "@buoysoftware/anchor-theme": "^0.10.0",
