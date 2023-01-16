@@ -1,4 +1,3 @@
-import kebabCase from "lodash/kebabCase";
 import { forwardRef } from "react";
 import { Heading } from "@buoysoftware/anchor-typography";
 import { Box, FlexProps } from "@buoysoftware/anchor-layout";
