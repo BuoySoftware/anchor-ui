@@ -10,6 +10,7 @@ type IconPosition = "left" | "right";
 interface OwnProps {
   children: React.ReactNode;
   colorScheme?: ColorScheme;
+  disabled?: boolean;
   form?: string;
   icon?: React.ReactNode;
   iconPosition?: IconPosition;
@@ -29,6 +30,7 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
     {
       children,
       colorScheme = "basic",
+      disabled,
       form,
       icon,
       iconPosition,
@@ -38,11 +40,12 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
     },
     ref
   ): React.ReactElement => (
-    <StyledButton form={form} onClick={onClick} ref={ref}>
+    <StyledButton disabled={disabled} form={form} onClick={onClick} ref={ref}>
       <InnerButton
         alignItems="center"
         borderRadius="4px"
         colorScheme={colorScheme}
+        disabled={disabled}
         height={HEIGHT_MAPPING[size]}
         px={size}
         {...props}
