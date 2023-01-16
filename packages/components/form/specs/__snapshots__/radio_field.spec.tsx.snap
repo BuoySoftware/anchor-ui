@@ -10,7 +10,7 @@ exports[`<RadioField /> renders properly 1`] = `
   >
     <fieldset
       aria-invalid="false"
-      class="sc-bcXHqe sc-gswNZR djjbVj ilnAE"
+      class="sc-bcXHqe sc-gswNZR evXPsB ilnAE"
       data-testid="radio-test"
       display="flex"
       id="my-radio-field"
@@ -96,7 +96,7 @@ exports[`<RadioField /> with error renders properly 1`] = `
       aria-describedby="error-my-radio-field"
       aria-errormessage="error-my-radio-field"
       aria-invalid="true"
-      class="sc-bcXHqe sc-gswNZR djjbVj ilnAE"
+      class="sc-bcXHqe sc-gswNZR evXPsB ilnAE"
       data-testid="radio-test"
       display="flex"
       id="my-radio-field"
