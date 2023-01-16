@@ -1,0 +1,37 @@
+import { Canvas, Story } from "@storybook/addon-docs";
+import { Button } from "@buoysoftware/anchor-button";
+
+import { StickyFooter } from "../src";
+
+<Meta
+  title="Components / StickyFooter"
+  component={StickyFooter}
+  parameters={{
+    layout: "fullscreen"
+  }}
+/>
+
+export const Template = (args) => {
+  return (
+    <StickyFooter {...args}>
+      <Button size="l" colorScheme="basic">Cancel</Button>
+      <Button size="l" colorScheme="primary">Save</Button>
+    </StickyFooter>
+  );
+};
+
+# Footer
+
+## Import
+
+```javascript
+import { StickyFooter } from "@buoysoftware/anchor-ui";
+```
+
+## Basic Usage
+
+<Canvas>
+  <Story name="StickyFooter">
+    {Template.bind({})}
+  </Story>
+</Canvas>

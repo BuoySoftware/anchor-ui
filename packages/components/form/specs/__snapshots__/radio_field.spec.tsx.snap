@@ -4,35 +4,35 @@ exports[`<RadioField /> renders properly 1`] = `
 <DocumentFragment>
   <form
     autocomplete="off"
-    class="sc-bcXHqe cXZCGl"
+    class="sc-bcXHqe hVFKD"
     data-testid="test-form"
     id="test-form"
   >
     <fieldset
       aria-invalid="false"
-      class="sc-bcXHqe sc-gswNZR evXPsB ilnAE"
+      class="sc-bcXHqe sc-gswNZR eEiBuf ilnAE"
       data-testid="radio-test"
       display="flex"
       id="my-radio-field"
       width="input"
     >
       <label
-        class="sc-bcXHqe sc-hLBbgP sc-jSUZER sc-iBYQkv hwPmRZ jvXitA"
+        class="sc-bcXHqe sc-hLBbgP sc-jSUZER sc-iBYQkv dHgQYX jvXitA"
         color="text.primary"
         font-weight="600"
       >
         This is my radio field
       </label>
       <div
-        class="sc-bcXHqe sc-dkrFOg AUzOq rKvnZ"
+        class="sc-bcXHqe sc-dkrFOg jRICgE rKvnZ"
         display="grid"
       >
         <div
-          class="sc-bcXHqe sc-gswNZR btAYzt iEgkhg"
+          class="sc-bcXHqe sc-gswNZR bzXDJL iEgkhg"
           display="flex"
         >
           <input
-            class="sc-ftTHYK jCfsfU"
+            class="sc-ftTHYK dNfiMO"
             data-testid="radio-my-radio-field-a"
             id="my-radio-field-a"
             name="myRadioField"
@@ -40,7 +40,7 @@ exports[`<RadioField /> renders properly 1`] = `
             value="a"
           />
           <label
-            class="sc-bcXHqe sc-hLBbgP sc-eDvSVe iyziWa cqiIFy"
+            class="sc-bcXHqe sc-hLBbgP sc-eDvSVe jeHWwE cqiIFy"
             color="text.primary"
             font-size="font-size-100"
             font-style="none"
@@ -51,11 +51,11 @@ exports[`<RadioField /> renders properly 1`] = `
           </label>
         </div>
         <div
-          class="sc-bcXHqe sc-gswNZR btAYzt iEgkhg"
+          class="sc-bcXHqe sc-gswNZR bzXDJL iEgkhg"
           display="flex"
         >
           <input
-            class="sc-ftTHYK jCfsfU"
+            class="sc-ftTHYK dNfiMO"
             data-testid="radio-my-radio-field-b"
             id="my-radio-field-b"
             name="myRadioField"
@@ -63,7 +63,7 @@ exports[`<RadioField /> renders properly 1`] = `
             value="b"
           />
           <label
-            class="sc-bcXHqe sc-hLBbgP sc-eDvSVe iyziWa cqiIFy"
+            class="sc-bcXHqe sc-hLBbgP sc-eDvSVe jeHWwE cqiIFy"
             color="text.primary"
             font-size="font-size-100"
             font-style="none"
@@ -88,7 +88,7 @@ exports[`<RadioField /> with error renders properly 1`] = `
 <DocumentFragment>
   <form
     autocomplete="off"
-    class="sc-bcXHqe cXZCGl"
+    class="sc-bcXHqe hVFKD"
     data-testid="test-form"
     id="test-form"
   >
@@ -96,29 +96,29 @@ exports[`<RadioField /> with error renders properly 1`] = `
       aria-describedby="error-my-radio-field"
       aria-errormessage="error-my-radio-field"
       aria-invalid="true"
-      class="sc-bcXHqe sc-gswNZR evXPsB ilnAE"
+      class="sc-bcXHqe sc-gswNZR eEiBuf ilnAE"
       data-testid="radio-test"
       display="flex"
       id="my-radio-field"
       width="input"
     >
       <label
-        class="sc-bcXHqe sc-hLBbgP sc-jSUZER sc-iBYQkv hwPmRZ jvXitA"
+        class="sc-bcXHqe sc-hLBbgP sc-jSUZER sc-iBYQkv dHgQYX jvXitA"
         color="text.primary"
         font-weight="600"
       >
         This is my radio field
       </label>
       <div
-        class="sc-bcXHqe sc-dkrFOg AUzOq rKvnZ"
+        class="sc-bcXHqe sc-dkrFOg jRICgE rKvnZ"
         display="grid"
       >
         <div
-          class="sc-bcXHqe sc-gswNZR btAYzt iEgkhg"
+          class="sc-bcXHqe sc-gswNZR bzXDJL iEgkhg"
           display="flex"
         >
           <input
-            class="sc-ftTHYK jCfsfU"
+            class="sc-ftTHYK dNfiMO"
             data-testid="radio-my-radio-field-a"
             id="my-radio-field-a"
             name="myRadioField"
@@ -126,7 +126,7 @@ exports[`<RadioField /> with error renders properly 1`] = `
             value="a"
           />
           <label
-            class="sc-bcXHqe sc-hLBbgP sc-eDvSVe iyziWa cqiIFy"
+            class="sc-bcXHqe sc-hLBbgP sc-eDvSVe jeHWwE cqiIFy"
             color="text.primary"
             font-size="font-size-100"
             font-style="none"
@@ -137,11 +137,11 @@ exports[`<RadioField /> with error renders properly 1`] = `
           </label>
         </div>
         <div
-          class="sc-bcXHqe sc-gswNZR btAYzt iEgkhg"
+          class="sc-bcXHqe sc-gswNZR bzXDJL iEgkhg"
           display="flex"
         >
           <input
-            class="sc-ftTHYK jCfsfU"
+            class="sc-ftTHYK dNfiMO"
             data-testid="radio-my-radio-field-b"
             id="my-radio-field-b"
             name="myRadioField"
@@ -149,7 +149,7 @@ exports[`<RadioField /> with error renders properly 1`] = `
             value="b"
           />
           <label
-            class="sc-bcXHqe sc-hLBbgP sc-eDvSVe iyziWa cqiIFy"
+            class="sc-bcXHqe sc-hLBbgP sc-eDvSVe jeHWwE cqiIFy"
             color="text.primary"
             font-size="font-size-100"
             font-style="none"
@@ -161,20 +161,20 @@ exports[`<RadioField /> with error renders properly 1`] = `
         </div>
       </div>
       <div
-        class="sc-bcXHqe foQqDH"
+        class="sc-bcXHqe hlRiqt"
         data-testid="error-my-radio-field"
         id="error-my-radio-field"
         role="alert"
       >
         <div
-          class="sc-bcXHqe sc-hLBbgP sc-eDvSVe dawtXs fHZCEm"
+          class="sc-bcXHqe sc-hLBbgP sc-eDvSVe bGCHBu fHZCEm"
           color="text.critical"
           font-size="font-size-100"
           font-style="none"
           font-weight="400"
         >
           <p
-            class="sc-bcXHqe sc-hLBbgP fAmFrY dDZkPR"
+            class="sc-bcXHqe sc-hLBbgP iwinvS dDZkPR"
             color="text.primary"
           >
             errors.required
