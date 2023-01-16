@@ -3,6 +3,7 @@ import { Flex, FlexProps } from "@buoysoftware/anchor-layout";
 
 interface OwnProps {
   children: React.ReactNode;
+  "data-testid"?: string;
 }
 
 type ActionBarProps = OwnProps & FlexProps;
