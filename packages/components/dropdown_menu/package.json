@@ -1,6 +1,6 @@
 {
   "name": "@buoysoftware/anchor-dropdown-menu",
-  "version": "0.12.1-alpha.0",
+  "version": "0.13.0",
   "license": "MIT",
   "main": "src/index.ts",
   "files": [
@@ -13,9 +13,9 @@
     "prepack": "clean-package"
   },
   "dependencies": {
-    "@buoysoftware/anchor-button": "^0.12.1-alpha.0",
-    "@buoysoftware/anchor-layout": "^0.12.1-alpha.0",
-    "@buoysoftware/anchor-typography": "^0.12.1-alpha.0",
+    "@buoysoftware/anchor-button": "^0.13.0",
+    "@buoysoftware/anchor-layout": "^0.13.0",
+    "@buoysoftware/anchor-typography": "^0.13.0",
     "@styled-icons/feather": "^10.47.0",
     "@types/styled-components": "^5.1.26",
     "react-tiny-popover": "^7.2.0",
