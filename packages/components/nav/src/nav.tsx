@@ -16,6 +16,7 @@ export const Nav = styled(({ variant, ...props }) => {
       as="nav"
       alignItems="center"
       bg="white"
+      data-testid={`${variant}-navigation-bar`}
       display="flex"
       height="navigationBar"
       px="page.gutterX"
