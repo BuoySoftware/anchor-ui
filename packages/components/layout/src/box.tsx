@@ -23,18 +23,24 @@ import {
 import { gap, GapProps } from "./custom_style_props/gap";
 import { listStyle, ListStyleProps } from "./custom_style_props/list_style";
 
-export type BoxStructuralProps = BorderProps &
-  FlexProps &
-  FlexGrowProps &
-  GapProps &
-  LayoutProps &
-  ListStyleProps &
-  PositionProps &
-  SpaceProps;
-
-export type BoxStylisticProps = BackgroundProps & ColorProps & ShadowProps;
-
-export type BoxProps = BoxStructuralProps & BoxStylisticProps;
+export interface BoxProps
+  extends BorderProps,
+    BackgroundProps,
+    BackgroundProps,
+    ColorProps,
+    ColorProps,
+    FlexGrowProps,
+    FlexProps,
+    GapProps,
+    LayoutProps,
+    ListStyleProps,
+    PositionProps,
+    ShadowProps,
+    ShadowProps,
+    SpaceProps {
+  as?: React.ElementType;
+  children?: React.ReactNode;
+}
 
 export const boxCss = css`
   box-sizing: border-box;
