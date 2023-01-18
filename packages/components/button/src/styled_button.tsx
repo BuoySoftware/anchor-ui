@@ -2,7 +2,9 @@ import styled from "styled-components";
 
 import { boxCss, BoxProps } from "@buoysoftware/anchor-layout";
 
-export const StyledButton = styled.button<BoxProps>`
+type StyledButtonProps = BoxProps;
+
+export const StyledButton = styled.button<StyledButtonProps>`
   ${boxCss};
 
   margin: 0;

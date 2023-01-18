@@ -1,8 +1,9 @@
-import { forwardRef } from "react";
-import { Heading } from "@buoysoftware/anchor-typography";
 import { Box, FlexProps } from "@buoysoftware/anchor-layout";
 import { ColorScheme, InnerButton } from "./inner_button";
+import { Heading } from "@buoysoftware/anchor-typography";
+import { LoadingIndicator } from "@buoysoftware/anchor-loading-indicator";
 import { StyledButton } from "./styled_button";
+import { forwardRef } from "react";
 
 type Size = "s" | "l";
 type IconPosition = "left" | "right";
@@ -17,9 +18,12 @@ interface OwnProps {
   iconPosition?: IconPosition;
   onClick?: React.MouseEventHandler;
   size?: Size;
+  submitting?: boolean;
 }
 
-type ButtonProps = OwnProps & Omit<FlexProps, "theme" | "color" | "size">;
+type ButtonProps = OwnProps &
+  Omit<FlexProps, "theme" | "color" | "size"> &
+  React.ButtonHTMLAttributes<HTMLButtonElement>;
 
 const HEIGHT_MAPPING: Record<Size, number> = {
   l: 40,
@@ -38,6 +42,8 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
       iconPosition,
       onClick,
       size = "l",
+      submitting = false,
+      type,
       ...props
     },
     ref
@@ -48,28 +54,44 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
       form={form}
       onClick={onClick}
       ref={ref}
+      type={type}
     >
       <InnerButton
         alignItems="center"
         borderRadius="4px"
         colorScheme={colorScheme}
-        disabled={disabled}
+        disabled={disabled || submitting}
         height={HEIGHT_MAPPING[size]}
         px={size}
         {...props}
       >
-        {iconPosition === "left" && (
-          <Box display="flex" ml="-xxs" mr="xs">
-            {icon}
-          </Box>
-        )}
-        <Heading as="span" color="inherit" size="s" textDecoration="none">
-          {children}
-        </Heading>
-        {iconPosition === "right" && (
-          <Box display="flex" ml="xs" mr="-xxs">
-            {icon}
-          </Box>
+        {type == "submit" && submitting ? (
+          <LoadingIndicator size="12px" strokeSize={1} color="text.tertiary" />
+        ) : (
+          <>
+            {iconPosition === "left" && (
+              <Box display="flex" ml="-xxs" mr="xs">
+                {icon}
+              </Box>
+            )}
+            {submitting && (
+              <Box display="flex" ml="-xxs" mr="xs">
+                <LoadingIndicator
+                  size="12px"
+                  strokeSize={1}
+                  color="text.tertiary"
+                />
+              </Box>
+            )}
+            <Heading as="span" color="inherit" size="s" textDecoration="none">
+              {children}
+            </Heading>
+            {iconPosition === "right" && (
+              <Box display="flex" ml="xs" mr="-xxs">
+                {icon}
+              </Box>
+            )}
+          </>
         )}
       </InnerButton>
     </StyledButton>
