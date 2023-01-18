@@ -1,0 +1,27 @@
+{
+  "errors": {
+    "date": "Invalid date",
+    "dateNotInFuture": "Date cannot be in the future",
+    "invalidUnitControlNumber": "Invalid unit control number",
+    "invalidNumber": "Invalid number",
+    "maxLength": "Value is too long",
+    "minLength": "Value is too short",
+    "input_types": {
+      "checkbox": {
+        "required": "This field is required"
+      },
+      "collection_checkbox": {
+        "required": "A selection is required"
+      },
+      "text": {
+        "required": "This field is required"
+      },
+      "radio": {
+        "required": "This field is required, please make a selection"
+      },
+      "select": {
+        "required": "This field is required, please make a selection"
+      }
+    }
+  }
+}
