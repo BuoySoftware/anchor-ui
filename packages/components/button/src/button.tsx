@@ -74,15 +74,6 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
                 {icon}
               </Box>
             )}
-            {submitting && (
-              <Box display="flex" ml="-xxs" mr="xs">
-                <LoadingIndicator
-                  size="12px"
-                  strokeSize={1}
-                  color="text.tertiary"
-                />
-              </Box>
-            )}
             <Heading as="span" color="inherit" size="s" textDecoration="none">
               {children}
             </Heading>
