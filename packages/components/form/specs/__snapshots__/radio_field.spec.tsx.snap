@@ -167,15 +167,15 @@ exports[`<RadioField /> with error renders properly 1`] = `
         role="alert"
       >
         <div
-          class="sc-bcXHqe sc-hLBbgP sc-eDvSVe bGCHBu fHZCEm"
+          class="sc-bcXHqe sc-hLBbgP sc-eDvSVe dhraWS fHZCEm"
           color="text.critical"
           font-size="font-size-100"
           font-style="none"
           font-weight="400"
         >
           <p
-            class="sc-bcXHqe sc-hLBbgP iwinvS dDZkPR"
-            color="text.primary"
+            class="sc-bcXHqe sc-hLBbgP dYCYGe dDZkPR"
+            color="inherit"
           >
             errors.required
           </p>

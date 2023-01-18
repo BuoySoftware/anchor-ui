@@ -1,0 +1,28 @@
+import { Canvas, Story } from "@storybook/addon-docs";
+
+import { ErrorMessage } from "../src";
+
+<Meta
+  title="Forms / Components / ErrorMessage"
+  component={ErrorMessage}
+  parameters={{
+    layout: "centered",
+    controls: {
+      include: ["errors"]
+    }
+  }}
+/>
+
+export const Template = (args) => {
+  return(
+    <ErrorMessage {...args}/>
+  );
+}
+
+## Basic Usage
+
+<Canvas>
+  <Story name="ErrorMessage" args={{ errors: ["A selection is required"]}}>
+    {Template.bind({})}
+  </Story>
+</Canvas>
