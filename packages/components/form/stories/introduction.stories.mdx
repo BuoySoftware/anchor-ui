@@ -16,7 +16,7 @@ React Hook Form works.
 
 Our library utilizes the power of [react-i18next] to do look ups for labels,
 placeholders, and errors. The assumption is that these translations exist within
-the namespace called 'forms'.
+the namespace called 'forms' or a namespace called `anchorForms`.
 
 ```
 {
@@ -41,6 +41,27 @@ the namespace called 'forms'.
     }
   }
 }
+```
+
+### Default translations
+
+AnchorUI provides some default translations for use within forms. To utilize them
+you must import the translations and add them as a resource in i18next.
+
+Example:
+
+```javascript
+import { anchorFormsEn } from "@buoysoftware/anchor-ui";
+
+i18n.use(initReactI18next).init({
+  lng: "en",
+  ns: ["anchorForms"],
+  resources: {
+    en: {
+      anchorForms: anchorFormsEn
+    }
+  }
+});
 ```
 
 [react-hook-form]: https://react-hook-form.com/

@@ -2,7 +2,7 @@ import i18n from "i18next";
 import { initReactI18next } from "react-i18next";
 import { render } from "@testing-library/react";
 
-import { FormScopeProvider } from "../src";
+import { anchorFormsEn, FormScopeProvider } from "../src";
 import { FieldError } from "../src/field_error";
 
 describe("<FieldError />", () => {
@@ -34,15 +34,18 @@ describe("<FieldError />", () => {
     },
   };
 
-  i18n.use(initReactI18next).init({
-    lng: "en",
-    ns: ["forms", "customScope"],
-    resources: {
-      en: {
-        customScope: customScopeTranslations,
-        forms: translations,
+  beforeEach(() => {
+    i18n.use(initReactI18next).init({
+      lng: "en",
+      ns: ["anchorForms", "customScope", "forms"],
+      resources: {
+        en: {
+          anchorForms: anchorFormsEn,
+          customScope: customScopeTranslations,
+          forms: translations,
+        },
       },
-    },
+    });
   });
 
   context("error is undefined", () => {
@@ -133,6 +136,25 @@ describe("<FieldError />", () => {
           "Custom scoped required error"
         );
       });
+
+      it("properly falls back if custom namespace does not have a translation", () => {
+        const errors = render(
+          <FormScopeProvider
+            value={{ scope: "testForm", tNamespace: ["customScope"] }}
+          >
+            <FieldError
+              name="fieldB"
+              inputType="text"
+              error={{ type: "required", message: "" }}
+              inputId="test-input"
+            />
+          </FormScopeProvider>
+        );
+
+        expect(errors.getByTestId("error-test-input")).toHaveTextContent(
+          "Default text input required message"
+        );
+      });
     });
 
     context("input type message exists", () => {
@@ -150,6 +172,26 @@ describe("<FieldError />", () => {
 
         expect(errors.getByTestId("error-test-input")).toHaveTextContent(
           "Default text input required message"
+        );
+      });
+    });
+
+    context("input type in anchor defaults exist", () => {
+      it("uses the anchor default", () => {
+        i18n.removeResourceBundle("en", "forms");
+        const errors = render(
+          <FormScopeProvider value={{ scope: "testForm" }}>
+            <FieldError
+              name="testField2"
+              inputType="text"
+              error={{ type: "required", message: "" }}
+              inputId="test-input"
+            />
+          </FormScopeProvider>
+        );
+
+        expect(errors.getByTestId("error-test-input")).toHaveTextContent(
+          "This field is required"
         );
       });
     });
@@ -175,6 +217,7 @@ describe("<FieldError />", () => {
   context("error message with markdown", () => {
     context("with a single message", () => {
       it("renders the provided message with markup", () => {
+        i18n;
         const errors = render(
           <FieldError
             name="myField"

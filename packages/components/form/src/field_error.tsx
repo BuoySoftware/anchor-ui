@@ -41,15 +41,20 @@ export type FieldErrorProps = OwnProps & BoxProps;
  * 3. An error message in default forms namespace for the given input type and
  *    error type.
  *
- * 4. An error message in the default forms namespace scoped to the form scope,
- *    for the error type.
+ * 4. An error message in the anchorForms namespace for the given input type and
+ *    error type.
+ *
+ * 5. An error message in the forms namespace for the given error type
+ *
+ * 6. An error message in the anchorForms namespace for the given error type
  */
 function lookupErrorMessage(
   error: HookFormFieldError,
   scope: string,
   name: string,
   inputType: InputType,
-  t: TFunction
+  t: TFunction,
+  tNamespace: string[]
 ): string {
   if (error.message !== undefined && error.message !== "") {
     return error.message;
@@ -58,12 +63,26 @@ function lookupErrorMessage(
   const i18nName = snakeCase(name);
   const i18nErrorScope = snakeCase(scope);
 
-  return t([
+  // These are translations scoped to the form's scope and field name.
+  // The use of forms.errors is to look into the custom tNamespace if one was
+  // provided. The second will look up in the forms default namespace.
+  const fieldScopes = [
     `forms.errors.${i18nErrorScope}.${i18nName}.${error.type}`,
     `errors.${i18nErrorScope}.${i18nName}.${error.type}`,
+  ];
+
+  // Global scopes are used to look up defaults in the forms namespace or
+  // the anchorForms namespace
+  const globalScopes = [
     `errors.input_types.${snakeCase(inputType)}.${error.type}`,
     `errors.${error.type}`,
-  ]);
+  ];
+
+  const combinedGlobalScopes = tNamespace.flatMap((namespace: string) =>
+    globalScopes.map((scope) => `${namespace}:${scope}`)
+  );
+
+  return t([...fieldScopes, ...combinedGlobalScopes]);
 }
 
 export const FieldError: React.FC<FieldErrorProps> = ({
@@ -73,12 +92,20 @@ export const FieldError: React.FC<FieldErrorProps> = ({
   inputType = "text",
   ...elementProps
 }): React.ReactElement | null => {
-  const { scope, tNamespace } = useFormScope();
-  const { t } = useTranslation(compact(flatten([tNamespace, "forms"])));
+  const { scope, tNamespace = [] } = useFormScope();
+  const namespace = compact(flatten([tNamespace, "forms", "anchorForms"]));
+  const { t } = useTranslation(namespace);
 
   if (!error || !name) return null;
 
-  const message = lookupErrorMessage(error, scope, name, inputType, t);
+  const message = lookupErrorMessage(
+    error,
+    scope,
+    name,
+    inputType,
+    t,
+    namespace
+  );
 
   return (
     <ErrorMessage
