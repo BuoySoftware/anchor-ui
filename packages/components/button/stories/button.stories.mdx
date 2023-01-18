@@ -6,12 +6,21 @@ import { Button } from "../src";
 <Meta
   title="Components / Button"
   component={Button}
+  argTypes={{
+    type: {
+      control: "select",
+      name: "type",
+      options: ["submit", "reset", "button"]
+    }
+  }}
   parameters={{
     controls: {
       include: [
         "disabled",
         "size",
-        "colorScheme"
+        "colorScheme",
+        "submitting",
+        "type"
       ]
     },
     layout: "centered"
@@ -41,7 +50,8 @@ import { Button } from "@buoysoftware/anchor-ui";
       disabled: false,
       size: "l",
       children: "Button",
-      colorScheme: "basic" 
+      colorScheme: "basic",
+      type: "submit"
     }}
   >
     {Template.bind({})}
