@@ -1,0 +1,23 @@
+import { Canvas, Story } from "@storybook/addon-docs";
+
+import { LoadingIndicator } from "../src";
+
+<Meta
+  title="Components / LoadingIndicator"
+  component={LoadingIndicator}
+  parameters={{
+    controls: {
+    },
+    layout: "centered"
+  }}
+/>
+
+export const Template = (args) => {
+  return <LoadingIndicator {...args} />
+};
+
+## Basic Usage
+
+<Canvas>
+  <Story name="LoadingIndicator" args={{ color: "grey70", size: "20px", strokeSize: 2}} >{Template.bind({})}</Story>
+</Canvas>
