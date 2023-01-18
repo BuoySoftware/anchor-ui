@@ -20,6 +20,7 @@
     "@buoysoftware/anchor-dropdown-menu": "^0.13.0",
     "@buoysoftware/anchor-form": "^0.13.1-alpha.0",
     "@buoysoftware/anchor-layout": "^0.13.0",
+    "@buoysoftware/anchor-loading-indicator": "*",
     "@buoysoftware/anchor-nav": "^0.13.0",
     "@buoysoftware/anchor-sticky-footer": "*",
     "@buoysoftware/anchor-theme": "^0.13.0",
