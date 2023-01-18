@@ -2,6 +2,7 @@ import { buildThemeAliases } from "../utils/buildThemeAliases";
 import { base } from "./base";
 
 export const textAliases = buildThemeAliases(base, {
+  critical: "red60",
   primary: "grey100",
   secondary: "grey70",
   tertiary: "grey50",

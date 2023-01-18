@@ -20,8 +20,8 @@ exports[`<FieldError /> error message is provided with a single message renders 
       font-weight="400"
     >
       <p
-        class="sc-bcXHqe sc-hLBbgP gfGzhI dDZkPR"
-        color="text.primary"
+        class="sc-bcXHqe sc-hLBbgP dYCYGe dDZkPR"
+        color="inherit"
       >
         Invalid field
       </p>
@@ -46,8 +46,8 @@ exports[`<FieldError /> error message is provided with multiple messages renders
       font-weight="400"
     >
       <p
-        class="sc-bcXHqe sc-hLBbgP gfGzhI dDZkPR"
-        color="text.primary"
+        class="sc-bcXHqe sc-hLBbgP dYCYGe dDZkPR"
+        color="inherit"
       >
         Invalid field
       </p>
@@ -60,8 +60,8 @@ exports[`<FieldError /> error message is provided with multiple messages renders
       font-weight="400"
     >
       <p
-        class="sc-bcXHqe sc-hLBbgP gfGzhI dDZkPR"
-        color="text.primary"
+        class="sc-bcXHqe sc-hLBbgP dYCYGe dDZkPR"
+        color="inherit"
       >
         Other error
       </p>
@@ -86,13 +86,13 @@ exports[`<FieldError /> error message with markdown with a single message render
       font-weight="400"
     >
       <p
-        class="sc-bcXHqe sc-hLBbgP gfGzhI dDZkPR"
-        color="text.primary"
+        class="sc-bcXHqe sc-hLBbgP dYCYGe dDZkPR"
+        color="inherit"
       >
         This is 
         <strong
-          class="sc-bcXHqe sc-hLBbgP gfGzhI ePgUZj"
-          color="text.primary"
+          class="sc-bcXHqe sc-hLBbgP dYCYGe ePgUZj"
+          color="inherit"
           font-weight="bold"
         >
           an error

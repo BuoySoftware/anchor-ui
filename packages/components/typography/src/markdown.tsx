@@ -23,14 +23,18 @@ export const Markdown: React.FC<MarkdownProps> = ({
   return (
     <ReactMarkdown
       components={{
-        p: ({ children }) => <Text as="p">{children}</Text>,
+        p: ({ children }) => (
+          <Text as="p" color="inherit">
+            {children}
+          </Text>
+        ),
         strong: ({ children }) => (
-          <Text as="strong" fontWeight="bold">
+          <Text as="strong" color="inherit" fontWeight="bold">
             {children}
           </Text>
         ),
         em: ({ children }) => (
-          <Text as="em" fontStyle="italic">
+          <Text as="em" color="inherit" fontStyle="italic">
             {children}
           </Text>
         ),
