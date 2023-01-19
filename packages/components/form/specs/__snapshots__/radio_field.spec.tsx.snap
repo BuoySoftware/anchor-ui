@@ -17,7 +17,7 @@ exports[`<RadioField /> renders properly 1`] = `
       width="input"
     >
       <label
-        class="sc-bcXHqe sc-hLBbgP sc-jSUZER sc-iBYQkv dHgQYX jvXitA"
+        class="sc-bcXHqe sc-hLBbgP sc-jSUZER sc-jrcTuL dHgQYX jvXitA"
         color="text.primary"
         font-weight="600"
       >
@@ -32,7 +32,7 @@ exports[`<RadioField /> renders properly 1`] = `
           display="flex"
         >
           <input
-            class="sc-ftTHYK dNfiMO"
+            class="sc-kDvujY gqiOgR"
             data-testid="radio-my-radio-field-a"
             id="my-radio-field-a"
             name="myRadioField"
@@ -55,7 +55,7 @@ exports[`<RadioField /> renders properly 1`] = `
           display="flex"
         >
           <input
-            class="sc-ftTHYK dNfiMO"
+            class="sc-kDvujY gqiOgR"
             data-testid="radio-my-radio-field-b"
             id="my-radio-field-b"
             name="myRadioField"
@@ -103,7 +103,7 @@ exports[`<RadioField /> with error renders properly 1`] = `
       width="input"
     >
       <label
-        class="sc-bcXHqe sc-hLBbgP sc-jSUZER sc-iBYQkv dHgQYX jvXitA"
+        class="sc-bcXHqe sc-hLBbgP sc-jSUZER sc-jrcTuL dHgQYX jvXitA"
         color="text.primary"
         font-weight="600"
       >
@@ -118,7 +118,7 @@ exports[`<RadioField /> with error renders properly 1`] = `
           display="flex"
         >
           <input
-            class="sc-ftTHYK dNfiMO"
+            class="sc-kDvujY gqiOgR"
             data-testid="radio-my-radio-field-a"
             id="my-radio-field-a"
             name="myRadioField"
@@ -141,7 +141,7 @@ exports[`<RadioField /> with error renders properly 1`] = `
           display="flex"
         >
           <input
-            class="sc-ftTHYK dNfiMO"
+            class="sc-kDvujY gqiOgR"
             data-testid="radio-my-radio-field-b"
             id="my-radio-field-b"
             name="myRadioField"
