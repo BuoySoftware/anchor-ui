@@ -12,6 +12,7 @@ export const StickyFooter: React.FC<StickyFooterProps> = ({
       as="footer"
       borderTop="1SolidSubdued"
       bottom={0}
+      data-testid="sticky-footer"
       gap="m"
       height="stickyFooter"
       justifyContent="flex-end"
