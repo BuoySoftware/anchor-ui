@@ -1,7 +1,7 @@
 {
   "name": "@buoysoftware/anchor-ui",
   "author": "Damian Galarza <damian@buoysoftware.com>",
-  "version": "0.14.3-alpha.0",
+  "version": "0.15.0",
   "homepage": "https://github.com/BuoySoftware/anchor-ui",
   "main": "src/index.ts",
   "license": "MIT",
@@ -15,16 +15,16 @@
     "postpack": "clean-package restore"
   },
   "dependencies": {
-    "@buoysoftware/anchor-action-bar": "^0.14.0-alpha.0",
-    "@buoysoftware/anchor-button": "^0.14.2-alpha.0",
-    "@buoysoftware/anchor-dropdown-menu": "^0.14.2-alpha.0",
-    "@buoysoftware/anchor-form": "^0.14.3-alpha.0",
-    "@buoysoftware/anchor-layout": "^0.14.0-alpha.0",
-    "@buoysoftware/anchor-loading-indicator": "^0.14.0-alpha.0",
-    "@buoysoftware/anchor-nav": "^0.14.0-alpha.0",
-    "@buoysoftware/anchor-sticky-footer": "^0.14.0-alpha.0",
-    "@buoysoftware/anchor-theme": "^0.14.0-alpha.0",
-    "@buoysoftware/anchor-typography": "^0.14.0-alpha.0",
+    "@buoysoftware/anchor-action-bar": "^0.15.0",
+    "@buoysoftware/anchor-button": "^0.15.0",
+    "@buoysoftware/anchor-dropdown-menu": "^0.15.0",
+    "@buoysoftware/anchor-form": "^0.15.0",
+    "@buoysoftware/anchor-layout": "^0.15.0",
+    "@buoysoftware/anchor-loading-indicator": "^0.15.0",
+    "@buoysoftware/anchor-nav": "^0.15.0",
+    "@buoysoftware/anchor-sticky-footer": "^0.15.0",
+    "@buoysoftware/anchor-theme": "^0.15.0",
+    "@buoysoftware/anchor-typography": "^0.15.0",
     "@buoysoftware/anchor-use-translated-options": "^0.13.0"
   },
   "devDependencies": {
