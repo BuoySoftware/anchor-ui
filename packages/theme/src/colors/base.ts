@@ -1,6 +1,9 @@
 import { buildThemeAliases } from "../utils/buildThemeAliases";
 
 export const baseColors = {
+  brandCoral: "#F2AA6A",
+  brandPrimary: "#1C4957",
+
   grey100: "#101112",
   grey90: "#2B2D2F",
   grey80: "#46494D",

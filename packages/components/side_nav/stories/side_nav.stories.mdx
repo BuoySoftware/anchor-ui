@@ -1,0 +1,50 @@
+import { useState } from "react";
+import { Canvas, Story } from '@storybook/addon-docs';
+import { Heading } from "@buoysoftware/anchor-typography";
+import { Box, Grid } from "@buoysoftware/anchor-layout";
+
+import { SideNav, SideNavItemsContainer, SideNavItem, SideNavFooter } from "../src";
+
+<Meta
+  title="Components / SideNav"
+  component={SideNav}
+  parameters={{
+    layout: "fullscreen"
+  }}
+/>
+
+export const Template = (args) => {
+  const [currentPage, setCurrentPage] = useState("page1");
+  const onClick = (e) => {
+    e.preventDefault();
+    const href = e.currentTarget.getAttribute("href");
+    setCurrentPage(href.replace("#", ""));
+  };
+  return (
+    <Box  gridTemplateColumns="auto 1fr" height="100vh">
+      <SideNav>
+        <SideNavItemsContainer>
+          <SideNavItem active={currentPage === "page1"}>
+            <a onClick={onClick} href="#page1">Page 1</a>
+          </SideNavItem>
+          <SideNavItem active={currentPage === "page2"}>
+            <a onClick={onClick} href="#page2">Page 2</a>
+          </SideNavItem>
+        </SideNavItemsContainer>
+        <SideNavFooter>
+          <Heading size="s" color="white">Employee N</Heading>
+        </SideNavFooter>
+      </SideNav>
+      { currentPage === "page1" && <Box p="xl">Page 1</Box>}
+      { currentPage === "page2" && <Box p="xl">Page 2</Box>}
+    </Box>
+  );
+};
+
+## Basic Usage
+
+<Canvas>
+  <Story name="SideNav" args={{}}>
+    {Template.bind({})}
+  </Story>
+</Canvas>
