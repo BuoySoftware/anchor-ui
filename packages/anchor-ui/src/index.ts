@@ -1,4 +1,5 @@
 export * from "@buoysoftware/anchor-action-bar";
+export * from "@buoysoftware/anchor-app-template";
 export * from "@buoysoftware/anchor-button";
 export * from "@buoysoftware/anchor-dropdown-menu";
 export * from "@buoysoftware/anchor-form";
