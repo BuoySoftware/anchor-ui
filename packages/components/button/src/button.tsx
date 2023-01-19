@@ -21,7 +21,7 @@ interface OwnProps {
   submitting?: boolean;
 }
 
-type ButtonProps = OwnProps &
+export type ButtonProps = OwnProps &
   Omit<FlexProps, "theme" | "color" | "size"> &
   React.ButtonHTMLAttributes<HTMLButtonElement>;
 
