@@ -1,0 +1,48 @@
+import { Canvas, Story } from "@storybook/addon-docs";
+import { useForm } from "react-hook-form";
+
+import { Form, FormButton } from "../src";
+
+<Meta
+  title="Forms / Components / FormButton"
+  component={FormButton}
+  parameters={{
+    layout: "centered",
+    controls: {
+      include: ["disabled"]
+    }
+  }}
+/>
+
+export const Template = (args) => {
+  const form = useForm();
+  const onSubmit = () => {
+    return new Promise(resolve => setTimeout(resolve, 1000));
+  }
+  return(
+    <Form form={form} id="form-button-example" scope="form-button-example" onSubmit={onSubmit}>
+      <FormButton type="submit" colorScheme="primary" {...args}>Save</FormButton>
+    </Form>
+  );
+}
+
+
+# FormButton
+
+The FormButton component composes the anchor-ui Button component in order to
+leverage react-hook-form's `formState` via the `useFormState` hook. When a
+form's `isSubmitting` is true, the button will automatically be disabled.
+
+## Import
+
+```javascript
+import { FormButton } from "@buoysoftware/anchor-ui";
+```
+
+## Basic Usage
+
+<Canvas>
+  <Story args={{ disabled: false }} name="Form Button">
+    {Template.bind({})}
+  </Story>
+</Canvas>
