@@ -10,6 +10,8 @@ import {
   FlexProps,
   flexGrow,
   FlexGrowProps,
+  grid,
+  GridProps,
   layout,
   LayoutProps,
   position,
@@ -32,6 +34,7 @@ export interface BoxProps
     FlexGrowProps,
     FlexProps,
     GapProps,
+    GridProps,
     LayoutProps,
     ListStyleProps,
     PositionProps,
@@ -51,6 +54,7 @@ export const boxCss = css`
   ${flex};
   ${flexGrow};
   ${gap};
+  ${grid};
   ${layout};
   ${listStyle};
   ${position};
