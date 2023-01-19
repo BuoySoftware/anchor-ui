@@ -16,6 +16,7 @@
   },
   "dependencies": {
     "@buoysoftware/anchor-action-bar": "^0.15.0",
+    "@buoysoftware/anchor-app-template": "*",
     "@buoysoftware/anchor-button": "^0.15.0",
     "@buoysoftware/anchor-dropdown-menu": "^0.15.0",
     "@buoysoftware/anchor-form": "^0.15.0",
