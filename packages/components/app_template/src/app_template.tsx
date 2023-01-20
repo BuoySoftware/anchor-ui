@@ -9,7 +9,7 @@ export type AppTemplateProps = OwnProps;
 export type AppTemplateGridArea = "side-nav" | "app-content";
 
 const GRID_AREA_TEMPLATE = `
-  "side-nav" "app-content"
+  "side-nav app-content"
 `;
 
 export const AppTemplate: React.FC<AppTemplateProps> = ({

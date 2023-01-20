@@ -7,7 +7,7 @@ interface OwnProps {
   children?: React.ReactNode;
 }
 
-type AppAreaProps = OwnProps & Omit<BoxProps, "gridTemplateArea">;
+type AppAreaProps = OwnProps & Omit<BoxProps, "gridArea">;
 
 export const AppArea: React.FC<AppAreaProps> = ({
   area,
@@ -15,7 +15,7 @@ export const AppArea: React.FC<AppAreaProps> = ({
   ...props
 }): React.ReactElement => {
   return (
-    <Box gridTemplateArea={area} {...props}>
+    <Box gridArea={area} {...props}>
       {children}
     </Box>
   );
