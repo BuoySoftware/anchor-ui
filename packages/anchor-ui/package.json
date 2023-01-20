@@ -18,6 +18,7 @@
     "@buoysoftware/anchor-action-bar": "^0.16.0",
     "@buoysoftware/anchor-app-template": "^0.16.0",
     "@buoysoftware/anchor-button": "^0.16.0",
+    "@buoysoftware/anchor-breadcrumbs": "*",
     "@buoysoftware/anchor-dropdown-menu": "^0.16.0",
     "@buoysoftware/anchor-form": "^0.16.0",
     "@buoysoftware/anchor-layout": "^0.16.0",

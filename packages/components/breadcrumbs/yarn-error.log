@@ -1,0 +1,46 @@
+Arguments: 
+  /Users/dgalarza/.asdf/installs/nodejs/16.13.0/bin/node /opt/homebrew/Cellar/yarn/1.22.17_2/libexec/bin/yarn.js
+
+PATH: 
+  /Users/dgalarza/.asdf/plugins/nodejs/shims:/Users/dgalarza/.asdf/installs/nodejs/16.13.0/.npm/bin:/Users/dgalarza/.asdf/installs/nodejs/16.13.0/bin:/opt/homebrew/opt/postgresql@12/bin:/opt/homebrew/opt/postgresql@13/bin:/Users/dgalarza/Library/Android/sdk/platform-tools:/Users/dgalarza/go/bin:/Users/dgalarza/.asdf/shims:/opt/homebrew/opt/asdf/libexec/bin:/usr/local/bin:/opt/homebrew/bin:./bin:.git/safe/../../bin:/Users/dgalarza/.bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/Library/Apple/usr/bin:/Applications/kitty.app/Contents/MacOS:/emulator
+
+Yarn version: 
+  1.22.17
+
+Node version: 
+  16.13.0
+
+Platform: 
+  darwin arm64
+
+Trace: 
+  SyntaxError: /Users/dgalarza/Code/anchor-ui/packages/components/breadcrumbs/package.json: Unexpected string in JSON at position 117
+      at JSON.parse (<anonymous>)
+      at /opt/homebrew/Cellar/yarn/1.22.17_2/libexec/lib/cli.js:1625:59
+      at Generator.next (<anonymous>)
+      at step (/opt/homebrew/Cellar/yarn/1.22.17_2/libexec/lib/cli.js:310:30)
+      at /opt/homebrew/Cellar/yarn/1.22.17_2/libexec/lib/cli.js:321:13
+
+npm manifest: 
+  {
+    "name": "@buoysoftware/anchor-breadcrumbs",
+    "version": "0.0.1",
+    "main": "src/index.ts",
+    "license": "MIT"
+    "dependencies": {
+      "@buoysoftware/anchor-layout": "^0.16.0",
+      "@buoysoftware/anchor-typography": "^0.16.0"
+    },
+    "scripts": {
+      "build": "tsc -outDir dist",
+      "compile": "tsc --noEmit",
+      "postpack": "clean-package restore",
+      "prepack": "clean-package"
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
