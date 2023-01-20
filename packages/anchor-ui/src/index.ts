@@ -3,6 +3,7 @@ export * from "@buoysoftware/anchor-app-template";
 export * from "@buoysoftware/anchor-breadcrumbs";
 export * from "@buoysoftware/anchor-button";
 export * from "@buoysoftware/anchor-dropdown-menu";
+export * from "@buoysoftware/anchor-footer-actions";
 export * from "@buoysoftware/anchor-form";
 export * from "@buoysoftware/anchor-layout";
 export * from "@buoysoftware/anchor-loading-indicator";
