@@ -1,0 +1,101 @@
+import i18n from "i18next";
+import { initReactI18next } from "react-i18next";
+import { Canvas, Story } from "@storybook/addon-docs";
+
+import { Table } from "../src";
+
+<Meta
+  title="Components / Table"
+  component={Table}
+  parameters={{
+    controls: {
+      include: ["records"]
+    }
+  }}
+/>
+
+
+export const Template = ({ cellProps = () => ({}), ...args }) => {
+  i18n.use(initReactI18next).init({
+    lng: "en",
+    ns: ["tables"],
+    resources: {
+      en: {
+        tables: {
+          donors: {
+            empty_message: "No donors to display",
+            th: {
+              name: "Donor Name",
+              id: "Donor ID",
+              deferred: "Deferred",
+              my_facility_name: "Assigned Center",
+              level: "Level"
+            },
+          }
+        }
+      },
+    },
+  });
+  const CELL_CONFIGS = [
+    { dataKey: "name" },
+    { dataKey: "id" },
+    { dataKey: "myFacility.name" },
+    { dataKey: "level" },
+  ].map((cellConfig) => ({ ...cellConfig, cellProps }))
+  return (
+    <Table
+      cellConfigs={CELL_CONFIGS}
+      name="donors"
+      recordIdKey="id"
+      {...args}
+    />
+  )
+};
+
+## Basic Usage
+
+<Canvas>
+  <Story
+    args={{
+      records: [
+        { name: "Jerry Seinfeld", id: 1, myFacility: { name: "Paris " }, level: 1 },
+        { name: "Cosmo Kramer", id: 2, myFacility: { name: "Paris " }, level: 7 },
+        { name: "Elaine Benes", id: 3, myFacility: { name: "Paris " }, level: 4 },
+        { name: "George Costanza", id: 4, myFacility: { name: "Paris " }, level: 0 },
+      ]
+    }}
+    name="Table with data"
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+## Empty Table
+
+<Canvas>
+  <Story
+    args={{ records: [] }}
+    name="Empty Table"
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+## Row styling
+
+<Canvas>
+  <Story
+    args={{
+      cellProps: ({ level }) => ( level == 0 ? { background: "red", color: "white", } : {} ),
+      records: [
+        { name: "Jerry Seinfeld", id: 1, myFacility: { name: "Paris " }, level: 1 },
+        { name: "Cosmo Kramer", id: 2, myFacility: { name: "Paris " }, level: 7 },
+        { name: "Elaine Benes", id: 3, myFacility: { name: "Paris " }, level: 4 },
+        { name: "George Costanza", id: 4, myFacility: { name: "Paris " }, level: 0 },
+      ]
+    }}
+    name="Row styling"
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>
