@@ -2,12 +2,18 @@ import { Box } from "@buoysoftware/anchor-layout";
 
 interface OwnProps {
   children?: React.ReactNode;
+  "data-testid"?: string;
 }
 
 type SideNavFooterProps = OwnProps;
 
 export const SideNavFooter: React.FC<SideNavFooterProps> = ({
   children,
+  "data-testid": testId = "side-nav-footer",
 }): React.ReactElement => {
-  return <Box gridArea="side-nav-footer">{children}</Box>;
+  return (
+    <Box data-testid={testId} gridArea="side-nav-footer">
+      {children}
+    </Box>
+  );
 };

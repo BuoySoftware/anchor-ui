@@ -15,6 +15,7 @@ interface LoadingIndicatorProps
   extends Omit<BoxProps, "color" | "size">,
     Required<Pick<BoxProps, "color">>,
     Required<Pick<BoxProps, "size">> {
+  "data-testid"?: string;
   strokeSize: number;
 }
 

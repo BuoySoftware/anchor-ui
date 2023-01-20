@@ -6,25 +6,33 @@ import { Body, Heading } from "@buoysoftware/anchor-typography";
 interface OwnProps {
   active?: boolean;
   children?: React.ReactNode;
+  "data-testid"?: string;
 }
 
 type SideNavItemProps = OwnProps;
 
-export const SideNavItem = styled(({ active = false, children, ...props }) => {
-  return (
-    <Box as="li" my="s" {...props}>
-      {active ? (
-        <Heading as="span" color="brandCoral" size="s">
-          {children}
-        </Heading>
-      ) : (
-        <Body as="span" color="white" size="m">
-          {children}
-        </Body>
-      )}
-    </Box>
-  );
-})<SideNavItemProps>`
+export const SideNavItem = styled(
+  ({
+    active = false,
+    children,
+    "data-testid": testId = "side-nav-item",
+    ...props
+  }) => {
+    return (
+      <Box as="li" my="s" {...props}>
+        {active ? (
+          <Heading as="span" color="brandCoral" data-testid={testId} size="s">
+            {children}
+          </Heading>
+        ) : (
+          <Body as="span" color="white" size="m">
+            {children}
+          </Body>
+        )}
+      </Box>
+    );
+  }
+)<SideNavItemProps>`
   & a {
     text-decoration: none;
     color: inherit;
