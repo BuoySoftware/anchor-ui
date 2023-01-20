@@ -1,0 +1,16 @@
+{
+  "name": "@buoysoftware/anchor-breadcrumbs",
+  "version": "0.0.1",
+  "main": "src/index.ts",
+  "license": "MIT",
+  "dependencies": {
+    "@buoysoftware/anchor-layout": "^0.16.0",
+    "@buoysoftware/anchor-typography": "^0.16.0"
+  },
+  "scripts": {
+    "build": "tsc -outDir dist",
+    "compile": "tsc --noEmit",
+    "postpack": "clean-package restore",
+    "prepack": "clean-package"
+  }
+}
