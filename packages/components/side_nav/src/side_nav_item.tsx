@@ -12,16 +12,16 @@ interface OwnProps {
 type SideNavItemProps = OwnProps;
 
 export const SideNavItem = styled(
-  ({ active = false, children, "data-testid": testId, ...props }) => {
+  ({
+    active = false,
+    children,
+    "data-testid": testId = "side-nav-item",
+    ...props
+  }) => {
     return (
       <Box as="li" my="s" {...props}>
         {active ? (
-          <Heading
-            as="span"
-            color="brandCoral"
-            data-testid={testId || "side-nav-item"}
-            size="s"
-          >
+          <Heading as="span" color="brandCoral" data-testid={testId} size="s">
             {children}
           </Heading>
         ) : (

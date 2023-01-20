@@ -16,11 +16,11 @@ const GRID_TEMPLATE_AREAS = `
 
 export const SideNav: React.FC<SideNavProps> = ({
   children,
-  "data-testid": testId,
+  "data-testid": testId = "side-nav",
 }): React.ReactElement => {
   return (
     <Grid
-      data-testid={testId || "side-nav"}
+      data-testid={testId}
       gridTemplateAreas={GRID_TEMPLATE_AREAS}
       gridTemplateRows="auto 1fr auto"
       p="xl"

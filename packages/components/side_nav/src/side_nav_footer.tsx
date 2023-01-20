@@ -9,10 +9,10 @@ type SideNavFooterProps = OwnProps;
 
 export const SideNavFooter: React.FC<SideNavFooterProps> = ({
   children,
-  "data-testid": testId,
+  "data-testid": testId = "side-nav-footer",
 }): React.ReactElement => {
   return (
-    <Box data-testid={testId || "side-nav-footer"} gridArea="side-nav-footer">
+    <Box data-testid={testId} gridArea="side-nav-footer">
       {children}
     </Box>
   );

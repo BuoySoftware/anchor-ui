@@ -10,11 +10,11 @@ type SideNavItemsContainerProps = OwnProps;
 
 export const SideNavItemsContainer: React.FC<SideNavItemsContainerProps> = ({
   children,
-  "data-testid": testId,
+  "data-testid": testId = "side-nav-items",
 }): React.ReactElement => {
   return (
     <Box
-      data-testid={testId || "side-nav-items"}
+      data-testid={testId}
       gridArea="side-nav-items"
       as="ul"
       list-style="none"
