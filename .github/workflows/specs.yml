@@ -19,7 +19,11 @@ jobs:
       - name: Install Node
         uses: BuoySoftware/github-actions/setup-node@main
         with:
+          install-dependencies: false
           node-version: ${{ env.NODE_VERSION }}
+
+      - name: Yarn install
+        run: yarn install
 
       - name: Compile Typescript
         run: yarn compile
