@@ -1149,6 +1149,24 @@
   resolved "https://registry.yarnpkg.com/@bcoe/v8-coverage/-/v8-coverage-0.2.3.tgz#75a2e8b51cb758a7553d6804a5932d7aace75c39"
   integrity sha512-0hYQ8SB4Db5zvZB4axdMHGwEaQjkZzFjQiN9LVYvIFB2nSUHW9tYpxWriPrWDASIxiaXax83REcLxuSdnGPZtw==
 
+"@buoysoftware/anchor-layout@^0.17.0":
+  version "0.17.0"
+  resolved "https://registry.yarnpkg.com/@buoysoftware/anchor-layout/-/anchor-layout-0.17.0.tgz#06b7791fd95716e455d82b8cfac5b2701780ef34"
+  integrity sha512-ASlvtkZcEzbE63dz+ubciW5ZQ56ubQracyRNN8GnO3jLAI4CpK+8VFTF3fqMfE6cL60JZOJJoxOso21C2C6f8g==
+  dependencies:
+    "@buoysoftware/anchor-theme" "^0.17.0"
+    styled-components "^5.3.6"
+    styled-system "^5.1.5"
+
+"@buoysoftware/anchor-theme@^0.17.0":
+  version "0.17.0"
+  resolved "https://registry.yarnpkg.com/@buoysoftware/anchor-theme/-/anchor-theme-0.17.0.tgz#6ac95716c02024907e60dd3a9ffdf3058baeadb4"
+  integrity sha512-vL9FaCN4rq5rapcqS1QE1HggLuk5taZwVTrxk98kyiPPKYROd9n22BdjTYc8B64ceRcVa46dQCurt//BAowY6Q==
+  dependencies:
+    "@styled-system/theme-get" "^5.1.2"
+    polished "^4.2.2"
+    styled-components "^5.3.6"
+
 "@cnakazawa/watch@^1.0.3":
   version "1.0.4"
   resolved "https://registry.yarnpkg.com/@cnakazawa/watch/-/watch-1.0.4.tgz#f864ae85004d0fcab6f50be9141c4da368d1656a"
