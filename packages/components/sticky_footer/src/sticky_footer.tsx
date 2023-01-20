@@ -1,29 +1,23 @@
-import { Flex, FlexProps } from "@buoysoftware/anchor-layout";
+import {
+  FooterActions,
+  FooterActionsProps,
+} from "@buoysoftware/anchor-footer-actions";
 
-type StickyFooterProps = Omit<FlexProps, "height">;
-
-export const StickyFooter: React.FC<StickyFooterProps> = ({
+export const StickyFooter: React.FC<FooterActionsProps> = ({
   children,
   ...props
 }): React.ReactElement => {
   return (
-    <Flex
-      alignItems="center"
-      as="footer"
-      borderTop="1SolidSubdued"
+    <FooterActions
       bottom={0}
       data-testid="sticky-footer"
-      gap="m"
-      height="stickyFooter"
-      justifyContent="flex-end"
       left={0}
       position="fixed"
-      px="xxxl"
       right={0}
       zIndex="2"
       {...props}
     >
       {children}
-    </Flex>
+    </FooterActions>
   );
 };

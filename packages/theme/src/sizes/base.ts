@@ -3,6 +3,7 @@ export const base = {
   checkboxWrapper: "18px",
   input: "350px",
   inputSmall: "141px",
+  footerActions: "80px",
   menu: "150px",
   modalWidth: "527px",
   modalWidthLarge: "880px",
@@ -11,7 +12,6 @@ export const base = {
   paymentStatusWidth: "425px",
   radio: "18px",
   searchInput: "220px",
-  stickyFooter: "80px",
   widget: "170px",
 };
 
