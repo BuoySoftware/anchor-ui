@@ -1,10 +1,10 @@
 {
   "name": "@buoysoftware/anchor-loading-indicator",
-  "version": "0.18.0-alpha.0",
+  "version": "0.18.0",
   "main": "src/index.ts",
   "license": "MIT",
   "dependencies": {
-    "@buoysoftware/anchor-layout": "^0.18.0-alpha.0"
+    "@buoysoftware/anchor-layout": "^0.18.0"
   },
   "scripts": {
     "build": "tsc -outDir dist",

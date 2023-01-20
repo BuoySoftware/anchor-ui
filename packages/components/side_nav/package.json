@@ -1,13 +1,13 @@
 {
   "name": "@buoysoftware/anchor-side-nav",
-  "version": "0.18.0-alpha.0",
+  "version": "0.18.0",
   "main": "src/index.ts",
   "license": "MIT",
   "files": [
     "dist"
   ],
   "dependencies": {
-    "@buoysoftware/anchor-layout": "^0.18.0-alpha.0"
+    "@buoysoftware/anchor-layout": "^0.18.0"
   },
   "scripts": {
     "build": "tsc -outDir dist && yarn copy-files",
