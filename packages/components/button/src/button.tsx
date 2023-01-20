@@ -50,7 +50,7 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
   ): React.ReactElement => (
     <StyledButton
       data-testid={testId}
-      disabled={disabled}
+      disabled={disabled || submitting}
       form={form}
       onClick={onClick}
       ref={ref}
@@ -60,7 +60,6 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
         alignItems="center"
         borderRadius="4px"
         colorScheme={colorScheme}
-        disabled={disabled || submitting}
         height={HEIGHT_MAPPING[size]}
         px={size}
         {...props}

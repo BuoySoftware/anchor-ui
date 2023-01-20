@@ -83,7 +83,7 @@ export const InnerButton = styled(Flex)<InnerButtonProps>`
       getThemeColor(props.colorScheme, props.theme, "active")};
   }
 
-  &[disabled] {
+  [disabled] & {
     background-color: ${(props) =>
       getThemeColor(props.colorScheme, props.theme, "disabledBackground")};
 
