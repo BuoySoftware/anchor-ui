@@ -1,6 +1,5 @@
 import { Canvas, Story } from "@storybook/addon-docs";
 import { DropdownMenu, DropdownMenuList, DropdownMenuItem } from "../src";
-import { ActionBar } from "@buoysoftware/anchor-action-bar";
 
 <Meta
   title="Components / Dropdown Menu"
@@ -41,27 +40,5 @@ import {
     args={{ label: "Actions" }}
   >
     {Template.bind({})}
-  </Story>
-</Canvas>
-
-## Within an ActionBar
-
-<Canvas>
-  <Story
-    name="Dropdown Menu in ActionBar"
-    parameters={{
-      layout: "fullscreen"
-    }}
-  >
-    <ActionBar justifyContent="flex-end">
-      <DropdownMenu label="Actions">
-        <DropdownMenuList>
-          <DropdownMenuItem>Item 1</DropdownMenuItem>
-          <DropdownMenuItem>Item 2</DropdownMenuItem>
-          <DropdownMenuItem>Item 3</DropdownMenuItem>
-          <DropdownMenuItem>Item 4</DropdownMenuItem>
-        </DropdownMenuList>
-      </DropdownMenu>
-    </ActionBar>
   </Story>
 </Canvas>
