@@ -15,12 +15,13 @@ export const PageHeader: React.FC<PageHeaderProps> = ({
     <Flex
       as="header"
       data-testid="page-header"
+      gridArea="header"
       mb="l"
       ml="page.gutterX"
       mt="xxxl"
       {...props}
     >
-      <Heading as="h1" gridArea="page-title" size="xl">
+      <Heading as="h1" size="xl">
         {title}
       </Heading>
     </Flex>
