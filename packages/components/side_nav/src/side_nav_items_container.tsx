@@ -3,7 +3,7 @@ import { Box } from "@buoysoftware/anchor-layout";
 interface OwnProps {
   active?: boolean;
   children?: React.ReactNode;
-  "data-testid": string;
+  "data-testid"?: string;
 }
 
 type SideNavItemsContainerProps = OwnProps;

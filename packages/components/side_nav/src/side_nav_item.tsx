@@ -6,7 +6,7 @@ import { Body, Heading } from "@buoysoftware/anchor-typography";
 interface OwnProps {
   active?: boolean;
   children?: React.ReactNode;
-  "data-testid": string;
+  "data-testid"?: string;
 }
 
 type SideNavItemProps = OwnProps;

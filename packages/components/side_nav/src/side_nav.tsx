@@ -3,7 +3,7 @@ import { SideNavLogo } from "./side_nav_logo";
 
 interface OwnProps {
   children?: React.ReactNode;
-  "data-testid": string;
+  "data-testid"?: string;
 }
 
 type SideNavProps = OwnProps;
