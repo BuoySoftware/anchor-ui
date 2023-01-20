@@ -1,0 +1,85 @@
+import { Canvas, Story } from "@storybook/addon-docs";
+
+import { DropdownMenu, DropdownMenuList, DropdownMenuItem } from "@buoysoftware/anchor-dropdown-menu";
+import { Flex } from "@buoysoftware/anchor-layout";
+import { Breadcrumbs, Breadcrumb } from "@buoysoftware/anchor-breadcrumbs";
+import { Button } from "@buoysoftware/anchor-button";
+
+import { PageActionBar, PageBreadcrumbs, PageContent, PageFooter, PageHeader, PageTemplate, PageTemplateArea } from "../src";
+
+<Meta
+  title="Templates / PageTemplate"
+  component={PageTemplate}
+  subcomponents={ PageTemplateArea }
+  parameters={{
+    layout: "fullscreen"
+  }}
+/>
+
+## Basic Usage
+
+<Canvas>
+  <Story name="Basic" args={{}}>
+    <PageTemplate>
+      <PageBreadcrumbs>
+        <Breadcrumbs>
+          <Breadcrumb>Questionnaires</Breadcrumb>
+        </Breadcrumbs>
+      </PageBreadcrumbs>
+      <PageHeader title="Template example" />
+      <PageContent>
+        Page Content
+      </PageContent>
+    </PageTemplate>
+  </Story>
+</Canvas>
+
+## With ActionBar
+
+<Canvas>
+  <Story name="with ActionBar" args={{}}>
+    <PageTemplate>
+      <PageBreadcrumbs>
+        <Breadcrumbs>
+          <Breadcrumb>Questionnaires</Breadcrumb>
+        </Breadcrumbs>
+      </PageBreadcrumbs>
+      <PageActionBar justifyContent="flex-end">
+        <DropdownMenu label="Actions">
+          <DropdownMenuList>
+            <DropdownMenuItem>Item 1</DropdownMenuItem>
+            <DropdownMenuItem>Item 2</DropdownMenuItem>
+            <DropdownMenuItem>Item 3</DropdownMenuItem>
+            <DropdownMenuItem>Item 4</DropdownMenuItem>
+          </DropdownMenuList>
+        </DropdownMenu>
+      </PageActionBar>
+      <PageHeader title="Template example" />
+      <PageContent>
+        Page Content
+      </PageContent>
+    </PageTemplate>
+  </Story>
+</Canvas>
+
+## With Footer
+
+<Canvas>
+  <Story name="with Footer" args={{}}>
+    <PageTemplate>
+      <PageBreadcrumbs>
+        <Breadcrumbs>
+          <Breadcrumb>Questionnaires</Breadcrumb>
+        </Breadcrumbs>
+      </PageBreadcrumbs>
+      <PageHeader title="Tempalte example" />
+      <PageContent>
+        Page Content
+      </PageContent>
+      <PageFooter>
+        <Button>Cancel</Button>
+        <Button colorScheme="primary">Save</Button>
+      </PageFooter>
+    </PageTemplate>
+  </Story>
+</Canvas>
