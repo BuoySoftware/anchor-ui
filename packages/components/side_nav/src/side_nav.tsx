@@ -3,6 +3,7 @@ import { SideNavLogo } from "./side_nav_logo";
 
 interface OwnProps {
   children?: React.ReactNode;
+  "data-testid": string;
 }
 
 type SideNavProps = OwnProps;
@@ -15,9 +16,11 @@ const GRID_TEMPLATE_AREAS = `
 
 export const SideNav: React.FC<SideNavProps> = ({
   children,
+  "data-testid": testId,
 }): React.ReactElement => {
   return (
     <Grid
+      data-testid={testId || "side-nav"}
       gridTemplateAreas={GRID_TEMPLATE_AREAS}
       gridTemplateRows="auto 1fr auto"
       p="xl"
