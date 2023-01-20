@@ -8,6 +8,7 @@ export * from "@buoysoftware/anchor-loading-indicator";
 export * from "@buoysoftware/anchor-nav";
 export * from "@buoysoftware/anchor-page-template";
 export * from "@buoysoftware/anchor-side-nav";
+export * from "@buoysoftware/anchor-table";
 export * from "@buoysoftware/anchor-theme";
 export * from "@buoysoftware/anchor-typography";
 export * from "@buoysoftware/anchor-use-translated-options";

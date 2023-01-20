@@ -33,9 +33,9 @@
     "eslint-plugin-jest-dom": "^4.0.3",
     "eslint-plugin-react": "^7.31.11",
     "eslint-plugin-react-hooks": "^4.6.0",
+    "iconoir-react": "^6.0.0",
     "jest-environment-jsdom": "^29.3.1",
     "jest-plugin-context": "^2.9.0",
-    "iconoir-react": "^6.0.0",
     "lerna": "^6.1.0",
     "lodash": "^4.17.21",
     "ts-jest": "^29.0.3"
