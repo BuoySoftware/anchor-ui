@@ -34,13 +34,5 @@
     "react/prop-types": "off",
     "react/react-in-jsx-scope": "off",
     "jest/no-identical-title": "off"
-  },
-  "overrides": [
-    {
-      "files": ["packages/**/*.ts", "packages/**/*.tsx"],
-      "parserOptions": {
-        "project": ["tsconfig.json"]
-      }
-    }
-  ]
+  }
 }
