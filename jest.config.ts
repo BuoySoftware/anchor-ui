@@ -34,12 +34,7 @@ const config: Config = {
   setupFilesAfterEnv: ["./jest.setup.ts"],
   setupFiles: ["jest-plugin-context/setup"],
   transform: {
-    "^.+\\.(ts|tsx)?$": [
-      "ts-jest",
-      {
-        tsconfig: "tsconfig.spec.json",
-      },
-    ],
+    "^.+\\.(ts|tsx)?$": "ts-jest",
     "^.+\\.(js|jsx)$": "babel-jest",
   },
   transformIgnorePatterns: [`/node_modules/(?!${esModules})`],
