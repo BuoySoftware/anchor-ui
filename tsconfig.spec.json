@@ -1,7 +1,12 @@
 {
   "extends": "./tsconfig.json",
   "compilerOptions": {
-    "types": ["jest", "node"]
+    "types": [
+      "jest",
+      "node",
+      "@types/jest-plugin-context",
+      "@types/testing-library__jest-dom"
+    ]
   },
   "include": ["**/*.spec.ts", "**/*.spec.tsx", "**/*.d.ts"],
   "exclude": ["node_modules"]
