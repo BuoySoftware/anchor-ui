@@ -1,8 +1,12 @@
 import kebabCase from "lodash/kebabCase";
 import { Button } from "@buoysoftware/anchor-button";
 import { ChevronDown } from "@styled-icons/feather";
-import { Popover, PopoverProps } from "react-tiny-popover";
 import { useState } from "react";
+
+import {
+  DropdownMenuPopover,
+  DropdownMenuPopoverProps,
+} from "./dropdown_menu_popover";
 
 interface OwnProps {
   children: React.ReactNode;
@@ -10,9 +14,8 @@ interface OwnProps {
   label: string;
 }
 
-type DropdownMenuProps = OwnProps & Partial<Omit<PopoverProps, "children">>;
-
-const MENU_CONTAINER_OFFSET = 3;
+type DropdownMenuProps = OwnProps &
+  Partial<Omit<DropdownMenuPopoverProps, "children">>;
 
 export const DropdownMenu: React.FC<DropdownMenuProps> = ({
   children,
@@ -30,25 +33,21 @@ export const DropdownMenu: React.FC<DropdownMenuProps> = ({
   };
 
   return (
-    <Popover
-      align="start"
-      padding={MENU_CONTAINER_OFFSET}
-      isOpen={isOpen}
-      containerStyle={{ zIndex: "3" }}
-      content={<>{children}</>}
-      onClickOutside={() => setIsOpen(false)}
-      positions={["bottom", "top", "left", "right"]}
+    <DropdownMenuPopover
+      trigger={
+        <Button
+          data-testid={id}
+          icon={<ChevronDown size="20px" strokeWidth="2px" />}
+          iconPosition="right"
+          onClick={onClick}
+          size="l"
+        >
+          {label}
+        </Button>
+      }
       {...popoverProps}
     >
-      <Button
-        data-testid={id}
-        icon={<ChevronDown size="20px" strokeWidth="2px" />}
-        iconPosition="right"
-        onClick={onClick}
-        size="l"
-      >
-        {label}
-      </Button>
-    </Popover>
+      {children}
+    </DropdownMenuPopover>
   );
 };
