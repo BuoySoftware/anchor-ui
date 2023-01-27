@@ -1,5 +1,6 @@
 import { Canvas, Story } from "@storybook/addon-docs";
-import { DropdownMenu, DropdownMenuList, DropdownMenuItem } from "../src";
+import { Button } from "@buoysoftware/anchor-button";
+import { DropdownMenu, DropdownMenuList, DropdownMenuItem, DropdownMenuPopover } from "../src";
 
 <Meta
   title="Components / Dropdown Menu"
@@ -40,5 +41,21 @@ import {
     args={{ label: "Actions" }}
   >
     {Template.bind({})}
+  </Story>
+</Canvas>
+
+## Custom trigger
+
+<Canvas>
+  <Story name="Dropdown with custom trigger">
+    <DropdownMenuPopover
+      trigger={<Button colorScheme="primary">Actions</Button>}>
+      <DropdownMenuList>
+        <DropdownMenuItem>Item 1</DropdownMenuItem>
+        <DropdownMenuItem>Item 2</DropdownMenuItem>
+        <DropdownMenuItem>Item 3</DropdownMenuItem>
+        <DropdownMenuItem>Item 4</DropdownMenuItem>
+      </DropdownMenuList>
+    </DropdownMenuPopover>
   </Story>
 </Canvas>
