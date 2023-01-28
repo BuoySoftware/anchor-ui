@@ -1,8 +1,6 @@
 import i18n from "i18next";
 import { initReactI18next } from "react-i18next";
-import { render as baseRender, RenderResult } from "@testing-library/react";
-import { ThemeProvider } from "styled-components";
-import { theme } from "@buoysoftware/anchor-theme";
+import { render } from "../test_utils";
 
 import { extractConnectionNodes } from "../src/extract_connection_nodes";
 import { Connection, PageableConnection, TableCellConfig } from "../src/types";
@@ -68,10 +66,6 @@ const connection: Connection<Donation> & PageableConnection = {
 };
 
 describe("<Table />", () => {
-  const render = (ui: React.ReactElement): RenderResult => {
-    return baseRender(<ThemeProvider theme={theme}>{ui}</ThemeProvider>);
-  };
-
   const tables = {
     empty_message: "Default empty message",
     test_table_donations_empty: {

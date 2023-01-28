@@ -1,13 +1,6 @@
 import i18n from "i18next";
 import { initReactI18next } from "react-i18next";
-import {
-  render as baseRender,
-  screen,
-  RenderResult,
-} from "@testing-library/react";
-import { ThemeProvider } from "styled-components";
-import { theme } from "@buoysoftware/anchor-theme";
-import userEvent from "@testing-library/user-event";
+import { render, screen } from "../test_utils";
 
 import { TableActions } from "../src/table_actions";
 import { Connection, PageableConnection } from "../src/types";
@@ -90,17 +83,6 @@ describe("<TableActions />", () => {
       },
     },
   });
-
-  interface Render extends RenderResult {
-    user: ReturnType<typeof userEvent.setup>;
-  }
-
-  const render = (ui: React.ReactElement): Render => {
-    return {
-      user: userEvent.setup(),
-      ...baseRender(<ThemeProvider theme={theme}>{ui}</ThemeProvider>),
-    };
-  };
 
   context("user is on first page of multiple", () => {
     it("endables the 'Next' button", () => {
