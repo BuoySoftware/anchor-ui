@@ -1,0 +1,48 @@
+import { Canvas, Story } from "@storybook/addon-docs";
+
+import { TextButton } from "../src";
+
+<Meta
+  title="Components / Button"
+  component={TextButton}
+  argTypes={{
+    type: {
+      control: "select",
+      name: "type",
+      options: ["submit", "reset", "button"]
+    }
+  }}
+  parameters={{
+    controls: {
+      include: [
+        "disabled",
+        "size",
+        "colorScheme",
+        "submitting",
+        "type"
+      ]
+    },
+    layout: "centered"
+  }}
+/>
+
+export const Template = (args) => {
+  return(
+    <TextButton {...args} />
+  );
+}
+
+## Basic Usage
+
+<Canvas>
+  <Story
+    name="Text Button"
+    args={{
+      disabled: false,
+      children: "Button",
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
