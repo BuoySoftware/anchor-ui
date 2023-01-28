@@ -22,6 +22,11 @@ export const Template = ({ cellProps = () => ({}), ...args }) => {
     resources: {
       en: {
         tables: {
+          actions: {
+            next: "Next",
+            previous: "Previous"
+          },
+          total_label: "Total: {{total}}",
           donors: {
             empty_message: "No donors to display",
             th: {
@@ -65,6 +70,35 @@ export const Template = ({ cellProps = () => ({}), ...args }) => {
       ]
     }}
     name="Table with data"
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+## With pagination
+
+<Canvas>
+  <Story
+    args={{
+      fetchMore: () => undefined,
+      paginationData: {
+        totalCount: 4,
+        pageInfo: {
+          startCursor: null,
+          endCursor: null,
+          hasNextPage: false,
+          hasPreviousPage: false,
+          perPage: 4,
+        }
+      },
+      records: [
+        { name: "Jerry Seinfeld", id: 1, myFacility: { name: "Paris " }, level: 1 },
+        { name: "Cosmo Kramer", id: 2, myFacility: { name: "Paris " }, level: 7 },
+        { name: "Elaine Benes", id: 3, myFacility: { name: "Paris " }, level: 4 },
+        { name: "George Costanza", id: 4, myFacility: { name: "Paris " }, level: 0 },
+      ]
+    }}
+    name="Table with pagination"
   >
     {Template.bind({})}
   </Story>
