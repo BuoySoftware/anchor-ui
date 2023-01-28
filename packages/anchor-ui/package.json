@@ -15,6 +15,7 @@
     "postpack": "clean-package restore"
   },
   "dependencies": {
+    "@buoysoftware/anchor-actor": "*",
     "@buoysoftware/anchor-app-template": "^0.23.0",
     "@buoysoftware/anchor-breadcrumbs": "^0.23.0",
     "@buoysoftware/anchor-button": "^0.23.0",
