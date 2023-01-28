@@ -1,0 +1,133 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ConnectionTable /> renders a table based on a column configuration 1`] = `
+<DocumentFragment>
+  <table
+    class="sc-hLBbgP dxfGUx"
+    data-testid="donations-table"
+  >
+    <thead
+      class="sc-pyfCe ecJMuD"
+    >
+      <tr>
+        <th
+          class="sc-bcXHqe sc-eDvSVe sc-gKPRtg bjZCcm cRpfjC"
+          color="text.primary"
+          font-size="font-size-100"
+          font-weight="600"
+        >
+          ID
+        </th>
+        <th
+          class="sc-bcXHqe sc-eDvSVe sc-gKPRtg bjZCcm cRpfjC"
+          color="text.primary"
+          font-size="font-size-100"
+          font-weight="600"
+        >
+          Status
+        </th>
+      </tr>
+    </thead>
+    <tbody
+      class="sc-ftTHYK jdcCIu"
+    >
+      <tr
+        data-testid="tr-1"
+      >
+        <td
+          class="sc-bcXHqe sc-eDvSVe sc-jSUZER rcJCu lliSHS"
+          color="text.primary"
+          data-testid="tr-1-td-id"
+          font-size="font-size-100"
+          font-style="none"
+          font-weight="400"
+        >
+          1
+        </td>
+        <td
+          class="sc-bcXHqe sc-eDvSVe sc-jSUZER rcJCu lliSHS"
+          color="text.primary"
+          data-testid="tr-1-td-status"
+          font-size="font-size-100"
+          font-style="none"
+          font-weight="400"
+        >
+          Good
+        </td>
+      </tr>
+      <tr
+        data-testid="tr-2"
+      >
+        <td
+          class="sc-bcXHqe sc-eDvSVe sc-jSUZER rcJCu lliSHS"
+          color="text.primary"
+          data-testid="tr-2-td-id"
+          font-size="font-size-100"
+          font-style="none"
+          font-weight="400"
+        >
+          2
+        </td>
+        <td
+          class="sc-bcXHqe sc-eDvSVe sc-jSUZER rcJCu lliSHS"
+          color="text.primary"
+          data-testid="tr-2-td-status"
+          font-size="font-size-100"
+          font-style="none"
+          font-weight="400"
+        >
+          Bad
+        </td>
+      </tr>
+      <tr
+        data-testid="tr-3"
+      >
+        <td
+          class="sc-bcXHqe sc-eDvSVe sc-jSUZER rcJCu lliSHS"
+          color="text.primary"
+          data-testid="tr-3-td-id"
+          font-size="font-size-100"
+          font-style="none"
+          font-weight="400"
+        >
+          3
+        </td>
+        <td
+          class="sc-bcXHqe sc-eDvSVe sc-jSUZER rcJCu lliSHS"
+          color="text.primary"
+          data-testid="tr-3-td-status"
+          font-size="font-size-100"
+          font-style="none"
+          font-weight="400"
+        >
+          Ugly
+        </td>
+      </tr>
+      <tr
+        data-testid="tr-4"
+      >
+        <td
+          class="sc-bcXHqe sc-eDvSVe sc-jSUZER rcJCu lliSHS"
+          color="text.primary"
+          data-testid="tr-4-td-id"
+          font-size="font-size-100"
+          font-style="none"
+          font-weight="400"
+        >
+          4
+        </td>
+        <td
+          class="sc-bcXHqe sc-eDvSVe sc-jSUZER rcJCu lliSHS"
+          color="text.primary"
+          data-testid="tr-4-td-status"
+          font-size="font-size-100"
+          font-style="none"
+          font-weight="400"
+        >
+          Other
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</DocumentFragment>
+`;
