@@ -4,7 +4,8 @@ import { render as baseRender, RenderResult } from "@testing-library/react";
 import { ThemeProvider } from "styled-components";
 import { theme } from "@buoysoftware/anchor-theme";
 
-import { TableCellConfig } from "../src/types";
+import { extractConnectionNodes } from "../src/extract_connection_nodes";
+import { Connection, PageableConnection, TableCellConfig } from "../src/types";
 import { Table } from "../src/table";
 
 interface Donation {
@@ -24,6 +25,47 @@ const cellConfigs: TableCellConfig<Donation>[] = [
   { dataKey: "id" },
   { dataKey: "status" },
 ];
+
+const connection: Connection<Donation> & PageableConnection = {
+  edges: [
+    {
+      node: {
+        __typename: "Donation",
+        id: "1",
+        status: "Good",
+      },
+    },
+    {
+      node: {
+        __typename: "Donation",
+        id: "2",
+        status: "Bad",
+      },
+    },
+    {
+      node: {
+        __typename: "Donation",
+        id: "3",
+        status: "Ugly",
+      },
+    },
+    {
+      node: {
+        __typename: "Donation",
+        id: "4",
+        status: "Other",
+      },
+    },
+  ],
+  pageInfo: {
+    endCursor: null,
+    startCursor: null,
+    hasPreviousPage: false,
+    hasNextPage: true,
+    perPage: 2,
+  },
+  totalCount: 4,
+};
 
 describe("<Table />", () => {
   const render = (ui: React.ReactElement): RenderResult => {
@@ -67,6 +109,25 @@ describe("<Table />", () => {
     );
 
     expect(component.asFragment()).toMatchSnapshot();
+  });
+
+  context("data can be paginated", () => {
+    it("renders the table and table actions correctly", () => {
+      const records = extractConnectionNodes(connection);
+
+      const component = render(
+        <Table
+          cellConfigs={cellConfigs}
+          fetchMore={jest.fn()}
+          name="test_table_donations"
+          paginationData={connection}
+          records={records}
+          recordIdKey="id"
+        />
+      );
+
+      expect(component.getByTestId("table-actions")).toBeInTheDocument();
+    });
   });
 
   context("some data is null", () => {
@@ -180,6 +241,20 @@ describe("<Table />", () => {
           );
         });
       });
+    });
+
+    it("does not render the table actions", () => {
+      const records: Donation[] = [];
+      const component = render(
+        <Table
+          cellConfigs={cellConfigs}
+          name="test_table_donations"
+          records={records}
+          recordIdKey="id"
+        />
+      );
+
+      expect(component.queryByTestId("table-actions")).not.toBeInTheDocument();
     });
   });
 });

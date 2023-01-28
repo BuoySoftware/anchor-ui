@@ -13,9 +13,11 @@ import {
 } from "./types";
 import { DEFAULT_TABLE_NAMESPACE } from "./use_table";
 import { EmptyMessage } from "./empty_message";
+import { FetchMore, TableActions } from "./table_actions";
 
 interface OwnProps<RecordData> {
   name: string;
+  fetchMore?: FetchMore;
   paginationData?: (Connection<RecordData> | ConnectionWithEdges<RecordData>) &
     PageableConnection;
   renderPlaceholder?: RenderPlaceholder<RecordData>;
@@ -28,13 +30,17 @@ export type TableProps<RecordData> = OwnProps<RecordData> &
 
 export const Table = <RecordData,>({
   cellConfigs,
+  fetchMore,
   name,
+  paginationData,
   renderPlaceholder = () => "--",
   rowAction,
   recordIdKey,
   records,
   tNamespace = DEFAULT_TABLE_NAMESPACE,
 }: TableProps<RecordData>): React.ReactElement => {
+  const renderTableActions = fetchMore && paginationData && records.length > 0;
+
   return (
     <TableProvider value={{ name, tNamespace }}>
       <StyledTable data-testid={`${kebabCase(name)}-table`}>
@@ -48,6 +54,9 @@ export const Table = <RecordData,>({
         />
       </StyledTable>
       {records.length === 0 && <EmptyMessage />}
+      {renderTableActions && (
+        <TableActions data={paginationData} fetchMore={fetchMore} />
+      )}
     </TableProvider>
   );
 };

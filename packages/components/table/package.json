@@ -6,6 +6,7 @@
   "dependencies": {
     "@buoysoftware/anchor-layout": "^0.21.0",
     "@buoysoftware/anchor-typography": "^0.21.0",
+    "@buoysoftware/anchor-button": "*",
     "lodash": "^4.17.21",
     "react-i18next": "^12.1.4"
   },
