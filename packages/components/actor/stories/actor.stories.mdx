@@ -1,0 +1,49 @@
+import { Canvas, Story } from "@storybook/addon-docs";
+
+import { Actor } from "../src";
+
+<Meta
+  title="Components / Actor"
+  component={Actor}
+  parameters={{
+    controls: {
+      include: [
+        "actor",
+      ]
+    },
+    layout: "centered"
+  }}
+/>
+
+export const Template = (args) => {
+  return (
+    <Actor {...args} />
+  );
+};
+
+# Actor
+
+A component for taking a user with a first and last name to generate a First
+name last initial display.
+
+## Import
+
+```javascript
+import { Actor } from "@buoysoftware/anchor-ui";
+```
+
+## Basic Usage
+
+<Canvas>
+  <Story
+    name="Actor"
+    args={{
+      actor: {
+        firstName: "George",
+        lastName: "Costanza"
+      },
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>

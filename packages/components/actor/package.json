@@ -1,0 +1,22 @@
+{
+  "name": "@buoysoftware/anchor-actor",
+  "version": "0.0.0",
+  "main": "src/index.ts",
+  "license": "MIT",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc -outDir dist",
+    "compile": "tsc --noEmit",
+    "test": "jest",
+    "postpack": "clean-package restore",
+    "prepack": "clean-package"
+  },
+  "dependencies": {
+    "@buoysoftware/anchor-layout": "^0.23.0"
+  },
+  "devDependencies": {
+    "jest": "^29.3.1"
+  }
+}
