@@ -6,6 +6,7 @@ interface OwnProps {
 }
 
 type TextButtonProps = OwnProps &
+  React.ButtonHTMLAttributes<HTMLButtonElement> &
   Omit<HeadingProps, "as" | "size" | "background" | "color">;
 
 export const TextButton = styled(Heading).attrs(() => ({
