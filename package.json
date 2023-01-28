@@ -51,12 +51,12 @@
   },
   "scripts": {
     "build": "yarn lerna run build",
-    "build-storybook": "build-storybook",
+    "build-storybook": "NODE_OPTIONS=--openssl-legacy-provider build-storybook",
     "compile": "yarn lerna run compile",
-    "deploy-storybook": "storybook-to-ghpages",
+    "deploy-storybook": "NODE_OPTIONS=--openssl-legacy-provider storybook-to-ghpages",
     "lint": "eslint packages/**/**/src --ext .ts,.tsx --config .eslintrc",
     "publish-build": "yarn build && yarn lerna publish",
-    "storybook": "start-storybook -p 6006",
+    "storybook": "NODE_OPTIONS=--openssl-legacy-provider start-storybook -p 6006",
     "test": "yarn lerna run test"
   }
 }
