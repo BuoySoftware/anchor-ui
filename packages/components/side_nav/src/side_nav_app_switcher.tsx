@@ -1,3 +1,4 @@
+import { Children } from "react";
 import { remToPx, stripUnit } from "polished";
 import { Box } from "@buoysoftware/anchor-layout";
 import {
@@ -10,14 +11,14 @@ import { useTheme } from "@buoysoftware/anchor-theme";
 import { AppSwitcherTrigger } from "./app_switcher_trigger";
 
 interface OwnProps {
-  menuItems: React.ReactElement[];
+  children: React.ReactNode;
   triggerLabel: string;
 }
 
 type SideNavAppSwitcherProps = OwnProps;
 
 export const SideNavAppSwitcher: React.FC<SideNavAppSwitcherProps> = ({
-  menuItems,
+  children,
   triggerLabel,
 }) => {
   const { space } = useTheme();
@@ -33,10 +34,8 @@ export const SideNavAppSwitcher: React.FC<SideNavAppSwitcherProps> = ({
         trigger={<AppSwitcherTrigger>{triggerLabel}</AppSwitcherTrigger>}
       >
         <DropdownMenuList>
-          {menuItems.map((menuItem, index) => (
-            <DropdownMenuItem size="s" key={index}>
-              {menuItem}
-            </DropdownMenuItem>
+          {Children.map(children, (child) => (
+            <DropdownMenuItem size="s">{child}</DropdownMenuItem>
           ))}
         </DropdownMenuList>
       </DropdownMenuPopover>

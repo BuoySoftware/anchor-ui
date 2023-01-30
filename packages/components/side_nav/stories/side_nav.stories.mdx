@@ -25,7 +25,9 @@ export const Template = (args) => {
     <AppTemplate>
       <AppArea area="side-nav">
         <SideNav>
-          <SideNavAppSwitcher triggerLabel="Centers" menuItems={[<a href="#centers">Centers</a>]}/>
+          <SideNavAppSwitcher triggerLabel="Centers">
+            <a href="#centers">Centers</a>
+          </SideNavAppSwitcher>
           <SideNavItemsContainer>
             <SideNavItem active={currentPage === "page1"}>
               <a onClick={onClick} href="#page1">Page 1</a>
