@@ -6,7 +6,7 @@ interface OwnProps {
   children: React.ReactNode;
 }
 
-type DropdownMenuItemProps = OwnProps & BodyProps;
+type DropdownMenuItemProps = OwnProps & Omit<BodyProps, "size">;
 
 export const DropdownMenuItem = styled(Body).attrs<DropdownMenuItemProps>(
   () => ({
@@ -16,6 +16,10 @@ export const DropdownMenuItem = styled(Body).attrs<DropdownMenuItemProps>(
     px: "m",
   })
 )<DropdownMenuItemProps>`
+  a {
+    color: inherit;
+  }
+
   &:hover {
     background-color: ${(props) => props.theme.colors.background.hover};
     cursor: pointer;

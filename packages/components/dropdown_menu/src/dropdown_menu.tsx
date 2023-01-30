@@ -1,7 +1,7 @@
 import kebabCase from "lodash/kebabCase";
 import { Button } from "@buoysoftware/anchor-button";
-import { ChevronDown } from "@styled-icons/feather";
 import { useState } from "react";
+import { DropdownArrow } from "./dropdown_arrow";
 
 import {
   DropdownMenuPopover,
@@ -37,7 +37,7 @@ export const DropdownMenu: React.FC<DropdownMenuProps> = ({
       trigger={
         <Button
           data-testid={id}
-          icon={<ChevronDown size="20px" strokeWidth="2px" />}
+          icon={<DropdownArrow />}
           iconPosition="right"
           onClick={onClick}
           size="l"
