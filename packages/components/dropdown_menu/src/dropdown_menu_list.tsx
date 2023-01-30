@@ -14,6 +14,7 @@ export const DropdownMenuList: React.FC<DropdownMenuListProps> = ({
       bg="white"
       border="1SolidSubdued"
       borderRadius="4px"
+      minWidth="200px"
       py="xxs"
       flexDirection="column"
     >
