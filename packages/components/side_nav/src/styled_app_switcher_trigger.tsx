@@ -3,9 +3,9 @@ import { Heading } from "@buoysoftware/anchor-typography";
 
 export const StyledAppSwitcherTrigger = styled(Heading)`
   background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.25);
   border-left: none;
   border-right: none;
-  border: 1px solid rgba(255, 255, 255, 0.25);
   color: ${({ theme }) => theme.colors.white};
   cursor: pointer;
   display: flex;
