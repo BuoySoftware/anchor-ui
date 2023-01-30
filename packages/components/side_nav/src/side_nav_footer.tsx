@@ -12,7 +12,7 @@ export const SideNavFooter: React.FC<SideNavFooterProps> = ({
   "data-testid": testId = "side-nav-footer",
 }): React.ReactElement => {
   return (
-    <Box data-testid={testId} gridArea="side-nav-footer">
+    <Box data-testid={testId} gridArea="side-nav-footer" px="sideNav">
       {children}
     </Box>
   );

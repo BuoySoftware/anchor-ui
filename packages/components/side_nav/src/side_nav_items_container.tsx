@@ -17,6 +17,7 @@ export const SideNavItemsContainer: React.FC<SideNavItemsContainerProps> = ({
       data-testid={testId}
       gridArea="side-nav-items"
       as="ul"
+      px="sideNav"
       list-style="none"
     >
       {children}

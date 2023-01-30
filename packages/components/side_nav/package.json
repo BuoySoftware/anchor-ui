@@ -7,7 +7,8 @@
     "dist"
   ],
   "dependencies": {
-    "@buoysoftware/anchor-layout": "^0.24.0"
+    "@buoysoftware/anchor-layout": "^0.24.0",
+    "polished": "^4.2.2"
   },
   "scripts": {
     "build": "tsc -outDir dist && yarn copy-files",

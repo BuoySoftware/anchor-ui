@@ -10,6 +10,7 @@ type SideNavProps = OwnProps;
 
 const GRID_TEMPLATE_AREAS = `
   'side-nav-logo'
+  'side-nav-app-switcher'
   'side-nav-items'
   'side-nav-footer'
 `;
@@ -22,13 +23,13 @@ export const SideNav: React.FC<SideNavProps> = ({
     <Grid
       data-testid={testId}
       gridTemplateAreas={GRID_TEMPLATE_AREAS}
-      gridTemplateRows="auto 1fr auto"
-      p="xl"
+      gridTemplateRows="auto auto 1fr auto"
+      py="xl"
       bg="brandPrimary"
       width="240px"
       height="100vh"
     >
-      <Box gridArea="side-nav-logo">
+      <Box px="sideNav" gridArea="side-nav-logo">
         <SideNavLogo />
       </Box>
 

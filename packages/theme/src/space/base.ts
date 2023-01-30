@@ -59,6 +59,8 @@ const baseAliases = buildThemeAliases(baseSpace, {
   xl: "24",
   xxl: "28",
   xxxl: "32",
+  sideNav: "24",
+  "-sideNav": "-24",
 });
 
 export const base = {
