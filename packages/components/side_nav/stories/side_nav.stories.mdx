@@ -4,7 +4,7 @@ import { Heading } from "@buoysoftware/anchor-typography";
 import { Box } from "@buoysoftware/anchor-layout";
 import { AppTemplate, AppArea } from "@buoysoftware/anchor-app-template";
 
-import { SideNav, SideNavItemsContainer, SideNavItem, SideNavFooter } from "../src";
+import { SideNavAppSwitcher, SideNav, SideNavItemsContainer, SideNavItem, SideNavFooter } from "../src";
 
 <Meta
   title="Components / SideNav"
@@ -25,6 +25,7 @@ export const Template = (args) => {
     <AppTemplate>
       <AppArea area="side-nav">
         <SideNav>
+          <SideNavAppSwitcher triggerLabel="Centers" menuItems={[<a href="#centers">Centers</a>]}/>
           <SideNavItemsContainer>
             <SideNavItem active={currentPage === "page1"}>
               <a onClick={onClick} href="#page1">Page 1</a>
