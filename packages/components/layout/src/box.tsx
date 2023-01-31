@@ -10,6 +10,8 @@ import {
   FlexProps,
   flexGrow,
   FlexGrowProps,
+  flexbox,
+  FlexboxProps,
   grid,
   GridProps,
   layout,
@@ -33,6 +35,7 @@ export interface BoxProps
     ColorProps,
     FlexGrowProps,
     FlexProps,
+    FlexboxProps,
     GapProps,
     GridProps,
     LayoutProps,
@@ -53,6 +56,7 @@ export const boxCss = css`
   ${color};
   ${flex};
   ${flexGrow};
+  ${flexbox};
   ${gap};
   ${grid};
   ${layout};
