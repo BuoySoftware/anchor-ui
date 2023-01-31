@@ -1,0 +1,19 @@
+{
+  "name": "@buoysoftware/anchor-ui-legacy-text",
+  "version": "0.0.0",
+  "main": "src/index.ts",
+  "license": "MIT",
+  "files": [
+    "dist"
+  ],
+  "dependencies": {
+    "@buoysoftware/anchor-layout": "*",
+    "@buoysoftware/anchor-typography": "*"
+  },
+  "scripts": {
+    "build": "tsc -outDir dist",
+    "compile": "tsc --noEmit",
+    "postpack": "clean-package restore",
+    "prepack": "clean-package"
+  }
+}
