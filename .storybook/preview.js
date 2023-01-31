@@ -7,6 +7,12 @@ export const parameters = {
       order: [
         "Typography",
         ["Introduction", "Components", ["Heading", "Subheading", "Body"]],
+        "Components",
+        "Templates",
+        "Forms",
+        "Hooks",
+        "Theme",
+        "anchor-ui-compat",
       ],
     },
   },
