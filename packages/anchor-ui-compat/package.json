@@ -1,0 +1,18 @@
+{
+  "name": "@buoysoftware/anchor-ui-compat",
+  "version": "0.0.0",
+  "main": "src/index.ts",
+  "license": "MIT",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc -outDir dist",
+    "compile": "tsc --noEmit",
+    "prepack": "clean-package",
+    "postpack": "clean-package restore"
+  },
+  "dependencies": {
+    "@buoysoftware/anchor-ui-legacy-text": "*"
+  }
+}
