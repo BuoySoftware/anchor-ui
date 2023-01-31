@@ -1,0 +1,38 @@
+import { Canvas, Story } from "@storybook/addon-docs";
+
+import { LegacyText } from "../src";
+
+<Meta
+  title="anchor-ui-compat / LegacyText"
+  component={LegacyText}
+  parameters={{
+    layout: "centered",
+    controls: {
+      include: ["variant"],
+    },
+  }}
+/>
+
+export const Template = (args) => {
+  return <LegacyText {...args} />
+};
+
+# LegacyText
+
+The LegacyText component provides a compatability bridge to migrate existing
+applications to use AnchorUI incrementally. All of the legacy text variants in
+Buoy are mapped to a new typography component.
+
+## Import
+
+```javascript
+import { Button } from "@buoysoftware/anchor-ui-compat";
+```
+
+## Basic Usage
+
+<Canvas>
+  <Story name="LegacyText" args={{ children: "Lorem ipsum" }}>
+    {Template.bind({})}
+  </Story>
+</Canvas>
