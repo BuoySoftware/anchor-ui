@@ -3,7 +3,7 @@
 exports[`<ConnectionTable /> renders a table based on a column configuration 1`] = `
 <DocumentFragment>
   <table
-    class="sc-hLBbgP dxfGUx"
+    class="sc-hLBbgP eMrZKw"
     data-testid="donations-table"
   >
     <thead
@@ -11,7 +11,7 @@ exports[`<ConnectionTable /> renders a table based on a column configuration 1`]
     >
       <tr>
         <th
-          class="sc-bcXHqe sc-eDvSVe sc-gKPRtg bjZCcm cRpfjC"
+          class="sc-bcXHqe sc-eDvSVe sc-gKPRtg dkPXaA cRpfjC"
           color="text.primary"
           font-size="font-size-100"
           font-weight="600"
@@ -19,7 +19,7 @@ exports[`<ConnectionTable /> renders a table based on a column configuration 1`]
           ID
         </th>
         <th
-          class="sc-bcXHqe sc-eDvSVe sc-gKPRtg bjZCcm cRpfjC"
+          class="sc-bcXHqe sc-eDvSVe sc-gKPRtg dkPXaA cRpfjC"
           color="text.primary"
           font-size="font-size-100"
           font-weight="600"
@@ -35,7 +35,7 @@ exports[`<ConnectionTable /> renders a table based on a column configuration 1`]
         data-testid="tr-1"
       >
         <td
-          class="sc-bcXHqe sc-eDvSVe sc-jSUZER rcJCu lliSHS"
+          class="sc-bcXHqe sc-eDvSVe sc-jSUZER lmYLQs lliSHS"
           color="text.primary"
           data-testid="tr-1-td-id"
           font-size="font-size-100"
@@ -45,7 +45,7 @@ exports[`<ConnectionTable /> renders a table based on a column configuration 1`]
           1
         </td>
         <td
-          class="sc-bcXHqe sc-eDvSVe sc-jSUZER rcJCu lliSHS"
+          class="sc-bcXHqe sc-eDvSVe sc-jSUZER lmYLQs lliSHS"
           color="text.primary"
           data-testid="tr-1-td-status"
           font-size="font-size-100"
@@ -59,7 +59,7 @@ exports[`<ConnectionTable /> renders a table based on a column configuration 1`]
         data-testid="tr-2"
       >
         <td
-          class="sc-bcXHqe sc-eDvSVe sc-jSUZER rcJCu lliSHS"
+          class="sc-bcXHqe sc-eDvSVe sc-jSUZER lmYLQs lliSHS"
           color="text.primary"
           data-testid="tr-2-td-id"
           font-size="font-size-100"
@@ -69,7 +69,7 @@ exports[`<ConnectionTable /> renders a table based on a column configuration 1`]
           2
         </td>
         <td
-          class="sc-bcXHqe sc-eDvSVe sc-jSUZER rcJCu lliSHS"
+          class="sc-bcXHqe sc-eDvSVe sc-jSUZER lmYLQs lliSHS"
           color="text.primary"
           data-testid="tr-2-td-status"
           font-size="font-size-100"
@@ -83,7 +83,7 @@ exports[`<ConnectionTable /> renders a table based on a column configuration 1`]
         data-testid="tr-3"
       >
         <td
-          class="sc-bcXHqe sc-eDvSVe sc-jSUZER rcJCu lliSHS"
+          class="sc-bcXHqe sc-eDvSVe sc-jSUZER lmYLQs lliSHS"
           color="text.primary"
           data-testid="tr-3-td-id"
           font-size="font-size-100"
@@ -93,7 +93,7 @@ exports[`<ConnectionTable /> renders a table based on a column configuration 1`]
           3
         </td>
         <td
-          class="sc-bcXHqe sc-eDvSVe sc-jSUZER rcJCu lliSHS"
+          class="sc-bcXHqe sc-eDvSVe sc-jSUZER lmYLQs lliSHS"
           color="text.primary"
           data-testid="tr-3-td-status"
           font-size="font-size-100"
@@ -107,7 +107,7 @@ exports[`<ConnectionTable /> renders a table based on a column configuration 1`]
         data-testid="tr-4"
       >
         <td
-          class="sc-bcXHqe sc-eDvSVe sc-jSUZER rcJCu lliSHS"
+          class="sc-bcXHqe sc-eDvSVe sc-jSUZER lmYLQs lliSHS"
           color="text.primary"
           data-testid="tr-4-td-id"
           font-size="font-size-100"
@@ -117,7 +117,7 @@ exports[`<ConnectionTable /> renders a table based on a column configuration 1`]
           4
         </td>
         <td
-          class="sc-bcXHqe sc-eDvSVe sc-jSUZER rcJCu lliSHS"
+          class="sc-bcXHqe sc-eDvSVe sc-jSUZER lmYLQs lliSHS"
           color="text.primary"
           data-testid="tr-4-td-status"
           font-size="font-size-100"
