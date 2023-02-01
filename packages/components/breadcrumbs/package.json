@@ -1,11 +1,11 @@
 {
   "name": "@buoysoftware/anchor-breadcrumbs",
-  "version": "0.25.0-alpha.0",
+  "version": "0.25.1",
   "main": "src/index.ts",
   "license": "MIT",
   "dependencies": {
-    "@buoysoftware/anchor-layout": "^0.25.0-alpha.0",
-    "@buoysoftware/anchor-typography": "^0.25.0-alpha.0"
+    "@buoysoftware/anchor-layout": "^0.25.1",
+    "@buoysoftware/anchor-typography": "^0.25.1"
   },
   "scripts": {
     "build": "tsc -outDir dist",
