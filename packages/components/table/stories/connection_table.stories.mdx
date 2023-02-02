@@ -1,0 +1,90 @@
+import i18n from "i18next";
+import { initReactI18next } from "react-i18next";
+import { Canvas, Story } from "@storybook/addon-docs";
+import LinkTo from '@storybook/addon-links/react';
+
+import { ConnectionTable } from "../src";
+
+<Meta
+  title="Components / ConnectionTable"
+  component={ConnectionTable}
+/>
+
+export const Template = ({ cellProps = () => ({}), ...args }) => {
+  i18n.use(initReactI18next).init({
+    lng: "en",
+    ns: ["tables"],
+    resources: {
+      en: {
+        tables: {
+          actions: {
+            next: "Next",
+            previous: "Previous"
+          },
+          total_label: "Total: {{total}}",
+          donors: {
+            empty_message: "No donors to display",
+            th: {
+              name: "Donor Name",
+              id: "Donor ID",
+              deferred: "Deferred",
+              my_facility_name: "Assigned Center",
+              level: "Level"
+            },
+          }
+        }
+      },
+    },
+  });
+  const CELL_CONFIGS = [
+    { dataKey: "name" },
+    { dataKey: "id" },
+    { dataKey: "myFacility.name" },
+    { dataKey: "level" },
+  ];
+  const connection = {
+    edges: [
+      {
+        node: { name: "Jerry Seinfeld", id: 1, myFacility: { name: "Paris " }, level: 1 },
+      },
+      {
+        node: { name: "Cosmo Kramer", id: 2, myFacility: { name: "Paris " }, level: 7 },
+      },
+      {
+        node: { name: "Elaine Benes", id: 3, myFacility: { name: "Paris " }, level: 4 },
+      }
+    ],
+    pageInfo: {
+      startCursor: "abc",
+      endCursor: "def",
+      hasNextPage: true,
+      hasPreviousPage: false,
+      perPage: 3
+    },
+    totalCount: 3
+  }
+  return (
+    <ConnectionTable
+      cellConfigs={CELL_CONFIGS}
+      connection={connection}
+      name="donors"
+      recordIdKey="id"
+      {...args}
+    />
+  )
+};
+
+## Basic Usage
+
+<Canvas>
+  <Story name="ConnectionTable">
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+The `ConnectionTable` provides a convenience wrapper for rendering a table for
+relay connection interface. It will extract the nodes out of the connection in
+order to render them as well as extract the pagination data out for paginating
+the connection.
+
+See `Table` for more details.

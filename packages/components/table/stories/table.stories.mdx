@@ -14,7 +14,6 @@ import { Table } from "../src";
   }}
 />
 
-
 export const Template = ({ cellProps = () => ({}), ...args }) => {
   i18n.use(initReactI18next).init({
     lng: "en",
@@ -59,7 +58,7 @@ export const Template = ({ cellProps = () => ({}), ...args }) => {
 
 ## Basic Usage
 
-<Canvas>
+<Canvas isColumn>
   <Story
     args={{
       records: [
@@ -74,6 +73,95 @@ export const Template = ({ cellProps = () => ({}), ...args }) => {
     {Template.bind({})}
   </Story>
 </Canvas>
+
+### CellConfig
+
+Tables are built by passing in the cellConfigs prop to the table. They represent
+the configuration for each cell within a row. In the story above, all rows are
+rendered by reading from the records directly.
+
+#### Example
+
+```jsx
+const CELL_CONFIGS = [
+  { dataKey: "name" },
+  { dataKey: "id" },
+  { dataKey: "myFacility.name" },
+  { dataKey: "level" },
+]
+
+const records = [
+  { name: "Jerry Seinfeld", id: 1, myFacility: { name: "Paris " }, level: 1 },
+  { name: "Cosmo Kramer", id: 2, myFacility: { name: "Paris " }, level: 7 },
+  { name: "Elaine Benes", id: 3, myFacility: { name: "Paris " }, level: 4 },
+  { name: "George Costanza", id: 4, myFacility: { name: "Paris " }, level: 0 },
+]
+```
+
+<table className="doc-table">
+  <thead>
+    <tr>
+      <th>Option</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>dataKey</td>
+      <td>
+        A unique identifier for the cell in a row. This can be propert of the
+        record being rendered or a nested property within the record being rendered.
+      </td>
+    </tr>
+    <tr>
+      <td>cellProps (optional)</td>
+      <td>
+        Props to be passed to the table cell when rendered. They can be any props
+        that can be passed to `Box`.
+      </td>
+    </tr>
+    <tr>
+      <td>render</td>
+      <td>
+        A function used in order to render the row. If provided, the record will
+        be passed as the only argument to the render function. If no render function
+        is provided then td will attempt to read the dataKey from the object.
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+## Empty Table
+
+<Canvas>
+  <Story
+    args={{ records: [] }}
+    name="Empty Table"
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+The table component provides a empty state which will read from i18next
+translation. It utilizes the i18next fallback pattern in order to look up an
+empty message.
+
+Example:
+
+```jsx
+const MyTable = () => {
+  return <Table records={[]} name="donors" tNamespace="myTranslationNamespace" cellConfigs={} />;
+};
+```
+
+Will look in the following:
+
+```js
+myTranslationNamespace:donors.empty_message
+myTranslationNamespace:tables.donors.empty_message
+tables:donors.empty_message
+tables:empty_message
+```
 
 ## With pagination
 
@@ -104,18 +192,27 @@ export const Template = ({ cellProps = () => ({}), ...args }) => {
   </Story>
 </Canvas>
 
-## Empty Table
+Pagination is built into the tables expecting cursor based pagination following
+a relay connection. You can get pagination by passing the `paginationData` prop
+along with a `fetchMore` prop which is utilized to retrieve the next or previous
+page of results.
 
-<Canvas>
-  <Story
-    args={{ records: [] }}
-    name="Empty Table"
-  >
-    {Template.bind({})}
-  </Story>
-</Canvas>
+Example paginationData:
 
-## Row styling
+```js
+{
+  totalCount: 4,
+  pageInfo: {
+    startCursor: null,
+    endCursor: null,
+    hasNextPage: false,
+    hasPreviousPage: false,
+    perPage: 4,
+  }
+}
+```
+
+## Cell styling
 
 <Canvas>
   <Story
@@ -133,3 +230,23 @@ export const Template = ({ cellProps = () => ({}), ...args }) => {
     {Template.bind({})}
   </Story>
 </Canvas>
+
+The `cellProps` field for `CellConfig` can be utilized to style a row. It takes
+a function which will be passed the record allowing you to conditionally style a
+cell based of the record.
+
+
+Example cellProps for the above conditional styling:
+
+```js
+const CELL_CONFIGS = [
+  { dataKey: "name" },
+  { dataKey: "id" },
+  { dataKey: "myFacility.name" },
+  { dataKey: "level" },
+];
+
+const cellProps = ({ level }) => ( level == 0 ? { background: "red", color: "white", } : {} ),
+
+CELL_CONFIGS.map((cellConfig) => ({ ...cellConfig, cellProps }))
+```
