@@ -1,0 +1,100 @@
+import i18n from "i18next";
+import { initReactI18next } from "react-i18next";
+import { Meta, Canvas, Story } from "@storybook/addon-docs";
+import { useForm } from "react-hook-form";
+import { Button } from "@buoysoftware/anchor-button";
+import { Box, Flex } from "@buoysoftware/anchor-layout";
+
+import { Form, Label, SelectField, anchorFormsEn } from "../src";
+
+<Meta
+  title="Forms / Components / SelectField"
+  component={SelectField}
+  decorators={[
+    (Story) => {
+      const translations = {
+        labels: {
+          select_field_example: {
+            select_example: "Select example"
+          }
+        }
+      }
+      i18n.use(initReactI18next).init({
+        lng: "en",
+        ns: ["anchorForms", "forms"],
+        resources: {
+          en: {
+            anchorForms: anchorFormsEn,
+            forms: translations,
+          },
+        },
+      });
+      return <Story />
+    }
+  ]}
+  parameters={{
+    layout: "centered",
+    controls: {
+      include: ["disabled"]
+    }
+  }}
+/>
+
+export const Template = (args) => {
+  const form = useForm();
+  const options = [
+    { value: "1", label: "Option 1" },
+    { value: "2", label: "Option 2" },
+    { value: "3", label: "Option 3" },
+  ];
+  return(
+    <Form form={form} id="select-field-example" scope="select-field-example">
+      <SelectField
+        options={options}
+        name="selectExample"
+        rules={{ required: true }}
+        {...args} 
+      />
+      <Flex>
+        <Button colorScheme="basic" onClick={(e) => { e.preventDefault(); form.reset() }}>Reset</Button>
+        <Button colorScheme="primary">Submit</Button>
+      </Flex>
+    </Form>
+  );
+}
+
+# SelectField
+
+The SelectField component is intended to be used within a `Form` component utilizing
+react-hook-form. It is composed of the FormField and Select components.
+
+## Import
+
+```javascript
+import { SelectField } from "@buoysoftware/anchor-ui";
+```
+
+## Basic Usage
+
+<Canvas>
+  <Story args={{ disabled: false }} name="SelectField">
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+## With Banner
+
+An optional banner prop is supported to display between the label and the select
+box.
+
+<Canvas>
+  <Story
+    args={{
+      disabled: false,
+      banner: <Box p="s" bg="background.criticalSubdued">Warning: Lorem ipsum</Box>
+    }}
+    name="SelectField with Banner"
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>

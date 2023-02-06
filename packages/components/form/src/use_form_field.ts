@@ -30,13 +30,14 @@ export const useFormField = <L extends true | false>({
   const { t } = useTranslation(compact(flatten([tNamespace, "forms"])));
   const { errors } = useFormState();
 
+  const snakeScope = snakeCase(scope);
   const inputId = kebabCase(name);
   const i18nKey = snakeCase(name);
 
   const placeholder = t(
     [
-      `forms.placeholders.${scope}.${i18nKey}`,
-      `placeholders.${scope}.${i18nKey}`,
+      `forms.placeholders.${snakeScope}.${i18nKey}`,
+      `placeholders.${snakeScope}.${i18nKey}`,
     ],
     {
       defaultValue: defaultPlaceholder,
@@ -45,8 +46,8 @@ export const useFormField = <L extends true | false>({
 
   const label = buildLabel
     ? t([
-        `forms.labels.${scope}.${i18nKey}`,
-        `labels.${scope}.${i18nKey}`,
+        `forms.labels.${snakeScope}.${i18nKey}`,
+        `labels.${snakeScope}.${i18nKey}`,
         `labels.${i18nKey}`,
       ])
     : undefined;

@@ -23,5 +23,8 @@
         "required": "This field is required, please make a selection"
       }
     }
+  },
+  "placeholders": {
+    "select": "Select"
   }
 }

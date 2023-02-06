@@ -1,0 +1,231 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<SelectField /> async is false renders properly 1`] = `
+<DocumentFragment>
+  <form
+    autocomplete="off"
+    class="sc-bcXHqe gKnvGb"
+    data-testid="test-form"
+    id="test-form"
+  >
+    <div
+      class="sc-bcXHqe jMdtpv sc-csuSiG"
+      data-testid="select-field-my-select-field"
+      display="flex"
+      width="input"
+    >
+      <label
+        class="sc-bcXHqe sc-hLBbgP sc-jSUZER sc-kDvujY jMrRtF jvXitA"
+        color="text.primary"
+        font-weight="600"
+        for="my-select-field"
+      >
+        This is my select field
+      </label>
+      <div
+        class="sc-bcXHqe bRutrG"
+      >
+        <div
+          class="react-select css-b62m3t-container"
+        >
+          <span
+            class="css-1f43avz-a11yText-A11yText"
+            id="react-select-5-live-region"
+          />
+          <span
+            aria-atomic="false"
+            aria-live="polite"
+            aria-relevant="additions text"
+            class="css-1f43avz-a11yText-A11yText"
+          />
+          <div
+            class=" css-1nv62aq-control"
+          >
+            <div
+              class=" css-1fdsijx-ValueContainer"
+            >
+              <div
+                class=" css-yeky0j-placeholder"
+                id="react-select-5-placeholder"
+              >
+                Select
+              </div>
+              <div
+                class=" css-ocxznx-Input"
+                data-value=""
+              >
+                <input
+                  aria-autocomplete="list"
+                  aria-describedby="react-select-5-placeholder"
+                  aria-expanded="false"
+                  aria-haspopup="true"
+                  aria-invalid="false"
+                  autocapitalize="none"
+                  autocomplete="off"
+                  autocorrect="off"
+                  class=""
+                  id="my-select-field"
+                  role="combobox"
+                  spellcheck="false"
+                  style="opacity: 1; width: 100%; grid-area: 1 / 2; min-width: 2px; border: 0px; margin: 0px; outline: 0; padding: 0px;"
+                  tabindex="0"
+                  type="text"
+                  value=""
+                />
+              </div>
+            </div>
+            <div
+              class=" css-unhd5j-IndicatorsContainer"
+            >
+              <span
+                class=" css-1xjgjl1-IndicatorSeparator"
+              />
+              <svg
+                color="#101112"
+                fill="none"
+                height="24"
+                stroke-width="1.5"
+                viewBox="0 0 24 24"
+                width="24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M6 9l6 6 6-6"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </div>
+          </div>
+          <input
+            name="mySelectField"
+            type="hidden"
+            value=""
+          />
+        </div>
+      </div>
+    </div>
+    <button
+      type="submit"
+    >
+      Submit
+    </button>
+  </form>
+</DocumentFragment>
+`;
+
+exports[`<SelectField /> async is true renders properly 1`] = `
+<DocumentFragment>
+  <form
+    autocomplete="off"
+    class="sc-bcXHqe gKnvGb"
+    data-testid="test-form"
+    id="test-form"
+  >
+    <div
+      class="sc-bcXHqe jMdtpv sc-csuSiG"
+      data-testid="select-field-my-select-field"
+      display="flex"
+      width="input"
+    >
+      <label
+        class="sc-bcXHqe sc-hLBbgP sc-jSUZER sc-kDvujY jMrRtF jvXitA"
+        color="text.primary"
+        font-weight="600"
+        for="my-select-field"
+      >
+        This is my select field
+      </label>
+      <div
+        class="sc-bcXHqe bRutrG"
+      >
+        <div
+          class="react-async-select css-b62m3t-container"
+        >
+          <span
+            class="css-1f43avz-a11yText-A11yText"
+            id="react-select-2-live-region"
+          />
+          <span
+            aria-atomic="false"
+            aria-live="polite"
+            aria-relevant="additions text"
+            class="css-1f43avz-a11yText-A11yText"
+          />
+          <div
+            class=" css-1nv62aq-control"
+          >
+            <div
+              class=" css-1fdsijx-ValueContainer"
+            >
+              <div
+                class=" css-yeky0j-placeholder"
+                id="react-select-2-placeholder"
+              >
+                Select
+              </div>
+              <div
+                class=" css-ocxznx-Input"
+                data-value=""
+              >
+                <input
+                  aria-autocomplete="list"
+                  aria-describedby="react-select-2-placeholder"
+                  aria-expanded="false"
+                  aria-haspopup="true"
+                  aria-invalid="false"
+                  autocapitalize="none"
+                  autocomplete="off"
+                  autocorrect="off"
+                  class=""
+                  id="my-select-field"
+                  role="combobox"
+                  spellcheck="false"
+                  style="opacity: 1; width: 100%; grid-area: 1 / 2; min-width: 2px; border: 0px; margin: 0px; outline: 0; padding: 0px;"
+                  tabindex="0"
+                  type="text"
+                  value=""
+                />
+              </div>
+            </div>
+            <div
+              class=" css-unhd5j-IndicatorsContainer"
+            >
+              <span
+                class=" css-1xjgjl1-IndicatorSeparator"
+              />
+              <svg
+                color="#101112"
+                fill="none"
+                height="24"
+                stroke-width="1.5"
+                viewBox="0 0 24 24"
+                width="24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M6 9l6 6 6-6"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </div>
+          </div>
+          <input
+            name="mySelectField"
+            type="hidden"
+            value=""
+          />
+        </div>
+      </div>
+    </div>
+    <button
+      type="submit"
+    >
+      Submit
+    </button>
+  </form>
+</DocumentFragment>
+`;
