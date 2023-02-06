@@ -17,7 +17,7 @@ interface OwnProps {
 
 export type FormFieldProps = OwnProps & Omit<BoxProps, "errors">;
 
-const FormField = styled(
+export const FormField = styled(
   ({ children, error, inputId, inputType, name, label, ...elementProps }) => {
     const testId = kebabCase(inputId);
 
@@ -40,14 +40,10 @@ const FormField = styled(
           error={error}
           inputId={inputId}
           inputType={inputType}
-          mt="-xs"
+          mt="xxs"
           name={name}
-          pb="xxs"
-          pt="s"
         />
       </Box>
     );
   }
 )<FormFieldProps>``;
-
-export default FormField;

@@ -101,9 +101,9 @@ describe("<RadioField />", () => {
       expect(asFragment()).toMatchSnapshot();
     });
   });
-  //
+
   describe("group label", () => {
-    context("ccustom label is provided", () => {
+    context("custom label is provided", () => {
       it("uses the passed in label", () => {
         const label = <p>Hello World</p>;
 
