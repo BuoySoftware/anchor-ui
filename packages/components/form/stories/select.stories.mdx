@@ -1,0 +1,38 @@
+import { Canvas, Story } from "@storybook/addon-docs";
+
+import { Select } from "../src"
+
+<Meta
+  title="Forms / Components / Select"
+  component={Select}
+  argTypes={{
+    isDisabled: {
+      control: "boolean"
+    }
+  }}
+  parameters={{
+    controls: {
+      include: ["error", "isDisabled", "options"]
+    },
+    layout: "centered"
+  }}
+/>
+
+export const Template = (args) => {
+  return (<Select {...args} />);
+};
+
+# Select
+
+## Basic Usage
+
+<Canvas>
+  <Story name="Select" args={{ 
+    options: [
+      { label: "Option 1", value: "option-1" },
+      { label: "Option 2", value: "option-2" }
+    ]
+  }}>
+    {Template.bind({})}
+  </Story>
+</Canvas>

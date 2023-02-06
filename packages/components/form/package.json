@@ -16,11 +16,14 @@
   "dependencies": {
     "@buoysoftware/anchor-button": "^0.25.1",
     "@buoysoftware/anchor-layout": "^0.25.1",
+    "@buoysoftware/anchor-theme": "*",
     "@buoysoftware/anchor-typography": "^0.25.1",
     "i18next": "^22.4.9",
+    "iconoir-react": "^6.2.1",
     "lodash": "*",
     "react-hook-form": "^7.42.1",
-    "react-i18next": "^12.1.4"
+    "react-i18next": "^12.1.4",
+    "react-select": "^5.7.0"
   },
   "devDependencies": {
     "jest": "^29.3.1",
