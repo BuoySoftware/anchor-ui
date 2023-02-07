@@ -1149,36 +1149,6 @@
   resolved "https://registry.yarnpkg.com/@bcoe/v8-coverage/-/v8-coverage-0.2.3.tgz#75a2e8b51cb758a7553d6804a5932d7aace75c39"
   integrity sha512-0hYQ8SB4Db5zvZB4axdMHGwEaQjkZzFjQiN9LVYvIFB2nSUHW9tYpxWriPrWDASIxiaXax83REcLxuSdnGPZtw==
 
-"@buoysoftware/anchor-layout@*", "@buoysoftware/anchor-layout@^0.24.0":
-  version "0.24.0"
-  resolved "https://registry.yarnpkg.com/@buoysoftware/anchor-layout/-/anchor-layout-0.24.0.tgz#e68bf6e51fb2c51e76600b7320fbee3b7dd5e396"
-  integrity sha512-oJwGq+wD696f3JYvS8v+McOZ49s96hggpsj+VxQzhXfic4qsSSn63234rIygWfxU6Xej5rre/20k4nwlgJsiYA==
-  dependencies:
-    "@buoysoftware/anchor-theme" "^0.24.0"
-    styled-components "^5.3.6"
-    styled-system "^5.1.5"
-
-"@buoysoftware/anchor-theme@^0.24.0":
-  version "0.24.0"
-  resolved "https://registry.yarnpkg.com/@buoysoftware/anchor-theme/-/anchor-theme-0.24.0.tgz#e6d2c044c6d71327363786dad502f6973a806780"
-  integrity sha512-N3yPmrRiUYURYihz+3hnGvlSEQDbVf0aygfJOlE0l2D06UKgZ4qgXW2qr0a8Mf26IXCpiaT2amtmeCrCuKNhsw==
-  dependencies:
-    "@styled-system/theme-get" "^5.1.2"
-    polished "^4.2.2"
-    styled-components "^5.3.6"
-
-"@buoysoftware/anchor-typography@*":
-  version "0.24.0"
-  resolved "https://registry.yarnpkg.com/@buoysoftware/anchor-typography/-/anchor-typography-0.24.0.tgz#801a95bb522e32457199d22dbbff585bbdf37f17"
-  integrity sha512-Q0NmMDVk5y2646ty405VLdSxBK56k/DtcOSC6//e6JmztiKze3LOfQX2LmBdvxA0xbZfp0/NQ5JPDWExqUFI2Q==
-  dependencies:
-    "@buoysoftware/anchor-layout" "^0.24.0"
-    "@buoysoftware/anchor-theme" "^0.24.0"
-    react-markdown "^8.0.4"
-    rehype-raw "^6.1.1 "
-    styled-components "^5.3.6"
-    styled-system "^5.1.5"
-
 "@cnakazawa/watch@^1.0.3":
   version "1.0.4"
   resolved "https://registry.yarnpkg.com/@cnakazawa/watch/-/watch-1.0.4.tgz#f864ae85004d0fcab6f50be9141c4da368d1656a"
@@ -8963,9 +8933,9 @@ i18next@^22.4.9:
     "@babel/runtime" "^7.20.6"
 
 iconoir-react@^6.0.0, iconoir-react@^6.2.0:
-  version "6.2.0"
-  resolved "https://registry.yarnpkg.com/iconoir-react/-/iconoir-react-6.2.0.tgz#a5160a36ad76a648394373d69ecfdcc50c930c8a"
-  integrity sha512-y0IoL1vty1Afdc7Z66QgrF80imSp6edhgXA3a+nZPk4UYNCAqMxSxZo+VwMic/V7PrSrjD/tKLyx81EcbGFOPQ==
+  version "6.2.1"
+  resolved "https://registry.yarnpkg.com/iconoir-react/-/iconoir-react-6.2.1.tgz#d4b224679d9cc89f269b6c976a22d5eaf93cdc41"
+  integrity sha512-KcVRNsgNSm8OoZDJPWH6xCa7qnZXweG6SswykINyGXl5ro/2TM7Taf1G8zr6usNnbxnYixOoPLz8G/5amxexvA==
 
 iconv-lite@0.4.24, iconv-lite@^0.4.24:
   version "0.4.24"
