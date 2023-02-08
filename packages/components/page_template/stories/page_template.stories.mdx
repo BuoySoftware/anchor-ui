@@ -1,7 +1,10 @@
 import { Canvas, Story } from "@storybook/addon-docs";
+import i18n from "i18next";
+import { initReactI18next } from "react-i18next";
 
+import { LoadingIndicator } from "@buoysoftware/anchor-loading-indicator";
 import { DropdownMenu, DropdownMenuList, DropdownMenuItem } from "@buoysoftware/anchor-dropdown-menu";
-import { Flex } from "@buoysoftware/anchor-layout";
+import { Box, Flex } from "@buoysoftware/anchor-layout";
 import { Breadcrumbs, Breadcrumb } from "@buoysoftware/anchor-breadcrumbs";
 import { Button } from "@buoysoftware/anchor-button";
 
@@ -11,6 +14,21 @@ import { PageActionBar, PageBreadcrumbs, PageContent, PageFooter, PageHeader, Pa
   title="Templates / PageTemplate"
   component={PageTemplate}
   subcomponents={ PageTemplateArea }
+  decorators={[
+    (Story) => {
+      i18n.use(initReactI18next).init({
+        lng: "en",
+        resources: {
+          en: {
+            translation: {
+              loading: "Loading"
+            }
+          }
+        }
+      });
+      return <Story />
+    }
+  ]}
   parameters={{
     layout: "fullscreen"
   }}
@@ -80,6 +98,24 @@ import { PageActionBar, PageBreadcrumbs, PageContent, PageFooter, PageHeader, Pa
         <Button>Cancel</Button>
         <Button colorScheme="primary">Save</Button>
       </PageFooter>
+    </PageTemplate>
+  </Story>
+</Canvas>
+
+## With Loader
+
+<Canvas>
+  <Story name="with Loader" args={{}}>
+    <PageTemplate>
+      <PageBreadcrumbs>
+        <Breadcrumbs>
+          <Breadcrumb>Questionnaires</Breadcrumb>
+        </Breadcrumbs>
+      </PageBreadcrumbs>
+      <PageHeader title="Template example" />
+      <PageContent loading>
+        Content is loading
+      </PageContent>
     </PageTemplate>
   </Story>
 </Canvas>
