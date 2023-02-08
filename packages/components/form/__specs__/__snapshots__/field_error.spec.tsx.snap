@@ -6,21 +6,59 @@ exports[`<FieldError /> error is undefined renders nothing 1`] = `<DocumentFragm
 
 exports[`<FieldError /> error message is provided with a single message renders the provided message 1`] = `
 <DocumentFragment>
-  <div
-    class="sc-bcXHqe hsduTM"
+  .c0 {
+  box-sizing: border-box;
+  border-radius: 4px;
+  background-color: background.criticalSubdued;
+  padding-bottom: xs;
+  padding-top: xs;
+  padding-left: m;
+  padding-right: m;
+}
+
+.c1 {
+  box-sizing: border-box;
+  color: text.critical;
+  width: m;
+  height: m;
+}
+
+.c3 {
+  box-sizing: border-box;
+  color: inherit;
+}
+
+.c2 {
+  font-family: -apple-system,BlinkMacSystemFont,San Francisco,Segoe UI, Roboto,Helvetica Neue,sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-style: none;
+  font-size: font-size-100;
+  font-weight: 400;
+  line-height: font-size-100;
+}
+
+.c4 {
+  font-family: -apple-system,BlinkMacSystemFont,San Francisco,Segoe UI, Roboto,Helvetica Neue,sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+<div
+    class="c0"
     data-testid="error-test-input"
     id="error-test-input"
     role="alert"
   >
     <div
-      class="sc-bcXHqe sc-hLBbgP sc-eDvSVe oSLUe rKWEz"
+      class="c1 c2"
       color="text.critical"
       font-size="font-size-100"
       font-style="none"
       font-weight="400"
     >
       <p
-        class="sc-bcXHqe sc-hLBbgP fRQuMW dDZkPR"
+        class="c3 c4"
         color="inherit"
       >
         Invalid field
@@ -32,35 +70,73 @@ exports[`<FieldError /> error message is provided with a single message renders 
 
 exports[`<FieldError /> error message is provided with multiple messages renders all of the provided messages 1`] = `
 <DocumentFragment>
-  <div
-    class="sc-bcXHqe hsduTM"
+  .c0 {
+  box-sizing: border-box;
+  border-radius: 4px;
+  background-color: background.criticalSubdued;
+  padding-bottom: xs;
+  padding-top: xs;
+  padding-left: m;
+  padding-right: m;
+}
+
+.c1 {
+  box-sizing: border-box;
+  color: text.critical;
+  width: m;
+  height: m;
+}
+
+.c3 {
+  box-sizing: border-box;
+  color: inherit;
+}
+
+.c2 {
+  font-family: -apple-system,BlinkMacSystemFont,San Francisco,Segoe UI, Roboto,Helvetica Neue,sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-style: none;
+  font-size: font-size-100;
+  font-weight: 400;
+  line-height: font-size-100;
+}
+
+.c4 {
+  font-family: -apple-system,BlinkMacSystemFont,San Francisco,Segoe UI, Roboto,Helvetica Neue,sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+<div
+    class="c0"
     data-testid="error-test-input"
     id="error-test-input"
     role="alert"
   >
     <div
-      class="sc-bcXHqe sc-hLBbgP sc-eDvSVe oSLUe rKWEz"
+      class="c1 c2"
       color="text.critical"
       font-size="font-size-100"
       font-style="none"
       font-weight="400"
     >
       <p
-        class="sc-bcXHqe sc-hLBbgP fRQuMW dDZkPR"
+        class="c3 c4"
         color="inherit"
       >
         Invalid field
       </p>
     </div>
     <div
-      class="sc-bcXHqe sc-hLBbgP sc-eDvSVe oSLUe rKWEz"
+      class="c1 c2"
       color="text.critical"
       font-size="font-size-100"
       font-style="none"
       font-weight="400"
     >
       <p
-        class="sc-bcXHqe sc-hLBbgP fRQuMW dDZkPR"
+        class="c3 c4"
         color="inherit"
       >
         Other error
@@ -72,26 +148,71 @@ exports[`<FieldError /> error message is provided with multiple messages renders
 
 exports[`<FieldError /> error message with markdown with a single message renders the provided message with markup 1`] = `
 <DocumentFragment>
-  <div
-    class="sc-bcXHqe hsduTM"
+  .c0 {
+  box-sizing: border-box;
+  border-radius: 4px;
+  background-color: background.criticalSubdued;
+  padding-bottom: xs;
+  padding-top: xs;
+  padding-left: m;
+  padding-right: m;
+}
+
+.c1 {
+  box-sizing: border-box;
+  color: text.critical;
+  width: m;
+  height: m;
+}
+
+.c3 {
+  box-sizing: border-box;
+  color: inherit;
+}
+
+.c2 {
+  font-family: -apple-system,BlinkMacSystemFont,San Francisco,Segoe UI, Roboto,Helvetica Neue,sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-style: none;
+  font-size: font-size-100;
+  font-weight: 400;
+  line-height: font-size-100;
+}
+
+.c4 {
+  font-family: -apple-system,BlinkMacSystemFont,San Francisco,Segoe UI, Roboto,Helvetica Neue,sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.c5 {
+  font-family: -apple-system,BlinkMacSystemFont,San Francisco,Segoe UI, Roboto,Helvetica Neue,sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-weight: bold;
+}
+
+<div
+    class="c0"
     data-testid="error-test-input"
     id="error-test-input"
     role="alert"
   >
     <div
-      class="sc-bcXHqe sc-hLBbgP sc-eDvSVe oSLUe rKWEz"
+      class="c1 c2"
       color="text.critical"
       font-size="font-size-100"
       font-style="none"
       font-weight="400"
     >
       <p
-        class="sc-bcXHqe sc-hLBbgP fRQuMW dDZkPR"
+        class="c3 c4"
         color="inherit"
       >
         This is 
         <strong
-          class="sc-bcXHqe sc-hLBbgP fRQuMW ePgUZj"
+          class="c3 c5"
           color="inherit"
           font-weight="bold"
         >
