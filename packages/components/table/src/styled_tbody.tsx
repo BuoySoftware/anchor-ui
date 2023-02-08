@@ -16,19 +16,7 @@ export const StyledTbody = styled.tbody<StyledTbodyProps>`
         cursor: pointer;
 
         &:hover {
-          background-color: ${({ theme }) => theme.colors.cloud};
-        }
-
-        &:focus {
-          background-color: ${({ theme }) => theme.colors.white};
-          outline: none;
-        }
-
-        &:active {
-          outline-color: ${({ theme }) => theme.colors.blue};
-          outline-offset: -3px;
-          outline-style: solid;
-          outline-width: 3px;
+          background-color: ${({ theme }) => theme.colors.background.hover};
         }
       `}
   }

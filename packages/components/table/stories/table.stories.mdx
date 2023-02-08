@@ -131,6 +131,22 @@ const records = [
   </tbody>
 </table>
 
+## Row action
+
+<Canvas>
+  <Story args={{
+    records: [
+      { name: "Jerry Seinfeld", id: 1, myFacility: { name: "Paris " }, level: 1 },
+      { name: "Cosmo Kramer", id: 2, myFacility: { name: "Paris " }, level: 7 },
+      { name: "Elaine Benes", id: 3, myFacility: { name: "Paris " }, level: 4 },
+      { name: "George Costanza", id: 4, myFacility: { name: "Paris " }, level: 0 },
+    ],
+    rowAction: () => console.log("Row action!")}} name="Row action"
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
 ## Empty Table
 
 <Canvas>
