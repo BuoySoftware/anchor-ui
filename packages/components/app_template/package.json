@@ -1,10 +1,10 @@
 {
   "name": "@buoysoftware/anchor-app-template",
-  "version": "0.25.1",
+  "version": "0.26.0",
   "main": "src/index.ts",
   "license": "MIT",
   "dependencies": {
-    "@buoysoftware/anchor-layout": "^0.25.1"
+    "@buoysoftware/anchor-layout": "^0.26.0"
   },
   "scripts": {
     "build": "tsc -outDir dist",
