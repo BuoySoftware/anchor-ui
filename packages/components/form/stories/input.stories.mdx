@@ -1,0 +1,39 @@
+import { Meta, Canvas, Story } from "@storybook/addon-docs";
+import { Search } from "iconoir-react";
+
+import { Input } from "../src";
+
+<Meta
+  title="Forms / Components / Input"
+  component={Input}
+  parameters={{
+    layout: "centered",
+    controls: {
+    include: ["prefixUnit", "placeholder", "disabled", "readOnly", "unit", "value", "error"]
+    }
+  }}
+/>
+
+export const Template = (args) => {
+  return(
+    <Input name="example" mr="xs" {...args} />
+  );
+}
+
+# Input
+
+## Basic Usage
+
+<Canvas>
+  <Story args={{ disabled: false, placeholder: "Example" }} name="Input">
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+## With Icon
+
+<Canvas>
+  <Story args={{ disabled: false, placeholder: "Example", icon: <Search /> }} name="Input with Icon">
+    {Template.bind({})}
+  </Story>
+</Canvas>
