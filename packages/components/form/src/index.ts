@@ -2,6 +2,7 @@ export * from "./error_message";
 export * from "./form";
 export * from "./form_button";
 export * from "./form_scope_provider";
+export * from "./input";
 export * from "./label";
 export * from "./radio_field";
 export * from "./select";

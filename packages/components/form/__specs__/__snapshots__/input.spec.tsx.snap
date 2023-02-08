@@ -1,0 +1,981 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Input /> prefix unit renders a prefix unit properly 1`] = `
+<DocumentFragment>
+  .c0 {
+  box-sizing: border-box;
+}
+
+.c2 {
+  box-sizing: border-box;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-flex-direction: row-reverse;
+  -ms-flex-direction: row-reverse;
+  flex-direction: row-reverse;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.c4 {
+  box-sizing: border-box;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+
+.c6 {
+  box-sizing: border-box;
+  color: #9CA1A5;
+  margin-right: 0.5rem;
+}
+
+.c3 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-flex-direction: row-reverse;
+  -ms-flex-direction: row-reverse;
+  flex-direction: row-reverse;
+}
+
+.c5 {
+  outline: none;
+  background: none;
+  border: none;
+  color: inherit;
+  fontsize: inherit;
+  line-height: inherit;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  text-align: inherit;
+  box-sizing: border-box;
+}
+
+.c1 {
+  font-family: -apple-system,BlinkMacSystemFont,San Francisco,Segoe UI, Roboto,Helvetica Neue,sans-serif;
+  display: inline-block;
+  background-color: #FFFFFF;
+  border: 1px solid;
+  border-radius: 4px;
+  color: #101112;
+  font-size: $({ theme }) => theme.fontSize["font-size-100"];
+  font-weight: $({ theme }) => theme.fontWeight.normal;
+  line-height: $({ theme }) => theme.lineHeight["font-size-100"];
+  margin: 0;
+  padding: 0.75rem 0.75rem;
+  width: 300px;
+}
+
+.c1 transition:"background 0.75s ease",
+.c1 input::-webkit-input-placeholder {
+  opacity: 1;
+  color: #9CA1A5;
+  -webkit-text-fill-color: $({ theme}) => theme.colors.text.tertiary;
+}
+
+.c1 transition:"background 0.75s ease",
+.c1 input::-moz-placeholder {
+  opacity: 1;
+  color: #9CA1A5;
+  -webkit-text-fill-color: $({ theme}) => theme.colors.text.tertiary;
+}
+
+.c1 transition:"background 0.75s ease",
+.c1 input:-ms-input-placeholder {
+  opacity: 1;
+  color: #9CA1A5;
+  -webkit-text-fill-color: $({ theme}) => theme.colors.text.tertiary;
+}
+
+.c1 transition:"background 0.75s ease",
+.c1 input::placeholder {
+  opacity: 1;
+  color: #9CA1A5;
+  -webkit-text-fill-color: $({ theme}) => theme.colors.text.tertiary;
+}
+
+.c1:hover {
+  border-color: #46494D;
+}
+
+<div
+    class="c0 c1"
+    data-testid="input-wrapper-example"
+  >
+    <div
+      class="c2 c3"
+      display="flex"
+    >
+      <div
+        class="c4"
+      >
+        <input
+          class="c5"
+          data-testid="input-example"
+          id="example"
+          name="example"
+          value=""
+        />
+      </div>
+      <div
+        class="c6"
+        color="text.tertiary"
+        data-testid="input-unit"
+      >
+        $
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`<Input /> renders a disabled input properly 1`] = `
+<DocumentFragment>
+  .c0 {
+  box-sizing: border-box;
+}
+
+.c2 {
+  box-sizing: border-box;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.c4 {
+  box-sizing: border-box;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+
+.c3 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+}
+
+.c5 {
+  outline: none;
+  background: none;
+  border: none;
+  color: inherit;
+  fontsize: inherit;
+  line-height: inherit;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  text-align: inherit;
+  box-sizing: border-box;
+}
+
+.c1 {
+  font-family: -apple-system,BlinkMacSystemFont,San Francisco,Segoe UI, Roboto,Helvetica Neue,sans-serif;
+  display: inline-block;
+  background-color: #FFFFFF;
+  border: 1px solid;
+  border-radius: 4px;
+  color: #101112;
+  font-size: $({ theme }) => theme.fontSize["font-size-100"];
+  font-weight: $({ theme }) => theme.fontWeight.normal;
+  line-height: $({ theme }) => theme.lineHeight["font-size-100"];
+  margin: 0;
+  padding: 0.75rem 0.75rem;
+  width: 300px;
+  background: #FAFBFC;
+  border-color: #BABEC3;
+  color: #9CA1A5;
+}
+
+.c1 transition:"background 0.75s ease",
+.c1 input::-webkit-input-placeholder {
+  opacity: 1;
+  color: #9CA1A5;
+  -webkit-text-fill-color: $({ theme}) => theme.colors.text.tertiary;
+}
+
+.c1 transition:"background 0.75s ease",
+.c1 input::-moz-placeholder {
+  opacity: 1;
+  color: #9CA1A5;
+  -webkit-text-fill-color: $({ theme}) => theme.colors.text.tertiary;
+}
+
+.c1 transition:"background 0.75s ease",
+.c1 input:-ms-input-placeholder {
+  opacity: 1;
+  color: #9CA1A5;
+  -webkit-text-fill-color: $({ theme}) => theme.colors.text.tertiary;
+}
+
+.c1 transition:"background 0.75s ease",
+.c1 input::placeholder {
+  opacity: 1;
+  color: #9CA1A5;
+  -webkit-text-fill-color: $({ theme}) => theme.colors.text.tertiary;
+}
+
+.c1:hover {
+  border-color: #46494D;
+}
+
+.c1 input {
+  -webkit-text-fill-color: #9CA1A5;
+}
+
+<div
+    class="c0 c1"
+    data-testid="input-wrapper-example"
+    disabled=""
+  >
+    <div
+      class="c2 c3"
+      display="flex"
+    >
+      <div
+        class="c4"
+      >
+        <input
+          class="c5"
+          data-testid="input-example"
+          disabled=""
+          id="example"
+          name="example"
+          value=""
+        />
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`<Input /> renders a focus state properly 1`] = `
+<DocumentFragment>
+  .c0 {
+  box-sizing: border-box;
+}
+
+.c2 {
+  box-sizing: border-box;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.c4 {
+  box-sizing: border-box;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+
+.c3 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+}
+
+.c5 {
+  outline: none;
+  background: none;
+  border: none;
+  color: inherit;
+  fontsize: inherit;
+  line-height: inherit;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  text-align: inherit;
+  box-sizing: border-box;
+}
+
+.c1 {
+  font-family: -apple-system,BlinkMacSystemFont,San Francisco,Segoe UI, Roboto,Helvetica Neue,sans-serif;
+  display: inline-block;
+  background-color: #FFFFFF;
+  border: 1px solid;
+  border-radius: 4px;
+  color: #101112;
+  font-size: $({ theme }) => theme.fontSize["font-size-100"];
+  font-weight: $({ theme }) => theme.fontWeight.normal;
+  line-height: $({ theme }) => theme.lineHeight["font-size-100"];
+  margin: 0;
+  padding: 0.75rem 0.75rem;
+  width: 300px;
+  box-shadow: 0px 0px 0px 2px #FFFFFF, 0px 0px 0px 4px #5B91F4;
+}
+
+.c1 transition:"background 0.75s ease",
+.c1 input::-webkit-input-placeholder {
+  opacity: 1;
+  color: #9CA1A5;
+  -webkit-text-fill-color: $({ theme}) => theme.colors.text.tertiary;
+}
+
+.c1 transition:"background 0.75s ease",
+.c1 input::-moz-placeholder {
+  opacity: 1;
+  color: #9CA1A5;
+  -webkit-text-fill-color: $({ theme}) => theme.colors.text.tertiary;
+}
+
+.c1 transition:"background 0.75s ease",
+.c1 input:-ms-input-placeholder {
+  opacity: 1;
+  color: #9CA1A5;
+  -webkit-text-fill-color: $({ theme}) => theme.colors.text.tertiary;
+}
+
+.c1 transition:"background 0.75s ease",
+.c1 input::placeholder {
+  opacity: 1;
+  color: #9CA1A5;
+  -webkit-text-fill-color: $({ theme}) => theme.colors.text.tertiary;
+}
+
+.c1:hover {
+  border-color: #46494D;
+}
+
+<div
+    class="c0 c1"
+    data-testid="input-wrapper-example"
+  >
+    <div
+      class="c2 c3"
+      display="flex"
+    >
+      <div
+        class="c4"
+      >
+        <input
+          class="c5"
+          data-testid="input-example"
+          id="example"
+          name="example"
+          value=""
+        />
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`<Input /> renders a readOnly input properly 1`] = `
+<DocumentFragment>
+  .c0 {
+  box-sizing: border-box;
+}
+
+.c2 {
+  box-sizing: border-box;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.c4 {
+  box-sizing: border-box;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+
+.c3 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+}
+
+.c5 {
+  outline: none;
+  background: none;
+  border: none;
+  color: inherit;
+  fontsize: inherit;
+  line-height: inherit;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  text-align: inherit;
+  box-sizing: border-box;
+}
+
+.c1 {
+  font-family: -apple-system,BlinkMacSystemFont,San Francisco,Segoe UI, Roboto,Helvetica Neue,sans-serif;
+  display: inline-block;
+  background-color: #FFFFFF;
+  border: 1px solid;
+  border-radius: 4px;
+  color: #101112;
+  font-size: $({ theme }) => theme.fontSize["font-size-100"];
+  font-weight: $({ theme }) => theme.fontWeight.normal;
+  line-height: $({ theme }) => theme.lineHeight["font-size-100"];
+  margin: 0;
+  padding: 0.75rem 0.75rem;
+  width: 300px;
+  background: #FAFBFC;
+  border-color: #BABEC3;
+  color: #9CA1A5;
+}
+
+.c1 transition:"background 0.75s ease",
+.c1 input::-webkit-input-placeholder {
+  opacity: 1;
+  color: #9CA1A5;
+  -webkit-text-fill-color: $({ theme}) => theme.colors.text.tertiary;
+}
+
+.c1 transition:"background 0.75s ease",
+.c1 input::-moz-placeholder {
+  opacity: 1;
+  color: #9CA1A5;
+  -webkit-text-fill-color: $({ theme}) => theme.colors.text.tertiary;
+}
+
+.c1 transition:"background 0.75s ease",
+.c1 input:-ms-input-placeholder {
+  opacity: 1;
+  color: #9CA1A5;
+  -webkit-text-fill-color: $({ theme}) => theme.colors.text.tertiary;
+}
+
+.c1 transition:"background 0.75s ease",
+.c1 input::placeholder {
+  opacity: 1;
+  color: #9CA1A5;
+  -webkit-text-fill-color: $({ theme}) => theme.colors.text.tertiary;
+}
+
+.c1:hover {
+  border-color: #46494D;
+}
+
+.c1 input {
+  -webkit-text-fill-color: #9CA1A5;
+}
+
+<div
+    class="c0 c1"
+    data-testid="input-wrapper-example"
+    readonly=""
+  >
+    <div
+      class="c2 c3"
+      display="flex"
+    >
+      <div
+        class="c4"
+      >
+        <input
+          class="c5"
+          data-testid="input-example"
+          id="example"
+          name="example"
+          readonly=""
+          value=""
+        />
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`<Input /> renders properly 1`] = `
+<DocumentFragment>
+  .c0 {
+  box-sizing: border-box;
+}
+
+.c2 {
+  box-sizing: border-box;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.c4 {
+  box-sizing: border-box;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+
+.c3 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+}
+
+.c5 {
+  outline: none;
+  background: none;
+  border: none;
+  color: inherit;
+  fontsize: inherit;
+  line-height: inherit;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  text-align: inherit;
+  box-sizing: border-box;
+}
+
+.c1 {
+  font-family: -apple-system,BlinkMacSystemFont,San Francisco,Segoe UI, Roboto,Helvetica Neue,sans-serif;
+  display: inline-block;
+  background-color: #FFFFFF;
+  border: 1px solid;
+  border-radius: 4px;
+  color: #101112;
+  font-size: $({ theme }) => theme.fontSize["font-size-100"];
+  font-weight: $({ theme }) => theme.fontWeight.normal;
+  line-height: $({ theme }) => theme.lineHeight["font-size-100"];
+  margin: 0;
+  padding: 0.75rem 0.75rem;
+  width: 300px;
+}
+
+.c1 transition:"background 0.75s ease",
+.c1 input::-webkit-input-placeholder {
+  opacity: 1;
+  color: #9CA1A5;
+  -webkit-text-fill-color: $({ theme}) => theme.colors.text.tertiary;
+}
+
+.c1 transition:"background 0.75s ease",
+.c1 input::-moz-placeholder {
+  opacity: 1;
+  color: #9CA1A5;
+  -webkit-text-fill-color: $({ theme}) => theme.colors.text.tertiary;
+}
+
+.c1 transition:"background 0.75s ease",
+.c1 input:-ms-input-placeholder {
+  opacity: 1;
+  color: #9CA1A5;
+  -webkit-text-fill-color: $({ theme}) => theme.colors.text.tertiary;
+}
+
+.c1 transition:"background 0.75s ease",
+.c1 input::placeholder {
+  opacity: 1;
+  color: #9CA1A5;
+  -webkit-text-fill-color: $({ theme}) => theme.colors.text.tertiary;
+}
+
+.c1:hover {
+  border-color: #46494D;
+}
+
+<div
+    class="c0 c1"
+    data-testid="input-wrapper-example"
+  >
+    <div
+      class="c2 c3"
+      display="flex"
+    >
+      <div
+        class="c4"
+      >
+        <input
+          class="c5"
+          data-testid="input-example"
+          id="example"
+          name="example"
+          value=""
+        />
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`<Input /> renders with an icon properly 1`] = `
+<DocumentFragment>
+  .c0 {
+  box-sizing: border-box;
+}
+
+.c2 {
+  box-sizing: border-box;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.c4 {
+  box-sizing: border-box;
+  margin-right: 0.5rem;
+}
+
+.c5 {
+  box-sizing: border-box;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+
+.c3 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+}
+
+.c6 {
+  outline: none;
+  background: none;
+  border: none;
+  color: inherit;
+  fontsize: inherit;
+  line-height: inherit;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  text-align: inherit;
+  box-sizing: border-box;
+}
+
+.c1 {
+  font-family: -apple-system,BlinkMacSystemFont,San Francisco,Segoe UI, Roboto,Helvetica Neue,sans-serif;
+  display: inline-block;
+  background-color: #FFFFFF;
+  border: 1px solid;
+  border-radius: 4px;
+  color: #101112;
+  font-size: $({ theme }) => theme.fontSize["font-size-100"];
+  font-weight: $({ theme }) => theme.fontWeight.normal;
+  line-height: $({ theme }) => theme.lineHeight["font-size-100"];
+  margin: 0;
+  padding: 0.5rem 0.75rem;
+  width: 300px;
+}
+
+.c1 transition:"background 0.75s ease",
+.c1 input::-webkit-input-placeholder {
+  opacity: 1;
+  color: #9CA1A5;
+  -webkit-text-fill-color: $({ theme}) => theme.colors.text.tertiary;
+}
+
+.c1 transition:"background 0.75s ease",
+.c1 input::-moz-placeholder {
+  opacity: 1;
+  color: #9CA1A5;
+  -webkit-text-fill-color: $({ theme}) => theme.colors.text.tertiary;
+}
+
+.c1 transition:"background 0.75s ease",
+.c1 input:-ms-input-placeholder {
+  opacity: 1;
+  color: #9CA1A5;
+  -webkit-text-fill-color: $({ theme}) => theme.colors.text.tertiary;
+}
+
+.c1 transition:"background 0.75s ease",
+.c1 input::placeholder {
+  opacity: 1;
+  color: #9CA1A5;
+  -webkit-text-fill-color: $({ theme}) => theme.colors.text.tertiary;
+}
+
+.c1:hover {
+  border-color: #46494D;
+}
+
+<div
+    class="c0 c1"
+    data-testid="input-wrapper-example"
+  >
+    <div
+      class="c2 c3"
+      display="flex"
+    >
+      <div
+        class="c4"
+      >
+        <svg
+          color="currentColor"
+          fill="none"
+          height="1.5em"
+          stroke-width="1.5"
+          viewBox="0 0 24 24"
+          width="1.5em"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M17 17l4 4M3 11a8 8 0 1016 0 8 8 0 00-16 0z"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </svg>
+      </div>
+      <div
+        class="c5"
+      >
+        <input
+          class="c6"
+          data-testid="input-example"
+          id="example"
+          name="example"
+          value=""
+        />
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`<Input /> unit renders a unit properly 1`] = `
+<DocumentFragment>
+  .c0 {
+  box-sizing: border-box;
+}
+
+.c2 {
+  box-sizing: border-box;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.c4 {
+  box-sizing: border-box;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+
+.c6 {
+  box-sizing: border-box;
+  color: #9CA1A5;
+  margin-right: 0rem;
+}
+
+.c3 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+}
+
+.c5 {
+  outline: none;
+  background: none;
+  border: none;
+  color: inherit;
+  fontsize: inherit;
+  line-height: inherit;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  text-align: inherit;
+  box-sizing: border-box;
+}
+
+.c1 {
+  font-family: -apple-system,BlinkMacSystemFont,San Francisco,Segoe UI, Roboto,Helvetica Neue,sans-serif;
+  display: inline-block;
+  background-color: #FFFFFF;
+  border: 1px solid;
+  border-radius: 4px;
+  color: #101112;
+  font-size: $({ theme }) => theme.fontSize["font-size-100"];
+  font-weight: $({ theme }) => theme.fontWeight.normal;
+  line-height: $({ theme }) => theme.lineHeight["font-size-100"];
+  margin: 0;
+  padding: 0.75rem 0.75rem;
+  width: 300px;
+}
+
+.c1 transition:"background 0.75s ease",
+.c1 input::-webkit-input-placeholder {
+  opacity: 1;
+  color: #9CA1A5;
+  -webkit-text-fill-color: $({ theme}) => theme.colors.text.tertiary;
+}
+
+.c1 transition:"background 0.75s ease",
+.c1 input::-moz-placeholder {
+  opacity: 1;
+  color: #9CA1A5;
+  -webkit-text-fill-color: $({ theme}) => theme.colors.text.tertiary;
+}
+
+.c1 transition:"background 0.75s ease",
+.c1 input:-ms-input-placeholder {
+  opacity: 1;
+  color: #9CA1A5;
+  -webkit-text-fill-color: $({ theme}) => theme.colors.text.tertiary;
+}
+
+.c1 transition:"background 0.75s ease",
+.c1 input::placeholder {
+  opacity: 1;
+  color: #9CA1A5;
+  -webkit-text-fill-color: $({ theme}) => theme.colors.text.tertiary;
+}
+
+.c1:hover {
+  border-color: #46494D;
+}
+
+<div
+    class="c0 c1"
+    data-testid="input-wrapper-example"
+  >
+    <div
+      class="c2 c3"
+      display="flex"
+    >
+      <div
+        class="c4"
+      >
+        <input
+          class="c5"
+          data-testid="input-example"
+          id="example"
+          name="example"
+          value=""
+        />
+      </div>
+      <div
+        class="c6"
+        color="text.tertiary"
+        data-testid="input-unit"
+      >
+        mL
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
