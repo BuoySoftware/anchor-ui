@@ -2,20 +2,60 @@
 
 exports[`<SelectField /> async is false renders properly 1`] = `
 <DocumentFragment>
-  <form
+  .c0 {
+  box-sizing: border-box;
+}
+
+.c1 {
+  box-sizing: border-box;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 350px;
+  position: relative;
+  z-index: formField;
+  margin-bottom: 1.5rem;
+}
+
+.c2 {
+  box-sizing: border-box;
+  color: #101112;
+  width: s;
+  height: s;
+  margin-bottom: 0.25rem;
+}
+
+.c4 {
+  box-sizing: border-box;
+  position: relative;
+  z-index: 1;
+}
+
+.c3 {
+  font-family: -apple-system,BlinkMacSystemFont,San Francisco,Segoe UI, Roboto,Helvetica Neue,sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-weight: 600;
+}
+
+<form
     autocomplete="off"
-    class="sc-bcXHqe gKnvGb"
+    class="c0"
     data-testid="test-form"
     id="test-form"
   >
     <div
-      class="sc-bcXHqe jMdtpv sc-csuSiG"
+      class="c1 "
       data-testid="select-field-my-select-field"
       display="flex"
       width="input"
     >
       <label
-        class="sc-bcXHqe sc-hLBbgP sc-jSUZER sc-kDvujY jMrRtF jvXitA"
+        class="c2 c3"
         color="text.primary"
         font-weight="600"
         for="my-select-field"
@@ -23,7 +63,7 @@ exports[`<SelectField /> async is false renders properly 1`] = `
         This is my select field
       </label>
       <div
-        class="sc-bcXHqe bRutrG"
+        class="c4"
       >
         <div
           class="react-select css-b62m3t-container"
@@ -117,20 +157,60 @@ exports[`<SelectField /> async is false renders properly 1`] = `
 
 exports[`<SelectField /> async is true renders properly 1`] = `
 <DocumentFragment>
-  <form
+  .c0 {
+  box-sizing: border-box;
+}
+
+.c1 {
+  box-sizing: border-box;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 350px;
+  position: relative;
+  z-index: formField;
+  margin-bottom: 1.5rem;
+}
+
+.c2 {
+  box-sizing: border-box;
+  color: #101112;
+  width: s;
+  height: s;
+  margin-bottom: 0.25rem;
+}
+
+.c4 {
+  box-sizing: border-box;
+  position: relative;
+  z-index: 1;
+}
+
+.c3 {
+  font-family: -apple-system,BlinkMacSystemFont,San Francisco,Segoe UI, Roboto,Helvetica Neue,sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-weight: 600;
+}
+
+<form
     autocomplete="off"
-    class="sc-bcXHqe gKnvGb"
+    class="c0"
     data-testid="test-form"
     id="test-form"
   >
     <div
-      class="sc-bcXHqe jMdtpv sc-csuSiG"
+      class="c1 "
       data-testid="select-field-my-select-field"
       display="flex"
       width="input"
     >
       <label
-        class="sc-bcXHqe sc-hLBbgP sc-jSUZER sc-kDvujY jMrRtF jvXitA"
+        class="c2 c3"
         color="text.primary"
         font-weight="600"
         for="my-select-field"
@@ -138,7 +218,7 @@ exports[`<SelectField /> async is true renders properly 1`] = `
         This is my select field
       </label>
       <div
-        class="sc-bcXHqe bRutrG"
+        class="c4"
       >
         <div
           class="react-async-select css-b62m3t-container"

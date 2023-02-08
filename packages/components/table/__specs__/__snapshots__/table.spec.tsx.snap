@@ -2,16 +2,85 @@
 
 exports[`<Table /> renders the table correctly 1`] = `
 <DocumentFragment>
-  <table
-    class="sc-hLBbgP eMrZKw"
+  .c2 {
+  box-sizing: border-box;
+  color: #101112;
+  width: s;
+  height: s;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+
+.c5 {
+  box-sizing: border-box;
+  color: #101112;
+  width: m;
+  height: m;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+
+.c0 {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.c3 {
+  font-family: -apple-system,BlinkMacSystemFont,San Francisco,Segoe UI, Roboto,Helvetica Neue,sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: 0.875rem;
+  font-weight: 600;
+  line-height: 1rem;
+}
+
+.c6 {
+  font-family: -apple-system,BlinkMacSystemFont,San Francisco,Segoe UI, Roboto,Helvetica Neue,sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-style: none;
+  font-size: 0.875rem;
+  font-weight: 400;
+  line-height: 1rem;
+}
+
+.c4 tr {
+  border-bottom: 1px solid #BABEC3;
+}
+
+.c1 {
+  border-bottom: 1px solid #BABEC3;
+}
+
+.c1 th {
+  overflow: hidden;
+  text-align: left;
+  text-overflow: ellipsis;
+  vertical-align: bottom;
+}
+
+.c1 th:last-child {
+  padding-right: 0;
+}
+
+.c1:first-child th {
+  padding-top: 0;
+}
+
+<table
+    class="c0"
     data-testid="test-table-donations-table"
   >
     <thead
-      class="sc-pyfCe ecJMuD"
+      class="c1"
     >
       <tr>
         <th
-          class="sc-bcXHqe sc-eDvSVe sc-gKPRtg dkPXaA cRpfjC"
+          class="c2 c3"
           color="text.primary"
           font-size="font-size-100"
           font-weight="600"
@@ -19,7 +88,7 @@ exports[`<Table /> renders the table correctly 1`] = `
           test_table_donations.th.id
         </th>
         <th
-          class="sc-bcXHqe sc-eDvSVe sc-gKPRtg dkPXaA cRpfjC"
+          class="c2 c3"
           color="text.primary"
           font-size="font-size-100"
           font-weight="600"
@@ -29,13 +98,13 @@ exports[`<Table /> renders the table correctly 1`] = `
       </tr>
     </thead>
     <tbody
-      class="sc-ftTHYK jdcCIu"
+      class="c4"
     >
       <tr
         data-testid="tr-1"
       >
         <td
-          class="sc-bcXHqe sc-eDvSVe sc-jSUZER lmYLQs lliSHS"
+          class="c5 c6"
           color="text.primary"
           data-testid="tr-1-td-id"
           font-size="font-size-100"
@@ -45,7 +114,7 @@ exports[`<Table /> renders the table correctly 1`] = `
           1
         </td>
         <td
-          class="sc-bcXHqe sc-eDvSVe sc-jSUZER lmYLQs lliSHS"
+          class="c5 c6"
           color="text.primary"
           data-testid="tr-1-td-status"
           font-size="font-size-100"
@@ -59,7 +128,7 @@ exports[`<Table /> renders the table correctly 1`] = `
         data-testid="tr-2"
       >
         <td
-          class="sc-bcXHqe sc-eDvSVe sc-jSUZER lmYLQs lliSHS"
+          class="c5 c6"
           color="text.primary"
           data-testid="tr-2-td-id"
           font-size="font-size-100"
@@ -69,7 +138,7 @@ exports[`<Table /> renders the table correctly 1`] = `
           2
         </td>
         <td
-          class="sc-bcXHqe sc-eDvSVe sc-jSUZER lmYLQs lliSHS"
+          class="c5 c6"
           color="text.primary"
           data-testid="tr-2-td-status"
           font-size="font-size-100"
@@ -83,7 +152,7 @@ exports[`<Table /> renders the table correctly 1`] = `
         data-testid="tr-3"
       >
         <td
-          class="sc-bcXHqe sc-eDvSVe sc-jSUZER lmYLQs lliSHS"
+          class="c5 c6"
           color="text.primary"
           data-testid="tr-3-td-id"
           font-size="font-size-100"
@@ -93,7 +162,7 @@ exports[`<Table /> renders the table correctly 1`] = `
           3
         </td>
         <td
-          class="sc-bcXHqe sc-eDvSVe sc-jSUZER lmYLQs lliSHS"
+          class="c5 c6"
           color="text.primary"
           data-testid="tr-3-td-status"
           font-size="font-size-100"
@@ -107,7 +176,7 @@ exports[`<Table /> renders the table correctly 1`] = `
         data-testid="tr-4"
       >
         <td
-          class="sc-bcXHqe sc-eDvSVe sc-jSUZER lmYLQs lliSHS"
+          class="c5 c6"
           color="text.primary"
           data-testid="tr-4-td-id"
           font-size="font-size-100"
@@ -117,7 +186,7 @@ exports[`<Table /> renders the table correctly 1`] = `
           4
         </td>
         <td
-          class="sc-bcXHqe sc-eDvSVe sc-jSUZER lmYLQs lliSHS"
+          class="c5 c6"
           color="text.primary"
           data-testid="tr-4-td-status"
           font-size="font-size-100"
