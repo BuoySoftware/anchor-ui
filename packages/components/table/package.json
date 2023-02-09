@@ -1,12 +1,12 @@
 {
   "name": "@buoysoftware/anchor-table",
-  "version": "0.26.0",
+  "version": "0.27.0",
   "main": "src/index.ts",
   "license": "MIT",
   "dependencies": {
-    "@buoysoftware/anchor-button": "^0.26.0",
-    "@buoysoftware/anchor-layout": "^0.26.0",
-    "@buoysoftware/anchor-typography": "^0.26.0",
+    "@buoysoftware/anchor-button": "^0.27.0",
+    "@buoysoftware/anchor-layout": "^0.27.0",
+    "@buoysoftware/anchor-typography": "^0.27.0",
     "lodash": "^4.17.21",
     "react-i18next": "^12.1.4"
   },
