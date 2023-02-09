@@ -5,7 +5,7 @@ export const StyledBreadcrumbs = styled(Flex).attrs(() => ({
   as: "nav",
   listStyle: "none",
 }))<FlexProps>`
-  .breadcrumb:not(:last-child):after {
+  .breadcrumb:not(:first-child):not(:empty):before {
     color: ${(props) => props.theme.colors.text.secondary};
     content: "/";
     font-size: ${(props) => props.theme.fontSizes["font-size-75"]};
