@@ -15,7 +15,7 @@ exports[`<SelectField /> async is false renders properly 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  width: 350px;
+  width: 300px;
   position: relative;
   z-index: formField;
   margin-bottom: 1.5rem;
@@ -170,7 +170,7 @@ exports[`<SelectField /> async is true renders properly 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  width: 350px;
+  width: 300px;
   position: relative;
   z-index: formField;
   margin-bottom: 1.5rem;

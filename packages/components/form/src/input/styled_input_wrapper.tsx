@@ -26,7 +26,7 @@ export const StyledInputWrapper = styled(Box)<StyledInputWrapperProps>`
   margin: 0;
   padding: ${({ theme, hasIcon }) =>
     hasIcon ? theme.space.xs : theme.space.s} ${({ theme }) => theme.space.s};
-  width: 300px;
+  width: ${({ theme }) => theme.sizes.input};
   transition: "background 0.75s ease",
 
   input::placeholder {

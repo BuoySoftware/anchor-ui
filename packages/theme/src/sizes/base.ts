@@ -1,7 +1,7 @@
 export const base = {
   checkbox: "16px",
   checkboxWrapper: "18px",
-  input: "350px",
+  input: "300px",
   inputSmall: "141px",
   pageFooter: "80px",
   menu: "150px",
