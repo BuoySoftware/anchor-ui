@@ -1,0 +1,31 @@
+import { Meta, Canvas, Story } from "@storybook/addon-docs";
+import { Search } from "iconoir-react";
+
+import { TextArea } from "../src";
+
+<Meta
+  title="Forms / Components / TextArea"
+  component={TextArea}
+  parameters={{
+    layout: "centered",
+    controls: {
+    include: ["placeholder", "disabled", "readOnly", "error"]
+    }
+  }}
+/>
+
+export const Template = (args) => {
+  return(
+    <TextArea name="example" mr="xs" {...args} />
+  );
+}
+
+# TextArea
+
+## Basic Usage
+
+<Canvas>
+  <Story args={{ disabled: false, placeholder: "Example" }} name="TextArea">
+    {Template.bind({})}
+  </Story>
+</Canvas>

@@ -5,7 +5,7 @@ import { useForm } from "react-hook-form";
 import { Flex } from "@buoysoftware/anchor-ui";
 import { Button } from "@buoysoftware/anchor-button";
 
-import { Form, TextField, anchorFormsEn } from "../src";
+import { Form, TextField, TextArea, anchorFormsEn } from "../src";
 
 <Meta
   title="Forms / Components / TextField"
@@ -57,6 +57,14 @@ export const Template = (args) => {
 
 <Canvas>
   <Story args={{ disabled: false }} name="TextField">
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+# TextArea
+
+<Canvas>
+  <Story args={{ disabled: false, Component: TextArea }} name="TextArea TextField">
     {Template.bind({})}
   </Story>
 </Canvas>
