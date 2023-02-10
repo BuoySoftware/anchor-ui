@@ -1,14 +1,14 @@
 {
   "name": "@buoysoftware/anchor-ui-legacy-text",
-  "version": "0.28.0",
+  "version": "0.29.0",
   "main": "src/index.ts",
   "license": "MIT",
   "files": [
     "dist"
   ],
   "dependencies": {
-    "@buoysoftware/anchor-layout": "^0.28.0",
-    "@buoysoftware/anchor-typography": "^0.28.0"
+    "@buoysoftware/anchor-layout": "^0.29.0",
+    "@buoysoftware/anchor-typography": "^0.29.0"
   },
   "scripts": {
     "build": "tsc -outDir dist",
