@@ -20,9 +20,10 @@ export const StyledInputWrapper = styled(Box)<StyledInputWrapperProps>`
   border: 1px solid ${({ theme }) => theme.colors.border.defualt};
   border-radius: 4px;
   color: ${({ theme }) => theme.colors.text.primary};
-  font-size: $({ theme }) => theme.fontSize["font-size-100"]};
-  font-weight: $({ theme }) => theme.fontWeight.normal};
-  line-height: $({ theme }) => theme.lineHeight["font-size-100"]};
+  font-size: ${({ theme }) => theme.fontSizes["font-size-100"]};
+  height: 40px;
+  font-weight: ${({ theme }) => theme.fontWeights.normal};
+  line-height: ${({ theme }) => theme.lineHeights["font-size-100"]};
   margin: 0;
   padding: ${({ theme, hasIcon }) =>
     hasIcon ? theme.space.xs : theme.space.s} ${({ theme }) => theme.space.s};
