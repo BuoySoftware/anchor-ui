@@ -28,6 +28,7 @@
     "@buoysoftware/anchor-side-nav": "^0.28.0",
     "@buoysoftware/anchor-table": "^0.28.0",
     "@buoysoftware/anchor-theme": "^0.28.0",
+    "@buoysoftware/anchor-toast-container": "*",
     "@buoysoftware/anchor-typography": "^0.28.0",
     "@buoysoftware/anchor-use-translated-options": "^0.28.0"
   },

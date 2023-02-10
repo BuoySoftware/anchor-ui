@@ -1,0 +1,45 @@
+import { Canvas, Story } from "@storybook/addon-docs";
+import { Button } from "@buoysoftware/anchor-button";
+import { toast } from "react-toastify";
+
+import { AnchorToastContainer } from "../src";
+
+<Meta
+  title="Components / AnchorToastContainer"
+  component={AnchorToastContainer}
+  parameters={{
+    controls: {
+      include: [
+        "actor",
+      ]
+    },
+    layout: "centered"
+  }}
+/>
+
+export const Template = (args) => {
+  const onClick = () => toast.success("Questionnaire created")
+  return (
+    <>
+      <AnchorToastContainer {...args} />
+      <Button onClick={onClick} colorScheme="basic">Show Toast</Button>
+    </>
+  );
+};
+
+# AnchorToastContainer
+
+The AnchorToastContainer is a styled ToastContainer for use with the
+react-toastify package.
+
+See [react-toastify] for more details.
+
+[react-toastify]: https://fkhadra.github.io/react-toastify/introduction
+
+## Basic Usage
+
+<Canvas>
+  <Story args={{ }} name="AnchorToastContainer">
+    {Template.bind({})}
+  </Story>
+</Canvas>
