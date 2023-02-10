@@ -1,0 +1,62 @@
+import i18n from "i18next";
+import { initReactI18next } from "react-i18next";
+import { Meta, Canvas, Story } from "@storybook/addon-docs";
+import { useForm } from "react-hook-form";
+import { Flex } from "@buoysoftware/anchor-ui";
+import { Button } from "@buoysoftware/anchor-button";
+
+import { Form, TextField, anchorFormsEn } from "../src";
+
+<Meta
+  title="Forms / Components / TextField"
+  component={TextField}
+  decorators={[
+    (Story) => {
+      const translations = {
+        labels: {
+          text_field_example: {
+            text_field: "Example"
+          }
+        }
+      }
+      i18n.use(initReactI18next).init({
+        lng: "en",
+        ns: ["anchorForms", "forms"],
+        resources: {
+          en: {
+            anchorForms: anchorFormsEn,
+            forms: translations,
+          },
+        },
+      });
+      return <Story />
+    }
+  ]}
+  parameters={{
+    layout: "centered",
+    controls: {
+      include: ["disabled"]
+    }
+  }}
+/>
+
+export const Template = (args) => {
+  const form = useForm();
+  return(
+    <Form form={form} id="text-field-example" scope="text-field-example">
+      <TextField name="textField" rules={{ required: true }} {...args} />
+      <Flex>
+        <Button colorScheme="basic" onClick={(e) => { e.preventDefault(); form.reset() }}>Reset</Button>
+        <Button colorScheme="primary">Submit</Button>
+      </Flex>
+    </Form>
+  );
+}
+
+## Basic Usage
+
+<Canvas>
+  <Story args={{ disabled: false }} name="TextField">
+    {Template.bind({})}
+  </Story>
+</Canvas>

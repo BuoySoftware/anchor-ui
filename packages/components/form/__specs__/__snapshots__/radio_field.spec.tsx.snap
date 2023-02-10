@@ -11,7 +11,7 @@ exports[`<RadioField /> renders properly 1`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  width: 350px;
+  width: 300px;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -217,7 +217,7 @@ exports[`<RadioField /> with error renders properly 1`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  width: 350px;
+  width: 300px;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
