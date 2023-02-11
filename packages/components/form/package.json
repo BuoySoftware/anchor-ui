@@ -7,8 +7,9 @@
     "dist"
   ],
   "scripts": {
-    "build": "tsc -outDir dist",
+    "build": "tsc -outDir dist && yarn copy-files",
     "compile": "tsc --noEmit",
+    "copy-files": "cp ./src/checkbox/checkmark.svg ./dist/checkbox",
     "test": "jest",
     "postpack": "clean-package restore",
     "prepack": "clean-package"

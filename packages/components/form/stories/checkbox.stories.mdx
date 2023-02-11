@@ -1,0 +1,40 @@
+import { Meta, Canvas, Story } from "@storybook/addon-docs";
+import { Flex } from "@buoysoftware/anchor-layout";
+
+import { Checkbox } from "../src";
+
+<Meta
+  title="Forms / Components / Checkbox"
+  component={Checkbox}
+  parameters={{
+    layout: "centered",
+    controls: {
+      include: ["disabled", "error"]
+    }
+  }}
+/>
+
+export const Template = (args) => {
+  return(
+    <Flex as="label" alignItems="center">
+      <Checkbox name="example" mr="xs" {...args} />
+      Option 1
+    </Flex>
+  );
+}
+
+# Checkbox
+
+## Import
+
+```javascript
+import { Checkbox } from "@buoysoftware/anchor-ui";
+```
+
+## Basic Usage
+
+<Canvas>
+ <Story args={{ disabled: false }} name="Checkbox">
+  {Template.bind({})}
+ </Story>
+</Canvas>
