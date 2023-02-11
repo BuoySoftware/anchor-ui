@@ -1,5 +1,5 @@
 export const base = {
-  checkbox: "16px",
+  checkbox: "18px",
   checkboxWrapper: "18px",
   input: "300px",
   inputSmall: "141px",
