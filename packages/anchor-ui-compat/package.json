@@ -13,6 +13,7 @@
     "postpack": "clean-package restore"
   },
   "dependencies": {
+    "@buoysoftware/anchor-ui-legacy-button": "*",
     "@buoysoftware/anchor-ui-legacy-text": "^0.30.0-alpha.0"
   }
 }
