@@ -1,0 +1,344 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<CheckboxField /> renders properly 1`] = `
+<DocumentFragment>
+  .c0 {
+  box-sizing: border-box;
+}
+
+.c1 {
+  box-sizing: border-box;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 1.5rem;
+}
+
+.c3 {
+  box-sizing: border-box;
+  color: #101112;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: m;
+  height: m;
+}
+
+.c4 {
+  font-family: -apple-system,BlinkMacSystemFont,San Francisco,Segoe UI, Roboto,Helvetica Neue,sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-style: none;
+  font-weight: 400;
+}
+
+[disabled] .c2 {
+  color: #9CA1A5;
+}
+
+.c5 {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  outline: none;
+  border: 2px solid #7F8387;
+  border-radius: 4px;
+  width: 18px;
+  height: 18px;
+  padding: 0.25rem;
+  cursor: pointer;
+  box-sizing: border-box;
+  margin-right: 0.25rem;
+}
+
+.c5:hover {
+  border-color: #46494D;
+}
+
+.c5:focus-visible {
+  box-shadow: 0px 0px 0px 2px #FFFFFF, 0px 0px 0px 4px #5B91F4;
+}
+
+.c5:checked {
+  border-color: transparent;
+  background: center #276EF1 url(test-file-stub) no-repeat;
+}
+
+.c5:hover:checked {
+  background-color: #1E54B7;
+}
+
+.c5:disabled {
+  border-color: #BABEC3;
+}
+
+.c5:checked:disabled {
+  background-color: #BABEC3;
+}
+
+<form
+    autocomplete="off"
+    class="c0"
+    data-testid="test-form"
+    id="test-form"
+  >
+    <fieldset
+      class="c1"
+      data-testid="checkbox-field-my-checkbox-field"
+      display="flex"
+    >
+      <label
+        class="c2 c3 c4 "
+        color="text.primary"
+        data-testid="label-my-checkbox-field"
+        display="flex"
+        font-style="none"
+        font-weight="400"
+        for="my-checkbox-field"
+      >
+        <input
+          aria-invalid="false"
+          class="c5"
+          data-testid="my-checkbox-field"
+          id="my-checkbox-field"
+          name="myCheckboxField"
+          type="checkbox"
+          value="1"
+        />
+        Example checkbox
+      </label>
+    </fieldset>
+    <button
+      type="submit"
+    >
+      Submit
+    </button>
+  </form>
+</DocumentFragment>
+`;
+
+exports[`<CheckboxField /> with error renders properly 1`] = `
+<DocumentFragment>
+  .c0 {
+  box-sizing: border-box;
+}
+
+.c1 {
+  box-sizing: border-box;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 1.5rem;
+}
+
+.c3 {
+  box-sizing: border-box;
+  color: #101112;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: m;
+  height: m;
+}
+
+.c6 {
+  box-sizing: border-box;
+  border-radius: 4px;
+  background-color: #F5DDDA;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  margin-top: 0.75rem;
+}
+
+.c7 {
+  box-sizing: border-box;
+  margin-left: 0.5rem;
+}
+
+.c8 {
+  box-sizing: border-box;
+  color: #C73624;
+  width: m;
+  height: m;
+}
+
+.c10 {
+  box-sizing: border-box;
+  color: inherit;
+}
+
+.c4 {
+  font-family: -apple-system,BlinkMacSystemFont,San Francisco,Segoe UI, Roboto,Helvetica Neue,sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-style: none;
+  font-weight: 400;
+}
+
+.c9 {
+  font-family: -apple-system,BlinkMacSystemFont,San Francisco,Segoe UI, Roboto,Helvetica Neue,sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-style: none;
+  font-size: 0.875rem;
+  font-weight: 400;
+  line-height: 1rem;
+}
+
+.c11 {
+  font-family: -apple-system,BlinkMacSystemFont,San Francisco,Segoe UI, Roboto,Helvetica Neue,sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+[disabled] .c2 {
+  color: #9CA1A5;
+}
+
+.c5 {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  outline: none;
+  border: 2px solid #7F8387;
+  border-radius: 4px;
+  width: 18px;
+  height: 18px;
+  padding: 0.25rem;
+  cursor: pointer;
+  box-sizing: border-box;
+  margin-right: 0.25rem;
+}
+
+.c5:hover {
+  border-color: #46494D;
+}
+
+.c5:focus-visible {
+  box-shadow: 0px 0px 0px 2px #FFFFFF, 0px 0px 0px 4px #5B91F4;
+}
+
+.c5:checked {
+  border-color: transparent;
+  background: center #276EF1 url(test-file-stub) no-repeat;
+}
+
+.c5:hover:checked {
+  background-color: #1E54B7;
+}
+
+.c5:disabled {
+  border-color: #BABEC3;
+}
+
+.c5:checked:disabled {
+  background-color: #BABEC3;
+}
+
+<form
+    autocomplete="off"
+    class="c0"
+    data-testid="test-form"
+    id="test-form"
+  >
+    <fieldset
+      class="c1"
+      data-testid="checkbox-field-my-checkbox-field"
+      display="flex"
+    >
+      <label
+        class="c2 c3 c4 "
+        color="text.primary"
+        data-testid="label-my-checkbox-field"
+        display="flex"
+        font-style="none"
+        font-weight="400"
+        for="my-checkbox-field"
+      >
+        <input
+          aria-describedby="error-myCheckboxField"
+          aria-invalid="true"
+          class="c5"
+          data-testid="my-checkbox-field"
+          id="my-checkbox-field"
+          name="myCheckboxField"
+          type="checkbox"
+          value="1"
+        />
+        Example checkbox
+      </label>
+      <div
+        class="c6 "
+        data-testid="error-my-checkbox-field"
+        display="flex"
+        id="error-my-checkbox-field"
+        role="alert"
+      >
+        <svg
+          color="#C73624"
+          fill="none"
+          height="16"
+          stroke-width="1.5"
+          viewBox="0 0 24 24"
+          width="16"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M12 7v6M12 17.01l.01-.011M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </svg>
+        <div
+          class="c7"
+        >
+          <div
+            class="c8 c9"
+            color="text.critical"
+            font-size="font-size-100"
+            font-style="none"
+            font-weight="400"
+          >
+            <p
+              class="c10 c11"
+              color="inherit"
+            >
+              This field is required
+            </p>
+          </div>
+        </div>
+      </div>
+    </fieldset>
+    <button
+      type="submit"
+    >
+      Submit
+    </button>
+  </form>
+</DocumentFragment>
+`;

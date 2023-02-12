@@ -1,0 +1,77 @@
+import i18n from "i18next";
+import { initReactI18next } from "react-i18next";
+import { Meta, Canvas, Story } from "@storybook/addon-docs";
+import { useForm } from "react-hook-form";
+import { Button } from "@buoysoftware/anchor-button";
+import { Box, Flex } from "@buoysoftware/anchor-layout";
+
+import { Form, CheckboxField, anchorFormsEn } from "../src";
+
+<Meta
+  title="Forms / Components / CheckboxField"
+  component={CheckboxField}
+  decorators={[
+    (Story) => {
+      const translations = {
+        labels: {
+          checkbox_field_example: {
+            checkbox_example: "Checkbox example"
+          }
+        }
+      }
+      i18n.use(initReactI18next).init({
+        lng: "en",
+        ns: ["anchorForms", "forms"],
+        resources: {
+          en: {
+            anchorForms: anchorFormsEn,
+            forms: translations,
+          },
+        },
+      });
+      return <Story />
+    }
+  ]}
+  parameters={{
+    layout: "centered",
+    controls: {
+      include: ["disabled"]
+    }
+  }}
+/>
+
+export const Template = (args) => {
+  const form = useForm();
+  return(
+    <Form form={form} id="checkbox-field-example" scope="checkbox-field-example">
+      <CheckboxField
+        name="checkboxExample"
+        rules={{ required: true }}
+        {...args} 
+      />
+      <Flex>
+        <Button colorScheme="basic" onClick={(e) => { e.preventDefault(); form.reset() }}>Reset</Button>
+        <Button colorScheme="primary">Submit</Button>
+      </Flex>
+    </Form>
+  );
+}
+
+# CheckboxField
+
+The CheckboxField component is intended to be used within a `Form` component utilizing
+react-hook-form.
+
+## Import
+
+```javascript
+import { CheckboxField } from "@buoysoftware/anchor-ui";
+```
+
+## Basic Usage
+
+<Canvas>
+  <Story args={{ disabled: false }} name="CheckboxField">
+    {Template.bind({})}
+  </Story>
+</Canvas>
