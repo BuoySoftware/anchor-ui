@@ -9,60 +9,90 @@ exports[`<FieldError /> error message is provided with a single message renders 
   .c0 {
   box-sizing: border-box;
   border-radius: 4px;
-  background-color: background.criticalSubdued;
-  padding-bottom: xs;
-  padding-top: xs;
-  padding-left: m;
-  padding-right: m;
+  background-color: #F5DDDA;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
 }
 
 .c1 {
   box-sizing: border-box;
-  color: text.critical;
+  margin-left: 0.5rem;
+}
+
+.c2 {
+  box-sizing: border-box;
+  color: #C73624;
   width: m;
   height: m;
 }
 
-.c3 {
+.c4 {
   box-sizing: border-box;
   color: inherit;
 }
 
-.c2 {
+.c3 {
   font-family: -apple-system,BlinkMacSystemFont,San Francisco,Segoe UI, Roboto,Helvetica Neue,sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-style: none;
-  font-size: font-size-100;
+  font-size: 0.875rem;
   font-weight: 400;
-  line-height: font-size-100;
+  line-height: 1rem;
 }
 
-.c4 {
+.c5 {
   font-family: -apple-system,BlinkMacSystemFont,San Francisco,Segoe UI, Roboto,Helvetica Neue,sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 <div
-    class="c0"
+    class="c0 "
     data-testid="error-test-input"
+    display="flex"
     id="error-test-input"
     role="alert"
   >
-    <div
-      class="c1 c2"
-      color="text.critical"
-      font-size="font-size-100"
-      font-style="none"
-      font-weight="400"
+    <svg
+      color="#C73624"
+      fill="none"
+      height="16"
+      stroke-width="1.5"
+      viewBox="0 0 24 24"
+      width="16"
+      xmlns="http://www.w3.org/2000/svg"
     >
-      <p
-        class="c3 c4"
-        color="inherit"
+      <path
+        d="M12 7v6M12 17.01l.01-.011M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"
+        stroke="currentColor"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      />
+    </svg>
+    <div
+      class="c1"
+    >
+      <div
+        class="c2 c3"
+        color="text.critical"
+        font-size="font-size-100"
+        font-style="none"
+        font-weight="400"
       >
-        Invalid field
-      </p>
+        <p
+          class="c4 c5"
+          color="inherit"
+        >
+          Invalid field
+        </p>
+      </div>
     </div>
   </div>
 </DocumentFragment>
@@ -73,74 +103,104 @@ exports[`<FieldError /> error message is provided with multiple messages renders
   .c0 {
   box-sizing: border-box;
   border-radius: 4px;
-  background-color: background.criticalSubdued;
-  padding-bottom: xs;
-  padding-top: xs;
-  padding-left: m;
-  padding-right: m;
+  background-color: #F5DDDA;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
 }
 
 .c1 {
   box-sizing: border-box;
-  color: text.critical;
+  margin-left: 0.5rem;
+}
+
+.c2 {
+  box-sizing: border-box;
+  color: #C73624;
   width: m;
   height: m;
 }
 
-.c3 {
+.c4 {
   box-sizing: border-box;
   color: inherit;
 }
 
-.c2 {
+.c3 {
   font-family: -apple-system,BlinkMacSystemFont,San Francisco,Segoe UI, Roboto,Helvetica Neue,sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-style: none;
-  font-size: font-size-100;
+  font-size: 0.875rem;
   font-weight: 400;
-  line-height: font-size-100;
+  line-height: 1rem;
 }
 
-.c4 {
+.c5 {
   font-family: -apple-system,BlinkMacSystemFont,San Francisco,Segoe UI, Roboto,Helvetica Neue,sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 <div
-    class="c0"
+    class="c0 "
     data-testid="error-test-input"
+    display="flex"
     id="error-test-input"
     role="alert"
   >
-    <div
-      class="c1 c2"
-      color="text.critical"
-      font-size="font-size-100"
-      font-style="none"
-      font-weight="400"
+    <svg
+      color="#C73624"
+      fill="none"
+      height="16"
+      stroke-width="1.5"
+      viewBox="0 0 24 24"
+      width="16"
+      xmlns="http://www.w3.org/2000/svg"
     >
-      <p
-        class="c3 c4"
-        color="inherit"
-      >
-        Invalid field
-      </p>
-    </div>
+      <path
+        d="M12 7v6M12 17.01l.01-.011M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"
+        stroke="currentColor"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      />
+    </svg>
     <div
-      class="c1 c2"
-      color="text.critical"
-      font-size="font-size-100"
-      font-style="none"
-      font-weight="400"
+      class="c1"
     >
-      <p
-        class="c3 c4"
-        color="inherit"
+      <div
+        class="c2 c3"
+        color="text.critical"
+        font-size="font-size-100"
+        font-style="none"
+        font-weight="400"
       >
-        Other error
-      </p>
+        <p
+          class="c4 c5"
+          color="inherit"
+        >
+          Invalid field
+        </p>
+      </div>
+      <div
+        class="c2 c3"
+        color="text.critical"
+        font-size="font-size-100"
+        font-style="none"
+        font-weight="400"
+      >
+        <p
+          class="c4 c5"
+          color="inherit"
+        >
+          Other error
+        </p>
+      </div>
     </div>
   </div>
 </DocumentFragment>
@@ -151,75 +211,105 @@ exports[`<FieldError /> error message with markdown with a single message render
   .c0 {
   box-sizing: border-box;
   border-radius: 4px;
-  background-color: background.criticalSubdued;
-  padding-bottom: xs;
-  padding-top: xs;
-  padding-left: m;
-  padding-right: m;
+  background-color: #F5DDDA;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
 }
 
 .c1 {
   box-sizing: border-box;
-  color: text.critical;
+  margin-left: 0.5rem;
+}
+
+.c2 {
+  box-sizing: border-box;
+  color: #C73624;
   width: m;
   height: m;
 }
 
-.c3 {
+.c4 {
   box-sizing: border-box;
   color: inherit;
 }
 
-.c2 {
+.c3 {
   font-family: -apple-system,BlinkMacSystemFont,San Francisco,Segoe UI, Roboto,Helvetica Neue,sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-style: none;
-  font-size: font-size-100;
+  font-size: 0.875rem;
   font-weight: 400;
-  line-height: font-size-100;
-}
-
-.c4 {
-  font-family: -apple-system,BlinkMacSystemFont,San Francisco,Segoe UI, Roboto,Helvetica Neue,sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  line-height: 1rem;
 }
 
 .c5 {
   font-family: -apple-system,BlinkMacSystemFont,San Francisco,Segoe UI, Roboto,Helvetica Neue,sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  font-weight: bold;
+}
+
+.c6 {
+  font-family: -apple-system,BlinkMacSystemFont,San Francisco,Segoe UI, Roboto,Helvetica Neue,sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-weight: 700;
 }
 
 <div
-    class="c0"
+    class="c0 "
     data-testid="error-test-input"
+    display="flex"
     id="error-test-input"
     role="alert"
   >
-    <div
-      class="c1 c2"
-      color="text.critical"
-      font-size="font-size-100"
-      font-style="none"
-      font-weight="400"
+    <svg
+      color="#C73624"
+      fill="none"
+      height="16"
+      stroke-width="1.5"
+      viewBox="0 0 24 24"
+      width="16"
+      xmlns="http://www.w3.org/2000/svg"
     >
-      <p
-        class="c3 c4"
-        color="inherit"
+      <path
+        d="M12 7v6M12 17.01l.01-.011M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"
+        stroke="currentColor"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      />
+    </svg>
+    <div
+      class="c1"
+    >
+      <div
+        class="c2 c3"
+        color="text.critical"
+        font-size="font-size-100"
+        font-style="none"
+        font-weight="400"
       >
-        This is 
-        <strong
-          class="c3 c5"
+        <p
+          class="c4 c5"
           color="inherit"
-          font-weight="bold"
         >
-          an error
-        </strong>
-         with markdown
-      </p>
+          This is 
+          <strong
+            class="c4 c6"
+            color="inherit"
+            font-weight="bold"
+          >
+            an error
+          </strong>
+           with markdown
+        </p>
+      </div>
     </div>
   </div>
 </DocumentFragment>
