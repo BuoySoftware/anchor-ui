@@ -1,0 +1,16 @@
+{
+  "name": "@buoysoftware/anchor-ui-legacy-button",
+  "version": "0.0.0",
+  "main": "src/index.ts",
+  "license": "MIT",
+  "dependencies": {
+    "@buoysoftware/anchor-layout": "^0.29.0",
+    "@buoysoftware/anchor-button": "^0.29.0"
+  },
+  "scripts": {
+    "build": "tsc -outDir dist",
+    "compile": "tsc --noEmit",
+    "postpack": "clean-package restore",
+    "prepack": "clean-package"
+  }
+}
