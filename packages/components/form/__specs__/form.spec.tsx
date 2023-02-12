@@ -1,4 +1,4 @@
-import { render } from "@testing-library/react";
+import { render } from "../test_utils";
 import { useForm } from "react-hook-form";
 import { Form } from "../src";
 

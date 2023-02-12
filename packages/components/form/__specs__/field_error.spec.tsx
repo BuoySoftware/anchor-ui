@@ -1,6 +1,6 @@
 import i18n from "i18next";
 import { initReactI18next } from "react-i18next";
-import { render } from "@testing-library/react";
+import { render } from "../test_utils";
 
 import { anchorFormsEn, FormScopeProvider } from "../src";
 import { FieldError } from "../src/field_error";

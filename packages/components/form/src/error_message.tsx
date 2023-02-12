@@ -1,5 +1,7 @@
-import { Box, BoxProps } from "@buoysoftware/anchor-layout";
+import { WarningCircle } from "iconoir-react";
+import { Box, BoxProps, Flex } from "@buoysoftware/anchor-layout";
 import { Body, Markdown } from "@buoysoftware/anchor-typography";
+import { useTheme } from "@buoysoftware/anchor-theme";
 
 interface OwnProps {
   errors: string[];
@@ -13,25 +15,28 @@ export const ErrorMessage: React.FC<ErrorMessageProps> = ({
   parentId,
   ...props
 }): React.ReactElement => {
+  const { colors } = useTheme();
   const id = `error-${parentId}`;
 
   return (
-    <Box
+    <Flex
       bg="background.criticalSubdued"
       borderRadius="4px"
       data-testid={id}
       id={id}
-      pb="xs"
-      pt="xs"
-      px="m"
+      py="xxs"
+      px="xs"
       role="alert"
       {...props}
     >
-      {errors.map((error, index) => (
-        <Body as="div" size="m" key={`error-${index}`} color="text.critical">
-          <Markdown>{error}</Markdown>
-        </Body>
-      ))}
-    </Box>
+      <WarningCircle color={colors.text.critical} width={16} height={16} />
+      <Box ml="xs">
+        {errors.map((error, index) => (
+          <Body as="div" size="m" key={`error-${index}`} color="text.critical">
+            <Markdown>{error}</Markdown>
+          </Body>
+        ))}
+      </Box>
+    </Flex>
   );
 };
