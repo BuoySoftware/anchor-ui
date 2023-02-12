@@ -1,10 +1,4 @@
-import {
-  Controller,
-  RegisterOptions,
-  get,
-  useFormContext,
-} from "react-hook-form";
-import kebabCase from "lodash/kebabCase";
+import { Controller, RegisterOptions, useFormContext } from "react-hook-form";
 import { useTranslation } from "react-i18next";
 import { Box, BoxProps } from "@buoysoftware/anchor-layout";
 
@@ -51,23 +45,22 @@ export const SelectField = function <
   ...props
 }: SelectFieldProps<Option, OnCreate, Async, IsMulti>): React.ReactElement {
   const { t } = useTranslation(["anchorForms", "forms"]);
-  const { label: formFieldLabel, placeholder } = useFormField({
+  const {
+    error,
+    inputId,
+    label: formFieldLabel,
+    placeholder,
+  } = useFormField({
     defaultPlaceholder:
       t(["anchorForms:placeholders.select", "forms:placeholders.select"]) ?? "",
     name,
   });
-  const {
-    control,
-    formState: { errors },
-  } = useFormContext();
-  const inputId = kebabCase(name);
-  const testId = kebabCase(name);
+  const { control } = useFormContext();
   const label = labelProp ?? formFieldLabel;
-  const error = get(errors, name);
 
   return (
     <FormField
-      data-testid={`select-field-${testId}`}
+      data-testid={`select-field-${inputId}`}
       error={error}
       inputId={inputId}
       inputType="select"
@@ -88,7 +81,7 @@ export const SelectField = function <
               aria-describedby={error ? `error-${inputId}` : undefined}
               aria-errormessage={error ? `error-${inputId}` : undefined}
               aria-invalid={!!error}
-              data-testid={testId}
+              data-testid={inputId}
               error={!!error}
               inputId={inputId}
               inputRef={ref}
