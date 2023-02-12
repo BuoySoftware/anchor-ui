@@ -1,8 +1,8 @@
 import { useForm } from "react-hook-form";
-import { render as baseRender, UserRenderResult } from "../test_utils";
 import i18n from "i18next";
 import { initReactI18next } from "react-i18next";
 
+import { render as baseRender, UserRenderResult } from "../test_utils";
 import { Form, SelectField } from "../src";
 
 describe("<SelectField />", () => {
