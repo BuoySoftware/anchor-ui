@@ -13190,9 +13190,9 @@ react-syntax-highlighter@^7.0.2:
     refractor "^2.4.1"
 
 react-tiny-popover@^7.2.0:
-  version "7.2.0"
-  resolved "https://registry.yarnpkg.com/react-tiny-popover/-/react-tiny-popover-7.2.0.tgz#e6277620efea6acea9c47efbfe5dcb473a552e99"
-  integrity sha512-AIliRDqTFB1+qy4GvWn+8B8JPKA13xtESWYdFkrdCeI8hEnPKufBvcF9a3dO/0SmD21mV6721xxhAnUm8TRXJw==
+  version "7.2.1"
+  resolved "https://registry.yarnpkg.com/react-tiny-popover/-/react-tiny-popover-7.2.1.tgz#c49672bcb118afd883f1b1916318ca7d40d940ea"
+  integrity sha512-1bS39W9wap+EBb48Lq9tuuTxaMWLV8MODRcsLniJAKPka7lyZZOrfS5dziLON3AkREtRgsamFrFIjoYWyhqRPA==
 
 react-toastify@^9.1.1:
   version "9.1.1"
