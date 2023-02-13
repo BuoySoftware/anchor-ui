@@ -6,10 +6,14 @@ export const parameters = {
     storySort: {
       order: [
         "Typography",
-        ["Introduction", "Components", ["Heading", "Subheading", "Body"]],
+        [
+          "Introduction",
+          "Components",
+          ["Heading", "Subheading", "Body", "Markdown"],
+        ],
         "Components",
+        ["Forms", ["Introduction"]],
         "Templates",
-        "Forms",
         "Hooks",
         "Theme",
         "anchor-ui-compat",
