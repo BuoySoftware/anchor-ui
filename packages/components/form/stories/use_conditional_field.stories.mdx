@@ -1,0 +1,86 @@
+import i18n from "i18next";
+import { initReactI18next } from "react-i18next";
+import { Meta, Canvas, Story, Source } from "@storybook/addon-docs";
+import { useForm } from "react-hook-form";
+
+import { Form, Label, RadioField, TextField, TextArea, useConditionalField as useConditionalFieldHook, anchorFormsEn } from "../src";
+
+<Meta
+  title="Hooks / useConditionalField"
+  decorators={[
+    (Story) => {
+      const translations = {
+        labels: {
+          conditional_field_example: {
+            comment: "Comment"
+          }
+        }
+      }
+      i18n.use(initReactI18next).init({
+        lng: "en",
+        ns: ["anchorForms", "forms"],
+        resources: {
+          en: {
+            anchorForms: anchorFormsEn,
+            forms: translations,
+          },
+        },
+      });
+      return <Story />
+    }
+  ]}
+/>
+
+export const Template = (args) => {
+  const form = useForm();
+  const { active } = useConditionalFieldHook({ control: form.control, value: "yes", watch: "agree" });
+  const options = [
+    { value: "yes", label: "Yes" },
+    { value: "no", label: "No" }
+  ];
+  return (
+    <Form form={form} id="conditional-field-example" scope="conditional-field-example">
+      <RadioField
+        name="agree"
+        label={<Label>Do you agree?</Label>}
+        options={options}
+      />
+      { active && (
+        <TextField Component={TextArea} name="comment" />
+      )}
+    </Form>
+  );
+};
+
+## Basic Usage
+
+<Story name="useConditionalField">
+  {Template.bind({})}
+</Story>
+
+```jsx
+const form = useForm();
+const { active } = useConditionalField({
+  control: form.control,
+  value: "yes",
+  watch: "agree"
+});
+
+const options = [
+  { value: "yes", label: "Yes" },
+  { value: "no", label: "No" }
+];
+
+return (
+  <Form form={form} id="conditional-field-example" scope="conditional-field-example">
+    <RadioField
+      name="agree"
+      label={<Label>Do you agree?</Label>}
+      options={options}
+    />
+    { active && (
+      <TextField Component={TextArea} name="comment" />
+    )}
+  </Form>
+);
+```
