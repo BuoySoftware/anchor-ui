@@ -8,12 +8,12 @@ import { Box, Flex } from "@buoysoftware/anchor-layout";
 import { Breadcrumbs, Breadcrumb } from "@buoysoftware/anchor-breadcrumbs";
 import { Button } from "@buoysoftware/anchor-button";
 
-import { PageActionBar, PageBreadcrumbs, PageContent, PageFooter, PageHeader, PageTemplate, PageTemplateArea } from "../src";
+import { PageActionBar, PageBreadcrumbs, PageContent, PageFooter, PageHeader, PageTemplate } from "../src";
 
 <Meta
   title="Templates / PageTemplate"
   component={PageTemplate}
-  subcomponents={ PageTemplateArea }
+  subcomponents={PageTemplate}
   decorators={[
     (Story) => {
       i18n.use(initReactI18next).init({
