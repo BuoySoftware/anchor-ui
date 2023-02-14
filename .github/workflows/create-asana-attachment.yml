@@ -1,6 +1,8 @@
 on:
   pull_request:
     types: [opened, reopened]
+    branches-ignore:
+      - dependabot/**
 
 jobs:
   create-asana-attachment-job:
