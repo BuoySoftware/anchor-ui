@@ -5,11 +5,15 @@ type UseTranslationParameters = Parameters<typeof useTranslation>;
 export type TNamespace = UseTranslationParameters[0];
 
 interface FormScope {
+  baseErrors: string[];
+  formId: string;
   scope: string;
   tNamespace?: TNamespace;
 }
 
 export const FormScopeContext = createContext<FormScope>({
+  baseErrors: [],
+  formId: "",
   scope: "",
   tNamespace: undefined,
 });

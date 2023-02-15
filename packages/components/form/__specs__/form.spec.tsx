@@ -43,20 +43,6 @@ describe("<Form />", () => {
   });
 
   context("server errors are provided", () => {
-    it("renders base error messages for the form", () => {
-      const { queryByTestId } = render(
-        <MockForm
-          scope="test-form-scope"
-          mutationErrors={{ base: ["Something went wrong"] }}
-          id="test-form"
-        />
-      );
-
-      expect(queryByTestId("error-test-form")).toHaveTextContent(
-        "Something went wrong"
-      );
-    });
-
     it("renders field specific server errors", () => {
       const { queryByTestId } = render(
         <MockForm
