@@ -1,5 +1,5 @@
 import { RegisterOptions } from "react-hook-form";
-import { Flex, Grid } from "@buoysoftware/anchor-layout";
+import { Flex, FlexProps, Grid } from "@buoysoftware/anchor-layout";
 
 import { Label } from "../label";
 import { FieldError } from "../field_error";
@@ -20,7 +20,7 @@ interface OptionalRenderProp<V> {
   children?: (props: OwnProps<V>) => React.ReactElement;
 }
 
-export type RadioFieldProps<V> = OwnProps<V> & OptionalRenderProp<V>;
+export type RadioFieldProps<V> = OwnProps<V> & OptionalRenderProp<V> & FlexProps;
 
 export const RadioField = function <V extends string>(
   props: RadioFieldProps<V>
@@ -34,6 +34,7 @@ export const RadioField = function <V extends string>(
     options,
     children,
     rules,
+    ...remainingProps
   } = props;
 
   const {
@@ -59,6 +60,7 @@ export const RadioField = function <V extends string>(
       id={inputId}
       mb="form.fieldGap"
       width="input"
+      {...remainingProps}
     >
       {groupLabel}
 
