@@ -56,7 +56,14 @@ describe("useFormField", () => {
 
     const wrapper = ({ children }: { children: React.ReactNode }) => (
       <I18nextProvider i18n={i18nInstance}>
-        <FormScopeProvider value={{ scope: "test_form", tNamespace }}>
+        <FormScopeProvider
+          value={{
+            baseErrors: [],
+            formId: "my-form",
+            scope: "test_form",
+            tNamespace,
+          }}
+        >
           {children}
         </FormScopeProvider>
       </I18nextProvider>

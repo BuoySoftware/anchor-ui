@@ -105,7 +105,9 @@ describe("<FieldError />", () => {
     context("scope and field error exists", () => {
       it("renders a message tailored to the scope and field name", () => {
         const errors = render(
-          <FormScopeProvider value={{ scope: "testForm" }}>
+          <FormScopeProvider
+            value={{ baseErrors: [], formId: "my-form", scope: "testForm" }}
+          >
             <FieldError
               name="myField"
               error={{ type: "required", message: "" }}
@@ -122,7 +124,12 @@ describe("<FieldError />", () => {
       it("supports a custom tNamespace for the scope and field error", () => {
         const errors = render(
           <FormScopeProvider
-            value={{ scope: "testForm", tNamespace: ["customScope"] }}
+            value={{
+              baseErrors: [],
+              formId: "my-form",
+              scope: "testForm",
+              tNamespace: ["customScope"],
+            }}
           >
             <FieldError
               name="customField"
@@ -140,7 +147,7 @@ describe("<FieldError />", () => {
       it("properly falls back if custom namespace does not have a translation", () => {
         const errors = render(
           <FormScopeProvider
-            value={{ scope: "testForm", tNamespace: ["customScope"] }}
+            value={{ baseErrors: [], formId: "my-form", scope: "testForm", tNamespace: ["customScope"] }}
           >
             <FieldError
               name="fieldB"
@@ -160,7 +167,7 @@ describe("<FieldError />", () => {
     context("input type message exists", () => {
       it("renders the input type validation error message", () => {
         const errors = render(
-          <FormScopeProvider value={{ scope: "testForm" }}>
+          <FormScopeProvider value={{ baseErrors: [], formId: "my-form", scope: "testForm" }}>
             <FieldError
               name="testField2"
               inputType="text"
@@ -180,7 +187,7 @@ describe("<FieldError />", () => {
       it("uses the anchor default", () => {
         i18n.removeResourceBundle("en", "forms");
         const errors = render(
-          <FormScopeProvider value={{ scope: "testForm" }}>
+          <FormScopeProvider value={{ baseErrors: [], formId: "my-form", scope: "testForm" }}>
             <FieldError
               name="testField2"
               inputType="text"
@@ -198,7 +205,7 @@ describe("<FieldError />", () => {
 
     it("falls back to a message based off the validation error type", () => {
       const errors = render(
-        <FormScopeProvider value={{ scope: "testForm" }}>
+        <FormScopeProvider value={{ baseErrors: [], formId: "my-form", scope: "testForm" }}>
           <FieldError
             name="date"
             inputType="text"

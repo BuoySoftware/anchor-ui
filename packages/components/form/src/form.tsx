@@ -70,7 +70,7 @@ export const Form = <TFormValues extends FieldValues>({
   const baseErrors = mutationErrors["base"] || [];
 
   return (
-    <FormScopeProvider value={{ scope, tNamespace }}>
+    <FormScopeProvider value={{ formId: id, baseErrors, scope, tNamespace }}>
       <FormProvider {...form} handleSubmit={handleSubmit}>
         <Box
           as="form"
@@ -81,13 +81,6 @@ export const Form = <TFormValues extends FieldValues>({
           {...elementProps}
         >
           {children}
-          {baseErrors.length > 0 && (
-            <ErrorMessage
-              errors={baseErrors}
-              parentId={id}
-              mb={!!baseErrors && "form.fieldGap"}
-            />
-          )}
         </Box>
       </FormProvider>
     </FormScopeProvider>
