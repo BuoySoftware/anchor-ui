@@ -1,6 +1,6 @@
 {
   "name": "@buoysoftware/anchor-nav",
-  "version": "0.30.0-alpha.0",
+  "version": "0.30.0",
   "license": "MIT",
   "main": "src/index.ts",
   "files": [
@@ -14,8 +14,8 @@
     "prepack": "clean-package"
   },
   "dependencies": {
-    "@buoysoftware/anchor-layout": "^0.30.0-alpha.0",
-    "@buoysoftware/anchor-typography": "^0.30.0-alpha.0",
+    "@buoysoftware/anchor-layout": "^0.30.0",
+    "@buoysoftware/anchor-typography": "^0.30.0",
     "styled-components": "^5.3.6",
     "styled-system": "^5.1.5"
   },
