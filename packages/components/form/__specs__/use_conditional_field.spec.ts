@@ -25,7 +25,7 @@ describe("useConditionalField", () => {
     });
 
     context("watched value does not match", () => {
-      it("returns true", () => {
+      it("returns false", () => {
         jest.spyOn(HookForm, "useWatch").mockReturnValue(["no"]);
         const { result } = renderHook(() =>
           useConditionalField({
