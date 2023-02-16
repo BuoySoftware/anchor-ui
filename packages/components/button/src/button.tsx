@@ -43,7 +43,7 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
       onClick,
       size = "l",
       submitting = false,
-      type,
+      type = "button",
       ...props
     },
     ref
