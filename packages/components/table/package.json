@@ -1,10 +1,10 @@
 {
   "name": "@buoysoftware/anchor-table",
-  "version": "0.30.0",
+  "version": "0.30.2",
   "main": "src/index.ts",
   "license": "MIT",
   "dependencies": {
-    "@buoysoftware/anchor-button": "^0.30.0",
+    "@buoysoftware/anchor-button": "^0.30.2",
     "@buoysoftware/anchor-layout": "^0.30.0",
     "@buoysoftware/anchor-typography": "^0.30.0",
     "lodash": "^4.17.21",
