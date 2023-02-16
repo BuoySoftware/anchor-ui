@@ -2,6 +2,7 @@ export * from "./checkbox";
 export * from "./checkbox_field";
 export * from "./error_message";
 export * from "./form";
+export * from "./form_base_errors";
 export * from "./form_button";
 export * from "./form_scope_provider";
 export * from "./input";
