@@ -1,11 +1,10 @@
 on:
   pull_request:
     types: [opened, reopened]
-    branches-ignore:
-      - dependabot/**
 
 jobs:
   create-asana-attachment-job:
+    if: ${{ github.actor != 'dependabot[bot]' }}
     runs-on: ubuntu-latest
     name: Create pull request attachments on Asana tasks
     steps:
