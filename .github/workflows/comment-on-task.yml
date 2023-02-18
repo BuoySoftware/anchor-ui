@@ -1,11 +1,10 @@
 on:
   pull_request:
     types: [opened, closed, reopened]
-    branches-ignore:
-      - dependabot/**
 
 jobs:
   create-comment-in-asana-task-job:
+    if: ${{ github.actor != 'dependabot[bot]' }}
     runs-on: ubuntu-latest
     name: Create a comment in Asana Task
     steps:
