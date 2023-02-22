@@ -4,8 +4,8 @@
   "main": "src/index.ts",
   "license": "MIT",
   "dependencies": {
-    "@buoysoftware/anchor-button": "^0.29.0",
-    "@buoysoftware/anchor-layout": "^0.29.0"
+    "@buoysoftware/anchor-button": "^0.30.2",
+    "@buoysoftware/anchor-layout": "^0.30.0"
   },
   "scripts": {
     "build": "tsc -outDir dist",

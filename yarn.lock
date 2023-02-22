@@ -1158,53 +1158,6 @@
   resolved "https://registry.yarnpkg.com/@bcoe/v8-coverage/-/v8-coverage-0.2.3.tgz#75a2e8b51cb758a7553d6804a5932d7aace75c39"
   integrity sha512-0hYQ8SB4Db5zvZB4axdMHGwEaQjkZzFjQiN9LVYvIFB2nSUHW9tYpxWriPrWDASIxiaXax83REcLxuSdnGPZtw==
 
-"@buoysoftware/anchor-button@^0.29.0":
-  version "0.29.0"
-  resolved "https://registry.yarnpkg.com/@buoysoftware/anchor-button/-/anchor-button-0.29.0.tgz#cfbeeb9f9e1fc894869ced2c2f9e75c11af3415d"
-  integrity sha512-jRRspy1KD+JZlGMVPErWSyUvmMs4JP+gxIP6x6Er5681wnWCr4S3Wb6CeYF4BGsMF1EQc2rw/+HkiSlBrp+h2Q==
-  dependencies:
-    "@buoysoftware/anchor-layout" "^0.29.0"
-    "@buoysoftware/anchor-loading-indicator" "^0.29.0"
-    "@buoysoftware/anchor-theme" "^0.29.0"
-    "@buoysoftware/anchor-typography" "^0.29.0"
-
-"@buoysoftware/anchor-layout@^0.29.0":
-  version "0.29.0"
-  resolved "https://registry.yarnpkg.com/@buoysoftware/anchor-layout/-/anchor-layout-0.29.0.tgz#7ae6cae484d9912ba6ecff9e58ebfc0fbda1749f"
-  integrity sha512-2OLZvnDWbpZAlzo6GYO2wF5zxiLLlFjUeuZyxNjlmOs8Nh16kn/idXAR+fdEMC7Wai02AqvfCVqM7C8j8CnkYg==
-  dependencies:
-    "@buoysoftware/anchor-theme" "^0.29.0"
-    styled-components "^5.3.6"
-    styled-system "^5.1.5"
-
-"@buoysoftware/anchor-loading-indicator@^0.29.0":
-  version "0.29.0"
-  resolved "https://registry.yarnpkg.com/@buoysoftware/anchor-loading-indicator/-/anchor-loading-indicator-0.29.0.tgz#6c120dcc647b6d7bce0fc0fc09be673a37c25c0a"
-  integrity sha512-aM0A8QpXYgWV8/YZLZnjlo1m8qENU7NPHDOqqUFdUP0xsAre2/gSGf6kKAGOgElv7YHkXNuroJ/qE1GdD4oMlg==
-  dependencies:
-    "@buoysoftware/anchor-layout" "^0.29.0"
-
-"@buoysoftware/anchor-theme@^0.29.0":
-  version "0.29.0"
-  resolved "https://registry.yarnpkg.com/@buoysoftware/anchor-theme/-/anchor-theme-0.29.0.tgz#79995da3cbe9052c949ba91e46be8a0176e50436"
-  integrity sha512-xd1j3gby2QDcoG7eMXAGaiiijwOkaEgxA6pKGu4fk1H+phWEgsSa17MQHdBIhFy8cCKD0iulz8nDb7zjR3J5rA==
-  dependencies:
-    "@styled-system/theme-get" "^5.1.2"
-    polished "^4.2.2"
-    styled-components "^5.3.6"
-
-"@buoysoftware/anchor-typography@^0.29.0":
-  version "0.29.0"
-  resolved "https://registry.yarnpkg.com/@buoysoftware/anchor-typography/-/anchor-typography-0.29.0.tgz#95b3846ae7a17952e317d5891b3fc7d7a5c36cc8"
-  integrity sha512-jRyqDgBsziRr210j84/+nMIC8tx3u8g+QGAFkvel8sER8XCSiIDLCg7nFYh7/YCG1O6A+48gEx4NISkyqk5QDQ==
-  dependencies:
-    "@buoysoftware/anchor-layout" "^0.29.0"
-    "@buoysoftware/anchor-theme" "^0.29.0"
-    react-markdown "^8.0.4"
-    rehype-raw "^6.1.1 "
-    styled-components "^5.3.6"
-    styled-system "^5.1.5"
-
 "@cnakazawa/watch@^1.0.3":
   version "1.0.4"
   resolved "https://registry.yarnpkg.com/@cnakazawa/watch/-/watch-1.0.4.tgz#f864ae85004d0fcab6f50be9141c4da368d1656a"
