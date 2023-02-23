@@ -15,6 +15,7 @@
   "dependencies": {
     "@buoysoftware/anchor-ui-legacy-button": "^0.30.3",
     "@buoysoftware/anchor-ui-legacy-layout": "^0.30.3",
+    "@buoysoftware/anchor-ui-legacy-page-footer": "^0.30.0",
     "@buoysoftware/anchor-ui-legacy-text": "^0.30.0"
   }
 }

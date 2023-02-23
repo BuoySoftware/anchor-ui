@@ -1,0 +1,53 @@
+import { Canvas, Story } from "@storybook/addon-docs";
+
+import { LegacyPageFooter } from "../src";
+
+<Meta
+  title="anchor-ui-compat / LegacyPageFooter"
+  component={LegacyPageFooter}
+  decorators={[
+    (Story) => (
+      <div style={{ background: "orange", border: "1px solid black", height:
+"200px", padding: "20px 20px", transform: "translate(0, 0)" }}>
+        Decorator content
+        {Story()}
+      </div>
+    ),
+  ]}
+/>
+
+export const Template = (args) => {
+  return (
+    <LegacyPageFooter {...args}>LegacyPageFooter content</LegacyPageFooter>
+  );
+}
+
+# LegacyPageFooter
+
+The LegacyPageFooter component renders a footer that will stick to the bottom of the
+screen regardless of the height the content on the screen. The content of the
+footer is right-aligned, as this component is usually used for keeping action buttons at
+the bottom of the screen.
+
+## Import
+
+```javascript
+import { LegacyPageFooter } from "@buoysoftware/anchor-ui-compat";
+```
+
+## Basic Usage
+
+<Canvas>
+  <Story
+    name="LegacyPageFooter"
+    parameters={{
+      docs: {
+        source: {
+          excludeDecorators: true,
+        },
+      },
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>
