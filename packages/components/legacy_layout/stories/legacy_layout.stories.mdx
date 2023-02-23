@@ -1,0 +1,41 @@
+import { Canvas, Story } from "@storybook/addon-docs";
+
+import { LegacyLayout } from "../src";
+
+<Meta
+  title="anchor-ui-compat / LegacyLayout"
+  component={LegacyLayout}
+  argTypes={{
+    display: {
+      control: "select",
+      options: ["block", "flex", "grid"],
+    },
+  }}
+/>
+
+export const Template = (args) => {
+  return <LegacyLayout {...args} />;
+};
+
+# LegacyLayout
+
+The LegacyLayout component provides a compatability bridge to migrate existing
+applications to use AnchorUI incrementally. It maps the display variants used in
+legacy components to the new AnchorUI equivalents.
+
+## Import
+
+```javascript
+import { LegacyLayout } from "@buoysoftware/anchor-ui-compat";
+```
+
+## Basic Usage
+
+<Canvas>
+  <Story
+    name="LegacyLayout"
+    args={{ bg: "orange", p: "25px", display: "block" }}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>
