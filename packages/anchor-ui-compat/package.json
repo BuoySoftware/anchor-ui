@@ -1,6 +1,6 @@
 {
   "name": "@buoysoftware/anchor-ui-compat",
-  "version": "0.30.3",
+  "version": "0.30.4",
   "main": "src/index.ts",
   "license": "MIT",
   "files": [
