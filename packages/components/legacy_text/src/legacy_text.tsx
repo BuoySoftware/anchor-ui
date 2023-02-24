@@ -1,5 +1,6 @@
 import { BoxProps } from "@buoysoftware/anchor-layout";
 import { Body, Heading, Subheading } from "@buoysoftware/anchor-typography";
+import { TypographyProps } from "styled-system";
 
 export type LegacyTextVariant =
   | "bodyLargeBold"
@@ -23,7 +24,7 @@ interface OwnProps {
   variant?: LegacyTextVariant;
 }
 
-export type TextProps = BoxProps & OwnProps;
+export type TextProps = BoxProps & TypographyProps & OwnProps;
 
 export const LegacyText: React.FC<TextProps> = ({
   children,
