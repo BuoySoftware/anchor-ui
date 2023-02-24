@@ -1,6 +1,6 @@
 {
   "name": "@buoysoftware/anchor-ui-legacy-text",
-  "version": "0.30.0",
+  "version": "0.30.6",
   "main": "src/index.ts",
   "license": "MIT",
   "files": [
