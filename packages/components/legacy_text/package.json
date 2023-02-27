@@ -1,6 +1,6 @@
 {
   "name": "@buoysoftware/anchor-ui-legacy-text",
-  "version": "0.30.6",
+  "version": "0.30.7",
   "main": "src/index.ts",
   "license": "MIT",
   "files": [
@@ -15,5 +15,6 @@
     "compile": "tsc --noEmit",
     "postpack": "clean-package restore",
     "prepack": "clean-package"
-  }
+  },
+  "gitHead": "db00665b2cf8c1856f16d6cec90f754a1c098b99"
 }
