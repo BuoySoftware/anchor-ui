@@ -30,7 +30,7 @@ interface OwnProps {
   sizeVariant?: LegacyButtonSize;
 }
 
-export type ButtonProps = OwnProps & Omit<BoxProps, "size" | "color">;
+export type ButtonProps = OwnProps & Omit<BoxProps, "size" | "color"> & React.ButtonHTMLAttributes<HTMLButtonElement>;;
 
 export const LegacyButton: React.FC<ButtonProps> = ({
   variant,
