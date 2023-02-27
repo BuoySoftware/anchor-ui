@@ -1,6 +1,6 @@
 {
   "name": "@buoysoftware/anchor-ui-legacy-page-footer",
-  "version": "0.30.5",
+  "version": "0.30.8",
   "main": "src/index.ts",
   "license": "MIT",
   "dependencies": {
