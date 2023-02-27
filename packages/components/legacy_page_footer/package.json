@@ -1,6 +1,6 @@
 {
   "name": "@buoysoftware/anchor-ui-legacy-page-footer",
-  "version": "0.30.9",
+  "version": "0.30.10",
   "main": "src/index.ts",
   "license": "MIT",
   "dependencies": {
@@ -12,5 +12,5 @@
     "postpack": "clean-package restore",
     "prepack": "clean-package"
   },
-  "gitHead": "270955a45529f523f08217588673993fa5cc1f13"
+  "gitHead": "28d0aea99132d87da71d40f3291316a2e81b8260"
 }
