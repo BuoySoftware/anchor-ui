@@ -1,6 +1,6 @@
 {
   "name": "@buoysoftware/anchor-ui-compat",
-  "version": "0.30.10",
+  "version": "0.30.11",
   "main": "src/index.ts",
   "license": "MIT",
   "files": [
@@ -13,7 +13,7 @@
     "postpack": "clean-package restore"
   },
   "dependencies": {
-    "@buoysoftware/anchor-ui-legacy-button": "^0.30.3",
+    "@buoysoftware/anchor-ui-legacy-button": "^0.30.11",
     "@buoysoftware/anchor-ui-legacy-layout": "^0.30.3",
     "@buoysoftware/anchor-ui-legacy-page-footer": "^0.30.10",
     "@buoysoftware/anchor-ui-legacy-text": "^0.30.7"

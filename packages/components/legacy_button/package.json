@@ -1,6 +1,6 @@
 {
   "name": "@buoysoftware/anchor-ui-legacy-button",
-  "version": "0.30.3",
+  "version": "0.30.11",
   "main": "src/index.ts",
   "license": "MIT",
   "dependencies": {
