@@ -41,6 +41,7 @@ export const FormField = styled(
           inputId={inputId}
           inputType={inputType}
           mt="xxs"
+          width="input"
           name={name}
         />
       </Box>

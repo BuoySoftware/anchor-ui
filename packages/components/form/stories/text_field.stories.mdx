@@ -10,6 +10,11 @@ import { Form, TextField, TextArea, anchorFormsEn } from "../src";
 <Meta
   title="Components / Forms / TextField"
   component={TextField}
+  argTypes={{
+    width: {
+     control: { type: "text" },
+    }
+  }}
   decorators={[
     (Story) => {
       const translations = {
@@ -35,7 +40,7 @@ import { Form, TextField, TextArea, anchorFormsEn } from "../src";
   parameters={{
     layout: "centered",
     controls: {
-      include: ["disabled"]
+      include: ["label", "disabled", "width"]
     }
   }}
 />
@@ -47,7 +52,7 @@ export const Template = (args) => {
       <TextField name="textField" rules={{ required: true }} {...args} />
       <Flex>
         <Button colorScheme="basic" onClick={(e) => { e.preventDefault(); form.reset() }}>Reset</Button>
-        <Button colorScheme="primary">Submit</Button>
+        <Button colorScheme="primary" type="submit">Submit</Button>
       </Flex>
     </Form>
   );
@@ -56,7 +61,7 @@ export const Template = (args) => {
 ## Basic Usage
 
 <Canvas>
-  <Story args={{ disabled: false }} name="TextField">
+  <Story args={{ width: "input", disabled: false }} name="TextField">
     {Template.bind({})}
   </Story>
 </Canvas>
@@ -64,7 +69,7 @@ export const Template = (args) => {
 # TextArea
 
 <Canvas>
-  <Story args={{ disabled: false, Component: TextArea }} name="TextArea TextField">
+  <Story args={{ width: "input", disabled: false, Component: TextArea }} name="TextArea TextField">
     {Template.bind({})}
   </Story>
 </Canvas>
