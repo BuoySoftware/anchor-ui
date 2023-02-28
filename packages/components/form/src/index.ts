@@ -7,6 +7,7 @@ export * from "./form_button";
 export * from "./form_scope_provider";
 export * from "./input";
 export * from "./label";
+export * from "./phone_field";
 export * from "./radio_field";
 export * from "./select";
 export * from "./select_field";

@@ -1,0 +1,49 @@
+import { Meta, Canvas, Story } from "@storybook/addon-docs";
+import { useForm } from "react-hook-form";
+
+import { Form, Label, PhoneField } from "../src";
+
+<Meta
+  title="Components / Forms / PhoneField"
+  component={PhoneField}
+  parameters={{
+    layout: "centered",
+    controls: {
+      include: ["disabled"]
+    }
+  }}
+/>
+
+export const Template = (args) => {
+  const form = useForm();
+  return(
+    <Form form={form} id="phone-field-example" scope="phone-field-example">
+      <PhoneField
+        label={<Label>Phone Field</Label>}
+        name="phoneFieldExample"
+        {...args}
+      />
+    </Form>
+  );
+}
+
+# PhoneField
+
+The phone field is intended for use within a `Form` component utilizing 
+react-hook-form. It is composed of the FormField, Controller, and PhoneInput
+components. It includes typeahead updating as well as US phone number validation
+via `libphonenumber-js`.
+
+## Import
+
+```javascript
+import { PhoneField } from "@buoysoftware/anchor-ui";
+```
+
+## Basic Usage
+
+<Canvas>
+  <Story args={{ disabled: false }} name="PhoneField">
+    {Template.bind({})}
+  </Story>
+</Canvas>
