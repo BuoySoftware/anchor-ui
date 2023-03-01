@@ -1,0 +1,108 @@
+import i18n from "i18next";
+import { initReactI18next } from "react-i18next";
+import { Canvas, Story } from "@storybook/addon-docs";
+
+import { LegacyTable } from "../src";
+
+<Meta
+  title="Components / LegacyTable"
+  component={LegacyTable}
+  parameters={{
+    controls: {
+      include: ["records"],
+    },
+  }}
+/>
+
+export const Template = ({ cellProps = () => ({}), ...args }) => {
+  i18n.use(initReactI18next).init({
+    lng: "en",
+    ns: ["tables"],
+    resources: {
+      en: {
+        tables: {
+          actions: {
+            next: "Next",
+            previous: "Previous",
+          },
+          total_label: "Total: {{total}}",
+          donors: {
+            empty_message: "No donors to display",
+            th: {
+              name: "Donor Name",
+              id: "Donor ID",
+              deferred: "Deferred",
+              my_facility_name: "Assigned Center",
+              level: "Level",
+            },
+          },
+        },
+      },
+    },
+  });
+  const CELL_CONFIGS = [
+    { dataKey: "name" },
+    { dataKey: "id" },
+    { dataKey: "myFacility.name" },
+    { dataKey: "level" },
+  ].map((cellConfig) => ({ ...cellConfig, cellProps }));
+  return (
+    <LegacyTable
+      cellConfigs={CELL_CONFIGS}
+      name="donors"
+      recordIdKey="id"
+      {...args}
+    />
+  );
+};
+
+# LegacyTable
+
+The LegacyTable component provides a compatability bridge to migrate existing
+applications to use AnchorUI incrementally. It maps the table cell config's
+`translationNamespace`, `translationKeyPrefix`, `render` props used in legacy
+table components to the new AnchorUI equivalents.
+
+## Import
+
+```javascript
+import { LegacyTable } from "@buoysoftware/anchor-ui-compat";
+```
+
+## Basic Usage
+
+<Canvas isColumn>
+  <Story
+    args={{
+      records: [
+        {
+          name: "Jerry Seinfeld",
+          id: 1,
+          myFacility: { name: "Paris " },
+          level: 1,
+        },
+        {
+          name: "Cosmo Kramer",
+          id: 2,
+          myFacility: { name: "Paris " },
+          level: 7,
+        },
+        {
+          name: "Elaine Benes",
+          id: 3,
+          myFacility: { name: "Paris " },
+          level: 4,
+        },
+        {
+          name: "George Costanza",
+          id: 4,
+          myFacility: { name: "Paris " },
+          level: 0,
+        },
+      ],
+    }}
+    name="Table with data"
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>

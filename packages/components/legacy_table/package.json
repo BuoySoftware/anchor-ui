@@ -1,0 +1,19 @@
+{
+  "name": "@buoysoftware/anchor-ui-legacy-table",
+  "version": "0.30.11",
+  "main": "src/index.ts",
+  "license": "MIT",
+  "scripts": {
+    "build": "tsc -outDir dist",
+    "compile": "tsc --noEmit",
+    "postpack": "clean-package restore",
+    "prepack": "clean-package"
+  },
+  "dependencies": {
+    "@buoysoftware/anchor-layout": "^0.30.0",
+    "@buoysoftware/anchor-table": "^0.30.2",
+    "@buoysoftware/anchor-ui-legacy-text": "^0.30.7",
+    "i18next": "^22.4.9",
+    "react-i18next": "^12.1.4"
+  }
+}
