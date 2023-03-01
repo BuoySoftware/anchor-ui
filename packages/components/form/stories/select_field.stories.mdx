@@ -13,6 +13,11 @@ import { Form, Label, SelectField, anchorFormsEn } from "../src";
   decorators={[
     (Story) => {
       const translations = {
+        hints: {
+          select_field_example: {
+            select_example: "Optional helper text"
+          }
+        },
         labels: {
           select_field_example: {
             select_example: "Select example"
@@ -53,11 +58,11 @@ export const Template = (args) => {
         options={options}
         name="selectExample"
         rules={{ required: true }}
-        {...args} 
+        {...args}
       />
       <Flex>
         <Button colorScheme="basic" onClick={(e) => { e.preventDefault(); form.reset() }}>Reset</Button>
-        <Button colorScheme="primary">Submit</Button>
+        <Button colorScheme="primary" type="submit">Submit</Button>
       </Flex>
     </Form>
   );

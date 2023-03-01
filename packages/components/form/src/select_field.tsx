@@ -47,6 +47,7 @@ export const SelectField = function <
   const { t } = useTranslation(["anchorForms", "forms"]);
   const {
     error,
+    hint,
     inputId,
     label: formFieldLabel,
     placeholder,
@@ -62,13 +63,14 @@ export const SelectField = function <
     <FormField
       data-testid={`select-field-${inputId}`}
       error={error}
+      hint={hint}
       inputId={inputId}
       inputType="select"
       label={label}
       name={name}
       position="relative"
-      zIndex={zIndex}
       width={width}
+      zIndex={zIndex}
     >
       {banner && <Box my="xxs">{banner}</Box>}
       <Controller

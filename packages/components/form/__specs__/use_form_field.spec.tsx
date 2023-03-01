@@ -175,6 +175,68 @@ describe("useFormField", () => {
     });
   });
 
+  describe("hint", () => {
+    context("hint for field does not exist", () => {
+      it("returns undefined", () => {
+        const { result } = renderFieldHook({ name: "testField" });
+
+        expect(result.current.hint).toBe(undefined);
+      });
+    });
+
+    context("default namespace provides a hint", () => {
+      it("renders the default namespace hint for the field", () => {
+        const mockTranslations = {
+          forms: {
+            hints: {
+              test_form: {
+                test_field: "Default namespace helper text",
+              },
+            },
+          },
+        };
+
+        const { result } = renderFieldHook({
+          name: "testField",
+          mockTranslations,
+        });
+
+        expect(result.current.hint).toEqual("Default namespace helper text")
+      });
+    });
+
+    context("custom namespace provides a hint", () => {
+      it("renders the custom namespace hint for the field", () => {
+        const mockTranslations = {
+          forms: {
+            hints: {
+              test_form: {
+                test_field: "Default namespace helper text",
+              },
+            },
+          },
+          providedNamespace: {
+            forms: {
+              hints: {
+                test_form: {
+                  test_field: "Provided namespace helper text",
+                },
+              },
+            },
+          },
+        };
+
+        const { result } = renderFieldHook({
+          name: "testField",
+          mockTranslations,
+          tNamespace: ["providedNamespace"],
+        });
+
+        expect(result.current.hint).toEqual("Provided namespace helper text")
+      });
+    });
+  });
+
   describe("inputId", () => {
     it("generates an id from the field name", () => {
       const { result } = renderFieldHook({ name: "testField" });

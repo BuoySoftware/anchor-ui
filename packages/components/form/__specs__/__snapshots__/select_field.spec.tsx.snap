@@ -35,11 +35,29 @@ exports[`<SelectField /> async is false renders properly 1`] = `
   z-index: 1;
 }
 
+.c5 {
+  box-sizing: border-box;
+  color: #62666A;
+  width: s;
+  height: s;
+  margin-top: 0.25rem;
+}
+
 .c3 {
   font-family: -apple-system,BlinkMacSystemFont,San Francisco,Segoe UI, Roboto,Helvetica Neue,sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-weight: 600;
+}
+
+.c6 {
+  font-family: -apple-system,BlinkMacSystemFont,San Francisco,Segoe UI, Roboto,Helvetica Neue,sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-style: none;
+  font-size: 0.75rem;
+  font-weight: 400;
+  line-height: 1rem;
 }
 
 <form
@@ -145,6 +163,15 @@ exports[`<SelectField /> async is false renders properly 1`] = `
           />
         </div>
       </div>
+      <p
+        class="c5 c6"
+        color="text.secondary"
+        font-size="font-size-75"
+        font-style="none"
+        font-weight="400"
+      >
+        Optional helper text
+      </p>
     </div>
     <button
       type="submit"
@@ -190,11 +217,29 @@ exports[`<SelectField /> async is true renders properly 1`] = `
   z-index: 1;
 }
 
+.c5 {
+  box-sizing: border-box;
+  color: #62666A;
+  width: s;
+  height: s;
+  margin-top: 0.25rem;
+}
+
 .c3 {
   font-family: -apple-system,BlinkMacSystemFont,San Francisco,Segoe UI, Roboto,Helvetica Neue,sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-weight: 600;
+}
+
+.c6 {
+  font-family: -apple-system,BlinkMacSystemFont,San Francisco,Segoe UI, Roboto,Helvetica Neue,sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-style: none;
+  font-size: 0.75rem;
+  font-weight: 400;
+  line-height: 1rem;
 }
 
 <form
@@ -300,6 +345,15 @@ exports[`<SelectField /> async is true renders properly 1`] = `
           />
         </div>
       </div>
+      <p
+        class="c5 c6"
+        color="text.secondary"
+        font-size="font-size-75"
+        font-style="none"
+        font-weight="400"
+      >
+        Optional helper text
+      </p>
     </div>
     <button
       type="submit"
