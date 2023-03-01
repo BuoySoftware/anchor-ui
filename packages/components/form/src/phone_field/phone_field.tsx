@@ -1,14 +1,10 @@
 import {
-  // get,
-  useFormContext,
-  Controller,
-  RegisterOptions,
-} from "react-hook-form";
-import snakeCase from "lodash/snakeCase";
-import {
   isPossiblePhoneNumber,
   parsePhoneNumberFromString,
 } from "libphonenumber-js";
+import { useFormContext, Controller, RegisterOptions } from "react-hook-form";
+import snakeCase from "lodash/snakeCase";
+import { useTranslation } from "react-i18next";
 
 import { FormField } from "../form_field";
 import { useFormField } from "../use_form_field";
@@ -41,7 +37,7 @@ export const PhoneField: React.FC<PhoneFieldProps> = ({
     name,
     buildLabel: label === undefined,
   });
-  // const error = get(errors, name);
+  const { t } = useTranslation("errors");
   const fieldLabel = label ?? formFieldLabel;
   const inputId = snakeCase(name);
   const placeholder = "";
@@ -49,7 +45,7 @@ export const PhoneField: React.FC<PhoneFieldProps> = ({
   const phoneNumberValidation = (phoneNumber: string): string | undefined => {
     const valid = isPossiblePhoneNumber(phoneNumber, "US");
 
-    if (!valid) return "Invalid phone number" || undefined;
+    if (!valid) return t("phoneNumber") || undefined;
   };
 
   return (
