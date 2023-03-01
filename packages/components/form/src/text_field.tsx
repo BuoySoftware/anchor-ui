@@ -28,6 +28,7 @@ export const TextField: React.FC<TextFieldProps> = ({
   const wrapperProps = pick(inputProps, STYLED_INPUT_WRAPPER_PROP_LIST);
   const {
     error,
+    hint,
     inputId,
     label: formFieldLabel,
     placeholder,
@@ -39,6 +40,7 @@ export const TextField: React.FC<TextFieldProps> = ({
     <FormField
       error={error}
       label={fieldLabel}
+      hint={hint}
       inputId={inputId}
       name={name}
       {...wrapperProps}

@@ -15,6 +15,7 @@ export interface UseFormFieldProps<L extends true | false> {
 
 interface FormField<L> {
   error: FieldError;
+  hint?: string;
   inputId: string;
   label: L extends true ? string : undefined;
   placeholder: string;
@@ -52,10 +53,21 @@ export const useFormField = <L extends true | false>({
       ])
     : undefined;
 
+  const hint = t(
+    [
+      `forms.hints.${snakeScope}.${i18nKey}`,
+      `hints.${snakeScope}.${i18nKey}`,
+    ],
+    {
+      defaultValue: "",
+    }
+  );
+
   const error = get(errors, name);
 
   return {
     error,
+    hint: hint ? hint : undefined,
     inputId,
     label,
     placeholder,
