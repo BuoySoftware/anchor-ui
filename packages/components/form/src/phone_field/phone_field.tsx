@@ -27,34 +27,48 @@ const formattedValue = (value: string): string => {
 
 export const PhoneField: React.FC<PhoneFieldProps> = ({
   defaultValue = "",
-  label,
+  label: labelProp,
   name,
   rules,
-  ...inputProps
+  width = "input",
+  zIndex = "formField",
+  ...props
 }): React.ReactElement => {
   const { control } = useFormContext();
-  const { error, label: formFieldLabel } = useFormField({
+  const { t } = useTranslation(["anchorForms", "forms"]);
+  const {
+    error,
+    label: formFieldLabel,
+    placeholder,
+  } = useFormField({
+    defaultPlaceholder:
+      t([
+        "anchorForms:placeholders.phone_number",
+        "forms:placeholders.phone_number",
+      ]) ?? "",
     name,
-    buildLabel: label === undefined,
   });
-  const { t } = useTranslation("errors");
-  const fieldLabel = label ?? formFieldLabel;
+  const label = labelProp ?? formFieldLabel;
   const inputId = snakeCase(name);
-  const placeholder = "";
 
   const phoneNumberValidation = (phoneNumber: string): string | undefined => {
+    console.log("hi hi");
     const valid = isPossiblePhoneNumber(phoneNumber, "US");
 
-    if (!valid) return t("phoneNumber") || undefined;
+    if (!valid) return t("errors.phone") || undefined;
   };
 
   return (
     <FormField
+      data-testid={`phone-field-${inputId}`}
       error={error}
-      label={fieldLabel}
       inputId={inputId}
+      inputType="phone"
+      label={label}
       name={name}
-      {...inputProps}
+      position="relative"
+      zIndex={zIndex}
+      width={width}
     >
       <Controller
         control={control}
@@ -65,8 +79,8 @@ export const PhoneField: React.FC<PhoneFieldProps> = ({
             <PhoneInput
               id={inputId}
               placeholder={placeholder}
+              {...props}
               {...field}
-              {...inputProps}
             />
           );
         }}
