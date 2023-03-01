@@ -13,6 +13,7 @@ export type InputType =
   | "checkbox"
   | "collectionCheckbox"
   | "hidden"
+  | "phoneNumber"
   | "radio"
   | "select"
   | "text";
