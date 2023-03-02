@@ -1,10 +1,10 @@
 {
   "name": "@buoysoftware/anchor-ui-legacy-page-footer",
-  "version": "0.30.10",
+  "version": "0.31.0",
   "main": "src/index.ts",
   "license": "MIT",
   "dependencies": {
-    "@buoysoftware/anchor-layout": "^0.30.0"
+    "@buoysoftware/anchor-layout": "^0.31.0"
   },
   "scripts": {
     "build": "tsc -outDir dist",
