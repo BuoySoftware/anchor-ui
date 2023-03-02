@@ -1,9 +1,8 @@
 import { useForm } from "react-hook-form";
-import userEvent from "@testing-library/user-event";
 
 import PhoneInput, { PhoneInputProps } from "../src/phone_field/phone_input";
 import { Form } from "../src/form";
-import { render, UserRenderResult } from "../test_utils";
+import { act, render, waitFor, UserRenderResult } from "../test_utils";
 
 describe("<PhoneInput />", () => {
   type MockFormProps = Partial<PhoneInputProps>;
@@ -32,23 +31,33 @@ describe("<PhoneInput />", () => {
     const { user, getByTestId } = setup({ "data-testid": "phone-number" });
     const field = getByTestId("input-phone-number");
 
-    await user.type(field, "516");
+    await act(() => {
+      user.type(field, "516");
+    });
 
-    expect(field).toHaveValue("(516)");
+    await waitFor(() => {
+      expect(field).toHaveValue("(516)");
+    });
 
-    await user.type(field, "5552389");
+    await act(() => {
+      user.type(field, "5552389");
+    });
 
-    expect(field).toHaveValue("(516) 555-2389");
+    await waitFor(() => {
+      expect(field).toHaveValue("(516) 555-2389");
+    });
   });
 
   it("allows the user to back space", async () => {
     const { user, getByTestId } = setup({ "data-testid": "phone-number" });
     const field = getByTestId("input-phone-number");
 
-    await user.type(field, "516");
+    await act(() => {
+      user.type(field, "516{Backspace}");
+    });
 
-    await user.keyboard("{Backspace}");
-
-    expect(field).toHaveValue("(516");
+    await waitFor(() => {
+      expect(field).toHaveValue("(516");
+    });
   });
 });
