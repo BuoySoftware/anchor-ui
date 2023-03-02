@@ -1,7 +1,11 @@
 import { useFormContext, RegisterOptions } from "react-hook-form";
-import { Box } from "@buoysoftware/anchor-layout";
+import { BoxProps } from "@buoysoftware/anchor-layout";
+import pick from "lodash/pick";
 
 import { Input, InputProps } from "./input";
+import {
+  STYLED_INPUT_WRAPPER_PROP_LIST
+} from "./input/styled_input_wrapper_prop_list";
 import { FormField } from "./form_field";
 import { useFormField } from "./use_form_field";
 
@@ -12,7 +16,7 @@ interface OwnProps {
   rules?: RegisterOptions;
 }
 
-export type TextFieldProps = OwnProps & Omit<InputProps, "theme">;
+export type TextFieldProps = OwnProps & Omit<InputProps, "theme"> & BoxProps;
 
 export const TextField: React.FC<TextFieldProps> = ({
   Component = Input,
@@ -21,8 +25,10 @@ export const TextField: React.FC<TextFieldProps> = ({
   rules,
   ...inputProps
 }): React.ReactElement => {
+  const wrapperProps = pick(inputProps, STYLED_INPUT_WRAPPER_PROP_LIST);
   const {
     error,
+    hint,
     inputId,
     label: formFieldLabel,
     placeholder,
@@ -31,16 +37,21 @@ export const TextField: React.FC<TextFieldProps> = ({
   const fieldLabel = label ?? formFieldLabel;
 
   return (
-    <Box>
-      <FormField error={error} label={fieldLabel} inputId={inputId} name={name}>
-        <Component
-          error={!!error}
-          id={inputId}
-          placeholder={placeholder}
-          {...register(name, { shouldUnregister: true, ...rules })}
-          {...inputProps}
-        />
-      </FormField>
-    </Box>
+    <FormField
+      error={error}
+      label={fieldLabel}
+      hint={hint}
+      inputId={inputId}
+      name={name}
+      {...wrapperProps}
+    >
+      <Component
+        error={!!error}
+        id={inputId}
+        placeholder={placeholder}
+        {...register(name, { shouldUnregister: true, ...rules })}
+        {...inputProps}
+      />
+    </FormField>
   );
 };

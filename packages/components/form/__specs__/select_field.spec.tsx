@@ -2,7 +2,12 @@ import { useForm } from "react-hook-form";
 import i18n from "i18next";
 import { initReactI18next } from "react-i18next";
 
-import { render as baseRender, UserRenderResult } from "../test_utils";
+import {
+  act,
+  render as baseRender,
+  waitFor,
+  UserRenderResult,
+} from "../test_utils";
 import { Form, SelectField } from "../src";
 
 describe("<SelectField />", () => {
@@ -23,6 +28,11 @@ describe("<SelectField />", () => {
         select: {
           required: "This field is required",
         },
+      },
+    },
+    hints: {
+      test_form: {
+        my_select_field: "Optional helper text",
       },
     },
     labels: {
@@ -88,9 +98,13 @@ describe("<SelectField />", () => {
         it("flags the field as invalid", async () => {
           const { user, getByLabelText, getByText } = render({ async });
 
-          await user.click(getByText("Submit"));
+          await act(() => {
+            user.click(getByText("Submit"));
+          });
 
-          expect(getByLabelText(FIELD_LABEL)).toBeInvalid();
+          await waitFor(() => {
+            expect(getByLabelText(FIELD_LABEL)).toBeInvalid();
+          });
         });
 
         it("displays errors associated with the field", async () => {
@@ -99,9 +113,15 @@ describe("<SelectField />", () => {
             "forms:errors.input_types.select.required"
           );
 
-          await user.click(getByText("Submit"));
+          await act(() => {
+            user.click(getByText("Submit"));
+          });
 
-          expect(getByLabelText(FIELD_LABEL)).toHaveErrorMessage(errorMessage);
+          await waitFor(() => {
+            expect(getByLabelText(FIELD_LABEL)).toHaveErrorMessage(
+              errorMessage
+            );
+          });
         });
       });
     });

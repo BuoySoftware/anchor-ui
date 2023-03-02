@@ -1,10 +1,10 @@
 {
   "name": "@buoysoftware/anchor-ui-legacy-layout",
-  "version": "0.30.3",
+  "version": "0.31.1",
   "main": "src/index.ts",
   "license": "MIT",
   "dependencies": {
-    "@buoysoftware/anchor-layout": "^0.30.0"
+    "@buoysoftware/anchor-layout": "^0.31.1"
   },
   "scripts": {
     "build": "tsc -outDir dist",
