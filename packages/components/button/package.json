@@ -1,13 +1,13 @@
 {
   "name": "@buoysoftware/anchor-button",
-  "version": "0.31.0",
+  "version": "0.31.1",
   "main": "src/index.ts",
   "license": "MIT",
   "dependencies": {
-    "@buoysoftware/anchor-layout": "^0.31.0",
-    "@buoysoftware/anchor-loading-indicator": "^0.31.0",
-    "@buoysoftware/anchor-theme": "^0.31.0",
-    "@buoysoftware/anchor-typography": "^0.31.0"
+    "@buoysoftware/anchor-layout": "^0.31.1",
+    "@buoysoftware/anchor-loading-indicator": "^0.31.1",
+    "@buoysoftware/anchor-theme": "^0.31.1",
+    "@buoysoftware/anchor-typography": "^0.31.1"
   },
   "scripts": {
     "build": "tsc -outDir dist",
