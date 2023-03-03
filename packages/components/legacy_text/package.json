@@ -7,7 +7,6 @@
     "dist"
   ],
   "dependencies": {
-    "@buoysoftware/anchor-layout": "^0.31.1",
     "@buoysoftware/anchor-typography": "^0.31.1"
   },
   "scripts": {

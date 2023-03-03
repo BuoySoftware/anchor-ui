@@ -8,7 +8,7 @@ interface OwnProps {
   size: SubheadingSize;
 }
 
-type SubheadingProps = TextProps & OwnProps;
+export type SubheadingProps = TextProps & OwnProps;
 
 export const SUBHEADING_TOKEN_MAPPING: Record<
   SubheadingSize,
