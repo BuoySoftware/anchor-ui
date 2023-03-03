@@ -1,0 +1,71 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<PhoneField /> renders properly 1`] = `
+<DocumentFragment>
+  <form
+    autocomplete="off"
+    class="sc-bcXHqe gKnvGb"
+    data-testid="test-form"
+    id="test-form"
+  >
+    <div
+      class="sc-bcXHqe eCUswC sc-ftTHYK"
+      data-testid="phone-field-phone_number"
+      display="flex"
+      width="input"
+    >
+      <label
+        class="sc-bcXHqe sc-hLBbgP sc-jSUZER sc-iBYQkv jMrRtF jvXitA"
+        color="text.primary"
+        font-weight="600"
+        for="phone_number"
+      >
+        Cell Phone Number
+      </label>
+      <div
+        class="sc-bcXHqe bRutrG"
+      >
+        <div
+          class="sc-bcXHqe sc-jrcTuL gKnvGb gAYoPi"
+          data-testid="input-wrapper-phone-number"
+        >
+          <div
+            class="sc-bcXHqe sc-gswNZR dxGagn hcNfAU"
+            display="flex"
+          >
+            <div
+              class="sc-bcXHqe crvKEL"
+            >
+              <input
+                aria-invalid="false"
+                class="sc-pyfCe jTfFQB"
+                data-testid="input-phone-number"
+                id="phone_number"
+                maxlength="16"
+                name="phoneNumber"
+                placeholder="ex: xxx-xxx-xxxx"
+                type="tel"
+                value=""
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+      <p
+        class="sc-bcXHqe sc-hLBbgP sc-eDvSVe gmdqHQ iwgFby"
+        color="text.secondary"
+        font-size="font-size-75"
+        font-style="none"
+        font-weight="400"
+      >
+        Enter a 10 digit phone number
+      </p>
+    </div>
+    <button
+      type="submit"
+    >
+      Submit
+    </button>
+  </form>
+</DocumentFragment>
+`;
