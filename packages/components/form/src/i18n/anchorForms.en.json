@@ -6,7 +6,7 @@
     "invalidNumber": "Invalid number",
     "maxLength": "Value is too long",
     "minLength": "Value is too short",
-    "phone": "Invalid phone number",
+    "invalidPhoneNumber": "Invalid phone number",
     "input_types": {
       "checkbox": {
         "required": "This field is required"
@@ -15,9 +15,6 @@
         "required": "A selection is required"
       },
       "text": {
-        "required": "This field is required"
-      },
-      "phone": {
         "required": "This field is required"
       },
       "radio": {

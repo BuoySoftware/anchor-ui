@@ -12,7 +12,6 @@ import PhoneInput, { PhoneInputProps } from "./phone_input";
 
 interface OwnProps {
   defaultValue?: string;
-  hint?: string;
   label?: Maybe<string>;
   name: string;
   rules?: Exclude<RegisterOptions, "valueAsNumber" | "valueAsDate">;
@@ -28,7 +27,6 @@ const formattedValue = (value: string): string => {
 
 export const PhoneField: React.FC<PhoneFieldProps> = ({
   defaultValue = "",
-  hint,
   label: labelProp,
   name,
   rules,
@@ -40,6 +38,7 @@ export const PhoneField: React.FC<PhoneFieldProps> = ({
   const { t } = useTranslation(["anchorForms", "forms"]);
   const {
     error,
+    hint,
     label: formFieldLabel,
     placeholder,
   } = useFormField({
@@ -56,7 +55,12 @@ export const PhoneField: React.FC<PhoneFieldProps> = ({
   const phoneNumberValidation = (phoneNumber: string): string | undefined => {
     const valid = isPossiblePhoneNumber(phoneNumber, "US");
 
-    if (!valid) return t("errors.phone") || undefined;
+    if (!valid) {
+      return (
+        t("errors.invalidPhoneNumber", { ns: ["anchorForms", "forms"] }) ||
+        undefined
+      );
+    }
   };
 
   return (
