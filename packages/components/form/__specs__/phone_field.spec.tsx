@@ -9,7 +9,7 @@ import { act, render, waitFor, UserRenderResult } from "../test_utils";
 describe("<PhoneField />", () => {
   const translations = {
     errors: {
-      invalidPhoneNumber: "This phone number is invalid",
+      phoneNumber: "This phone number is invalid",
     },
     hints: {
       test_form: {
@@ -68,7 +68,7 @@ describe("<PhoneField />", () => {
   context("with an error", () => {
     it("displays errors associated to the field", async () => {
       const { user, getByLabelText, getByText } = setup();
-      const errorMessage = i18n.t("forms:errors.invalidPhoneNumber");
+      const errorMessage = i18n.t("forms:errors.phoneNumber");
 
       await act(() => {
         user.click(getByText("Submit"));
