@@ -1,0 +1,16 @@
+{
+  "name": "@buoysoftware/anchor-ui-legacy-trans",
+  "version": "0.31.1",
+  "description": "Legacy support for Trans component to assist in migrating to anchor-ui",
+  "main": "src/index.ts",
+  "license": "MIT",
+  "dependencies": {
+    "@buoysoftware/anchor-typography": "^0.31.1"
+  },
+  "scripts": {
+    "build": "tsc -outDir dist",
+    "compile": "tsc --noEmit",
+    "postpack": "clean-package restore",
+    "prepack": "clean-package"
+  }
+}

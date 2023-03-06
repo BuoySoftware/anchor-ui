@@ -1,0 +1,105 @@
+import { Canvas, Story } from "@storybook/addon-docs";
+import i18n from "i18next";
+import { initReactI18next } from "react-i18next";
+
+import { LegacyTrans } from "../src";
+
+<Meta
+  title="anchor-ui-compat / LegacyTrans"
+  component={LegacyTrans}
+  decorators={[
+    (Story) => {
+      const translations = {
+        formats: {
+          bodyMediumBold: "<BodyMediumBold>Body Medium Bold</BodyMediumBold>",
+          bodySmallBold: "<BodySmallRegularBold>Body Small Bold</BodySmallRegularBold>",
+          error: "<BodySmallRegularBoldError>Error message</BodySmallRegularBoldError>"
+        }
+      }
+      i18n.use(initReactI18next).init({
+        lng: "en",
+        ns: ["testNs"],
+        resources: {
+          en: {
+            testNs: translations,
+          },
+        },
+      });
+      return Story()
+    }
+  ]}
+  parameters={{ layout: "centered" }}
+/>
+
+export const Template = (args) => {
+  return <LegacyTrans {...args} />
+};
+
+# LegacyTrans
+
+The LegacyTrans component provides a compatability bridge to migrate existing
+applications to use AnchorUI incrementally. It maps the font size and color 
+scheme variants used in legacy components to the new AnchorUI equivalents.
+
+## Import
+
+```javascript
+import { LegacyTrans } from "@buoysoftware/anchor-ui-compat";
+```
+
+## Basic Usage
+
+<Canvas>
+  <Story name="LegacyTrans" args={{ children: "LegacyTrans" }}>
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+## Component Variants
+These are achieved by leveraging the i18next component prop and wrapping the
+text in the translation file in the corresponding tag. The LegacyTrans
+component maps prop name indexes from Wharf/Buoy onto anchor-ui components.
+
+<br />
+
+### BodyMediumBold
+
+<Canvas>
+  <Story
+    name="LegacyTransMediumBold"
+    args={{
+      i18nKey: "formats.bodyMediumBold",
+      ns: "testNs"
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+### BodySmallRegularBold
+
+<Canvas>
+  <Story
+    name="LegacyTransSmallBold"
+    args={{
+      i18nKey: "formats.bodySmallBold",
+      ns: "testNs"
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+### BodySmallRegularBoldError
+
+<Canvas>
+  <Story
+    name="LegacyTransSmallBoldError"
+    args={{
+      i18nKey: "formats.error",
+      ns: "testNs"
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>
