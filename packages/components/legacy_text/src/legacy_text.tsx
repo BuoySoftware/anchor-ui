@@ -26,17 +26,18 @@ export type LegacyTextVariant =
   | HeadingVariant
   | SubheadingVariant;
 
-interface OwnProps {
-  variant?: LegacyTextVariant;
-}
-
 type HeadingVariantProps = { variant: HeadingVariant } & Omit<HeadingProps, 'size'>;
 type SubheadingVariantProps = { variant: SubheadingVariant } & Omit<SubheadingProps, 'size'>;
 type BodyVariantProps = { variant: BodyVariant } & Omit<BodyProps, 'size'>;
+type NoVariantProps = Omit<BodyProps, 'size'>;
 
-export type TextProps = (HeadingVariantProps | SubheadingVariantProps | BodyVariantProps) & OwnProps;
+export type TextProps = HeadingVariantProps | SubheadingVariantProps | BodyVariantProps | NoVariantProps;
 
 export const LegacyText: React.FC<TextProps> = (props): React.ReactElement => {
+  if (!("variant" in props)) {
+    return (<Body size="m" {...props} />);
+  }
+
   switch (props.variant) {
     case "bodyLargeBold":
       return (
