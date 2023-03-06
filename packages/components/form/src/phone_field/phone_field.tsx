@@ -7,8 +7,8 @@ import snakeCase from "lodash/snakeCase";
 import { useTranslation } from "react-i18next";
 
 import { FormField } from "../form_field";
-import { useFormField } from "../use_form_field";
 import PhoneInput, { PhoneInputProps } from "./phone_input";
+import { useFormField } from "../use_form_field";
 
 interface OwnProps {
   defaultValue?: string;
@@ -52,15 +52,8 @@ export const PhoneField: React.FC<PhoneFieldProps> = ({
   const label = labelProp ?? formFieldLabel;
   const inputId = snakeCase(name);
 
-  const phoneNumberValidation = (phoneNumber: string): string | undefined => {
-    const valid = isPossiblePhoneNumber(phoneNumber, "US");
-
-    if (!valid) {
-      return (
-        t("errors.invalidPhoneNumber", { ns: ["anchorForms", "forms"] }) ||
-        undefined
-      );
-    }
+  const phoneNumberValidation = (phoneNumber: string): boolean => {
+    return isPossiblePhoneNumber(phoneNumber, "US");
   };
 
   return (
