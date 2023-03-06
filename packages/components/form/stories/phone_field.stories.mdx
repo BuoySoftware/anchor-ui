@@ -1,13 +1,42 @@
+import i18n from "i18next";
+import { initReactI18next } from "react-i18next";
 import { Meta, Canvas, Story } from "@storybook/addon-docs";
 import { useForm } from "react-hook-form";
 import { Button } from "@buoysoftware/anchor-button";
 import { Flex } from "@buoysoftware/anchor-ui";
 
-import { Form, Label, PhoneField } from "../src";
+import { Form, Label, PhoneField, anchorFormsEn  } from "../src";
 
 <Meta
   title="Components / Forms / PhoneField"
   component={PhoneField}
+  decorators={[
+    (Story) => {
+      const translations = {
+        hints: {
+          phone_field_example: {
+            phone_example: "Optional helper text"
+          }
+        },
+        labels: {
+          phone_field_example: {
+            phone_example: "Phone example"
+          }
+        }
+      }
+      i18n.use(initReactI18next).init({
+        lng: "en",
+        ns: ["anchorForms", "forms"],
+        resources: {
+          en: {
+            anchorForms: anchorFormsEn,
+            forms: translations,
+          },
+        },
+      });
+      return <Story />
+    }
+  ]}
   parameters={{
     layout: "centered",
     controls: {
@@ -22,7 +51,7 @@ export const Template = (args) => {
     <Form form={form} id="phone-field-example" scope="phone-field-example">
       <PhoneField
         label={<Label>Phone Field</Label>}
-        name="phoneFieldExample"
+        name="phoneExample"
         {...args}
       />
       <Flex>
