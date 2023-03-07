@@ -2,20 +2,178 @@
 
 exports[`<PhoneField /> renders properly 1`] = `
 <DocumentFragment>
-  <form
+  .c0 {
+  box-sizing: border-box;
+}
+
+.c1 {
+  box-sizing: border-box;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 300px;
+  position: relative;
+  z-index: formField;
+  margin-bottom: 1.5rem;
+}
+
+.c2 {
+  box-sizing: border-box;
+  color: #101112;
+  width: s;
+  height: s;
+  margin-bottom: 0.25rem;
+}
+
+.c4 {
+  box-sizing: border-box;
+  position: relative;
+  z-index: 1;
+}
+
+.c6 {
+  box-sizing: border-box;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.c8 {
+  box-sizing: border-box;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+
+.c10 {
+  box-sizing: border-box;
+  color: #62666A;
+  width: s;
+  height: s;
+  margin-top: 0.25rem;
+}
+
+.c7 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+}
+
+.c3 {
+  font-family: -apple-system,BlinkMacSystemFont,San Francisco,Segoe UI, Roboto,Helvetica Neue,sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-weight: 600;
+}
+
+.c11 {
+  font-family: -apple-system,BlinkMacSystemFont,San Francisco,Segoe UI, Roboto,Helvetica Neue,sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-style: none;
+  font-size: 0.75rem;
+  font-weight: 400;
+  line-height: 1rem;
+}
+
+.c9 {
+  outline: none;
+  background: none;
+  border: none;
+  color: inherit;
+  fontsize: inherit;
+  line-height: inherit;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  text-align: inherit;
+  box-sizing: border-box;
+}
+
+.c5 {
+  font-family: -apple-system,BlinkMacSystemFont,San Francisco,Segoe UI, Roboto,Helvetica Neue,sans-serif;
+  display: inline-block;
+  background-color: #FFFFFF;
+  border: 1px solid;
+  border-radius: 4px;
+  color: #101112;
+  font-size: 0.875rem;
+  height: 40px;
+  line-height: 1rem;
+  margin: 0;
+  padding: 0.75rem 0.75rem;
+  width: 300px;
+}
+
+.c5 transition:"background 0.75s ease",
+.c5 input::-webkit-input-placeholder {
+  opacity: 1;
+  color: #9CA1A5;
+  -webkit-text-fill-color: $({ theme}) => theme.colors.text.tertiary;
+}
+
+.c5 transition:"background 0.75s ease",
+.c5 input::-moz-placeholder {
+  opacity: 1;
+  color: #9CA1A5;
+  -webkit-text-fill-color: $({ theme}) => theme.colors.text.tertiary;
+}
+
+.c5 transition:"background 0.75s ease",
+.c5 input:-ms-input-placeholder {
+  opacity: 1;
+  color: #9CA1A5;
+  -webkit-text-fill-color: $({ theme}) => theme.colors.text.tertiary;
+}
+
+.c5 transition:"background 0.75s ease",
+.c5 input::placeholder {
+  opacity: 1;
+  color: #9CA1A5;
+  -webkit-text-fill-color: $({ theme}) => theme.colors.text.tertiary;
+}
+
+.c5:hover {
+  border-color: #46494D;
+}
+
+<form
     autocomplete="off"
-    class="sc-bcXHqe gKnvGb"
+    class="c0"
     data-testid="test-form"
     id="test-form"
   >
     <div
-      class="sc-bcXHqe eCUswC sc-ftTHYK"
+      class="c1 "
       data-testid="phone-field-phone_number"
       display="flex"
       width="input"
     >
       <label
-        class="sc-bcXHqe sc-hLBbgP sc-jSUZER sc-iBYQkv jMrRtF jvXitA"
+        class="c2 c3"
         color="text.primary"
         font-weight="600"
         for="phone_number"
@@ -23,22 +181,22 @@ exports[`<PhoneField /> renders properly 1`] = `
         Cell Phone Number
       </label>
       <div
-        class="sc-bcXHqe bRutrG"
+        class="c4"
       >
         <div
-          class="sc-bcXHqe sc-jrcTuL gKnvGb gAYoPi"
+          class="c0 c5"
           data-testid="input-wrapper-phone-number"
         >
           <div
-            class="sc-bcXHqe sc-gswNZR dxGagn hcNfAU"
+            class="c6 c7"
             display="flex"
           >
             <div
-              class="sc-bcXHqe crvKEL"
+              class="c8"
             >
               <input
                 aria-invalid="false"
-                class="sc-pyfCe jTfFQB"
+                class="c9"
                 data-testid="input-phone-number"
                 id="phone_number"
                 maxlength="16"
@@ -52,7 +210,7 @@ exports[`<PhoneField /> renders properly 1`] = `
         </div>
       </div>
       <p
-        class="sc-bcXHqe sc-hLBbgP sc-eDvSVe gmdqHQ iwgFby"
+        class="c10 c11"
         color="text.secondary"
         font-size="font-size-75"
         font-style="none"
