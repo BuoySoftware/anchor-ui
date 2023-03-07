@@ -1,0 +1,19 @@
+{
+  "name": "@buoysoftware/anchor-ui-modal",
+  "version": "0.31.2",
+  "main": "src/index.ts",
+  "license": "MIT",
+  "dependencies": {
+    "@buoysoftware/anchor-layout": "^0.31.1",
+    "@buoysoftware/anchor-loading-indicator": "^0.31.1",
+    "@buoysoftware/anchor-theme": "^0.31.1",
+    "@buoysoftware/anchor-typography": "^0.31.2",
+    "react-modal": "^3.16.1"
+  },
+  "scripts": {
+    "build": "tsc -outDir dist",
+    "compile": "tsc --noEmit",
+    "postpack": "clean-package restore",
+    "prepack": "clean-package"
+  }
+}
