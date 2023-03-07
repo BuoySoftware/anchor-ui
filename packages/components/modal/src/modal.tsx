@@ -37,7 +37,7 @@ const Modal: React.FC<ModalProps> = ({
     <ReactModal
       style={{
         overlay: {
-          backgroundColor: rgba(colors.modal.background, 0.8),
+          backgroundColor: rgba(colors.blue100, 0.64),
           display: "flex",
           alignItems: "flex-start",
           justifyContent: "center",
@@ -63,7 +63,7 @@ const Modal: React.FC<ModalProps> = ({
         {modalContent}
       </Box>
       <Box
-        borderTop="1SolidGray"
+        borderTop="1SolidDefault"
         display="flex"
         justifyContent="flex-end"
         pt="l"
