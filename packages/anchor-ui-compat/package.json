@@ -16,6 +16,8 @@
     "@buoysoftware/anchor-ui-legacy-button": "^0.31.2",
     "@buoysoftware/anchor-ui-legacy-layout": "^0.31.1",
     "@buoysoftware/anchor-ui-legacy-page-footer": "^0.31.1",
+    "@buoysoftware/anchor-ui-legacy-table": "^0.31.2",
+    "@buoysoftware/anchor-ui-legacy-connection-table": "^0.31.2",
     "@buoysoftware/anchor-ui-legacy-text": "^0.31.2",
     "@buoysoftware/anchor-ui-legacy-trans": "^0.31.2"
   },
