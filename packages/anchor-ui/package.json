@@ -24,6 +24,7 @@
     "@buoysoftware/anchor-form": "^0.32.1",
     "@buoysoftware/anchor-layout": "^0.32.0",
     "@buoysoftware/anchor-loading-indicator": "^0.32.0",
+    "@buoysoftware/anchor-modal": "^0.31.2",
     "@buoysoftware/anchor-nav": "^0.32.0",
     "@buoysoftware/anchor-page-template": "^0.32.0",
     "@buoysoftware/anchor-side-nav": "^0.32.0",
