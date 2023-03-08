@@ -1,5 +1,5 @@
 {
-  "name": "@buoysoftware/anchor-ui-modal",
+  "name": "@buoysoftware/anchor-modal",
   "version": "0.31.2",
   "main": "src/index.ts",
   "license": "MIT",
@@ -8,6 +8,7 @@
     "@buoysoftware/anchor-loading-indicator": "^0.31.1",
     "@buoysoftware/anchor-theme": "^0.31.1",
     "@buoysoftware/anchor-typography": "^0.31.2",
+    "@types/react-modal": "^3.13.1",
     "react-modal": "^3.16.1"
   },
   "scripts": {
