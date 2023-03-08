@@ -1,7 +1,7 @@
 import { Canvas, Story } from "@storybook/addon-docs";
 import { Flex } from "@buoysoftware/anchor-layout";
 
-import { AppTemplate, AppArea } from "../src";
+import { AppTemplate, AppSideNav, AppContent } from "../src";
 
 <Meta
   title="Templates / AppTemplate"
@@ -14,16 +14,16 @@ import { AppTemplate, AppArea } from "../src";
 export const Template = (args) => {
   return (
     <AppTemplate>
-      <AppArea area="side-nav">
+      <AppSideNav>
         <Flex color="white" bg="red" height="100vh" width="240px" alignItems="center" justifyContent="center">
           side-nav
         </Flex>
-      </AppArea>
-      <AppArea area="app-content">
+      </AppSideNav>
+      <AppContent>
         <Flex color="white" bg="blue" height="100vh" alignItems="center" justifyContent="center">
           app-content
         </Flex>
-      </AppArea>
+      </AppContent>
     </AppTemplate>
   );
 };
