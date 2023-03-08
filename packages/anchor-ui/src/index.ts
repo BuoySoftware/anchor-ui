@@ -7,6 +7,7 @@ export * from "@buoysoftware/anchor-dropdown-menu";
 export * from "@buoysoftware/anchor-form";
 export * from "@buoysoftware/anchor-layout";
 export * from "@buoysoftware/anchor-loading-indicator";
+export * from "@buoysoftware/anchor-modal";
 export * from "@buoysoftware/anchor-nav";
 export * from "@buoysoftware/anchor-page-template";
 export * from "@buoysoftware/anchor-side-nav";
