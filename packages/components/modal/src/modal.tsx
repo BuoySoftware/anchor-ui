@@ -1,29 +1,31 @@
-import { Box, BoxProps } from "@buoysoftware/anchor-layout";
+import { Heading } from "@buoysoftware/anchor-typography";
+import { Box } from "@buoysoftware/anchor-layout";
 import ReactModal, { Props as ReactModalProps } from "react-modal";
 import { rgba } from "polished";
+import { useTheme } from "@buoysoftware/anchor-theme";
 import { get } from "styled-system";
-
-import { useTheme } from "themes/buoy";
 
 ReactModal.setAppElement("#root");
 
 interface OwnProps {
   bg?: string;
   borderRadius?: string;
+  children?: React.ReactNode;
   modalActions?: React.ReactNode;
-  modalActionsProps?: BoxProps;
-  modalContent?: React.ReactNode;
+  testId: string;
+  title: string;
   width?: string;
 }
 
 export type ModalProps = ReactModalProps & OwnProps;
 
-const Modal: React.FC<ModalProps> = ({
+export const Modal: React.FC<ModalProps> = ({
   bg = "white",
   borderRadius = "modal",
+  children,
   modalActions,
-  modalActionsProps,
-  modalContent,
+  testId,
+  title,
   width = "modalWidth",
   ...modalProps
 }): React.ReactElement => {
@@ -59,22 +61,19 @@ const Modal: React.FC<ModalProps> = ({
       }}
       {...modalProps}
     >
-      <Box maxHeight="60vh" overflow="auto" py="xxl" px="modal.gutterX">
-        {modalContent}
-      </Box>
-      <Box
-        borderTop="1SolidDefault"
-        display="flex"
-        justifyContent="flex-end"
-        pt="l"
-        mx="modal.gutterX"
-        pb="xxl"
-        {...modalActionsProps}
-      >
-        {modalActions}
+      <Box data-testid={testId} py="xl" px="xl">
+        <Box mb="xl">
+          <Heading data-testid={`${testId}-title`} size="xl">
+            {title}
+          </Heading>
+        </Box>
+        <Box maxHeight="60vh" overflow="none" mb="l">
+          {children}
+        </Box>
+        <Box display="flex" justifyContent="flex-end" mt="l">
+          {modalActions}
+        </Box>
       </Box>
     </ReactModal>
   );
 };
-
-export default Modal;
