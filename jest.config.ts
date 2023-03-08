@@ -13,6 +13,7 @@ const reactMarkdownEsModules = [
   "micromark",
   "property-information",
   "react-markdown",
+  "react-modal",
   "rehype-raw",
   "remark-.+",
   "space-separated-tokens",
