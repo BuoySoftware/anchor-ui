@@ -6,6 +6,7 @@
     "invalidNumber": "Invalid number",
     "maxLength": "Value is too long",
     "minLength": "Value is too short",
+    "invalidPhoneNumber": "Invalid phone number",
     "input_types": {
       "checkbox": {
         "required": "This field is required"
@@ -25,6 +26,7 @@
     }
   },
   "placeholders": {
+    "phone_number": "ex: xxx-xxx-xxxx",
     "select": "Select"
   }
 }

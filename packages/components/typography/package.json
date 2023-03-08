@@ -1,6 +1,6 @@
 {
   "name": "@buoysoftware/anchor-typography",
-  "version": "0.31.1",
+  "version": "0.31.2",
   "license": "MIT",
   "main": "src/index.ts",
   "files": [
