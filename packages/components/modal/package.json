@@ -15,6 +15,12 @@
     "build": "tsc -outDir dist",
     "compile": "tsc --noEmit",
     "postpack": "clean-package restore",
-    "prepack": "clean-package"
+    "prepack": "clean-package",
+    "test": "jest"
+  },
+  "devDependencies": {
+    "jest": "^29.3.1",
+    "ts-jest": "^29.0.4",
+    "ts-node": "^10.9.1"
   }
 }
