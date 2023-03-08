@@ -1,0 +1,72 @@
+import { Canvas, Story } from "@storybook/addon-docs";
+import { Button } from "@buoysoftware/anchor-button";
+
+import { Modal, useModal } from "../src";
+
+<Meta
+  title="Components / Modal"
+  component={Modal}
+  decorators={[
+    (Story) => {
+      return (
+        <div id="root" style={{ height: "150px", transform: "translate(0, 0)", width: "400px" }}>
+          <Story />
+        </div>
+      )
+    }
+  ]}
+  parameters={{
+    layout: "centered"
+  }}
+/>
+
+export const Template = (args) => {
+  const { closeModal, isOpen, openModal } = useModal();
+  return (
+    <>
+      <Button onClick={openModal} colorScheme="basic">Show Modal</Button>
+      <Modal
+        isOpen={isOpen}
+        modalActions={
+          <>
+            <Button onClick={closeModal} colorScheme="basic" mr="xxs">Cancel</Button>
+            <Button onClick={closeModal} colorScheme="primary">Save</Button>
+          </>
+        }
+        onRequestClose={closeModal}
+        {...args}
+      >
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+        incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
+        nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+      </Modal>
+    </>
+  );
+}
+
+# Modal
+
+The Modal component provides a main Modal wrapping element for layout and
+styling modal content. It is composed of anchor-ui Box and Header elements
+as well as the Modal element from ReactModal. Additionally, a `useModal` hook is
+available to provide state control for the modal, giving a user to access the
+`closeModal` and `openModal` functions.
+
+## Import
+
+```javascript
+import { Modal, useModal } from "@buoysoftware/anchor-ui-modal";
+```
+
+## Basic Usage
+
+<Canvas>
+  <Story
+    name="Modal"
+    args={{
+      title: "Foo Modal",
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>
