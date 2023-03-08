@@ -29,7 +29,7 @@ export type LegacyTextVariant =
 type HeadingVariantProps = { variant: HeadingVariant } & Omit<HeadingProps, 'size'>;
 type SubheadingVariantProps = { variant: SubheadingVariant } & Omit<SubheadingProps, 'size'>;
 type BodyVariantProps = { variant: BodyVariant } & Omit<BodyProps, 'size'>;
-type NoVariantProps = Omit<BodyProps, 'size'>;
+type NoVariantProps = { variant?: undefined } & Omit<BodyProps, 'size'>;
 
 export type TextProps = HeadingVariantProps | SubheadingVariantProps | BodyVariantProps | NoVariantProps;
 
