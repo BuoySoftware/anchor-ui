@@ -1,6 +1,6 @@
 {
   "name": "@buoysoftware/anchor-use-translated-options",
-  "version": "0.31.1",
+  "version": "0.31.6",
   "main": "src/index.ts",
   "license": "MIT",
   "scripts": {
