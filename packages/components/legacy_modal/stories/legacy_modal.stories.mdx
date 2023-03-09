@@ -1,0 +1,85 @@
+import { Canvas, Story } from "@storybook/addon-docs";
+import { Body } from "@buoysoftware/anchor-typography";
+import { Button } from "@buoysoftware/anchor-button";
+import { Box } from "@buoysoftware/anchor-layout";
+
+import {
+  LegacyModal,
+  LegacyModalActions,
+  LegacyModalContent,
+  LegacyModalHeader,
+  useModal
+} from "../src";
+
+<Meta
+  title="anchor-ui-compat / LegacyModal"
+  component={LegacyModal}
+  decorators={[
+    (Story) => {
+      return (
+        <div id="root" style={{ height: "150px", transform: "translate(0, 0)", width: "400px" }}>
+          <Story />
+        </div>
+      )
+    }
+  ]}
+  parameters={{
+    layout: "centered"
+  }}
+/>
+
+export const Template = (args) => {
+  const { closeModal, isOpen, openModal } = useModal();
+  return (
+    <>
+      <Button onClick={openModal} colorScheme="basic">Show Modal</Button>
+      <LegacyModal isOpen={isOpen} onRequestClose={closeModal} {...args}>
+        <Box data-testid="example-modal">
+          <LegacyModalHeader title="Legacy Modal" />
+          <LegacyModalContent>
+            <Body>Behold! The LegacyModal!</Body>
+          </LegacyModalContent>
+          <LegacyModalActions>
+            <Button onClick={closeModal} colorScheme="basic" mr="xxs">Cancel</Button>
+            <Button onClick={closeModal} colorScheme="primary">Save</Button>
+          </LegacyModalActions>
+        </Box>
+      </LegacyModal>
+    </>
+  );
+};
+
+# LegacyModal
+
+The LegacyModal component set provides a compatability bridge to migrate
+existing applications to use AnchorUI incrementally. It maps the current modal
+structural components to corresponding AnchorUI base components.
+
+## Import
+
+```javascript
+import {
+  LegacyModal,
+  LegacyModalActions,
+  LegacyModalContent,
+  LegacyModalHeader,
+  useModal
+} from "@buoysoftware/anchor-ui-compat";
+```
+
+## Basic Usage
+
+<Canvas>
+  <Story
+    name="LegacyModal"
+    parameters={{
+      docs: {
+        source: {
+          excludeDecorators: true,
+        },
+      },
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>
