@@ -1,3 +1,4 @@
+import Modal from "react-modal";
 import React from "react";
 import { ThemeProvider } from "styled-components";
 import { render, RenderResult, RenderOptions } from "@testing-library/react";
@@ -11,16 +12,26 @@ interface UserRenderResult extends RenderResult {
 const Wrapper: React.FC<{ children: React.ReactNode }> = ({
   children,
 }): React.ReactElement => {
-  return <ThemeProvider theme={theme}>{children}</ThemeProvider>;
+  return (
+    <div id="test-root">
+      <ThemeProvider theme={theme}>{children}</ThemeProvider>
+    </div>
+  );
 };
 
 const customRender = (
   ui: React.ReactElement,
   options?: RenderOptions
-): UserRenderResult => ({
-  user: userEvent.setup(),
-  ...render(ui, { wrapper: Wrapper, ...options }),
-});
+): UserRenderResult => {
+  const rendered = render(ui, { wrapper: Wrapper, ...options });
+
+  Modal.setAppElement("#test-root");
+
+  return {
+    user: userEvent.setup(),
+    ...rendered,
+  };
+};
 
 export * from "@testing-library/react";
 
