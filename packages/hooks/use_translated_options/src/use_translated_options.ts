@@ -7,17 +7,15 @@ interface TranslatableComponentProps {
   tOptions?: UseTranslationParameters[1];
 }
 
-type Value = string;
-
-interface Option {
+interface Option<V> {
   label: string;
-  value: Value;
+  value: V;
 }
 
-export function useTranslatedOptions(
-  values: Value[],
+export function useTranslatedOptions<V extends string>(
+  values: V[],
   { tNamespace, tOptions }: TranslatableComponentProps
-): Option[] {
+): Option<V>[] {
   const { t } = useTranslation(tNamespace, tOptions);
 
   return values.map((value) => ({
