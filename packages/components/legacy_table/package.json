@@ -13,8 +13,14 @@
     "@buoysoftware/anchor-layout": "^0.31.1",
     "@buoysoftware/anchor-table": "^0.31.1",
     "@buoysoftware/anchor-ui-legacy-text": "^0.31.4",
+    "lodash": "^4.17.21"
+  },
+  "peerDependencies": {
     "i18next": "^22.4.9",
-    "lodash": "^4.17.21",
+    "react-i18next": "^12.1.4"
+  },
+  "devDependencies": {
+    "i18next": "^22.4.9",
     "react-i18next": "^12.1.4"
   }
 }
