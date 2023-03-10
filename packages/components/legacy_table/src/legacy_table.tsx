@@ -103,7 +103,7 @@ export const LegacyTable = <RecordData,>({ cellConfigs, ...props }: LegacyTableP
     const render = cellConfig.render || translationKeyPrefix || cellConfig.t ? (record: RecordData): React.ReactNode => {
       const value = get(record, dataKey, undefined);
       const hasNoValue = value === null || value === undefined;
-      const cellT = translationKeyPrefix ? keyPrefixedCellT(unprefixedCellT, value) : unprefixedCellT;
+      const cellT = translationKeyPrefix ? keyPrefixedCellT(unprefixedCellT, translationKeyPrefix) : unprefixedCellT;
 
       if (cellConfig.render) return cellConfig.render(record, actualT, cellT);
       if (hasNoValue) return renderPlaceholder(record);
