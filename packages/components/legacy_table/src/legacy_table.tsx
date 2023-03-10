@@ -17,19 +17,19 @@ export type LegacyTableCellConfig<RecordData> = Omit<TableCellConfig<RecordData>
   render?: (
     rowData: RecordData,
     tableT: TFunction,
-    cellT: ReturnType<typeof keyPrefixedCellT>
+    cellT: ReturnType<typeof enhanceCellT>
   ) => React.ReactNode;
   t?: TFunction<string, string | null>;
   translationNamespace?: string;
   translationKeyPrefix?: string;
 };
 
-const keyPrefixedCellT = (cellT: CellT, keyPrefix: string) => (key: CellTP[0], defaultValueOrOptions?: string | CellTP[1], options?: CellTP[1]) => {
-  const prefixedKey = typeof key === "string" ? [keyPrefix, key].join(".") : key.map(value => [keyPrefix, value].join("."));
+const enhanceCellT = (cellT: CellT, { keyPrefix, namespace }: { keyPrefix?: string, namespace?: string }) => (key: CellTP[0], defaultValueOrOptions?: string | CellTP[1], options?: CellTP[1]) => {
+  const prefixedKey = keyPrefix ? (Array.isArray(key) ? key.map(value => [keyPrefix, value].join(".")) : [keyPrefix, key].join(".")) : key;
   if (typeof defaultValueOrOptions === "string") {
-    return cellT(prefixedKey, defaultValueOrOptions, options);
+    return cellT(prefixedKey, defaultValueOrOptions, { ns: namespace, ...options });
   } else if (typeof defaultValueOrOptions === "object") {
-    return cellT(prefixedKey, defaultValueOrOptions);
+    return cellT(prefixedKey, { ns: namespace, ...options });
   } else {
     return cellT(prefixedKey);
   }
@@ -95,15 +95,16 @@ export const LegacyTable = <RecordData,>({ cellConfigs, ...props }: LegacyTableP
   const { t: tableT } = useTranslation("tables", { keyPrefix: i18nKey });
   const translationNamespaces = [...new Set(cellConfigs.map(({ translationNamespace }) => translationNamespace ?? "shared").filter(Boolean))];
   const namespaces = translationNamespaces.length > 0 ? translationNamespaces : undefined;
-  const { t: unprefixedCellT } = useTranslation(namespaces);
+  const { t: unmodifiedCellT } = useTranslation(namespaces);
   const actualT = tableT ?? t;
   const renderPlaceholder = props.renderPlaceholder ?? defaultRenderPlaceholder;
 
-  return <Table cellConfigs={cellConfigs.map(({ cellProps, dataKey, name, translationKeyPrefix, ...cellConfig }) => {
+  return <Table cellConfigs={cellConfigs.map(({ cellProps, dataKey, name, translationKeyPrefix, translationNamespace, ...cellConfig }) => {
     const render = cellConfig.render || translationKeyPrefix || cellConfig.t ? (record: RecordData): React.ReactNode => {
       const value = get(record, dataKey, undefined);
       const hasNoValue = value === null || value === undefined;
-      const cellT = translationKeyPrefix ? keyPrefixedCellT(unprefixedCellT, translationKeyPrefix) : unprefixedCellT;
+      const enhanceCellTOptions = translationKeyPrefix !== undefined || translationNamespace !== undefined ? { keyPrefix: translationKeyPrefix, namespace: translationNamespace } : undefined;
+      const cellT = enhanceCellTOptions ? enhanceCellT(unmodifiedCellT, enhanceCellTOptions) : unmodifiedCellT;
 
       if (cellConfig.render) return cellConfig.render(record, actualT, cellT);
       if (hasNoValue) return renderPlaceholder(record);
