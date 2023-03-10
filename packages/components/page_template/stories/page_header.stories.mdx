@@ -1,0 +1,35 @@
+import { Canvas, Story } from "@storybook/addon-docs";
+
+import { Badge } from "@buoysoftware/anchor-badge";
+import { PageHeader } from "../src";
+
+<Meta
+  title="Components / PageHeader"
+  component={PageHeader}
+  parameters={{
+    layout: "centered"
+  }}
+/>
+
+
+export const Template = (args) => {
+  return <PageHeader {...args} />
+};
+
+## Basic Usage
+
+<Canvas>
+  <Story
+    name="PageHeader"
+    args={{ title: "My Page Title" }}
+  >{Template.bind({})}</Story>
+</Canvas>
+
+## With Children
+
+<Canvas>
+  <Story
+    name="PageHeader with Children"
+    args={{ title: "Version 005", children: <Badge bg="background.selectedSubdued">Draft</Badge> }}
+  >{Template.bind({})}</Story>
+</Canvas>
