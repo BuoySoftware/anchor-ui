@@ -11,7 +11,7 @@ export const AppSideNav: React.FC<AppSideNavProps> = ({
   ...props
 }): React.ReactElement => {
   return (
-    <Box gridArea="side-nav" {...props}>
+    <Box gridArea="side-nav" overflowY="auto" {...props}>
       {children}
     </Box>
   );

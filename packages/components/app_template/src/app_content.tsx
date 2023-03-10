@@ -11,7 +11,7 @@ export const AppContent: React.FC<AppContentProps> = ({
   ...props
 }): React.ReactElement => {
   return (
-    <Box gridArea="app-content" overflowY="scroll" {...props}>
+    <Box gridArea="app-content" overflowY="auto" {...props}>
       {children}
     </Box>
   );
