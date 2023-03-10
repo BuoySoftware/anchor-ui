@@ -1,0 +1,30 @@
+import { Canvas, Story } from "@storybook/addon-docs";
+
+import { Badge } from "../src";
+
+<Meta
+  title="Components / Badge"
+  component={Badge}
+  parameters={{
+    controls: {
+    },
+    layout: "centered"
+  }}
+/>
+
+export const Template = (args) => {
+  return <Badge {...args} />
+};
+
+## Basic Usage
+
+<Canvas>
+  <Story
+    name="Badge"
+    args={{
+      textProps: { color: "#000000" },
+      backgroundColor: "background.successSubdued",
+      children: "Badge"
+    }}
+  >{Template.bind({})}</Story>
+</Canvas>

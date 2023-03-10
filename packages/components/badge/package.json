@@ -1,0 +1,19 @@
+{
+  "name": "@buoysoftware/anchor-badge",
+  "version": "0.0.0",
+  "main": "src/index.ts",
+  "license": "MIT",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc -outDir dist",
+    "compile": "tsc --noEmit",
+    "postpack": "clean-package restore",
+    "prepack": "clean-package"
+  },
+  "dependencies": {
+    "@buoysoftware/anchor-layout": "*",
+    "@buoysoftware/anchor-typography": "*"
+  }
+}

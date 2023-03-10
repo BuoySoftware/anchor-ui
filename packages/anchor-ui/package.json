@@ -17,6 +17,7 @@
   "dependencies": {
     "@buoysoftware/anchor-actor": "^0.31.1",
     "@buoysoftware/anchor-app-template": "^0.31.5",
+    "@buoysoftware/anchor-badge": "*",
     "@buoysoftware/anchor-breadcrumbs": "^0.31.2",
     "@buoysoftware/anchor-button": "^0.31.2",
     "@buoysoftware/anchor-dropdown-menu": "^0.31.2",
