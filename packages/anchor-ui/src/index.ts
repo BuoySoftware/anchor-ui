@@ -1,5 +1,6 @@
 export * from "@buoysoftware/anchor-actor";
 export * from "@buoysoftware/anchor-app-template";
+export * from "@buoysoftware/anchor-badge";
 export * from "@buoysoftware/anchor-breadcrumbs";
 export * from "@buoysoftware/anchor-button";
 export * from "@buoysoftware/anchor-dropdown-menu";
