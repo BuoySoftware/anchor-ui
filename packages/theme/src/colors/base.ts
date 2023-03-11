@@ -54,12 +54,12 @@ export const baseColors = {
   red90: "#481912",
   red80: "#6B1F14",
   red70: "#942619",
-  red60: "#C73624",
+  red60: "#BF2F1D",
   red50: "#E75F4D",
-  red40: "#ED958A",
-  red30: "#F0BEB6",
-  red20: "#F5DDDA",
-  red10: "#FAF0F0",
+  red40: "#F58C7F",
+  red30: "#FCC0B6",
+  red20: "#FFDED9",
+  red10: "#FFEDEB",
 };
 
 export const baseAliases = buildThemeAliases(baseColors, {
