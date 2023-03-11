@@ -263,7 +263,7 @@ exports[`<RadioField /> with error renders properly 1`] = `
 .c11 {
   box-sizing: border-box;
   border-radius: 4px;
-  background-color: #F5DDDA;
+  background-color: #FFDED9;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -282,7 +282,7 @@ exports[`<RadioField /> with error renders properly 1`] = `
 
 .c13 {
   box-sizing: border-box;
-  color: #C73624;
+  color: #BF2F1D;
   width: m;
   height: m;
 }
@@ -460,7 +460,7 @@ exports[`<RadioField /> with error renders properly 1`] = `
         role="alert"
       >
         <svg
-          color="#C73624"
+          color="#BF2F1D"
           fill="none"
           height="16"
           stroke-width="1.5"

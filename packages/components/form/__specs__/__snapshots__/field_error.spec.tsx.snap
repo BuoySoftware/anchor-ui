@@ -9,7 +9,7 @@ exports[`<FieldError /> error message is provided with a single message renders 
   .c0 {
   box-sizing: border-box;
   border-radius: 4px;
-  background-color: #F5DDDA;
+  background-color: #FFDED9;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -27,7 +27,7 @@ exports[`<FieldError /> error message is provided with a single message renders 
 
 .c2 {
   box-sizing: border-box;
-  color: #C73624;
+  color: #BF2F1D;
   width: m;
   height: m;
 }
@@ -61,7 +61,7 @@ exports[`<FieldError /> error message is provided with a single message renders 
     role="alert"
   >
     <svg
-      color="#C73624"
+      color="#BF2F1D"
       fill="none"
       height="16"
       stroke-width="1.5"
@@ -103,7 +103,7 @@ exports[`<FieldError /> error message is provided with multiple messages renders
   .c0 {
   box-sizing: border-box;
   border-radius: 4px;
-  background-color: #F5DDDA;
+  background-color: #FFDED9;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -121,7 +121,7 @@ exports[`<FieldError /> error message is provided with multiple messages renders
 
 .c2 {
   box-sizing: border-box;
-  color: #C73624;
+  color: #BF2F1D;
   width: m;
   height: m;
 }
@@ -155,7 +155,7 @@ exports[`<FieldError /> error message is provided with multiple messages renders
     role="alert"
   >
     <svg
-      color="#C73624"
+      color="#BF2F1D"
       fill="none"
       height="16"
       stroke-width="1.5"
@@ -211,7 +211,7 @@ exports[`<FieldError /> error message with markdown with a single message render
   .c0 {
   box-sizing: border-box;
   border-radius: 4px;
-  background-color: #F5DDDA;
+  background-color: #FFDED9;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -229,7 +229,7 @@ exports[`<FieldError /> error message with markdown with a single message render
 
 .c2 {
   box-sizing: border-box;
-  color: #C73624;
+  color: #BF2F1D;
   width: m;
   height: m;
 }
@@ -270,7 +270,7 @@ exports[`<FieldError /> error message with markdown with a single message render
     role="alert"
   >
     <svg
-      color="#C73624"
+      color="#BF2F1D"
       fill="none"
       height="16"
       stroke-width="1.5"
