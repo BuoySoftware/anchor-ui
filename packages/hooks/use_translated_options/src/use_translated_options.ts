@@ -12,14 +12,25 @@ interface Option<V> {
   value: V;
 }
 
+interface ReturnType<V> {
+  options: Option<V>[]
+  getOptionFromValue: (value: V) => Option<V> | undefined;
+}
+
 export function useTranslatedOptions<V extends string>(
   values: V[],
   { tNamespace, tOptions }: TranslatableComponentProps
-): Option<V>[] {
+): ReturnType<V> {
   const { t } = useTranslation(tNamespace, tOptions);
 
-  return values.map((value) => ({
+  const options = values.map((value) => ({
     label: t(value),
     value,
   }));
+
+  const getOptionFromValue = (value: V): Option<V> | undefined => {
+    return options.find((option) => option.value === value )
+  }
+
+  return { options, getOptionFromValue }
 }
