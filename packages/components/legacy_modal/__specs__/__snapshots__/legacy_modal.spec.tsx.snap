@@ -126,32 +126,38 @@ exports[`<Modal /> renders correctly 1`] = `
 
 .c0 {
   box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
   padding-top: 1.5rem;
   padding-bottom: 1.5rem;
-  padding-left: 1.5rem;
-  padding-right: 1.5rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
 }
 
 .c1 {
-  box-sizing: border-box;
-  margin-bottom: 1.5rem;
-}
-
-.c2 {
   box-sizing: border-box;
   color: #101112;
   width: xl;
   height: xl;
 }
 
-.c4 {
+.c3 {
   box-sizing: border-box;
   max-height: 60vh;
-  overflow: none;
-  margin-bottom: 1.25rem;
+  overflow: auto;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  padding-top: 1.75rem;
+  padding-bottom: 1.75rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
 }
 
-.c5 {
+.c4 {
   box-sizing: border-box;
   -webkit-box-pack: end;
   -webkit-justify-content: flex-end;
@@ -161,10 +167,20 @@ exports[`<Modal /> renders correctly 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  margin-top: 1.25rem;
+  padding-top: 1.25rem;
+  margin-left: 2rem;
+  margin-right: 2rem;
+  padding-bottom: 1.75rem;
 }
 
-.c3 {
+.c5 {
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+}
+
+.c2 {
   font-family: -apple-system,BlinkMacSystemFont,San Francisco,Segoe UI, Roboto,Helvetica Neue,sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -202,78 +218,76 @@ exports[`<Modal /> renders correctly 1`] = `
       <div
         aria-modal="true"
         class="ReactModal__Content"
+        data-testid="test-legacy-modal"
         role="dialog"
         style="background: rgb(255, 255, 255); overflow: auto; border-radius: 30px; outline: none; padding: 0px; background-color: rgb(255, 255, 255); margin-top: 4.25rem; width: 527px;"
         tabindex="-1"
       >
         <div
-          class="c0"
-          data-testid="test-modal"
+          class="c0 "
+          display="flex"
         >
           <div
-            class="c1"
+            class="c1 c2"
+            color="text.primary"
+            data-testid=""
+            font-size="font-size-400"
+            font-weight="600"
+          >
+            Test Legacy Modal
+          </div>
+        </div>
+        <div
+          class="c3 "
+          display="flex"
+          overflow="auto"
+        >
+          Test modal contents
+        </div>
+        <div
+          class="c4 c5 "
+          display="flex"
+        >
+          <button
+            class="c6"
+            type="button"
           >
             <div
-              class="c2 c3"
-              color="text.primary"
-              data-testid="test-modal-title"
-              font-size="font-size-400"
-              font-weight="600"
+              class="c7 c8 c9 c10"
+              display="flex"
+              height="40"
             >
-              Test Modal
+              <span
+                class="c11 c12"
+                color="inherit"
+                font-size="font-size-100"
+                font-weight="600"
+                text-decoration="none"
+              >
+                Cancel
+              </span>
             </div>
-          </div>
-          <div
-            class="c4"
-            overflow="none"
+          </button>
+          <button
+            class="c6"
+            type="button"
           >
-            Test modal contents
-          </div>
-          <div
-            class="c5"
-            display="flex"
-          >
-            <button
-              class="c6"
-              type="button"
+            <div
+              class="c7 c13 c9 c14"
+              display="flex"
+              height="40"
             >
-              <div
-                class="c7 c8 c9 c10"
-                display="flex"
-                height="40"
+              <span
+                class="c11 c12"
+                color="inherit"
+                font-size="font-size-100"
+                font-weight="600"
+                text-decoration="none"
               >
-                <span
-                  class="c11 c12"
-                  color="inherit"
-                  font-size="font-size-100"
-                  font-weight="600"
-                  text-decoration="none"
-                >
-                  Cancel
-                </span>
-              </div>
-            </button>
-            <button
-              class="c6"
-              type="button"
-            >
-              <div
-                class="c7 c13 c9 c14"
-                display="flex"
-                height="40"
-              >
-                <span
-                  class="c11 c12"
-                  color="inherit"
-                  font-size="font-size-100"
-                  font-weight="600"
-                  text-decoration="none"
-                >
-                  Save
-                </span>
-              </div>
-            </button>
-          </div>
+                Save
+              </span>
+            </div>
+          </button>
         </div>
       </div>
     </div>
