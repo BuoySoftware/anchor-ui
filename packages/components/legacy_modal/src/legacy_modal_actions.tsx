@@ -12,7 +12,7 @@ export const LegacyModalActions = styled(({ children, ...flexProps }) => (
     justifyContent="flex-end"
     pt="l"
     mx="modal.gutterX"
-    pb="xxl"
+    pb="xl"
     {...flexProps}
   >
     {children}
