@@ -13,7 +13,6 @@ const reactMarkdownEsModules = [
   "micromark",
   "property-information",
   "react-markdown",
-  "react-modal",
   "rehype-raw",
   "remark-.+",
   "space-separated-tokens",
@@ -26,9 +25,11 @@ const reactMarkdownEsModules = [
   "zwitch",
 ];
 
-const esModules = [...reactMarkdownEsModules, "@buoysoftware/anchor-.+"].join(
-  "|"
-);
+const esModules = [
+  ...reactMarkdownEsModules,
+  "@buoysoftware/anchor-.+",
+  "react-modal",
+].join("|");
 
 const config: Config = {
   preset: "ts-jest",
