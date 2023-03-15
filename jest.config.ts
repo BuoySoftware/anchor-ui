@@ -26,7 +26,9 @@ const reactMarkdownEsModules = [
   "zwitch",
 ];
 
-const esModules = [...reactMarkdownEsModules].join("|");
+const esModules = [...reactMarkdownEsModules, "@buoysoftware/anchor-.+"].join(
+  "|"
+);
 
 const config: Config = {
   preset: "ts-jest",
