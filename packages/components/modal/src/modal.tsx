@@ -61,7 +61,7 @@ export const Modal: React.FC<ModalProps> = ({
       }}
       {...modalProps}
     >
-      <Box data-testid={testId} py="xl" px="xl">
+      <Box data-testid={testId} py="xl" px="modal.gutterX">
         <Box mb="xl">
           <Heading data-testid={`${testId}-title`} size="xl">
             {title}

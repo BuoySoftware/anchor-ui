@@ -11,7 +11,7 @@ export const LegacyModalHeader: React.FC<LegacyModalHeaderProps> = ({
   title,
 }): React.ReactElement => {
   return (
-    <Flex py="xl" px="xxxl">
+    <Flex my="xl" px="modal.gutterX">
       <Heading data-testid="" size="xl">
         {title}
       </Heading>

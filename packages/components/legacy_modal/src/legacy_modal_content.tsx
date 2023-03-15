@@ -10,7 +10,7 @@ export const LegacyModalContent: React.FC<LegacyModalContentProps> = ({
   children,
 }): React.ReactElement => {
   return (
-    <Flex maxHeight="60vh" overflow="auto" py="xxl" px="modal.gutterX">
+    <Flex maxHeight="60vh" overflow="auto" pb="l" px="modal.gutterX">
       {children}
     </Flex>
   );
