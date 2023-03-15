@@ -13,7 +13,7 @@ const Wrapper: React.FC<{ children: React.ReactNode }> = ({
   children,
 }): React.ReactElement => {
   return (
-    <div id="test-root">
+    <div id="test-root" style={{ position: "relative" }}>
       <ThemeProvider theme={theme}>{children}</ThemeProvider>
     </div>
   );
