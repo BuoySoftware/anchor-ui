@@ -2,7 +2,7 @@ import { buildThemeAliases } from "../utils/buildThemeAliases";
 import { base } from "./base";
 
 export const modalAliases = buildThemeAliases(base, {
-  gutterX: "xxxl",
+  gutterX: "xl",
   gutterT: "68",
 });
 

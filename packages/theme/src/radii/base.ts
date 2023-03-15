@@ -5,7 +5,7 @@ export const base = {
   success: "4px",
   input: "4px",
   menu: "4px",
-  modal: "30px",
+  modal: "8px",
   none: "0",
   pill: "40px",
   circle: "100%",
