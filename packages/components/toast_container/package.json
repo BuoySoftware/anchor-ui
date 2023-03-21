@@ -1,6 +1,6 @@
 {
   "name": "@buoysoftware/anchor-toast-container",
-  "version": "0.32.3",
+  "version": "0.32.4",
   "main": "src/index.ts",
   "license": "MIT",
   "files": [
