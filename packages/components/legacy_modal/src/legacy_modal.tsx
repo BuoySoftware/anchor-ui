@@ -3,7 +3,9 @@ import { get } from "styled-system";
 import { rgba } from "polished";
 import { useTheme } from "@buoysoftware/anchor-theme";
 
-ReactModal.setAppElement("#root");
+if (!(process.env.NODE_ENV === "test")) {
+  ReactModal.setAppElement("#root");
+}
 
 interface OwnProps {
   bg?: string;
@@ -24,9 +26,11 @@ export const LegacyModal: React.FC<LegacyModalProps> = ({
   const contentWidth = get(sizes, width, width);
   const contentRadius = get(radii, borderRadius, borderRadius);
   const contentBackground = get(colors, bg, bg);
+  const isTestEnv = process.env.NODE_ENV === "test";
 
   return (
     <ReactModal
+      ariaHideApp={!isTestEnv}
       style={{
         overlay: {
           backgroundColor: rgba(colors.blue100, 0.64),

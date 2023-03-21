@@ -6,7 +6,6 @@ import { render } from "../test_utils";
 const MockModal: React.FC = (): React.ReactElement => {
   return (
     <Modal
-      ariaHideApp={false}
       isOpen={true}
       modalActions={
         <>
