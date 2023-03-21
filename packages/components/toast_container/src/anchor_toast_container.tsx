@@ -19,6 +19,11 @@ export const AnchorToastContainer = styled(ToastContainer)`
     background: ${({ theme }) => theme.colors.background.success};
   }
 
+  .Toastify__toast--error {
+    color: ${({ theme }) => theme.colors.white};
+    background: ${({ theme }) => theme.colors.background.critical};
+  }
+
   .Toastify__toast-body {
     font-family: -apple-system, BlinkMacSystemFont, San Francisco, Segoe UI,
       Roboto, Helvetica Neue, sans-serif;

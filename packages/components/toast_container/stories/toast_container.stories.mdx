@@ -19,10 +19,12 @@ import { AnchorToastContainer } from "../src";
 
 export const Template = (args) => {
   const onClick = () => toast.success("Questionnaire created")
+  const onErrorClick = () => toast.error("Error creating questionnaire")
   return (
     <>
       <AnchorToastContainer {...args} />
-      <Button onClick={onClick} colorScheme="basic">Show Toast</Button>
+      <Button onClick={onClick} colorScheme="basic">Success Toast</Button>
+      <Button onClick={onErrorClick} colorScheme="basic">Error Toast</Button>
     </>
   );
 };
