@@ -1,8 +1,9 @@
 import { Button } from "@buoysoftware/anchor-button";
 
 import { Modal } from "../src/modal";
-import { render } from "../test_utils";
+import { act, render, waitFor } from "../test_utils";
 
+const mockCloseModal = jest.fn();
 const MockModal: React.FC = (): React.ReactElement => {
   return (
     <Modal
@@ -17,6 +18,7 @@ const MockModal: React.FC = (): React.ReactElement => {
           </Button>
         </>
       }
+      onRequestClose={mockCloseModal}
       testId="test-modal"
       title="Test Modal"
     >
@@ -30,5 +32,19 @@ describe("<Modal />", () => {
     const modal = render(<MockModal />);
 
     expect(modal.baseElement).toMatchSnapshot();
+  });
+
+  context("x button", () => {
+    it("closes the modal", async () => {
+      const { user, getByRole } = render(<MockModal />);
+
+      act(() => {
+        user.click(getByRole("button", { name: "Close Button" }));
+      });
+
+      waitFor(() => {
+        expect(mockCloseModal).toHaveBeenCalled();
+      });
+    });
   });
 });
