@@ -10,7 +10,7 @@ import { render } from "../test_utils";
 
 const MockLegacyModal: React.FC = (): React.ReactElement => {
   return (
-    <LegacyModal ariaHideApp={false} isOpen={true} testId="test-legacy-modal">
+    <LegacyModal isOpen={true} testId="test-legacy-modal">
       <LegacyModalHeader title="Test Legacy Modal" />
       <LegacyModalContent>Test modal contents</LegacyModalContent>
       <LegacyModalActions>
