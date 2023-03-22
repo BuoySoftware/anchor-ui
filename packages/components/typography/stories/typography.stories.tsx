@@ -20,7 +20,7 @@ export default {
   },
 };
 
-const TOKENS = [
+const TOKENS: Array<keyof typeof theme.fontSizes> = [
   "font-size-700",
   "font-size-600",
   "font-size-500",
@@ -31,7 +31,7 @@ const TOKENS = [
   "font-size-75",
 ];
 
-export const Introduction = (args) => {
+export const Introduction = () => {
   return (
     <Box padding="120px">
       <Flex justifyContent="space-between">

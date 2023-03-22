@@ -22,9 +22,9 @@ export const Basic = () => {
 
 export const Tabs = () => {
   const [currentPage, setCurrentPage] = useState("page1");
-  const onClick = (e): void => {
+  const onClick = (e: React.MouseEvent): void => {
     e.preventDefault();
-    const href = e.currentTarget.getAttribute("href");
+    const href = e.currentTarget.getAttribute("href") || "";
     setCurrentPage(href.replace("#", ""));
   };
 

@@ -21,7 +21,7 @@ const Palette: React.FC<{ family: string }> = ({
 
   return (
     <>
-      {Array.apply(null, { length }).map((_, i) => (
+      {[...Array(length)].map((_, i) => (
         <PaletteSwatch key={i} family={family} index={i} />
       ))}
     </>
@@ -35,9 +35,9 @@ const PaletteSwatch: React.FC<{ family: string; index: number }> = ({
   const offset = 10 * index;
   const number = 100 - offset;
   const colorName = `${family}${number}`;
-  const hex = theme.colors[colorName];
+  const hex = theme.colors[colorName as keyof typeof theme.colors];
 
-  return <Swatch color={hex} name={colorName} />;
+  return <Swatch color={hex as string} name={colorName} />;
 };
 
 const Swatch: React.FC<{ color: string; name: string }> = ({
@@ -73,7 +73,7 @@ const DotSwatch: React.FC<{ alias: string }> = ({
 }): React.ReactElement => {
   const color = get(theme.colors, alias);
   const baseColor = Object.keys(baseColors).find(
-    (key) => baseColors[key] === color
+    (key) => baseColors[key as keyof typeof baseColors] === color
   );
 
   return (
