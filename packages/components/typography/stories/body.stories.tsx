@@ -15,7 +15,11 @@ export default {
   },
 };
 
-export const Body = ({ content, ...args }) => {
+interface BodyParameters extends Object {
+  content: string,
+}
+
+export const Body = ({ content, ...args }: BodyParameters) => {
   return (
     <BodyComponent size="m" {...args}>
       {content}

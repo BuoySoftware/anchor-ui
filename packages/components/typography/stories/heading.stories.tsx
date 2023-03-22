@@ -15,7 +15,11 @@ export default {
   },
 };
 
-export const Heading = ({ content, ...args }) => {
+interface HeadingParameters extends Object {
+  content: string;
+}
+
+export const Heading = ({ content, ...args }: HeadingParameters) => {
   return (
     <HeadingComponent size="3xl" {...args}>
       {content}

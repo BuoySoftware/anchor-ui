@@ -16,7 +16,11 @@ export default {
   },
 };
 
-export const Subheading = ({ content, ...args }) => {
+interface SubheadingParameters extends Object {
+  content: string;
+}
+
+export const Subheading = ({ content, ...args }: SubheadingParameters) => {
   return (
     <SubheadingComponent size="m" {...args}>
       {content}
