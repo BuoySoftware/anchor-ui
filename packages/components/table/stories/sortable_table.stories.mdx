@@ -1,0 +1,71 @@
+import i18n from "i18next";
+import { initReactI18next } from "react-i18next";
+import { Canvas, Story } from "@storybook/addon-docs";
+import LinkTo from '@storybook/addon-links/react';
+
+import { SortableRowHandle, SortableTable } from "../src";
+
+<Meta
+  title="Components / SortableTable"
+  component={SortableTable}
+/>
+
+export const Template = ({ cellProps = () => ({}), ...args }) => {
+  i18n.use(initReactI18next).init({
+    lng: "en",
+    ns: ["tables"],
+    resources: {
+      en: {
+        tables: {
+          donors: {
+            empty_message: "No donors to display",
+            th: {
+              name: "Donor Name",
+              id: "Donor ID",
+              deferred: "Deferred",
+              my_facility_name: "Assigned Center",
+              level: "Level"
+            },
+          }
+        }
+      },
+    },
+  });
+  const CELL_CONFIGS = [
+    { dataKey: "name", sortHandle: true },
+    { dataKey: "id" },
+    { dataKey: "myFacility.name" },
+    { dataKey: "level" },
+  ];
+  const records = [
+    { name: "Jerry Seinfeld", id: 1, myFacility: { name: "Paris " }, level: 1 },
+    { name: "Cosmo Kramer", id: 2, myFacility: { name: "Paris " }, level: 7 },
+    { name: "Elaine Benes", id: 3, myFacility: { name: "Paris " }, level: 4 },
+  ]
+  const onSort = (sortedRecords) => {
+    console.log("Sorted to: ", sortedRecords.map(({ name }) => name).join(", "))
+  }
+  return (
+    <SortableTable
+      cellConfigs={CELL_CONFIGS}
+      records={records}
+      name="donors"
+      recordIdKey="id"
+      onSort={onSort}
+      {...args}
+    />
+  )
+};
+
+## Basic Usage
+
+<Canvas>
+  <Story name="SortableTable">
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+The `SortableTable` provides a convenience wrapper for rendering a table with
+sortable rows. It will expose a handler for onSorted.
+
+See `Table` for more details.

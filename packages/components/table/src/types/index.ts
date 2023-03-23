@@ -1,5 +1,5 @@
 import type { PropertyPath } from "lodash";
-
+import type { UniqueIdentifier } from "@dnd-kit/core";
 import { BodyProps } from "@buoysoftware/anchor-typography";
 
 // Pagination utility types
@@ -54,14 +54,7 @@ export type Record<RecordData> = RecordData & { id?: string };
 
 export type RowAction<RecordData> = (rowData: RecordData) => void;
 
-export type TbodyProps<RecordData> = {
-  records: Record<RecordData>[];
-  recordIdKey: PropertyPath;
-} & Omit<TableRow<RecordData>, "record" | "rowId">;
-
-export type RenderPlaceholder<RecordData> = (
-  rowData: RecordData
-) => React.ReactElement | string;
+export type TableVariant = "default" | "condensed";
 
 export interface TableCellConfig<RecordData> {
   cellProps?: (rowData: RecordData) => CellProps;
@@ -115,9 +108,35 @@ export interface TableCell<RecordData> {
   variant?: TableVariant;
 }
 
-export interface PageableConnection {
-  pageInfo: PageInfo;
-  totalCount: number;
+// Sortable table types
+export interface SortableRecord extends Object {
+  id: UniqueIdentifier;
 }
 
-export type TableVariant = "default" | "condensed";
+export interface SortableTableCellConfig<RecordData>
+  extends TableCellConfig<RecordData> {
+  sortHandle?: boolean;
+}
+
+export interface SortableTableRow<RecordData>
+  extends Omit<TableRow<RecordData>, "cellConfigs"> {
+  cellConfigs: SortableTableCellConfig<RecordData>[];
+  sortHandle?: boolean;
+}
+
+export interface SortableTableCell<RecordData>
+  extends Omit<TableCell<RecordData>, "cellConfig"> {
+  cellConfig: SortableTableCellConfig<RecordData>;
+  sortHandle?: boolean;
+}
+
+export interface SortableTableProps<RecordData>
+  extends Omit<
+    TableProps<RecordData>,
+    "cellConfigs" | "TableCellComponent" | "TableRowComponent"
+  > {
+  cellConfigs: SortableTableCellConfig<RecordData>[];
+  TableCellComponent?: React.FC<SortableTableCell<RecordData>>;
+  TableRowComponent?: React.FC<SortableTableRow<RecordData>>;
+  onSort?: (records: Record<RecordData>[]) => void;
+}
