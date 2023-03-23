@@ -21,9 +21,7 @@ const Input = styled.input<StyledInputProps>`
 `;
 
 export const StyledInput = React.forwardRef<HTMLInputElement, StyledInputProps>(
-  ({ ...props }, forwardRef): React.ReactElement => {
+  function StyledInput({ ...props }, forwardRef): React.ReactElement {
     return <Input ref={forwardRef} {...props} />;
   }
 );
-
-StyledInput.displayName = "StyledInput";

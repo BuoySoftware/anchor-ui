@@ -15,8 +15,8 @@ export type PhoneInputProps = OwnProps & Omit<InputProps, "theme" | "type">;
 
 const MAX_LENGTH = 16;
 
-const PhoneInput = forwardRef<HTMLInputElement, PhoneInputProps>(
-  ({ value: defaultValue = "", name, onChange, ...inputProps }, ref) => {
+export const PhoneInput = forwardRef<HTMLInputElement, PhoneInputProps>(
+  function PhoneInput({ value: defaultValue = "", name, onChange, ...inputProps }, ref) {
     const [value, setValue] = useState(defaultValue);
     const {
       formState: { errors },
@@ -56,7 +56,3 @@ const PhoneInput = forwardRef<HTMLInputElement, PhoneInputProps>(
     );
   }
 );
-
-PhoneInput.displayName = "PhoneInput";
-
-export default PhoneInput;

@@ -7,7 +7,7 @@ import snakeCase from "lodash/snakeCase";
 import { useTranslation } from "react-i18next";
 
 import { FormField } from "../form_field";
-import PhoneInput, { PhoneInputProps } from "./phone_input";
+import { PhoneInput, PhoneInputProps } from "./phone_input";
 import { useFormField } from "../use_form_field";
 
 interface OwnProps {
