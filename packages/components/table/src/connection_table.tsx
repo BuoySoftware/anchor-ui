@@ -1,5 +1,5 @@
-import { Table, TableProps } from "./table";
-import { Connection, PageableConnection } from "./types";
+import { Table } from "./table";
+import { Connection, PageableConnection, TableProps } from "./types";
 import { extractConnectionNodes } from "./extract_connection_nodes";
 
 interface OwnProps<RecordData> {

@@ -4,7 +4,7 @@ import { useTranslation } from "react-i18next";
 import { TextButton } from "@buoysoftware/anchor-button";
 import { Flex } from "@buoysoftware/anchor-layout";
 
-import { PageableConnection } from "./types";
+import { FetchMore, PageableConnection } from "./types";
 
 type Cursor = Maybe<string>;
 
@@ -16,11 +16,6 @@ interface PaginationVariables {
     last?: number;
   };
 }
-
-export type FetchMore = (
-  fetchMoreOptions: PaginationVariables
-) => Promise<unknown>;
-
 interface OwnProps {
   data: PageableConnection;
   fetchMore: FetchMore;
