@@ -58,7 +58,7 @@ export const FormField = styled(
           inputType={inputType}
           mt="xxs"
           name={name}
-          width="input"
+          width="100%"
         />
       </Box>
     );
