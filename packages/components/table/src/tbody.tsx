@@ -1,15 +1,18 @@
 import get from "lodash/get";
-import { TableRow } from "./table_row";
-import { StyledTbody } from "./styled_tbody";
-import { TbodyProps as TableBodyProps } from "./types";
 
-type TbodyProps<RecordData> = Omit<TableBodyProps<RecordData>, "tableT">;
+import { StyledTbody } from "./styled_tbody";
+import { TableBodyProps } from "./types";
+import { TableRow } from "./table_row";
+
+type TbodyProps<RecordData> = TableBodyProps<RecordData>;
 
 export const Tbody = function <RecordData>({
+  TableCellComponent,
+  TableRowComponent = TableRow,
   cellConfigs,
+  recordIdKey,
   records,
   rowAction,
-  recordIdKey,
   ...styledTbodyProps
 }: TbodyProps<RecordData>): React.ReactElement {
   return (
@@ -19,8 +22,9 @@ export const Tbody = function <RecordData>({
         const rowId = `tr-${id}`;
 
         return (
-          <TableRow
-            key={rowId}
+          <TableRowComponent
+            TableCellComponent={TableCellComponent}
+            key={id}
             record={record}
             rowAction={rowAction}
             rowId={rowId}
