@@ -12,6 +12,7 @@ export const base = {
   paymentStatusWidth: "425px",
   radio: "18px",
   searchInput: "220px",
+  sortHandle: "16px",
   widget: "170px",
 };
 

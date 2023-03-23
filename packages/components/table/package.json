@@ -6,15 +6,20 @@
   "dependencies": {
     "@buoysoftware/anchor-button": "^0.32.6",
     "@buoysoftware/anchor-layout": "^0.32.6",
+    "@buoysoftware/anchor-theme": "^0.32.6",
     "@buoysoftware/anchor-typography": "^0.32.6",
+    "@dnd-kit/core": "^6.0.8",
+    "@dnd-kit/modifiers": "^6.0.1",
+    "@dnd-kit/sortable": "^7.0.2",
     "lodash": "^4.17.21"
   },
   "peerDependencies": {
     "react-i18next": "^12.1.4"
   },
   "scripts": {
-    "build": "tsc -outDir dist",
+    "build": "tsc -outDir dist && yarn copy-files",
     "compile": "tsc --noEmit",
+    "copy-files": "cp ./src/checkbox/checkmark.svg ./dist/checkbox",
     "postpack": "clean-package restore",
     "prepack": "clean-package",
     "test": "jest"

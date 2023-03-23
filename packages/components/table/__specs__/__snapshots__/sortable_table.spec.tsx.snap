@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<ConnectionTable /> renders a table based on a column configuration 1`] = `
+exports[`<SortableTable /> renders a sortable table 1`] = `
 <DocumentFragment>
   .c2 {
   box-sizing: border-box;
@@ -14,6 +14,20 @@ exports[`<ConnectionTable /> renders a table based on a column configuration 1`]
 }
 
 .c5 {
+  box-sizing: border-box;
+  background: 0.5rem center url(test-file-stub) no-repeat;
+  color: #101112;
+  width: m;
+  height: m;
+  min-height: 16px;
+  min-width: 16px;
+  padding-left: calc(0.5rem + 16px + 0.5rem);
+  padding-right: 0.5rem;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+}
+
+.c7 {
   box-sizing: border-box;
   color: #101112;
   width: m;
@@ -46,6 +60,15 @@ exports[`<ConnectionTable /> renders a table based on a column configuration 1`]
 .c0 {
   width: 100%;
   box-sizing: border-box;
+}
+
+.c0 tr:has(td:focus-visible) {
+  outline: 2px solid #276EF1;
+  border-radius: 4px;
+}
+
+.c0 tr:has(td:focus-visible) td {
+  outline: none;
 }
 
 .c4 tr {
@@ -101,20 +124,27 @@ exports[`<ConnectionTable /> renders a table based on a column configuration 1`]
       class="c4"
     >
       <tr
+        class="sortable-table"
         data-testid="tr-1"
       >
         <td
+          aria-describedby="DndDescribedBy-0"
+          aria-disabled="false"
+          aria-roledescription="sortable"
           class="c5 c6"
           color="text.primary"
           data-testid="tr-1-td-id"
           font-size="font-size-100"
           font-style="none"
           font-weight="400"
+          role="button"
+          style="cursor: grab;"
+          tabindex="0"
         >
           1
         </td>
         <td
-          class="c5 c6"
+          class="c7 c6"
           color="text.primary"
           data-testid="tr-1-td-status"
           font-size="font-size-100"
@@ -125,20 +155,27 @@ exports[`<ConnectionTable /> renders a table based on a column configuration 1`]
         </td>
       </tr>
       <tr
+        class="sortable-table"
         data-testid="tr-2"
       >
         <td
+          aria-describedby="DndDescribedBy-0"
+          aria-disabled="false"
+          aria-roledescription="sortable"
           class="c5 c6"
           color="text.primary"
           data-testid="tr-2-td-id"
           font-size="font-size-100"
           font-style="none"
           font-weight="400"
+          role="button"
+          style="cursor: grab;"
+          tabindex="0"
         >
           2
         </td>
         <td
-          class="c5 c6"
+          class="c7 c6"
           color="text.primary"
           data-testid="tr-2-td-status"
           font-size="font-size-100"
@@ -149,20 +186,27 @@ exports[`<ConnectionTable /> renders a table based on a column configuration 1`]
         </td>
       </tr>
       <tr
+        class="sortable-table"
         data-testid="tr-3"
       >
         <td
+          aria-describedby="DndDescribedBy-0"
+          aria-disabled="false"
+          aria-roledescription="sortable"
           class="c5 c6"
           color="text.primary"
           data-testid="tr-3-td-id"
           font-size="font-size-100"
           font-style="none"
           font-weight="400"
+          role="button"
+          style="cursor: grab;"
+          tabindex="0"
         >
           3
         </td>
         <td
-          class="c5 c6"
+          class="c7 c6"
           color="text.primary"
           data-testid="tr-3-td-status"
           font-size="font-size-100"
@@ -173,20 +217,27 @@ exports[`<ConnectionTable /> renders a table based on a column configuration 1`]
         </td>
       </tr>
       <tr
+        class="sortable-table"
         data-testid="tr-4"
       >
         <td
+          aria-describedby="DndDescribedBy-0"
+          aria-disabled="false"
+          aria-roledescription="sortable"
           class="c5 c6"
           color="text.primary"
           data-testid="tr-4-td-id"
           font-size="font-size-100"
           font-style="none"
           font-weight="400"
+          role="button"
+          style="cursor: grab;"
+          tabindex="0"
         >
           4
         </td>
         <td
-          class="c5 c6"
+          class="c7 c6"
           color="text.primary"
           data-testid="tr-4-td-status"
           font-size="font-size-100"
@@ -198,5 +249,22 @@ exports[`<ConnectionTable /> renders a table based on a column configuration 1`]
       </tr>
     </tbody>
   </table>
+  <div
+    id="DndDescribedBy-0"
+    style="display: none;"
+  >
+    
+    To pick up a draggable item, press the space bar.
+    While dragging, use the arrow keys to move the item.
+    Press space again to drop the item in its new position, or press escape to cancel.
+  
+  </div>
+  <div
+    aria-atomic="true"
+    aria-live="assertive"
+    id="DndLiveRegion-0"
+    role="status"
+    style="position: fixed; width: 1px; height: 1px; margin: -1px; border: 0px; padding: 0px; overflow: hidden; clip-path: inset(100%); white-space: nowrap;"
+  />
 </DocumentFragment>
 `;
