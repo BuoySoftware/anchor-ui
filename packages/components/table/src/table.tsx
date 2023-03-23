@@ -24,12 +24,13 @@ export const Table = <RecordData,>({
   renderPlaceholder = () => "--",
   rowAction,
   tNamespace = DEFAULT_TABLE_NAMESPACE,
+  variant,
 }: TableProps<RecordData>): React.ReactElement => {
   const renderTableActions = fetchMore && paginationData && records.length > 0;
 
   return (
     <TableProvider value={{ name, tNamespace }}>
-      <StyledTable data-testid={`${kebabCase(name)}-table`}>
+      <StyledTable data-testid={`${kebabCase(name)}-table`} variant={variant}>
         <Thead cellConfigs={cellConfigs} />
         <Tbody
           TableCellComponent={TableCellComponent}
