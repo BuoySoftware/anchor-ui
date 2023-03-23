@@ -11,11 +11,11 @@ type AppSwitcherTriggerProps = OwnProps;
 export const AppSwitcherTrigger = forwardRef<
   HTMLButtonElement,
   AppSwitcherTriggerProps
->(({ children, ...props }, ref) => (
-  <StyledAppSwitcherTrigger as="button" size="m" {...props} ref={ref}>
-    {children}
-    <DropdownArrow />
-  </StyledAppSwitcherTrigger>
-));
-
-AppSwitcherTrigger.displayName = "AppSwitcherTrigger";
+>(function AppSwitcherTrigger({ children, ...props }, ref) {
+  return (
+    <StyledAppSwitcherTrigger as="button" size="m" {...props} ref={ref}>
+      {children}
+      <DropdownArrow />
+    </StyledAppSwitcherTrigger>
+  );
+});

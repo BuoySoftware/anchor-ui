@@ -31,7 +31,7 @@ const HEIGHT_MAPPING: Record<Size, number> = {
 };
 
 export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
-  (
+  function Button(
     {
       children,
       colorScheme = "basic",
@@ -47,45 +47,49 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
       ...props
     },
     ref
-  ): React.ReactElement => (
-    <StyledButton
-      data-testid={testId}
-      disabled={disabled || submitting}
-      form={form}
-      onClick={onClick}
-      ref={ref}
-      type={type}
-    >
-      <InnerButton
-        alignItems="center"
-        borderRadius="4px"
-        colorScheme={colorScheme}
-        height={HEIGHT_MAPPING[size]}
-        px={size}
-        {...props}
+  ): React.ReactElement {
+    return (
+      <StyledButton
+        data-testid={testId}
+        disabled={disabled || submitting}
+        form={form}
+        onClick={onClick}
+        ref={ref}
+        type={type}
       >
-        {type == "submit" && submitting ? (
-          <LoadingIndicator size="12px" strokeSize={1} color="text.tertiary" />
-        ) : (
-          <>
-            {iconPosition === "left" && (
-              <Box display="flex" ml="-xxs" mr="xs">
-                {icon}
-              </Box>
-            )}
-            <Heading as="span" color="inherit" size="s" textDecoration="none">
-              {children}
-            </Heading>
-            {iconPosition === "right" && (
-              <Box display="flex" ml="xs" mr="-xxs">
-                {icon}
-              </Box>
-            )}
-          </>
-        )}
-      </InnerButton>
-    </StyledButton>
-  )
+        <InnerButton
+          alignItems="center"
+          borderRadius="4px"
+          colorScheme={colorScheme}
+          height={HEIGHT_MAPPING[size]}
+          px={size}
+          {...props}
+        >
+          {type == "submit" && submitting ? (
+            <LoadingIndicator
+              size="12px"
+              strokeSize={1}
+              color="text.tertiary"
+            />
+          ) : (
+            <>
+              {iconPosition === "left" && (
+                <Box display="flex" ml="-xxs" mr="xs">
+                  {icon}
+                </Box>
+              )}
+              <Heading as="span" color="inherit" size="s" textDecoration="none">
+                {children}
+              </Heading>
+              {iconPosition === "right" && (
+                <Box display="flex" ml="xs" mr="-xxs">
+                  {icon}
+                </Box>
+              )}
+            </>
+          )}
+        </InnerButton>
+      </StyledButton>
+    );
+  }
 );
-
-Button.displayName = "Button";

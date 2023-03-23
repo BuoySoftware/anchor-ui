@@ -37,7 +37,7 @@ export type InputProps = React.InputHTMLAttributes<Element> &
   Omit<StyledInputWrapperProps, "inputRef" | "hasIcon">;
 
 export const Input = forwardRef<HTMLInputElement, InputProps>(
-  (
+  function Input(
     {
       "data-testid": testIdProp,
       defaultValue,
@@ -56,7 +56,7 @@ export const Input = forwardRef<HTMLInputElement, InputProps>(
       ...props
     },
     forwardedRef
-  ): React.ReactElement => {
+  ): React.ReactElement {
     const inputProps = pick(props, STYLED_INPUT_PROP_LIST);
     const wrapperProps = pick(props, STYLED_INPUT_WRAPPER_PROP_LIST);
 
@@ -137,5 +137,3 @@ export const Input = forwardRef<HTMLInputElement, InputProps>(
     );
   }
 );
-
-Input.displayName = "Input";

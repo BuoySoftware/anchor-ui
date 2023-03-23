@@ -1,6 +1,6 @@
 import { useForm } from "react-hook-form";
 
-import PhoneInput, { PhoneInputProps } from "../src/phone_field/phone_input";
+import { PhoneInput, PhoneInputProps } from "../src/phone_field/phone_input";
 import { Form } from "../src/form";
 import { act, render, waitFor, UserRenderResult } from "../test_utils";
 
