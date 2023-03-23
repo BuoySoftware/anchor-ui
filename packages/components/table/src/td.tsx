@@ -1,22 +1,20 @@
 import get from "lodash/get";
-import { Body } from "@buoysoftware/anchor-typography";
+import { Body, BodyProps } from "@buoysoftware/anchor-typography";
+import { forwardRef } from "react";
 
-import { RenderPlaceholder, TableCellConfig, TableVariant } from "./types";
+import { TableCell } from "./types";
 
-interface TdProps<RecordData> {
-  cellConfig: TableCellConfig<RecordData>;
-  record: RecordData;
-  renderPlaceholder?: RenderPlaceholder<RecordData>;
-  testId: string;
-  variant?: TableVariant;
-}
+export type TdProps<RecordData> = TableCell<RecordData> & Omit<BodyProps, "size">
 
-export const Td = function <RecordData>({
+function PreForwardedTd<RecordData>({
   cellConfig,
   record,
   renderPlaceholder = () => "--",
   testId,
-}: TdProps<RecordData>): React.ReactElement {
+  ...tdProps
+}: TdProps<RecordData>,
+  ref?: React.ForwardedRef<HTMLTableCellElement>
+): React.ReactElement {
   const { cellProps = () => undefined, dataKey, render } = cellConfig;
 
   const renderCellContent = (): React.ReactNode => {
@@ -31,14 +29,18 @@ export const Td = function <RecordData>({
 
   return (
     <Body
-      py="s"
-      px="xs"
       as="td"
       data-testid={testId}
+      px="xs"
+      py="s"
+      ref={ref}
       size="m"
       {...cellProps(record)}
+      {...tdProps}
     >
       {renderCellContent()}
     </Body>
   );
 };
+
+export const Td = forwardRef(PreForwardedTd);
