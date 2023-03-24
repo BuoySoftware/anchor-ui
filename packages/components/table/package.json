@@ -19,7 +19,7 @@
   "scripts": {
     "build": "tsc -outDir dist && yarn copy-files",
     "compile": "tsc --noEmit",
-    "copy-files": "cp ./src/checkbox/checkmark.svg ./dist/checkbox",
+    "copy-files": "cp ./src/sort_handle.svg ./dist",
     "postpack": "clean-package restore",
     "prepack": "clean-package",
     "test": "jest"
