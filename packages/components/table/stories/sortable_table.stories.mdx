@@ -1,7 +1,8 @@
-import i18n from "i18next";
-import { initReactI18next } from "react-i18next";
-import { Canvas, Story } from "@storybook/addon-docs";
 import LinkTo from '@storybook/addon-links/react';
+import i18n from "i18next";
+import { Canvas, Story } from "@storybook/addon-docs";
+import { initReactI18next } from "react-i18next";
+import { useCallback, useState } from "react";
 
 import { SortableRowHandle, SortableTable } from "../src";
 
@@ -21,10 +22,9 @@ export const Template = ({ cellProps = () => ({}), ...args }) => {
             empty_message: "No donors to display",
             th: {
               name: "Donor Name",
+              position: "Sort Order",
               id: "Donor ID",
-              deferred: "Deferred",
-              my_facility_name: "Assigned Center",
-              level: "Level"
+              facility: "Assigned Center",
             },
           }
         }
@@ -32,19 +32,22 @@ export const Template = ({ cellProps = () => ({}), ...args }) => {
     },
   });
   const CELL_CONFIGS = [
-    { dataKey: "name", sortHandle: true },
+    { dataKey: "position", sortHandle: true },
+    { dataKey: "name"},
     { dataKey: "id" },
-    { dataKey: "myFacility.name" },
-    { dataKey: "level" },
+    { dataKey: "facility" },
   ];
-  const records = [
-    { name: "Jerry Seinfeld", id: 1, myFacility: { name: "Paris " }, level: 1 },
-    { name: "Cosmo Kramer", id: 2, myFacility: { name: "Paris " }, level: 7 },
-    { name: "Elaine Benes", id: 3, myFacility: { name: "Paris " }, level: 4 },
-  ]
-  const onSort = (sortedRecords) => {
+  const [records, setRecords] = useState([
+    { position: 1, name: "Jerry Seinfeld", id: 1, facility: "Paris" },
+    { position: 2, name: "Cosmo Kramer", id: 2, facility: "Paris" },
+    { position: 3, name: "Elaine Benes", id: 3, facility: "Paris" },
+  ])
+  const onSort = useCallback((sortedRecords) => {
     console.log("Sorted to: ", sortedRecords.map(({ name }) => name).join(", "))
-  }
+    setRecords(sortedRecords.map((record, index) => {
+      return { ...record, position: index + 1 }
+    }))
+  }, [])
   return (
     <SortableTable
       cellConfigs={CELL_CONFIGS}

@@ -1,4 +1,4 @@
-import { useEffect, useCallback, useState } from "react";
+import { useEffect, useCallback, useRef, useState } from "react";
 import {
   DndContext,
   DragEndEvent,
@@ -35,6 +35,7 @@ export const SortableTable = <RecordData extends SortableRecord>({
   records,
   ...tableBuilderProps
 }: SortableTableProps<RecordData>): React.ReactElement => {
+  const onSortRef = useRef<SortableTableProps<RecordData>["onSort"]>();
   const [sortedRecords, setSortedRecords] = useState(records);
   const sensors = useSensors(
     useSensor(PointerSensor),
@@ -45,6 +46,8 @@ export const SortableTable = <RecordData extends SortableRecord>({
     ({ active, over }: DragEndEvent) => {
       if (!active.id || !over?.id) return;
       if (active.id === over.id) return;
+
+      if (onSort) onSortRef.current = onSort;
 
       function indexById(records: RecordData[], id: UniqueIdentifier) {
         const record = records.find((record) => id === record.id);
@@ -59,16 +62,19 @@ export const SortableTable = <RecordData extends SortableRecord>({
         return resortedRecords;
       });
     },
-    [setSortedRecords]
+    [onSort, setSortedRecords]
   );
 
   useEffect(() => {
-    if (!onSort) return;
-
-    if (sortedRecords !== records) {
-      onSort(sortedRecords);
+    if (onSortRef.current) {
+      onSortRef.current(sortedRecords);
+      onSortRef.current = undefined;
     }
-  }, [onSort, sortedRecords, records]);
+  }, [onSort, sortedRecords]);
+
+  useEffect(() => {
+    setSortedRecords(records);
+  }, [records]);
 
   return (
     <DndContext
