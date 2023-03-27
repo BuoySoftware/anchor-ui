@@ -108,7 +108,7 @@ exports[`<SortableTable /> renders a sortable table 1`] = `
           font-size="font-size-100"
           font-weight="600"
         >
-          ID
+          Position
         </th>
         <th
           class="c2 c3"
@@ -116,7 +116,7 @@ exports[`<SortableTable /> renders a sortable table 1`] = `
           font-size="font-size-100"
           font-weight="600"
         >
-          Status
+          Full Name
         </th>
       </tr>
     </thead>
@@ -133,7 +133,7 @@ exports[`<SortableTable /> renders a sortable table 1`] = `
           aria-roledescription="sortable"
           class="c5 c6"
           color="text.primary"
-          data-testid="tr-1-td-id"
+          data-testid="tr-1-td-position"
           font-size="font-size-100"
           font-style="none"
           font-weight="400"
@@ -146,12 +146,12 @@ exports[`<SortableTable /> renders a sortable table 1`] = `
         <td
           class="c7 c6"
           color="text.primary"
-          data-testid="tr-1-td-status"
+          data-testid="tr-1-td-name"
           font-size="font-size-100"
           font-style="none"
           font-weight="400"
         >
-          Good
+          Jerry Seinfeld
         </td>
       </tr>
       <tr
@@ -164,7 +164,7 @@ exports[`<SortableTable /> renders a sortable table 1`] = `
           aria-roledescription="sortable"
           class="c5 c6"
           color="text.primary"
-          data-testid="tr-2-td-id"
+          data-testid="tr-2-td-position"
           font-size="font-size-100"
           font-style="none"
           font-weight="400"
@@ -177,12 +177,12 @@ exports[`<SortableTable /> renders a sortable table 1`] = `
         <td
           class="c7 c6"
           color="text.primary"
-          data-testid="tr-2-td-status"
+          data-testid="tr-2-td-name"
           font-size="font-size-100"
           font-style="none"
           font-weight="400"
         >
-          Bad
+          George Costanza
         </td>
       </tr>
       <tr
@@ -195,7 +195,7 @@ exports[`<SortableTable /> renders a sortable table 1`] = `
           aria-roledescription="sortable"
           class="c5 c6"
           color="text.primary"
-          data-testid="tr-3-td-id"
+          data-testid="tr-3-td-position"
           font-size="font-size-100"
           font-style="none"
           font-weight="400"
@@ -208,12 +208,12 @@ exports[`<SortableTable /> renders a sortable table 1`] = `
         <td
           class="c7 c6"
           color="text.primary"
-          data-testid="tr-3-td-status"
+          data-testid="tr-3-td-name"
           font-size="font-size-100"
           font-style="none"
           font-weight="400"
         >
-          Ugly
+          Elaine Benes
         </td>
       </tr>
       <tr
@@ -226,7 +226,7 @@ exports[`<SortableTable /> renders a sortable table 1`] = `
           aria-roledescription="sortable"
           class="c5 c6"
           color="text.primary"
-          data-testid="tr-4-td-id"
+          data-testid="tr-4-td-position"
           font-size="font-size-100"
           font-style="none"
           font-weight="400"
@@ -239,12 +239,12 @@ exports[`<SortableTable /> renders a sortable table 1`] = `
         <td
           class="c7 c6"
           color="text.primary"
-          data-testid="tr-4-td-status"
+          data-testid="tr-4-td-name"
           font-size="font-size-100"
           font-style="none"
           font-weight="400"
         >
-          Other
+          Cosmo Kramer
         </td>
       </tr>
     </tbody>
