@@ -1,6 +1,6 @@
 {
   "name": "@buoysoftware/anchor-table",
-  "version": "0.33.0",
+  "version": "0.33.1",
   "main": "src/index.ts",
   "license": "MIT",
   "dependencies": {

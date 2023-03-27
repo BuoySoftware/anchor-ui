@@ -1,6 +1,6 @@
 {
   "name": "@buoysoftware/anchor-ui-legacy-table",
-  "version": "0.33.0",
+  "version": "0.33.1",
   "main": "src/index.ts",
   "license": "MIT",
   "scripts": {
@@ -11,7 +11,7 @@
   },
   "dependencies": {
     "@buoysoftware/anchor-layout": "^0.33.0",
-    "@buoysoftware/anchor-table": "^0.33.0",
+    "@buoysoftware/anchor-table": "^0.33.1",
     "@buoysoftware/anchor-ui-legacy-text": "^0.33.0",
     "lodash": "^4.17.21"
   },
