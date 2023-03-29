@@ -13,6 +13,7 @@ export const base = {
   radio: "18px",
   searchInput: "220px",
   sortHandle: "16px",
+  tabBar: "52px",
   widget: "170px",
 };
 

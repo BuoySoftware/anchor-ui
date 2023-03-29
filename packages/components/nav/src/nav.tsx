@@ -2,13 +2,13 @@ import styled from "styled-components";
 
 import { Flex, FlexProps } from "@buoysoftware/anchor-layout";
 
-type Variant = "main" | "sub";
+type Variant = "main" | "sub" | "tabs";
 
 interface OwnProps {
   variant?: Variant;
 }
 
-type NavProps = FlexProps & OwnProps;
+export type NavProps = FlexProps & OwnProps;
 
 export const Nav = styled(({ variant, ...props }) => {
   return (
@@ -18,11 +18,11 @@ export const Nav = styled(({ variant, ...props }) => {
       bg="white"
       data-testid={`${variant}-navigation-bar`}
       display="flex"
-      height="navigationBar"
-      px="page.gutterX"
+      height={variant === "tabs" ? "tabBar" : "navigationBar"}
+      px={variant === "tabs" ? undefined : "page.gutterX"}
       position="relative"
       width="100%"
-      borderBottom={variant === "sub" ? "1SolidSubdued" : "none"}
+      borderBottom={variant === "main" ? "none" : "1SolidSubdued"}
       {...props}
     />
   );
