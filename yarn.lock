@@ -8701,9 +8701,9 @@ i18next@^22.4.9:
     "@babel/runtime" "^7.20.6"
 
 iconoir-react@^6.0.0, iconoir-react@^6.2.0, iconoir-react@^6.2.1:
-  version "6.4.0"
-  resolved "https://registry.yarnpkg.com/iconoir-react/-/iconoir-react-6.4.0.tgz#12f4ce14f740c89baea8f58cd1255e7fa20ba9a4"
-  integrity sha512-I43T2a0ubdzDULjlOX9W9GQOG5AXh0r9l937AgNczLLljNDXCgWbqACQIDqSiIlzhxyh/dZ/L1ewlaAiiK6kGQ==
+  version "6.5.0"
+  resolved "https://registry.yarnpkg.com/iconoir-react/-/iconoir-react-6.5.0.tgz#f3d29757928c70248307f125b6a27ca98f19f8a3"
+  integrity sha512-LU+Pa3lDJ3Sv8jhA/NXcokfKGaB4ofup4C/YllqxtWDBuR1ggdtCGwUbxHTgsc9+jWAikugR8qvh9fQI7O9E2w==
 
 iconv-lite@0.4.24, iconv-lite@^0.4.24:
   version "0.4.24"
