@@ -1,13 +1,13 @@
 {
   "name": "@buoysoftware/anchor-table",
-  "version": "0.33.1",
+  "version": "0.33.2",
   "main": "src/index.ts",
   "license": "MIT",
   "dependencies": {
-    "@buoysoftware/anchor-button": "^0.33.0",
-    "@buoysoftware/anchor-layout": "^0.33.0",
-    "@buoysoftware/anchor-theme": "^0.33.0",
-    "@buoysoftware/anchor-typography": "^0.33.0",
+    "@buoysoftware/anchor-button": "^0.33.2",
+    "@buoysoftware/anchor-layout": "^0.33.2",
+    "@buoysoftware/anchor-theme": "^0.33.2",
+    "@buoysoftware/anchor-typography": "^0.33.2",
     "@dnd-kit/core": "^6.0.8",
     "@dnd-kit/modifiers": "^6.0.1",
     "@dnd-kit/sortable": "^7.0.2",

@@ -1,15 +1,15 @@
 {
   "name": "@buoysoftware/anchor-toast-container",
-  "version": "0.33.0",
+  "version": "0.33.2",
   "main": "src/index.ts",
   "license": "MIT",
   "files": [
     "dist"
   ],
   "dependencies": {
-    "@buoysoftware/anchor-layout": "^0.33.0",
-    "@buoysoftware/anchor-theme": "^0.33.0",
-    "@buoysoftware/anchor-typography": "^0.33.0",
+    "@buoysoftware/anchor-layout": "^0.33.2",
+    "@buoysoftware/anchor-theme": "^0.33.2",
+    "@buoysoftware/anchor-typography": "^0.33.2",
     "iconoir-react": "^6.2.1",
     "react-toastify": "^9.1.1"
   },

@@ -1,13 +1,13 @@
 {
   "name": "@buoysoftware/anchor-side-nav",
-  "version": "0.33.0",
+  "version": "0.33.2",
   "main": "src/index.ts",
   "license": "MIT",
   "files": [
     "dist"
   ],
   "dependencies": {
-    "@buoysoftware/anchor-layout": "^0.33.0",
+    "@buoysoftware/anchor-layout": "^0.33.2",
     "polished": "^4.2.2"
   },
   "scripts": {
