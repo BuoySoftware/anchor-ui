@@ -80,10 +80,20 @@ export const Modal: React.FC<ModalProps> = ({
           </Heading>
           <CloseModal closeModal={modalProps.onRequestClose} />
         </Flex>
-        <Box maxHeight="60vh" overflow="none" mb="l">
+        <Box
+          data-testid={`${testId}-body`}
+          maxHeight="60vh"
+          overflow="none"
+          mb="l"
+        >
           {children}
         </Box>
-        <Box display="flex" justifyContent="flex-end" mt="l">
+        <Box
+          data-testid={`${testId}-actions`}
+          display="flex"
+          justifyContent="flex-end"
+          mt="l"
+        >
           {modalActions}
         </Box>
       </Box>
