@@ -292,12 +292,14 @@ exports[`<Modal /> renders correctly 1`] = `
           </div>
           <div
             class="c7"
+            data-testid="test-modal-body"
             overflow="none"
           >
             Test modal contents
           </div>
           <div
             class="c8"
+            data-testid="test-modal-actions"
             display="flex"
           >
             <button
