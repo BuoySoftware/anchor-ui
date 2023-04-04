@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Box } from "@buoysoftware/anchor-layout";
 import { Heading } from "@buoysoftware/anchor-typography";
 
-import { Nav, NavLogo, NavSeparator, NavItemsContainer, NavItem, TabItem } from "../src";
+import { Nav, NavLogo, NavSeparator, NavItemsContainer, NavItem, ItemWrapper, Tab } from "../src";
 
 export default {
   component: Nav,
@@ -64,18 +64,26 @@ export const SubNav = () => {
 };
 
 export const TabBar = () => {
+  const [active, setTabIndex] = useState(0);
+
   return (
     <Nav variant="tabs">
       <NavItemsContainer>
-        <TabItem>
-          Current Cycle
-        </TabItem>
-        <TabItem active>
-          Visits
-        </TabItem>
-        <TabItem>
-          Donation Cycles
-        </TabItem>
+        <ItemWrapper active={active === 0} margin="0" padding="0">
+          <Tab active={active === 0} onClick={() => setTabIndex(0)}>
+            Current Cycle
+          </Tab>
+        </ItemWrapper>
+        <ItemWrapper active={active === 1} margin="0" padding="0">
+          <Tab active={active === 1} onClick={() => setTabIndex(1)}>
+            Visits
+          </Tab>
+        </ItemWrapper>
+        <ItemWrapper active={active === 2} margin="0" padding="0">
+          <Tab active={active === 2} onClick={() => setTabIndex(2)}>
+            Donation Cycles
+          </Tab>
+        </ItemWrapper>
       </NavItemsContainer>
     </Nav>
   )
