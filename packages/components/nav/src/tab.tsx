@@ -9,6 +9,7 @@ type TabProps = OwnProps;
 export const Tab = styled.button<TabProps>`
   background: transparent;
   border: none;
+  cursor: pointer;
   font-size: ${({ theme }) => theme.fontSizes['font-size-100']};
   font-weight: 600;
   line-height: ${({ theme }) => theme.fontSizes['font-size-100']};
