@@ -16,10 +16,7 @@
   "overrides": [
     {
       "files": ["*.mdx"],
-      "extends": "plugin:mdx/recommended",
-      "globals": {
-        "Meta": "readonly"
-      }
+      "extends": "plugin:mdx/recommended"
     }
   ],
   "env": {
