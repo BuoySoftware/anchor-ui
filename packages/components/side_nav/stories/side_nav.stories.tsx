@@ -1,29 +1,28 @@
 import { useState } from "react";
-import { Canvas, Story } from '@storybook/addon-docs';
 import { Heading } from "@buoysoftware/anchor-typography";
 import { Box } from "@buoysoftware/anchor-layout";
-import { AppTemplate, AppArea } from "@buoysoftware/anchor-app-template";
+import { AppTemplate, AppSideNav, AppContent } from "@buoysoftware/anchor-app-template";
 
 import { SideNavAppSwitcher, SideNav, SideNavItemsContainer, SideNavItem, SideNavFooter } from "../src";
 
-<Meta
-  title="Components / SideNav"
-  component={SideNav}
-  parameters={{
-    layout: "fullscreen"
-  }}
-/>
+export default {
+  component: SideNav,
+  title: "Components / SideNav",
+  parameters: {
+    layout: "fullscreen",
+  },
+};
 
-export const Template = (args) => {
+export const Basic = () => {
   const [currentPage, setCurrentPage] = useState("page1");
-  const onClick = (e) => {
+  const onClick = (e: React.MouseEvent<HTMLElement>) => {
     e.preventDefault();
     const href = e.currentTarget.getAttribute("href");
-    setCurrentPage(href.replace("#", ""));
+    if(href) setCurrentPage(href.replace("#", ""));
   };
   return (
     <AppTemplate>
-      <AppArea area="side-nav">
+      <AppSideNav>
         <SideNav>
           <SideNavAppSwitcher triggerLabel="Centers">
             <a href="#centers">Centers</a>
@@ -40,19 +39,11 @@ export const Template = (args) => {
             <Heading size="s" color="white">Employee N</Heading>
           </SideNavFooter>
         </SideNav>
-      </AppArea>
-      <AppArea area="app-content">
+      </AppSideNav>
+      <AppContent>
         { currentPage === "page1" && <Box p="xl">Page 1</Box>}
         { currentPage === "page2" && <Box p="xl">Page 2</Box>}
-      </AppArea>
+      </AppContent>
     </AppTemplate>
   );
 };
-
-## Basic Usage
-
-<Canvas>
-  <Story name="SideNav" args={{}}>
-    {Template.bind({})}
-  </Story>
-</Canvas>
