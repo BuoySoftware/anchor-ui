@@ -6,8 +6,6 @@ interface OwnProps {
   "data-testid"?: string;
 }
 
-type SideNavProps = OwnProps;
-
 const GRID_TEMPLATE_AREAS = `
   'side-nav-logo'
   'side-nav-app-switcher'
@@ -15,7 +13,7 @@ const GRID_TEMPLATE_AREAS = `
   'side-nav-footer'
 `;
 
-export const SideNav: React.FC<SideNavProps> = ({
+export const SideNav: React.FC<OwnProps> = ({
   children,
   "data-testid": testId = "side-nav",
 }): React.ReactElement => {
