@@ -18,7 +18,7 @@ export const Basic = () => {
   const onClick = (e: React.MouseEvent<HTMLElement>) => {
     e.preventDefault();
     const href = e.currentTarget.getAttribute("href");
-    if(href) setCurrentPage(href.replace("#", ""));
+    if (href) setCurrentPage(href.replace("#", ""));
   };
   return (
     <AppTemplate>

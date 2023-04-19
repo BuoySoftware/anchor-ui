@@ -32,6 +32,7 @@
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-jest": "^27.1.7",
     "eslint-plugin-jest-dom": "^4.0.3",
+    "eslint-plugin-mdx": "^2.0.5",
     "eslint-plugin-react": "^7.31.11",
     "eslint-plugin-react-hooks": "^4.6.0",
     "iconoir-react": "^6.0.0",
@@ -57,7 +58,7 @@
     "build-storybook": "NODE_OPTIONS=--openssl-legacy-provider storybook build",
     "compile": "yarn lerna run compile",
     "deploy-storybook": "NODE_OPTIONS=--openssl-legacy-provider storybook-to-ghpages",
-    "lint": "eslint packages/**/**/src --ext .ts,.tsx --config .eslintrc",
+    "lint": "eslint packages/**/**/src packages/**/**/stories/ --ext .ts,.tsx,.mdx --config .eslintrc",
     "publish-build": "yarn build && yarn lerna publish",
     "storybook": "NODE_OPTIONS=--openssl-legacy-provider storybook dev -p 6006",
     "test": "yarn lerna run test"
