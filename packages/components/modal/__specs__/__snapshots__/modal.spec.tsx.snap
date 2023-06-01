@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Modal /> renders correctly 1`] = `
-.c11 {
+.c9 {
   box-sizing: border-box;
   border-radius: 4px;
   -webkit-align-items: center;
@@ -18,14 +18,14 @@ exports[`<Modal /> renders correctly 1`] = `
   margin-right: 0.25rem;
 }
 
-.c14 {
+.c12 {
   box-sizing: border-box;
   color: inherit;
   width: s;
   height: s;
 }
 
-.c16 {
+.c14 {
   box-sizing: border-box;
   border-radius: 4px;
   -webkit-align-items: center;
@@ -41,14 +41,15 @@ exports[`<Modal /> renders correctly 1`] = `
   padding-right: 1.25rem;
 }
 
-.c12 {
+.c10 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
 }
 
-.c13 {
+.c11 {
+  cursor: pointer;
   border-style: solid;
   border-width: 1px;
   background-color: #FFFFFF;
@@ -56,21 +57,29 @@ exports[`<Modal /> renders correctly 1`] = `
   color: #101112;
 }
 
-.c13:hover {
+.c11:hover {
   background-color: #F5F6F7;
 }
 
-.c13:active {
+.c11:active {
   background-color: #D9DDE1;
 }
 
-[disabled] .c10 {
+.c11:disabled {
+  cursor: not-allowed;
   background-color: #FFFFFF;
   border-color: #BABEC3;
   color: #9CA1A5;
 }
 
-.c17 {
+.c11:focus-visible {
+  border-radius: 4px;
+  outline: 2px solid #5b91f4;
+  outline-offset: 2px;
+}
+
+.c15 {
+  cursor: pointer;
   border-style: solid;
   border-width: 1px;
   background-color: #276EF1;
@@ -78,21 +87,28 @@ exports[`<Modal /> renders correctly 1`] = `
   color: #FFFFFF;
 }
 
-.c17:hover {
+.c15:hover {
   background-color: #1E54B7;
 }
 
-.c17:active {
+.c15:active {
   background-color: #174291;
 }
 
-[disabled] .c10 {
+.c15:disabled {
+  cursor: not-allowed;
   background-color: #EBEDF0;
   border-color: transparent;
   color: #9CA1A5;
 }
 
-.c15 {
+.c15:focus-visible {
+  border-radius: 4px;
+  outline: 2px solid #5b91f4;
+  outline-offset: 2px;
+}
+
+.c13 {
   font-family: -apple-system,BlinkMacSystemFont,San Francisco,Segoe UI, Roboto,Helvetica Neue,sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -101,27 +117,6 @@ exports[`<Modal /> renders correctly 1`] = `
   line-height: 1rem;
   -webkit-text-decoration: none;
   text-decoration: none;
-}
-
-.c9 {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  cursor: pointer;
-  border: 2px solid transparent;
-  background: transparent;
-}
-
-.c9:focus-visible {
-  background: rgba(255,255,255,0.01);
-  border-radius: 4px;
-  border-color: rgba(255,255,255,0.01);
-  box-shadow: 0px 0px 0px 2px #5b91f4;
-  outline: none;
 }
 
 .c0 {
@@ -303,44 +298,36 @@ exports[`<Modal /> renders correctly 1`] = `
             display="flex"
           >
             <button
-              class="c9"
+              class="c9 c10 c11"
+              display="flex"
+              height="40"
               type="button"
             >
-              <div
-                class="c10 c11 c12 c13"
-                display="flex"
-                height="40"
+              <span
+                class="c12 c13"
+                color="inherit"
+                font-size="font-size-100"
+                font-weight="600"
+                text-decoration="none"
               >
-                <span
-                  class="c14 c15"
-                  color="inherit"
-                  font-size="font-size-100"
-                  font-weight="600"
-                  text-decoration="none"
-                >
-                  Cancel
-                </span>
-              </div>
+                Cancel
+              </span>
             </button>
             <button
-              class="c9"
+              class="c14 c10 c15"
+              display="flex"
+              height="40"
               type="button"
             >
-              <div
-                class="c10 c16 c12 c17"
-                display="flex"
-                height="40"
+              <span
+                class="c12 c13"
+                color="inherit"
+                font-size="font-size-100"
+                font-weight="600"
+                text-decoration="none"
               >
-                <span
-                  class="c14 c15"
-                  color="inherit"
-                  font-size="font-size-100"
-                  font-weight="600"
-                  text-decoration="none"
-                >
-                  Save
-                </span>
-              </div>
+                Save
+              </span>
             </button>
           </div>
         </div>
