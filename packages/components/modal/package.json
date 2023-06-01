@@ -1,6 +1,6 @@
 {
   "name": "@buoysoftware/anchor-modal",
-  "version": "0.33.0",
+  "version": "0.33.3",
   "main": "src/index.ts",
   "license": "MIT",
   "dependencies": {

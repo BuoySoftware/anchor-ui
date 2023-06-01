@@ -1,12 +1,12 @@
 {
   "name": "@buoysoftware/anchor-page-template",
-  "version": "0.33.2",
+  "version": "0.33.3",
   "main": "src/index.ts",
   "license": "MIT",
   "dependencies": {
-    "@buoysoftware/anchor-layout": "^0.33.2",
-    "@buoysoftware/anchor-loading-indicator": "^0.33.2",
-    "@buoysoftware/anchor-typography": "^0.33.2"
+    "@buoysoftware/anchor-layout": "^0.33.3",
+    "@buoysoftware/anchor-loading-indicator": "^0.33.3",
+    "@buoysoftware/anchor-typography": "^0.33.3"
   },
   "peerDependencies": {
     "react-i18next": "^12.1.5"

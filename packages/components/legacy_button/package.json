@@ -1,11 +1,11 @@
 {
   "name": "@buoysoftware/anchor-ui-legacy-button",
-  "version": "0.33.2",
+  "version": "0.33.3",
   "main": "src/index.ts",
   "license": "MIT",
   "dependencies": {
-    "@buoysoftware/anchor-button": "^0.33.2",
-    "@buoysoftware/anchor-layout": "^0.33.2"
+    "@buoysoftware/anchor-button": "^0.33.3",
+    "@buoysoftware/anchor-layout": "^0.33.3"
   },
   "scripts": {
     "build": "tsc -outDir dist",
