@@ -1,6 +1,6 @@
 {
   "name": "@buoysoftware/anchor-actor",
-  "version": "0.33.3",
+  "version": "0.33.4",
   "main": "src/index.ts",
   "license": "MIT",
   "files": [
@@ -14,7 +14,7 @@
     "prepack": "clean-package"
   },
   "dependencies": {
-    "@buoysoftware/anchor-layout": "^0.33.3"
+    "@buoysoftware/anchor-layout": "^0.33.4"
   },
   "devDependencies": {
     "jest": "^29.3.1"
