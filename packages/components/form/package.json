@@ -1,6 +1,6 @@
 {
   "name": "@buoysoftware/anchor-form",
-  "version": "0.33.4",
+  "version": "0.34.0",
   "main": "src/index.ts",
   "license": "MIT",
   "files": [
@@ -15,10 +15,10 @@
     "prepack": "clean-package"
   },
   "dependencies": {
-    "@buoysoftware/anchor-button": "^0.33.4",
-    "@buoysoftware/anchor-layout": "^0.33.4",
-    "@buoysoftware/anchor-theme": "^0.33.4",
-    "@buoysoftware/anchor-typography": "^0.33.4",
+    "@buoysoftware/anchor-button": "^0.34.0",
+    "@buoysoftware/anchor-layout": "^0.34.0",
+    "@buoysoftware/anchor-theme": "^0.34.0",
+    "@buoysoftware/anchor-typography": "^0.34.0",
     "iconoir-react": "^6.2.1",
     "libphonenumber-js": "^1.10.21",
     "lodash": "*",

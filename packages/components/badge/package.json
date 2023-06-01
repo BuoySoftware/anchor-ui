@@ -1,6 +1,6 @@
 {
   "name": "@buoysoftware/anchor-badge",
-  "version": "0.33.4",
+  "version": "0.34.0",
   "main": "src/index.ts",
   "license": "MIT",
   "files": [
@@ -13,7 +13,7 @@
     "prepack": "clean-package"
   },
   "dependencies": {
-    "@buoysoftware/anchor-layout": "^0.33.4",
-    "@buoysoftware/anchor-typography": "^0.33.4"
+    "@buoysoftware/anchor-layout": "^0.34.0",
+    "@buoysoftware/anchor-typography": "^0.34.0"
   }
 }
