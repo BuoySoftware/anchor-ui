@@ -1,8 +1,7 @@
 import { Box, FlexProps } from "@buoysoftware/anchor-layout";
-import { ColorScheme, InnerButton } from "./inner_button";
+import { ColorScheme, StyledButton } from "./styled_button";
 import { Heading } from "@buoysoftware/anchor-typography";
 import { LoadingIndicator } from "@buoysoftware/anchor-loading-indicator";
-import { StyledButton } from "./styled_button";
 import { forwardRef } from "react";
 
 type Size = "s" | "l";
@@ -11,85 +10,82 @@ type IconPosition = "left" | "right";
 interface OwnProps {
   children: React.ReactNode;
   colorScheme?: ColorScheme;
-  "data-testid"?: string;
   disabled?: boolean;
-  form?: string;
   icon?: React.ReactNode;
   iconPosition?: IconPosition;
-  onClick?: React.MouseEventHandler;
   size?: Size;
   submitting?: boolean;
 }
 
-export type ButtonProps = OwnProps &
-  Omit<FlexProps, "theme" | "color" | "size"> &
-  React.ButtonHTMLAttributes<HTMLButtonElement>;
+type OwnAndFlexProps = OwnProps &
+  Omit<FlexProps, "theme" | "color" | "size" | "as">;
+
+export type ButtonProps<TComponent extends React.ElementType = "button"> =
+  PolymorphicComponentPropsWithRef<TComponent, OwnAndFlexProps>;
+
+type ButtonComponent = <C extends React.ElementType = "button">(
+  props: ButtonProps<C>
+) => React.ReactElement | null;
 
 const HEIGHT_MAPPING: Record<Size, number> = {
   l: 40,
   s: 28,
 };
 
-export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
-  function Button(
-    {
-      children,
-      colorScheme = "basic",
-      "data-testid": testId,
-      disabled,
-      form,
-      icon,
-      iconPosition,
-      onClick,
-      size = "l",
-      submitting = false,
-      type = "button",
-      ...props
-    },
-    ref
-  ): React.ReactElement {
-    return (
-      <StyledButton
-        data-testid={testId}
-        disabled={disabled || submitting}
-        form={form}
-        onClick={onClick}
-        ref={ref}
-        type={type}
-      >
-        <InnerButton
-          alignItems="center"
-          borderRadius="4px"
-          colorScheme={colorScheme}
-          height={HEIGHT_MAPPING[size]}
-          px={size}
-          {...props}
-        >
-          {type == "submit" && submitting ? (
-            <LoadingIndicator
-              size="12px"
-              strokeSize={1}
-              color="text.tertiary"
-            />
-          ) : (
-            <>
-              {iconPosition === "left" && (
-                <Box display="flex" ml="-xxs" mr="xs">
-                  {icon}
-                </Box>
-              )}
-              <Heading as="span" color="inherit" size="s" textDecoration="none">
-                {children}
-              </Heading>
-              {iconPosition === "right" && (
-                <Box display="flex" ml="xs" mr="-xxs">
-                  {icon}
-                </Box>
-              )}
-            </>
+export const Button: ButtonComponent = forwardRef(function Button<
+  TComponent extends React.ElementType = "button"
+>(
+  {
+    children,
+    colorScheme = "basic",
+    disabled,
+    icon,
+    iconPosition,
+    size = "l",
+    submitting = false,
+    ...props
+  }: ButtonProps<TComponent>,
+  ref: PolymorphicRef<TComponent>
+): React.ReactElement {
+  const Component = props.as || "button";
+
+  return (
+    <StyledButton
+      as={Component}
+      alignItems="center"
+      borderRadius="4px"
+      colorScheme={colorScheme}
+      disabled={disabled || submitting}
+      height={HEIGHT_MAPPING[size]}
+      px={size}
+      ref={ref}
+      {...(Component === "button" ? { type: props.type || "button" } : {})}
+      {...props}
+    >
+      {submitting ? (
+        <LoadingIndicator
+          data-testid="button-loading-indicator"
+          size="12px"
+          strokeSize={1}
+          color="text.tertiary"
+        />
+      ) : (
+        <>
+          {iconPosition === "left" && (
+            <Box display="flex" ml="-xxs" mr="xs">
+              {icon}
+            </Box>
           )}
-        </InnerButton>
-      </StyledButton>
-    );
-  }
-);
+          <Heading as="span" color="inherit" size="s" textDecoration="none">
+            {children}
+          </Heading>
+          {iconPosition === "right" && (
+            <Box display="flex" ml="xs" mr="-xxs">
+              {icon}
+            </Box>
+          )}
+        </>
+      )}
+    </StyledButton>
+  );
+});
