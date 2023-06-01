@@ -10,6 +10,7 @@ type DropdownMenuItemProps = OwnProps & Omit<BodyProps, "size">;
 
 export const DropdownMenuItem = styled(Body).attrs<DropdownMenuItemProps>(
   () => ({
+    "data-testid": "dropdown-menu-item",
     textDecoration: "none",
     size: "m",
     py: "xs",
