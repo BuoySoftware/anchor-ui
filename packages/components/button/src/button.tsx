@@ -2,6 +2,10 @@ import { Box, FlexProps } from "@buoysoftware/anchor-layout";
 import { ColorScheme, StyledButton } from "./styled_button";
 import { Heading } from "@buoysoftware/anchor-typography";
 import { LoadingIndicator } from "@buoysoftware/anchor-loading-indicator";
+import {
+  PolymorphicComponentPropsWithRef,
+  PolymorphicRef,
+} from "@buoysoftware/anchor-types";
 import { forwardRef } from "react";
 
 type Size = "s" | "l";

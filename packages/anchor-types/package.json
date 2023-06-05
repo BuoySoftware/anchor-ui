@@ -1,0 +1,19 @@
+{
+  "name": "@buoysoftware/anchor-types",
+  "version": "0.35.0",
+  "license": "MIT",
+  "main": "src/index.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc -outDir dist",
+    "compile": "tsc --noEmit",
+    "postpack": "clean-package restore",
+    "prepack": "clean-package"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "clean-package": "^2.2.0"
+  }
+}

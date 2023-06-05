@@ -1,0 +1,5 @@
+{
+  "replace": {
+    "types": "dist/index.d.ts"
+  }
+}
