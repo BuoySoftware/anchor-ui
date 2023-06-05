@@ -1,6 +1,6 @@
 {
   "name": "@buoysoftware/anchor-types",
-  "version": "0.35.0",
+  "version": "0.35.1",
   "license": "MIT",
   "main": "src/index.ts",
   "files": [
@@ -12,7 +12,6 @@
     "postpack": "clean-package restore",
     "prepack": "clean-package"
   },
-  "dependencies": {},
   "devDependencies": {
     "clean-package": "^2.2.0"
   }
