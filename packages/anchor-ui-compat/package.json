@@ -1,6 +1,6 @@
 {
   "name": "@buoysoftware/anchor-ui-compat",
-  "version": "0.35.1",
+  "version": "0.35.2",
   "main": "src/index.ts",
   "license": "MIT",
   "files": [
@@ -13,12 +13,12 @@
     "postpack": "clean-package restore"
   },
   "dependencies": {
-    "@buoysoftware/anchor-ui-legacy-button": "^0.35.1",
-    "@buoysoftware/anchor-ui-legacy-connection-table": "^0.35.1",
+    "@buoysoftware/anchor-ui-legacy-button": "^0.35.2",
+    "@buoysoftware/anchor-ui-legacy-connection-table": "^0.35.2",
     "@buoysoftware/anchor-ui-legacy-layout": "^0.35.0",
     "@buoysoftware/anchor-ui-legacy-modal": "^0.35.0",
     "@buoysoftware/anchor-ui-legacy-page-footer": "^0.35.0",
-    "@buoysoftware/anchor-ui-legacy-table": "^0.35.1",
+    "@buoysoftware/anchor-ui-legacy-table": "^0.35.2",
     "@buoysoftware/anchor-ui-legacy-text": "^0.35.0",
     "@buoysoftware/anchor-ui-legacy-trans": "^0.35.0"
   },
