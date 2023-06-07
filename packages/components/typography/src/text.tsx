@@ -25,10 +25,10 @@ export type TextProps = BoxProps &
   LegacyHtmlProps;
 
 export const Text = styled(Box)<TextProps>`
-  font-family: -apple-system, BlinkMacSystemFont, San Francisco, Segoe UI,
-    Roboto, Helvetica Neue, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
+    "Noto Color Emoji";
 
   ${typography}
   ${textTransform}

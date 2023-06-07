@@ -87,24 +87,11 @@ export const Introduction = () => {
 
             <Box mt="m" padding="l" bg="#F5F6F7">
               <Text as="pre" fontSize="16px">
-                font-family: -apple-system, BlinkMacSystemFont, San Francisco,
-                Segoe UI, Roboto, Helvetica Neue, sans-serif;
+                font-family: ui-sans-serif, system-ui, -apple-system,
+                BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial,
+                "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+                "Segoe UI Symbol", "Noto Color Emoji";
               </Text>
-            </Box>
-
-            <Box mt="36px">
-              <Body size="l">
-                We also utilize the following classes to improve legibility.
-              </Body>
-
-              <Box mt="m" padding="l" as="pre" bg="#F5F6F7">
-                <Text fontSize="16px" as="pre">
-                  -webkit-font-smoothing: antialiased;
-                </Text>
-                <Text fontSize="16px" as="pre">
-                  -moz-osx-font-smoothing: grayscale;
-                </Text>
-              </Box>
             </Box>
           </Box>
         </Box>

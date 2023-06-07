@@ -10,8 +10,10 @@ export type StyledTextAreaProps = OwnProps &
   React.TextareaHTMLAttributes<HTMLTextAreaElement>;
 
 export const StyledTextArea = styled.textarea<StyledTextAreaProps>`
-  font-family: -apple-system, BlinkMacSystemFont, San Francisco, Segoe UI,
-    Roboto, Helvetica Neue, sans-serif;
+  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
+    "Noto Color Emoji";
   resize: none;
   outline: none;
   border: 1px solid ${({ theme }) => theme.colors.border.defualt};

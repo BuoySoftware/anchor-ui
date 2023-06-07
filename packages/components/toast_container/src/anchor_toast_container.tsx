@@ -25,8 +25,10 @@ export const AnchorToastContainer = styled(ToastContainer)`
   }
 
   .Toastify__toast-body {
-    font-family: -apple-system, BlinkMacSystemFont, San Francisco, Segoe UI,
-      Roboto, Helvetica Neue, sans-serif;
+    font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
+      "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif,
+      "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
+      "Noto Color Emoji";
     font-size: ${({ theme }) => theme.fontSizes["font-size-100"]};
     font-weight: ${({ theme }) => theme.fontWeights.semibold};
     margin: 0;
