@@ -1,23 +1,20 @@
 import styled from "styled-components";
-import { Heading, HeadingProps } from "@buoysoftware/anchor-typography";
 
-interface OwnProps {
-  children?: React.ReactNode;
-}
-
-type TextButtonProps = OwnProps &
-  React.ButtonHTMLAttributes<HTMLButtonElement> &
-  Omit<HeadingProps, "as" | "size" | "background" | "color">;
-
-export const TextButton = styled(Heading).attrs(() => ({
+export const TextButton = styled.button.attrs((props) => ({
   as: "button",
-  size: "s",
-}))<TextButtonProps>`
+  ...props,
+}))`
+  align-items: center;
   background: transparent;
   border: none;
   height: 28px;
   color: ${({ theme }) => theme.colors.interactive.default};
   cursor: pointer;
+  display: inline-flex;
+  font-size: ${({ theme }) => theme.fontSizes["font-size-100"]};
+  font-family: -apple-system, BlinkMacSystemFont, San Francisco, Segoe UI, Roboto, Helvetica Neue, sans-serif;
+  font-weight: ${({ theme }) => theme.fontWeights["600"]};
+  line-height: ${({ theme }) => theme.fontSizes["font-size-200"]};
   padding: ${({ theme }) => theme.space.xxs};
 
   &:hover {
