@@ -46,3 +46,18 @@ export const Template = (args) => {
   </Story>
 </Canvas>
 
+## As link
+
+<Canvas>
+  <Story
+    name="Text Button as link"
+    args={{
+      as: "a",
+      href: "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+      target: "_blank",
+      children: "Button",
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>
