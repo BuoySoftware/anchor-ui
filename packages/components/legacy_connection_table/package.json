@@ -1,6 +1,6 @@
 {
   "name": "@buoysoftware/anchor-ui-legacy-connection-table",
-  "version": "0.35.2",
+  "version": "0.35.3",
   "main": "src/index.ts",
   "license": "MIT",
   "scripts": {
@@ -10,7 +10,7 @@
     "prepack": "clean-package"
   },
   "dependencies": {
-    "@buoysoftware/anchor-table": "^0.35.2",
-    "@buoysoftware/anchor-ui-legacy-table": "^0.35.2"
+    "@buoysoftware/anchor-table": "^0.35.3",
+    "@buoysoftware/anchor-ui-legacy-table": "^0.35.3"
   }
 }

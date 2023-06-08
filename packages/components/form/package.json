@@ -1,6 +1,6 @@
 {
   "name": "@buoysoftware/anchor-form",
-  "version": "0.35.2",
+  "version": "0.35.3",
   "main": "src/index.ts",
   "license": "MIT",
   "files": [
@@ -15,7 +15,7 @@
     "prepack": "clean-package"
   },
   "dependencies": {
-    "@buoysoftware/anchor-button": "^0.35.2",
+    "@buoysoftware/anchor-button": "^0.35.3",
     "@buoysoftware/anchor-layout": "^0.35.0",
     "@buoysoftware/anchor-theme": "^0.35.0",
     "@buoysoftware/anchor-typography": "^0.35.0",

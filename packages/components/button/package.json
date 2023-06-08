@@ -1,6 +1,6 @@
 {
   "name": "@buoysoftware/anchor-button",
-  "version": "0.35.2",
+  "version": "0.35.3",
   "main": "src/index.ts",
   "license": "MIT",
   "dependencies": {
