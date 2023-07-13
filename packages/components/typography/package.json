@@ -17,7 +17,7 @@
     "@buoysoftware/anchor-theme": "^0.35.0",
     "react-markdown": "^8.0.4",
     "rehype-raw": "^6.1.1 ",
-    "styled-components": "^5.3.6",
+    "styled-components": "^6.0.4",
     "styled-system": "^5.1.5"
   },
   "devDependencies": {
