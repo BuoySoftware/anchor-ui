@@ -19,7 +19,7 @@
     "@types/styled-components": "^5.1.26",
     "iconoir-react": "^6.2.0",
     "react-tiny-popover": "^7.2.0",
-    "styled-components": "^5.3.6"
+    "styled-components": "^6.0.5"
   },
   "devDependencies": {
     "@types/node": "^18.11.12",
