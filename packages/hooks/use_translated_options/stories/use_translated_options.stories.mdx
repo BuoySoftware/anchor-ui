@@ -7,6 +7,8 @@ import { Meta } from "@storybook/addon-docs";
 The `useTranslatedOptions` hook is a convience hook for taking a set of data
 values and generating options for use in select, radio, or check box collections.
 
+Additionally, it exposes a utility for getting an option object from a given value.
+
 This depends on [react-i18next] for translating the options.
 
 ## Import
@@ -21,15 +23,21 @@ import { useTranslatedOptions } from "@buoysoftware/anchor-ui";
 const MyComponent = () => {
   const values = ["option_1", "option_2"];
 
-  // Returns an arry of objecst like:
-  // [
-  //  { value: "option_1", label: "Option 1" },
-  //  { value: "option_2", label: "Option 2" }
-  // ]
-  const options = useTranslatedOptions(values, { tNamespace: "myNamespace" });
+  // Returns an object like:
+  // { 
+  //    getOptionFromValue: (value) => ({ value: value, label: "Translated Value Label" })
+  //    options: [
+  //      { value: "option_1", label: "Option 1" },
+  //      { value: "option_2", label: "Option 2" }
+  //    ]
+  // }
+  const { getOptionFromValue, options } = useTranslatedOptions(values, { tNamespace: "myNamespace" });
+
+  const defaultOption = getOptionFromValue("option_1");
 
   return (
     <>
+      <>The default option is {defaultOption.label}</>
       {options.map(({ value, label }) => (
         <label key={value}>
           <input type="radio" name="myRadio" value={value} />
