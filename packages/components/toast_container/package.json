@@ -10,7 +10,7 @@
     "@buoysoftware/anchor-layout": "^0.35.0",
     "@buoysoftware/anchor-theme": "^0.35.0",
     "@buoysoftware/anchor-typography": "^0.35.0",
-    "iconoir-react": "^6.2.1",
+    "iconoir-react": "^7.0.0",
     "react-toastify": "^9.1.1"
   },
   "scripts": {
