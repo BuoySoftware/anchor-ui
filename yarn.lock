@@ -11927,10 +11927,10 @@ react-syntax-highlighter@^7.0.2:
     prismjs "^1.8.4"
     refractor "^2.4.1"
 
-react-tiny-popover@^7.2.0:
-  version "7.2.4"
-  resolved "https://registry.yarnpkg.com/react-tiny-popover/-/react-tiny-popover-7.2.4.tgz#b11fe9b43d1fc8ac46e760419346afd41d6111ee"
-  integrity sha512-T7ZSwXcUtPXCog3Bux9+TjoTvUeMi/+zI0Yv/TkIznZCWUg0XTt2797G0IiT5mTVeJeLivUzdOmKA1hOQdMfOQ==
+react-tiny-popover@^8.0.4:
+  version "8.0.4"
+  resolved "https://registry.yarnpkg.com/react-tiny-popover/-/react-tiny-popover-8.0.4.tgz#bf76f1db8a9b62f4eb10fe0dc770a65c52d59560"
+  integrity sha512-pn0Y/G0gyMdYTBEWSKCCnaZsXAa54PkfnRE4fnMM5633SSClYrXxwXKc6vPYgJ9shLatGginxMjnhXq6guZmng==
 
 react-toastify@^9.1.1:
   version "9.1.2"
